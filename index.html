@@ -1,46 +1,8 @@
-<script type="text/javascript">
-        var gk_isXlsx = false;
-        var gk_xlsxFileLookup = {};
-        var gk_fileData = {};
-        function filledCell(cell) {
-          return cell !== '' && cell != null;
-        }
-        function loadFileData(filename) {
-        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
-            try {
-                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
-                var firstSheetName = workbook.SheetNames[0];
-                var worksheet = workbook.Sheets[firstSheetName];
-
-                // Convert sheet to JSON to filter blank rows
-                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
-                // Filter out blank rows (rows where all cells are empty, null, or undefined)
-                var filteredData = jsonData.filter(row => row.some(filledCell));
-
-                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
-                var headerRowIndex = filteredData.findIndex((row, index) =>
-                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
-                );
-                // Fallback
-                if (headerRowIndex === -1 || headerRowIndex > 25) {
-                  headerRowIndex = 0;
-                }
-
-                // Convert filtered JSON back to CSV
-                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
-                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
-                return csv;
-            } catch (e) {
-                console.error(e);
-                return "";
-            }
-        }
-        return gk_fileData[filename] || "";
-        }
-        </script><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yoxall</title>
   <style>
     html, body {
@@ -51,6 +13,7 @@
       overflow: hidden;
       font-family: 'Courier New', monospace;
       color: #00ff00;
+      cursor: none; /* Hide default cursor */
     }
     canvas {
       display: block;
@@ -58,6 +21,50 @@
       top: 0;
       left: 0;
       z-index: 0;
+    }
+    #background-canvas {
+      opacity: 0.1; /* Faint background terminal noise */
+      z-index: 0;
+    }
+    #cursor {
+      position: fixed;
+      width: 8px;
+      height: 16px;
+      background: #00ff00;
+      box-shadow: 0 0 5px #00ff00;
+      z-index: 1000;
+      animation: blink 0.7s infinite;
+      pointer-events: none;
+    }
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+    #boot-screen {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      color: #00ff00;
+      font-family: 'Courier New', monospace;
+      display: none; /* Initially hidden */
+      text-align: left;
+      z-index: 3;
+      transition: opacity 1s;
+      padding: 20px;
+      white-space: pre-wrap;
+      font-size: clamp(0.7rem, 2.5vw, 0.9rem);
+    }
+    #boot-content {
+      text-align: left;
+    }
+    #boot-cursor {
+      display: inline-block;
+      width: 10px;
+      height: 1em;
+      background: #00ff00;
+      animation: blink 0.7s infinite;
     }
     #overlay {
       position: absolute;
@@ -70,57 +77,187 @@
       align-items: center;
       background: black;
       color: #00ff00;
-      font-size: 2rem;
-      cursor: pointer;
+      font-size: clamp(1.5rem, 5vw, 2rem);
+      cursor: none;
       z-index: 2;
       transition: opacity 1s;
     }
     #quote {
       position: absolute;
-      bottom: 20%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       width: 100%;
+      max-width: clamp(300px, 80vw, 600px);
       text-align: center;
-      font-size: 1.5rem;
+      font-size: clamp(1.2rem, 3.5vw, 1.8rem);
       color: #00ff00;
       opacity: 0;
       z-index: 1;
       text-shadow: 0 0 15px #00ff00, 0 0 25px #00ff00;
+      background: rgba(0, 0, 0, 0.5); /* Slight background for readability */
+      padding: 10px;
+      border: 0.5px solid #00ff00; /* Thinner border */
+      box-shadow: 0 0 10px #00ff00;
       transition: opacity 1s;
     }
-    #enter {
+    #login {
       position: absolute;
-      bottom: 40%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       width: 100%;
+      max-width: clamp(300px, 80vw, 400px);
       text-align: center;
-      font-size: 2rem;
       color: #00ff00;
-      text-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00;
-      cursor: pointer;
+      font-size: clamp(0.9rem, 2.5vw, 1.2rem);
       opacity: 0;
       z-index: 1;
-      transition: opacity 2s;
+      transition: opacity 2s, color 0.5s, text-shadow 0.5s;
+    }
+    #login input {
+      background: black;
+      border: 1px solid #00ff00;
+      color: #00ff00;
+      font-family: 'Courier New', monospace;
+      font-size: clamp(0.8rem, 2vw, 1rem);
+      padding: 8px;
+      margin: 10px 0;
+      width: 80%;
+      text-align: center;
+      box-shadow: 0 0 10px #00ff00;
+      transition: border-color 0.5s, color 0.5s, box-shadow 0.5s, transform 0.1s;
+    }
+    #login button {
+      background: black;
+      border: 1px solid #00ff00;
+      color: #00ff00;
+      font-family: 'Courier New', monospace;
+      font-size: clamp(0.8rem, 2vw, 1rem);
+      padding: 8px 20px;
+      cursor: none;
+      box-shadow: 0 0 10px #00ff00;
+      transition: all 0.3s, transform 0.1s;
+    }
+    #login button:hover {
+      background: #00ff00;
+      color: black;
+      box-shadow: 0 0 15px #00ff00;
+    }
+    #error-message {
+      margin-top: 10px;
+      font-size: clamp(0.8rem, 2vw, 1rem);
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+    #all-seeing-eye {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 15px; /* Smaller size */
+      height: 15px;
+      z-index: 1;
+      opacity: 0; /* Initially hidden */
+      transition: opacity 1s;
+      cursor: none;
+    }
+    #hacking-screen {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      display: none;
+      z-index: 4;
+      color: #00ff00;
+      font-family: 'Courier New', monospace;
+      padding: 20px;
+      overflow: hidden;
+    }
+    #hacking-content {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 5;
+      white-space: pre-wrap;
+    }
+    .error {
+      color: #ff0000 !important;
+      text-shadow: 0 0 15px #ff0000, 0 0 25px #ff0000 !important;
+      animation: glitch 0.3s ease-in-out 2;
+    }
+    .error input, .error button {
+      border-color: #ff0000 !important;
+      color: #ff0000 !important;
+      box-shadow: 0 0 10px #ff0000 !important;
+      animation: glitch 0.3s ease-in-out 2;
+    }
+    .error button:hover {
+      background: #ff0000 !important;
+      color: black !important;
+      box-shadow: 0 0 15px #ff0000 !important;
+    }
+    @keyframes glitch {
+      0% { transform: translate(0); }
+      20% { transform: translate(-2px, 2px); }
+      40% { transform: translate(2px, -2px); }
+      60% { transform: translate(-1px, 1px); }
+      80% { transform: translate(1px, -1px); }
+      100% { transform: translate(0); }
     }
     @media (max-width: 768px) {
-      #quote { font-size: 1.2rem; }
-      #enter { font-size: 1.5rem; }
+      #boot-screen { font-size: clamp(0.6rem, 2vw, 0.8rem); }
+      #overlay { font-size: clamp(1.2rem, 4vw, 1.5rem); }
+      #quote { font-size: clamp(0.9rem, 2.5vw, 1.3rem); }
+      #login { max-width: clamp(250px, 90vw, 350px); }
+      #login input, #login button, #error-message { font-size: clamp(0.7rem, 2vw, 0.9rem); }
+      #all-seeing-eye { width: 10px; height: 10px; }
     }
   </style>
 </head>
 <body>
+  <canvas id="background-canvas"></canvas>
   <canvas id="matrix"></canvas>
+  <div id="cursor"></div>
+  <div id="boot-screen">
+    <div id="boot-content"></div>
+    <span id="boot-cursor"></span>
+  </div>
   <div id="overlay">Take the Red Pill</div>
   <div id="quote"></div>
-  <div id="enter" onclick="window.location.href='https://www.youtube.com/watch?v=xvFZjo5PgG0'">ENTER</div>
+  <div id="login">
+    <div>ACCESS REQUIRED</div>
+    <input type="text" id="username" placeholder="USERNAME" autocomplete="off" style="animation-delay: 0.1s;">
+    <input type="password" id="password" placeholder="PASSWORD" style="animation-delay: 0.2s;">
+    <button onclick="handleLogin()" style="animation-delay: 0.3s;">LOGIN</button>
+    <div id="error-message"></div>
+  </div>
+  <div id="all-seeing-eye" onclick="startHackingPrank()">
+    <svg width="100%" height="100%" viewBox="0 0 100 100">
+      <path d="M50 20 C70 20 90 40 90 50 C90 60 70 80 50 80 C30 80 10 60 10 50 C10 40 30 20 50 20 M50 35 C60 35 65 42 65 50 C65 58 60 65 50 65 C40 65 35 58 35 50 C35 42 40 35 50 35" fill="none" stroke="#00ff00" stroke-width="2"/>
+      <circle cx="50" cy="50" r="5" fill="#00ff00"/>
+    </svg>
+  </div>
+  <div id="hacking-screen">
+    <div id="hacking-content"></div>
+  </div>
 
   <script>
-    const canvas = document.getElementById('matrix');
-    const ctx = canvas.getContext('2d');
+    const matrixCanvas = document.getElementById('matrix');
+    const bgCanvas = document.getElementById('background-canvas');
+    const matrixCtx = matrixCanvas.getContext('2d');
+    const bgCtx = bgCanvas.getContext('2d');
 
-    function resizeCanvas() {
-      canvas.height = window.innerHeight;
-      canvas.width = window.innerWidth;
-      drops.length = Math.floor(canvas.width / fontSize);
+    function resizeCanvases() {
+      matrixCanvas.height = window.innerHeight;
+      matrixCanvas.width = window.innerWidth;
+      bgCanvas.height = window.innerHeight;
+      bgCanvas.width = window.innerWidth;
+      drops.length = Math.floor(matrixCanvas.width / fontSize);
       drops.fill(1);
+      bgDrops.length = Math.floor(bgCanvas.width / bgFontSize);
+      bgDrops.fill(1);
     }
 
     const katakana = 'アァイィウヴエェオカガキギクグケゲコゴサザシジスズセゼソゾタダチッヂツヅテデトドナニヌネノハバパヒビピフブプヘベペホボポマミムメモヤユヨラリルレロワヲン';
@@ -129,81 +266,285 @@
     const alphabet = katakana + latin + nums;
 
     const fontSize = 16;
+    const bgFontSize = 12;
     let drops = [];
-    resizeCanvas();
+    let bgDrops = [];
+    resizeCanvases();
 
-    function draw() {
+    function drawMatrix(ctx, canvas, fontSize, drops, isBackground = false) {
       ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      ctx.fillStyle = '#0F0';
+      const isError = loginDiv.classList.contains('error');
+      ctx.fillStyle = isError ? '#ff0000' : '#0F0';
       ctx.font = `${fontSize}px monospace`;
 
       for (let i = 0; i < drops.length; i++) {
         const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
         ctx.fillText(text, i * fontSize, drops[i] * fontSize);
 
+        drops[i]++;
         if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
           drops[i] = 0;
         }
-        drops[i]++;
       }
+    }
+
+    function draw() {
+      drawMatrix(matrixCtx, matrixCanvas, fontSize, drops);
+      drawMatrix(bgCtx, bgCanvas, bgFontSize, bgDrops, true);
     }
 
     let matrixInterval;
 
+    const cursor = document.getElementById('cursor');
+    const bootScreen = document.getElementById('boot-screen');
+    const bootContent = document.getElementById('boot-content');
+    const bootCursor = document.getElementById('boot-cursor');
     const overlay = document.getElementById('overlay');
     const quoteDiv = document.getElementById('quote');
-    const enterDiv = document.getElementById('enter');
+    const loginDiv = document.getElementById('login');
+    const errorMessage = document.getElementById('error-message');
+    const allSeeingEye = document.getElementById('all-seeing-eye');
+    const hackingScreen = document.getElementById('hacking-screen');
+    const hackingContent = document.getElementById('hacking-content');
 
     const quotes = [
-      { text: '"What is real? How do you define real?"', audio: 'https://drive.google.com/uc?export=download&id=1HC3CUn9IDb2vvBpWDFzfPlxQN5i_jOb-' },
-      { text: '"This is your last chance. After this, there is no turning back."', audio: 'https://drive.google.com/uc?export=download&id=1CUa1n6N8vq5I96GK5fivsgowxkBq2EjE' },
-      { text: '"You take the red pill—you stay in Wonderland."', audio: 'https://drive.google.com/uc?export=download&id=1YkNtFtQQtukaO2kZFG4VnFgtCV1A6VN1' },
-      { text: '"And dont even get me started on the Pyramids..."', audio: 'https://drive.google.com/uc?export=download&id=1cs6WaBNtMbKTCXGrj98rEAifK4o_DYsX' }
+      '"What is real? How do you define real?"',
+      '"This is your last chance. After this, there is no turning back."',
+      '"You take the red pill—you stay in Wonderland."',
+      '"And dont even get me started on the Pyramids..."'
     ];
 
-    async function playSequence() {
-      for (const q of quotes) {
-        quoteDiv.textContent = q.text;
-        quoteDiv.style.opacity = 1;
+    const bootMessages = [
+      "Yoxall Inc. Secure System v3.1.4\n",
+      "Copyright 1986 Yoxall Inc. All Rights Reserved.\n\n",
+      "Initializing Interface...\n\n",
+      "╔══════════════════════════════╗\n",
+      "║     YOXALL INC. BOOT MENU    ║\n",
+      "╚══════════════════════════════╝\n\n",
+      "[ OK ] Loading Kernel Modules...\n",
+      "[ OK ] Mounting Virtual Filesystem...\n",
+      "[ OK ] Initializing Network Protocols...\n",
+      "[ OK ] Establishing Secure Connection...\n",
+      "[ OK ] System Ready.\n\n",
+      "Booting into your mind...\n"
+    ];
 
-        try {
-          const audio = new Audio(q.audio);
-          audio.onerror = () => console.error(`Failed to load audio: ${q.audio}`);
-          await audio.play();
-          await new Promise(resolve => {
-            audio.onended = resolve;
-            audio.onerror = resolve;
-          });
-          // Keep quote displayed for 3 seconds after audio ends
-          await new Promise(r => setTimeout(r, 3000));
-        } catch (e) {
-          console.error(`Error playing audio: ${e.message}`);
-          // Display quote for 5 seconds if audio fails
-          await new Promise(r => setTimeout(r, 5000));
+    async function typeBootMessages() {
+      bootContent.textContent = '';
+      bootCursor.style.display = 'inline-block';
+      for (const message of bootMessages) {
+        for (let i = 0; i < message.length; i++) {
+          bootContent.textContent += message[i];
+          await new Promise(r => setTimeout(r, 15)); // Faster typing
         }
-
-        quoteDiv.style.opacity = 0;
-        // Wait 1 second for fade-out before next quote
-        await new Promise(r => setTimeout(r, 1000));
+        await new Promise(r => setTimeout(r, 200)); // Pause between lines
       }
-      enterDiv.style.opacity = 1;
+      // Blink cursor for a bit before fading
+      await new Promise(r => setTimeout(r, 2000));
+      bootCursor.style.display = 'none';
+      bootScreen.style.opacity = 0;
+      setTimeout(() => {
+        bootScreen.style.display = 'none';
+        if (!matrixInterval) {
+          matrixInterval = setInterval(draw, 35);
+        }
+        allSeeingEye.style.opacity = 1; // Show eye after boot
+        playSequence();
+      }, 1000);
     }
+
+    async function typeQuote(text, element, speed = 75) {
+      element.textContent = '';
+      if (text === '"What is real? How do you define real?"') {
+        // Split into two parts
+        const firstPart = '"What is real?"';
+        const secondPart = ' How do you define real?"';
+        for (let i = 0; i < firstPart.length; i++) {
+          element.textContent += firstPart[i];
+          await new Promise(r => setTimeout(r, speed));
+        }
+        await new Promise(r => setTimeout(r, 500)); // 500ms delay
+        for (let i = 0; i < secondPart.length; i++) {
+          element.textContent += secondPart[i];
+          await new Promise(r => setTimeout(r, speed));
+        }
+      } else {
+        // Type normally for other quotes
+        for (let i = 0; i < text.length; i++) {
+          element.textContent += text[i];
+          await new Promise(r => setTimeout(r, speed));
+        }
+      }
+    }
+
+    async function playSequence() {
+      for (const quote of quotes) {
+        quoteDiv.style.opacity = 1;
+        await typeQuote(quote, quoteDiv);
+        await new Promise(r => setTimeout(r, 3000)); // Display for 3 seconds after typing
+        quoteDiv.style.opacity = 0;
+        await new Promise(r => setTimeout(r, 1000)); // Wait 1 second for fade-out
+      }
+      loginDiv.style.opacity = 1;
+      loginDiv.querySelectorAll('input, button').forEach(el => {
+        el.style.animation = 'slideIn 0.5s ease-in-out';
+      });
+    }
+
+    function handleLogin() {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      loginDiv.classList.add('error');
+      if (username && password) {
+        errorMessage.textContent = 'Access Denied: Invalid credentials. Redirecting...';
+      } else {
+        errorMessage.textContent = 'Input Required: Enter username and password. Redirecting...';
+      }
+      errorMessage.style.opacity = 1;
+      setTimeout(() => {
+        window.location.href = 'https://www.youtube.com/watch?v=xvFZjo5PgG0';
+      }, 3000);
+    }
+
+    // Custom cursor movement
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.left = `${e.clientX}px`;
+      cursor.style.top = `${e.clientY}px`;
+    });
 
     overlay.addEventListener('click', () => {
       overlay.style.opacity = 0;
-      setTimeout(() => { overlay.style.display = 'none'; }, 1000);
-      if (!matrixInterval) {
-        matrixInterval = setInterval(draw, 35);
-      }
-      playSequence();
+      setTimeout(() => {
+        overlay.style.display = 'none';
+        bootScreen.style.display = 'block';
+        bootScreen.style.opacity = 1;
+        typeBootMessages();
+      }, 1000);
     });
 
-    window.addEventListener('resize', resizeCanvas);
+    window.addEventListener('resize', resizeCanvases);
+
+    // Slide-in animation for login elements
+    const styleSheet = document.createElement('style');
+    styleSheet.textContent = `
+      @keyframes slideIn {
+        from { transform: translateY(20px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+      }
+    `;
+    document.head.appendChild(styleSheet);
+
+    // Hacking Prank
+    function startHackingPrank() {
+      hackingScreen.style.display = 'block';
+      quoteDiv.style.display = 'none';
+      loginDiv.style.display = 'none';
+      allSeeingEye.style.display = 'none';
+      // Start typing hack commands
+      typeHackCommands();
+    }
+
+    async function typeText(text, speed) {
+      for (let i = 0; i < text.length; i++) {
+        hackingContent.textContent += text[i];
+        await new Promise(r => setTimeout(r, speed));
+      }
+    }
+
+    async function typeHackCommands() {
+      hackingContent.textContent = '';
+      const fastSpeed = 5; // Faster for non-personal
+      const slowSpeed = 30; // Slower for personal
+      const shortPause = 200;
+      const longPause = 1500; // Longer pause for personal data
+
+      await typeText("WARNING: Unauthorized access detected!\n", fastSpeed);
+      await new Promise(r => setTimeout(r, shortPause));
+      await typeText("[!] Exploit triggered: CVE-1986-0420 (Buffer Overflow)\n", fastSpeed);
+      await new Promise(r => setTimeout(r, shortPause));
+      await typeText("Bypassing firewall protections...\n", fastSpeed);
+      await new Promise(r => setTimeout(r, shortPause));
+      await typeText("Root access established.\n", fastSpeed);
+      await new Promise(r => setTimeout(r, shortPause));
+      await typeText("Initiating deep system scan...\n", fastSpeed);
+      await new Promise(r => setTimeout(r, shortPause));
+
+      // Personal data - slow and spread out
+      await typeText(`Target Device: `, fastSpeed);
+      await typeText(`${navigator.userAgent}\n`, slowSpeed);
+      await new Promise(r => setTimeout(r, longPause));
+
+      await typeText(`Display: `, fastSpeed);
+      await typeText(`${screen.width} x ${screen.height} pixels\n`, slowSpeed);
+      await new Promise(r => setTimeout(r, longPause));
+
+      await typeText(`Language Preference: `, fastSpeed);
+      await typeText(`${navigator.language}\n`, slowSpeed);
+      await new Promise(r => setTimeout(r, longPause));
+
+      await typeText(`Processor: `, fastSpeed);
+      await typeText(`${navigator.hardwareConcurrency} cores detected\n`, slowSpeed);
+      await new Promise(r => setTimeout(r, longPause));
+
+      // Fake IP
+      const fakeIP = `192.168.${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}`;
+      await typeText(`Network: `, fastSpeed);
+      await typeText(`IP ${fakeIP}\n`, slowSpeed);
+      await new Promise(r => setTimeout(r, longPause));
+
+      // Battery level
+      if (navigator.getBattery) {
+        await navigator.getBattery().then(async (battery) => {
+          await typeText(`Power: `, fastSpeed);
+          await typeText(`${Math.round(battery.level * 100)}% battery remaining\n`, slowSpeed);
+          await new Promise(r => setTimeout(r, longPause));
+        });
+      } else {
+        await typeText(`Power: `, fastSpeed);
+        await typeText(`Battery data restricted\n`, slowSpeed);
+        await new Promise(r => setTimeout(r, longPause));
+      }
+
+      // Location
+      await typeText("Triangulating location...\n", fastSpeed);
+      await new Promise(r => setTimeout(r, shortPause));
+      navigator.geolocation.getCurrentPosition(
+        async (position) => {
+          await typeText(`Coordinates: `, fastSpeed);
+          await typeText(`Lat ${position.coords.latitude.toFixed(2)}, Long ${position.coords.longitude.toFixed(2)}\n`, slowSpeed);
+          await new Promise(r => setTimeout(r, longPause));
+          await typeText("Locking onto target...\n", fastSpeed);
+          await new Promise(r => setTimeout(r, shortPause));
+          await typeText("Extracting sensitive data...\n", fastSpeed);
+          await new Promise(r => setTimeout(r, shortPause));
+          await typeText("Encrypting storage drives...\n", fastSpeed);
+          await new Promise(r => setTimeout(r, shortPause));
+          await typeText("Uploading to darknet server...\n", fastSpeed);
+          await new Promise(r => setTimeout(r, shortPause));
+          await typeText("System fully compromised.\n", fastSpeed);
+          await new Promise(r => setTimeout(r, shortPause));
+          await typeText("You are now under surveillance.\n", fastSpeed);
+        },
+        async () => {
+          await typeText("Geolocation restricted. Using IP triangulation...\n", fastSpeed);
+          await typeText(`Location: [REDACTED CITY], Earth\n`, slowSpeed);
+          await new Promise(r => setTimeout(r, longPause));
+          await typeText("Locking onto target...\n", fastSpeed);
+          await new Promise(r => setTimeout(r, shortPause));
+          await typeText("Extracting sensitive data...\n", fastSpeed);
+          await new Promise(r => setTimeout(r, shortPause));
+          await typeText("Encrypting storage drives...\n", fastSpeed);
+          await new Promise(r => setTimeout(r, shortPause));
+          await typeText("Uploading to darknet server...\n", fastSpeed);
+          await new Promise(r => setTimeout(r, shortPause));
+          await typeText("System fully compromised.\n", fastSpeed);
+          await new Promise(r => setTimeout(r, shortPause));
+          await typeText("You are now under surveillance.\n", fastSpeed);
+        }
+      );
+    }
   </script>
 </body>
-
 </html>
-
-
