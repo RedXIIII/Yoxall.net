@@ -1,4 +1,43 @@
-<!DOCTYPE html>
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -94,12 +133,16 @@
       color: #00ff00;
       opacity: 0;
       z-index: 1;
-      text-shadow: 0 0 15px #00ff00, 0 0 25px #00ff00;
-      background: rgba(0, 0, 0, 0.5); /* Slight background for readability */
-      padding: 10px;
-      border: 0.5px solid #00ff00; /* Thinner border */
-      box-shadow: 0 0 10px #00ff00;
+      text-shadow: 0 0 8px #00ff00, 0 0 15px #00ff00;
+      font-family: 'Courier New', monospace;
+      padding: 15px;
       transition: opacity 1s;
+      white-space: pre-wrap; /* Preserve spaces */
+    }
+    .quote-char {
+      display: inline-block;
+      transition: all 0.1s;
+      min-width: 0.5em; /* Ensure space for characters, including spaces */
     }
     #login {
       position: absolute;
@@ -350,46 +393,114 @@
         if (!matrixInterval) {
           matrixInterval = setInterval(draw, 35);
         }
-        allSeeingEye.style.opacity = 1; // Show eye after boot
-        playSequence();
+        waitForWaterfall();
       }, 1000);
     }
 
-    async function typeQuote(text, element, speed = 75) {
-      element.textContent = '';
+    async function waitForWaterfall() {
+      while (Math.max(...drops) * fontSize < matrixCanvas.height) {
+        await new Promise(r => setTimeout(r, 100)); // Check every 100ms
+      }
+      await new Promise(r => setTimeout(r, 1000)); // Additional 1-second delay
+      allSeeingEye.style.opacity = 1; // Show eye after delay
+      playSequence();
+    }
+
+    async function typeQuote(text, element) {
+      element.innerHTML = ''; // Clear previous content
+      element.style.opacity = 1;
+      const chars = text.split('');
+      const spans = [];
+
+      // Create spans for each character, including spaces
+      chars.forEach(char => {
+        const span = document.createElement('span');
+        span.className = 'quote-char';
+        span.textContent = char === ' ' ? '\u00A0' : alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+        element.appendChild(span);
+        spans.push(span);
+      });
+
       if (text === '"What is real? How do you define real?"') {
-        // Split into two parts
         const firstPart = '"What is real?"';
         const secondPart = ' How do you define real?"';
-        for (let i = 0; i < firstPart.length; i++) {
-          element.textContent += firstPart[i];
-          await new Promise(r => setTimeout(r, speed));
+        const firstChars = firstPart.split('');
+        const secondChars = secondPart.split('');
+
+        // First part
+        let spanIndex = 0;
+        for (let i = 0; i < firstChars.length && spanIndex < spans.length; i++, spanIndex++) {
+          const span = spans[spanIndex];
+          if (firstChars[i] === ' ') {
+            span.textContent = '\u00A0'; // Non-breaking space
+            await new Promise(r => setTimeout(r, 25)); // Match final pause
+            continue;
+          }
+          for (let j = 0; j < 5; j++) {
+            if (span) {
+              span.textContent = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+              await new Promise(r => setTimeout(r, 16)); // 2x faster (33ms -> ~16ms)
+            }
+          }
+          if (span) {
+            span.textContent = firstChars[i];
+            await new Promise(r => setTimeout(r, 25)); // 2x faster (50ms -> 25ms)
+          }
         }
         await new Promise(r => setTimeout(r, 500)); // 500ms delay
-        for (let i = 0; i < secondPart.length; i++) {
-          element.textContent += secondPart[i];
-          await new Promise(r => setTimeout(r, speed));
+        // Second part
+        for (let i = 0; i < secondChars.length && spanIndex < spans.length; i++, spanIndex++) {
+          const span = spans[spanIndex];
+          if (secondChars[i] === ' ') {
+            span.textContent = '\u00A0'; // Non-breaking space
+            await new Promise(r => setTimeout(r, 25)); // Match final pause
+            continue;
+          }
+          for (let j = 0; j < 5; j++) {
+            if (span) {
+              span.textContent = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+              await new Promise(r => setTimeout(r, 16)); // 2x faster (33ms -> ~16ms)
+            }
+          }
+          if (span) {
+            span.textContent = secondChars[i];
+            await new Promise(r => setTimeout(r, 25)); // 2x faster (50ms -> 25ms)
+          }
         }
       } else {
-        // Type normally for other quotes
-        for (let i = 0; i < text.length; i++) {
-          element.textContent += text[i];
-          await new Promise(r => setTimeout(r, speed));
+        // Other quotes
+        for (let i = 0; i < chars.length && i < spans.length; i++) {
+          const span = spans[i];
+          if (chars[i] === ' ') {
+            span.textContent = '\u00A0'; // Non-breaking space
+            await new Promise(r => setTimeout(r, 25)); // Match final pause
+            continue;
+          }
+          for (let j = 0; j < 5; j++) {
+            if (span) {
+              span.textContent = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+              await new Promise(r => setTimeout(r, 16)); // 2x faster (33ms -> ~16ms)
+            }
+          }
+          if (span) {
+            span.textContent = chars[i];
+            await new Promise(r => setTimeout(r, 25)); // 2x faster (50ms -> 25ms)
+          }
         }
       }
     }
 
     async function playSequence() {
       for (const quote of quotes) {
-        quoteDiv.style.opacity = 1;
         await typeQuote(quote, quoteDiv);
         await new Promise(r => setTimeout(r, 3000)); // Display for 3 seconds after typing
         quoteDiv.style.opacity = 0;
         await new Promise(r => setTimeout(r, 1000)); // Wait 1 second for fade-out
+        quoteDiv.innerHTML = ''; // Clear spans for next quote
       }
       loginDiv.style.opacity = 1;
       loginDiv.querySelectorAll('input, button').forEach(el => {
-        el.style.animation = 'slideIn 0.5s ease-in-out';
+        el.style.animation = 'scaleIn 0.5s ease-out';
       });
     }
 
@@ -426,12 +537,12 @@
 
     window.addEventListener('resize', resizeCanvases);
 
-    // Slide-in animation for login elements
+    // Scale-in animation for login elements
     const styleSheet = document.createElement('style');
     styleSheet.textContent = `
-      @keyframes slideIn {
-        from { transform: translateY(20px); opacity: 0; }
-        to { transform: translateY(0); opacity: 1; }
+      @keyframes scaleIn {
+        from { transform: translate(-50%, -50%) scale(0.95); opacity: 0; }
+        to { transform: translate(-50%, -50%) scale(1); opacity: 1; }
       }
     `;
     document.head.appendChild(styleSheet);
