@@ -1,0 +1,206 @@
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Matrix</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: black;
+      height: 100%;
+      overflow: hidden;
+      font-family: 'Courier New', monospace;
+      color: #00ff00;
+    }
+    canvas {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+    #overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: black;
+      color: #00ff00;
+      font-size: 2rem;
+      cursor: pointer;
+      z-index: 2;
+      transition: opacity 1s;
+    }
+    #quote {
+      position: absolute;
+      bottom: 20%;
+      width: 100%;
+      text-align: center;
+      font-size: 1.5rem;
+      color: #00ff00;
+      opacity: 0;
+      z-index: 1;
+      text-shadow: 0 0 15px #00ff00, 0 0 25px #00ff00;
+      transition: opacity 1s;
+    }
+    #enter {
+      position: absolute;
+      bottom: 40%;
+      width: 100%;
+      text-align: center;
+      font-size: 2rem;
+      color: #00ff00;
+      text-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00;
+      cursor: pointer;
+      opacity: 0;
+      z-index: 1;
+      transition: opacity 2s;
+    }
+    @media (max-width: 768px) {
+      #quote { font-size: 1.2rem; }
+      #enter { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <canvas id="matrix"></canvas>
+  <div id="overlay">Take the Red Pill</div>
+  <div id="quote"></div>
+  <div id="enter" onclick="window.location.href='https://www.youtube.com/watch?v=xvFZjo5PgG0'">ENTER</div>
+
+  <script>
+    const canvas = document.getElementById('matrix');
+    const ctx = canvas.getContext('2d');
+
+    function resizeCanvas() {
+      canvas.height = window.innerHeight;
+      canvas.width = window.innerWidth;
+      drops.length = Math.floor(canvas.width / fontSize);
+      drops.fill(1);
+    }
+
+    const katakana = 'アァイィウヴエェオカガキギクグケゲコゴサザシジスズセゼソゾタダチッヂツヅテデトドナニヌネノハバパヒビピフブプヘベペホボポマミムメモヤユヨラリルレロワヲン';
+    const latin = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const nums = '0123456789';
+    const alphabet = katakana + latin + nums;
+
+    const fontSize = 16;
+    let drops = [];
+    resizeCanvas();
+
+    function draw() {
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.fillStyle = '#0F0';
+      ctx.font = `${fontSize}px monospace`;
+
+      for (let i = 0; i < drops.length; i++) {
+        const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+          drops[i] = 0;
+        }
+        drops[i]++;
+      }
+    }
+
+    let matrixInterval;
+
+    const overlay = document.getElementById('overlay');
+    const quoteDiv = document.getElementById('quote');
+    const enterDiv = document.getElementById('enter');
+
+    const quotes = [
+      { text: '"What is real? How do you define real?"', audio: 'https://drive.google.com/uc?export=download&id=1HC3CUn9IDb2vvBpWDFzfPlxQN5i_jOb-' },
+      { text: '"This is your last chance. After this, there is no turning back."', audio: 'https://drive.google.com/uc?export=download&id=1CUa1n6N8vq5I96GK5fivsgowxkBq2EjE' },
+      { text: '"You take the red pill—you stay in Wonderland."', audio: 'https://drive.google.com/uc?export=download&id=1YkNtFtQQtukaO2kZFG4VnFgtCV1A6VN1' },
+      { text: '"The Matrix is everywhere. It is all around us."', audio: 'https://drive.google.com/uc?export=download&id=1cs6WaBNtMbKTCXGrj98rEAifK4o_DYsX' }
+    ];
+
+    async function playSequence() {
+      for (const q of quotes) {
+        quoteDiv.textContent = q.text;
+        quoteDiv.style.opacity = 1;
+
+        try {
+          const audio = new Audio(q.audio);
+          audio.onerror = () => console.error(`Failed to load audio: ${q.audio}`);
+          await audio.play();
+          await new Promise(resolve => {
+            audio.onended = resolve;
+            audio.onerror = resolve;
+          });
+          // Keep quote displayed for 3 seconds after audio ends
+          await new Promise(r => setTimeout(r, 3000));
+        } catch (e) {
+          console.error(`Error playing audio: ${e.message}`);
+          // Display quote for 5 seconds if audio fails
+          await new Promise(r => setTimeout(r, 5000));
+        }
+
+        quoteDiv.style.opacity = 0;
+        // Wait 1 second for fade-out before next quote
+        await new Promise(r => setTimeout(r, 1000));
+      }
+      enterDiv.style.opacity = 1;
+    }
+
+    overlay.addEventListener('click', () => {
+      overlay.style.opacity = 0;
+      setTimeout(() => { overlay.style.display = 'none'; }, 1000);
+      if (!matrixInterval) {
+        matrixInterval = setInterval(draw, 35);
+      }
+      playSequence();
+    });
+
+    window.addEventListener('resize', resizeCanvas);
+  </script>
+</body>
+</html>
