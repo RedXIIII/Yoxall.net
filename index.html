@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#050608" />
-  <title>Letter mask · Yoxall</title>
+  <title>Yoxall.net · Making Stuff You Like!</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@500;600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -444,6 +444,17 @@
       align-items: center;
       margin-top: 1.1rem;
     }
+    .upload-note {
+      font-family: "Caveat", cursive;
+      font-size: 1.05rem;
+      color: var(--muted);
+      margin-top: 0.75rem;
+      line-height: 1.3;
+    }
+    .upload-note a {
+      color: var(--teal);
+      text-decoration: underline;
+    }
     .status {
       font-family: "IBM Plex Mono", monospace;
       font-size: 0.72rem;
@@ -538,7 +549,7 @@
     <!-- Full colour composite (downloadable) -->
     <div class="preview-row">
       <div class="preview-head">
-        <h2>Composite (Final image preview)</h2>
+        <h2>Composite (Final Image Preview)</h2>
         <span class="rule" aria-hidden="true"></span>
       </div>
       <div class="preview-wrap">
@@ -548,6 +559,10 @@
         <button type="button" class="btn" id="btnDownload" disabled>Download PNG</button>
         <button type="button" class="btn secondary" id="btnEmail" disabled>Upload to workshop</button>
       </div>
+      <p class="upload-note">
+        Upload feature currently offline.<br>
+        Please <a href="mailto:karl@yoxall.net">Email PNG to karl@yoxall.net</a>
+      </p>
     </div>
 
     <!-- Lithophane simulation preview with contrast slider -->
@@ -666,7 +681,7 @@
   }
 
   let slots = [];
-  let currentContrast = 1.2; // default value
+  let currentContrast = 1.2;
 
   function allowedChars(word) {
     return word.toUpperCase().split("").filter(c => /[A-Z0-9]/.test(c));
@@ -967,8 +982,6 @@
       const g = data[i + 1];
       const b = data[i + 2];
       let gray = Math.round(0.299 * r + 0.587 * g + 0.114 * b);
-
-      // Apply current contrast
       gray = Math.max(0, Math.min(255, (gray - 128) * currentContrast + 128));
 
       data[i] = gray;
@@ -1322,7 +1335,6 @@
     }
   }
 
-  // Event listeners
   wordInput.addEventListener("input", () => rebuild(slots.slice()));
   outlineRange.addEventListener("input", () => {
     outlineVal.textContent = formatOutlinePxLabel();
@@ -1330,14 +1342,11 @@
   });
   outlineColorSelect.addEventListener("change", renderAll);
   fontFamilySelect.addEventListener("change", () => rebuild(slots.slice()));
-
-  // Contrast slider
   contrastRange.addEventListener("input", () => {
     currentContrast = parseFloat(contrastRange.value);
     contrastVal.textContent = formatContrastLabel();
     renderLithophanePreview();
   });
-
   btnResetWord.addEventListener("click", resetTransforms);
   btnDownload.addEventListener("click", () => {
     setStatus("");
@@ -1357,7 +1366,6 @@
   });
   btnEmail.addEventListener("click", submitEmail);
 
-  // Initial setup
   outlineVal.textContent = formatOutlinePxLabel();
   contrastVal.textContent = formatContrastLabel();
   fontFamilySelect.value = "anton";
