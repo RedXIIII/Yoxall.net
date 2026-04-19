@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#050608" />
-  <title>Yoxall Industries · 3D Design</title>
+  <title>Letter mask · Yoxall</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@500;600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -510,12 +510,12 @@
       <div class="field label-readable">
         <label for="fontFamilySelect">Select font</label>
         <select id="fontFamilySelect" aria-label="Select font">
-          <option value="impact" selected>Impact (classic)</option>
+          <option value="anton" selected>Anton (modern — best for mobile users)</option>
+          <option value="impact">Impact (Best — may vary on mobile)</option>
           <option value="arialBlack">Arial Black</option>
           <option value="haettenschweiler">Haettenschweiler (super narrow)</option>
           <option value="franklin">Franklin Gothic Heavy</option>
           <option value="cooper">Cooper Black (chunky)</option>
-          <option value="anton">Anton (modern bold)</option>
         </select>
       </div>
       <div class="field label-readable">
@@ -538,7 +538,7 @@
     <!-- Full colour composite (downloadable) -->
     <div class="preview-row">
       <div class="preview-head">
-        <h2>Composite (what you download)</h2>
+        <h2>Composite (Final image preview)</h2>
         <span class="rule" aria-hidden="true"></span>
       </div>
       <div class="preview-wrap">
@@ -550,7 +550,7 @@
       </div>
     </div>
 
-    <!-- Lithophane simulation preview -->
+    <!-- Lithophane simulation preview with contrast slider -->
     <div class="preview-row">
       <div class="preview-head">
         <h2>Lithophane preview (back-lit simulation)</h2>
@@ -559,7 +559,12 @@
       <div class="preview-wrap">
         <canvas id="lithophaneCanvas" width="800" height="320"></canvas>
       </div>
-      <p class="brand-product thanks-foot">This is only a simulation — your final lithophane will look close to this when back-lit</p>
+      <div class="field label-readable" style="margin-top: 1rem;">
+        <label for="contrastRange">Contrast</label>
+        <input id="contrastRange" type="range" min="0.5" max="4" value="1.2" step="0.1" aria-label="Lithophane contrast" />
+        <span id="contrastVal" class="val-pill">1.2x</span>
+      </div>
+      <p class="brand-product thanks-foot">This is only a simulation — your final lithophane will look close when back-lit</p>
     </div>
 
     <p class="brand-product thanks-foot">Thanks x</p>
@@ -580,6 +585,8 @@
   const fontFamilySelect = document.getElementById("fontFamilySelect");
   const exportCanvas = document.getElementById("exportCanvas");
   const lithophaneCanvas = document.getElementById("lithophaneCanvas");
+  const contrastRange = document.getElementById("contrastRange");
+  const contrastVal = document.getElementById("contrastVal");
   const btnResetWord = document.getElementById("btnResetWord");
   const btnDownload = document.getElementById("btnDownload");
   const btnEmail = document.getElementById("btnEmail");
@@ -645,20 +652,21 @@
   }
 
   const FONT_STACKS = {
+    anton: 'Anton, sans-serif',
     impact: 'Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif',
     arialBlack: '"Arial Black", Gadget, sans-serif',
     haettenschweiler: 'Haettenschweiler, "Franklin Gothic Heavy", Impact, sans-serif',
     franklin: '"Franklin Gothic Heavy", "Arial Black", Impact, sans-serif',
-    cooper: '"Cooper Black", "Arial Black", Impact, sans-serif',
-    anton: 'Anton, sans-serif'
+    cooper: '"Cooper Black", "Arial Black", Impact, sans-serif'
   };
 
   function getFontStack() {
     const k = fontFamilySelect.value;
-    return FONT_STACKS[k] || FONT_STACKS.impact;
+    return FONT_STACKS[k] || FONT_STACKS.anton;
   }
 
   let slots = [];
+  let currentContrast = 1.2; // default value
 
   function allowedChars(word) {
     return word.toUpperCase().split("").filter(c => /[A-Z0-9]/.test(c));
@@ -688,6 +696,10 @@
     const v = Number(outlineRange.value);
     const s = Number.isInteger(v) ? String(v) : v.toFixed(1);
     return `${s}px`;
+  }
+
+  function formatContrastLabel() {
+    return currentContrast.toFixed(1) + "x";
   }
 
   function getOutlineColor() {
@@ -937,7 +949,6 @@
     renderLithophanePreview();
   }
 
-  /** FIXED Lithophane preview — no inversion, strong contrast for realistic back-lit look */
   function renderLithophanePreview() {
     const innerW = PREVIEW_INNER_W;
     const innerH = innerHeightPreviewPx();
@@ -946,7 +957,6 @@
     lithophaneCanvas.height = Math.max(1, innerH);
     const lctx = lithophaneCanvas.getContext("2d");
 
-    // Copy the exact composite
     lctx.drawImage(exportCanvas, 0, 0);
 
     const imageData = lctx.getImageData(0, 0, lithophaneCanvas.width, lithophaneCanvas.height);
@@ -956,12 +966,10 @@
       const r = data[i];
       const g = data[i + 1];
       const b = data[i + 2];
-
-      // Grayscale (no inversion — brighter photo = brighter light transmission)
       let gray = Math.round(0.299 * r + 0.587 * g + 0.114 * b);
 
-      // Strong contrast boost (typical lithophane "dramatic" look)
-      gray = Math.max(0, Math.min(255, (gray - 128) * 2.4 + 128));
+      // Apply current contrast
+      gray = Math.max(0, Math.min(255, (gray - 128) * currentContrast + 128));
 
       data[i] = gray;
       data[i + 1] = gray;
@@ -1314,6 +1322,7 @@
     }
   }
 
+  // Event listeners
   wordInput.addEventListener("input", () => rebuild(slots.slice()));
   outlineRange.addEventListener("input", () => {
     outlineVal.textContent = formatOutlinePxLabel();
@@ -1321,6 +1330,14 @@
   });
   outlineColorSelect.addEventListener("change", renderAll);
   fontFamilySelect.addEventListener("change", () => rebuild(slots.slice()));
+
+  // Contrast slider
+  contrastRange.addEventListener("input", () => {
+    currentContrast = parseFloat(contrastRange.value);
+    contrastVal.textContent = formatContrastLabel();
+    renderLithophanePreview();
+  });
+
   btnResetWord.addEventListener("click", resetTransforms);
   btnDownload.addEventListener("click", () => {
     setStatus("");
@@ -1340,8 +1357,10 @@
   });
   btnEmail.addEventListener("click", submitEmail);
 
+  // Initial setup
   outlineVal.textContent = formatOutlinePxLabel();
-  fontFamilySelect.value = "impact";
+  contrastVal.textContent = formatContrastLabel();
+  fontFamilySelect.value = "anton";
   rebuild();
 })();
   </script>
