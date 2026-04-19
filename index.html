@@ -1,662 +1,1440 @@
-<script type="text/javascript">
-        var gk_isXlsx = false;
-        var gk_xlsxFileLookup = {};
-        var gk_fileData = {};
-        function filledCell(cell) {
-          return cell !== '' && cell != null;
-        }
-        function loadFileData(filename) {
-        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
-            try {
-                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
-                var firstSheetName = workbook.SheetNames[0];
-                var worksheet = workbook.Sheets[firstSheetName];
-
-                // Convert sheet to JSON to filter blank rows
-                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
-                // Filter out blank rows (rows where all cells are empty, null, or undefined)
-                var filteredData = jsonData.filter(row => row.some(filledCell));
-
-                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
-                var headerRowIndex = filteredData.findIndex((row, index) =>
-                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
-                );
-                // Fallback
-                if (headerRowIndex === -1 || headerRowIndex > 25) {
-                  headerRowIndex = 0;
-                }
-
-                // Convert filtered JSON back to CSV
-                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
-                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
-                return csv;
-            } catch (e) {
-                console.error(e);
-                return "";
-            }
-        }
-        return gk_fileData[filename] || "";
-        }
-        </script><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yoxall</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#050608" />
+  <title>Letter mask · Yoxall</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
-    html, body {
+    :root {
+      --void: #050608;
+      --bg: #080a0e;
+      --elev: #0d1018;
+      --panel: rgba(12, 15, 22, 0.72);
+      --panel-solid: #0c0f16;
+      --border: rgba(230, 237, 243, 0.08);
+      --border-bright: rgba(94, 234, 212, 0.22);
+      --text: #e8ecf1;
+      --muted: #8b95a5;
+      --teal: #2dd4bf;
+      --teal-dim: rgba(45, 212, 191, 0.12);
+      --amber: #d4a574;
+      --amber-bright: #e8bc8c;
+      --amber-deep: #9a6b3f;
+      --shadow-glow: 0 0 32px rgba(45, 212, 191, 0.06);
+    }
+    * { box-sizing: border-box; }
+    html { color-scheme: dark; }
+    body {
       margin: 0;
-      padding: 0;
-      background: black;
-      height: 100%;
-      overflow: hidden;
-      font-family: 'Courier New', monospace;
-      color: #00ff00;
-      cursor: none; /* Hide default cursor */
+      font-family: "IBM Plex Sans", system-ui, sans-serif;
+      background: var(--void);
+      color: var(--text);
+      line-height: 1.45;
+      min-height: 100vh;
+      position: relative;
     }
-    canvas {
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 0;
-    }
-    #background-canvas {
-      opacity: 0.1; /* Faint background terminal noise */
-      z-index: 0;
-    }
-    #cursor {
+    /* Subtle datum grid — texture, not gimmick */
+    body::before {
+      content: "";
       position: fixed;
-      width: 8px;
-      height: 16px;
-      background: #00ff00;
-      box-shadow: 0 0 5px #00ff00;
-      z-index: 1000;
-      animation: blink 0.7s infinite;
+      inset: 0;
       pointer-events: none;
+      z-index: 0;
+      opacity: 0.35;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+      background-size: 56px 56px;
+      mask-image: radial-gradient(ellipse 85% 70% at 50% 0%, black 0%, transparent 72%);
     }
-    @keyframes blink {
-      50% { opacity: 0; }
+    .app-shell {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
-    #boot-screen {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: black;
-      color: #00ff00;
-      font-family: 'Courier New', monospace;
-      display: none; /* Initially hidden */
-      text-align: left;
-      z-index: 3;
-      transition: opacity 1s;
-      padding: 20px;
-      white-space: pre-wrap;
-      font-size: clamp(0.7rem, 2.5vw, 0.9rem);
+    header.top-bar {
+      padding: 1.1rem 1.5rem 1.25rem;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, rgba(13, 16, 24, 0.95) 0%, rgba(8, 10, 14, 0.88) 100%);
+      backdrop-filter: blur(12px);
     }
-    #boot-content {
-      text-align: left;
+    header.top-bar::after {
+      content: "";
+      display: block;
+      height: 1px;
+      margin-top: 1rem;
+      background: linear-gradient(90deg, transparent, var(--border-bright), transparent);
+      opacity: 0.5;
     }
-    #boot-cursor {
+    .brand {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.65rem 1rem;
+    }
+    .brand-logo-link {
+      display: flex;
+      align-items: center;
+      line-height: 1.2;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: opacity 0.15s, filter 0.15s;
+    }
+    .brand-logo-link:hover {
+      opacity: 0.92;
+    }
+    .brand-logo-link:hover .brand-wordmark::after {
+      opacity: 1;
+    }
+    .brand-logo-link:focus-visible {
+      outline: 1px solid rgba(45, 212, 191, 0.65);
+      outline-offset: 4px;
+    }
+    /* Vector-free wordmark: always uses the same tokens as the rest of the UI */
+    .brand-wordmark {
+      font-family: "IBM Plex Sans", system-ui, sans-serif;
+      font-weight: 600;
+      font-size: clamp(1.12rem, 3.3vw, 1.62rem);
+      letter-spacing: 0.2em;
+      color: var(--text);
+      text-transform: none;
       display: inline-block;
-      width: 10px;
-      height: 1em;
-      background: #00ff00;
-      animation: blink 0.7s infinite;
+      position: relative;
+      padding-bottom: 0.42rem;
     }
-    #overlay {
+    .brand-wordmark::first-letter {
+      color: var(--teal);
+      font-weight: 600;
+    }
+    .brand-wordmark::after {
+      content: "";
       position: absolute;
-      top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
+      bottom: 0;
+      height: 1px;
+      background: linear-gradient(
+        90deg,
+        var(--teal) 0%,
+        rgba(45, 212, 191, 0.2) 38%,
+        var(--amber) 100%
+      );
+      opacity: 0.88;
+      transition: opacity 0.15s;
+    }
+    .brand-product {
+      margin: 0;
+      font-family: "Caveat", cursive;
+      font-size: clamp(0.88rem, 2.1vw, 1rem);
+      font-weight: 600;
+      font-style: normal;
+      letter-spacing: 0.01em;
+      line-height: 1.25;
+      color: var(--muted);
+      padding-left: 0.85rem;
+      border-left: 1px solid var(--border);
+      max-width: min(28rem, 100%);
+    }
+    .thanks-foot {
+      margin: 1rem 0 0;
+      padding-left: 0;
+      border-left: none;
+    }
+    main {
+      flex: 1;
+      padding: 1.35rem 1.5rem 2.75rem;
+      max-width: 1680px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 1.35rem;
+      align-items: flex-end;
+      margin-bottom: 1.35rem;
+    }
+    .field label {
+      display: block;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.65rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+    }
+    .field.label-readable label {
+      font-family: "IBM Plex Sans", system-ui, sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      text-transform: none;
+      letter-spacing: 0.02em;
+    }
+    .field input[type="text"] {
+      width: min(100%, 280px);
+      padding: 0.55rem 0.75rem;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      background: var(--elev);
+      color: var(--text);
+      font-size: 1rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .field input[type="text"]:focus {
+      outline: none;
+      border-color: rgba(212, 165, 116, 0.45);
+      box-shadow: 0 0 0 1px rgba(212, 165, 116, 0.15);
+    }
+    input[type="range"] {
+      accent-color: var(--teal);
+    }
+    .field input[type="range"] {
+      width: 148px;
+      vertical-align: middle;
+    }
+    .field select {
+      padding: 0.5rem 0.65rem;
+      border-radius: 2px;
+      border: 1px solid var(--border);
+      background: var(--elev);
+      color: var(--text);
+      font-size: 0.875rem;
+      min-width: 10.5rem;
+      cursor: pointer;
+      transition: border-color 0.15s;
+    }
+    .field select:focus {
+      outline: none;
+      border-color: rgba(45, 212, 191, 0.35);
+    }
+    .field input[type="number"].zoom-num {
+      width: 4rem;
+      padding: 0.35rem 0.45rem;
+      border-radius: 2px;
+      border: 1px solid var(--border);
+      background: var(--elev);
+      color: var(--text);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.78rem;
+    }
+    .val-pill {
+      display: inline-block;
+      margin-left: 0.35rem;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.7rem;
+      color: var(--teal);
+      opacity: 0.9;
+    }
+    .btn {
+      cursor: pointer;
+      border: none;
+      border-radius: 2px;
+      padding: 0.58rem 1.15rem;
+      font-family: "IBM Plex Sans", sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      background: linear-gradient(165deg, var(--amber-bright) 0%, var(--amber) 42%, var(--amber-deep) 100%);
+      color: #0a0604;
+      box-shadow: var(--shadow-glow), inset 0 1px 0 rgba(255, 255, 255, 0.22);
+      transition: filter 0.15s, transform 0.1s;
+    }
+    .btn:hover:not(:disabled) {
+      filter: brightness(1.06);
+    }
+    .btn:active:not(:disabled) {
+      transform: translateY(1px);
+    }
+    .btn:disabled {
+      opacity: 0.38;
+      cursor: not-allowed;
+      filter: grayscale(0.3);
+    }
+    .btn.secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+      box-shadow: none;
+      font-weight: 500;
+    }
+    .btn.secondary:hover:not(:disabled) {
+      border-color: rgba(45, 212, 191, 0.35);
+      background: var(--teal-dim);
+    }
+    .btn.small {
+      padding: 0.32rem 0.5rem;
+      font-size: 0.78rem;
+      min-width: 2.1rem;
+    }
+    .letters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.1rem;
+      align-items: flex-start;
+    }
+    .letter-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      padding: 0.85rem;
+      width: fit-content;
+      min-width: 5.5rem;
+      max-width: min(22rem, 100%);
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+    }
+    .letter-card .glyph {
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      font-weight: bold;
+      font-size: 1.5rem;
+      text-align: center;
+      color: var(--muted);
+      user-select: none;
+      letter-spacing: 0.02em;
+    }
+    .letter-card .viewport {
+      border-radius: 2px;
+      overflow: hidden;
+      background: #040508;
+      border: 1px solid var(--border);
       display: flex;
       justify-content: center;
       align-items: center;
-      background: black;
-      color: #00ff00;
-      font-size: clamp(1.5rem, 5vw, 2rem);
-      cursor: none;
+      width: 100%;
+      box-shadow: inset 0 0 0 1px rgba(45, 212, 191, 0.04);
+    }
+    .letter-card canvas {
+      display: block;
+      width: auto;
+      height: auto;
+      max-height: 29rem;
+      max-width: 100%;
+      cursor: grab;
+      touch-action: none;
+    }
+    .letter-card canvas:active { cursor: grabbing; }
+    .zoom-row {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      flex-wrap: wrap;
+    }
+    .zoom-row .zoom-val {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.7rem;
+      color: var(--muted);
+      min-width: 3rem;
+    }
+    .zoom-row input[type="range"] {
+      flex: 1;
+      min-width: 80px;
+      height: 1.35rem;
+    }
+    .letter-card .actions {
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+    .letter-card .actions .btn.ghost-clear {
+      font-size: 0.76rem;
+      padding: 0.42rem 0.55rem;
+      font-weight: 500;
+    }
+    .letter-card .actions label.file {
+      display: block;
+      text-align: center;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.45rem;
+      border-radius: 2px;
+      border: 1px dashed rgba(230, 237, 243, 0.14);
+      color: var(--muted);
+      cursor: pointer;
+      transition: border-color 0.15s, color 0.15s, background 0.15s;
+    }
+    .letter-card .actions label.file:hover {
+      border-color: rgba(45, 212, 191, 0.35);
+      color: var(--teal);
+      background: var(--teal-dim);
+    }
+    .letter-card .actions input[type="file"] { display: none; }
+    .preview-row {
+      margin-top: 2.25rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+    .preview-head {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+    .preview-head h2 {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.68rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--muted);
+      margin: 0;
+    }
+    .preview-head .rule {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, var(--border), transparent);
+    }
+    .preview-wrap {
+      position: relative;
+      background: var(--panel-solid);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      padding: 1rem 1.1rem;
+      overflow: auto;
+      box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.45);
+    }
+    /* Corner ticks — readout frame, not decoration overload */
+    .preview-wrap::before,
+    .preview-wrap::after {
+      content: "";
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      border-color: rgba(45, 212, 191, 0.35);
+      border-style: solid;
+      pointer-events: none;
       z-index: 2;
-      transition: opacity 1s;
     }
-    #quote {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+    .preview-wrap::before {
+      top: 6px;
+      left: 6px;
+      border-width: 1px 0 0 1px;
+    }
+    .preview-wrap::after {
+      bottom: 6px;
+      right: 6px;
+      border-width: 0 1px 1px 0;
+    }
+    #exportCanvas {
+      display: block;
       width: 100%;
-      max-width: clamp(300px, 80vw, 600px);
-      text-align: center;
-      font-size: clamp(1.2rem, 3.5vw, 1.8rem);
-      color: #00ff00;
-      opacity: 0;
+      max-width: 100%;
+      height: auto;
+      border-radius: 1px;
+      border: 1px solid rgba(0, 0, 0, 0.5);
+      background: #030406;
+      position: relative;
       z-index: 1;
-      text-shadow: 0 0 8px #00ff00, 0 0 15px #00ff00;
-      font-family: 'Courier New', monospace;
-      padding: 15px;
-      transition: opacity 1s;
-      white-space: pre-wrap; /* Preserve spaces */
     }
-    .quote-char {
-      display: inline-block;
-      transition: all 0.1s;
-      min-width: 0.5em; /* Ensure space for characters, including spaces */
+    .export-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      align-items: center;
+      margin-top: 1.1rem;
     }
-    #login {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 100%;
-      max-width: clamp(300px, 80vw, 400px);
-      text-align: center;
-      color: #00ff00;
-      font-size: clamp(0.9rem, 2.5vw, 1.2rem);
-      opacity: 0;
-      z-index: 1;
-      transition: opacity 2s, color 0.5s, text-shadow 0.5s;
+    .status {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+      margin-top: 0.85rem;
+      min-height: 1.2rem;
+      color: var(--muted);
     }
-    #login input {
-      background: black;
-      border: 1px solid #00ff00;
-      color: #00ff00;
-      font-family: 'Courier New', monospace;
-      font-size: clamp(0.8rem, 2vw, 1rem);
-      padding: 8px;
-      margin: 10px 0;
-      width: 80%;
-      text-align: center;
-      box-shadow: 0 0 10px #00ff00;
-      transition: border-color 0.5s, color 0.5s, box-shadow 0.5s, transform 0.1s;
+    .status.ok { color: #5eead4; }
+    .status.err { color: #f0a8a8; }
+    .empty-state {
+      color: var(--muted);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.75rem 0 0;
     }
-    #login button {
-      background: black;
-      border: 1px solid #00ff00;
-      color: #00ff00;
-      font-family: 'Courier New', monospace;
-      font-size: clamp(0.8rem, 2vw, 1rem);
-      padding: 8px 20px;
-      cursor: none;
-      box-shadow: 0 0 10px #00ff00;
-      transition: all 0.3s, transform 0.1s;
-    }
-    #login button:hover {
-      background: #00ff00;
-      color: black;
-      box-shadow: 0 0 15px #00ff00;
-    }
-    #error-message {
-      margin-top: 10px;
-      font-size: clamp(0.8rem, 2vw, 1rem);
-      opacity: 0;
-      transition: opacity 0.5s;
-    }
-    #all-seeing-eye {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 15px; /* Smaller size */
-      height: 15px;
-      z-index: 1;
-      opacity: 0; /* Initially hidden */
-      transition: opacity 1s;
-      cursor: none;
-    }
-    #hacking-screen {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: black;
-      display: none;
-      z-index: 4;
-      color: #00ff00;
-      font-family: 'Courier New', monospace;
-      padding: 20px;
-      overflow: hidden;
-    }
-    #hacking-content {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      z-index: 5;
-      white-space: pre-wrap;
-    }
-    .error {
-      color: #ff0000 !important;
-      text-shadow: 0 0 15px #ff0000, 0 0 25px #ff0000 !important;
-      animation: glitch 0.3s ease-in-out 2;
-    }
-    .error input, .error button {
-      border-color: #ff0000 !important;
-      color: #ff0000 !important;
-      box-shadow: 0 0 10px #ff0000 !important;
-      animation: glitch 0.3s ease-in-out 2;
-    }
-    .error button:hover {
-      background: #ff0000 !important;
-      color: black !important;
-      box-shadow: 0 0 15px #ff0000 !important;
-    }
-    @keyframes glitch {
-      0% { transform: translate(0); }
-      20% { transform: translate(-2px, 2px); }
-      40% { transform: translate(2px, -2px); }
-      60% { transform: translate(-1px, 1px); }
-      80% { transform: translate(1px, -1px); }
-      100% { transform: translate(0); }
-    }
-    @media (max-width: 768px) {
-      #boot-screen { font-size: clamp(0.6rem, 2vw, 0.8rem); }
-      #overlay { font-size: clamp(1.2rem, 4vw, 1.5rem); }
-      #quote { font-size: clamp(0.9rem, 2.5vw, 1.3rem); }
-      #login { max-width: clamp(250px, 90vw, 350px); }
-      #login input, #login button, #error-message { font-size: clamp(0.7rem, 2vw, 0.9rem); }
-      #all-seeing-eye { width: 10px; height: 10px; }
+    .btn:focus-visible,
+    .field input:focus-visible,
+    .field select:focus-visible {
+      outline: 1px solid rgba(45, 212, 191, 0.65);
+      outline-offset: 2px;
     }
   </style>
 </head>
 <body>
-  <canvas id="background-canvas"></canvas>
-  <canvas id="matrix"></canvas>
-  <div id="cursor"></div>
-  <div id="boot-screen">
-    <div id="boot-content"></div>
-    <span id="boot-cursor"></span>
-  </div>
-  <div id="overlay">Take the Red Pill</div>
-  <div id="quote"></div>
-  <div id="login">
-    <div>ACCESS REQUIRED</div>
-    <input type="text" id="username" placeholder="USERNAME" autocomplete="off" style="animation-delay: 0.1s;">
-    <input type="password" id="password" placeholder="PASSWORD" style="animation-delay: 0.2s;">
-    <button onclick="handleLogin()" style="animation-delay: 0.3s;">LOGIN</button>
-    <div id="error-message"></div>
-  </div>
-  <div id="all-seeing-eye" onclick="startHackingPrank()">
-    <svg width="100%" height="100%" viewBox="0 0 100 100">
-      <path d="M50 20 C70 20 90 40 90 50 C90 60 70 80 50 80 C30 80 10 60 10 50 C10 40 30 20 50 20 M50 35 C60 35 65 42 65 50 C65 58 60 65 50 65 C40 65 35 58 35 50 C35 42 40 35 50 35" fill="none" stroke="#00ff00" stroke-width="2"/>
-      <circle cx="50" cy="50" r="5" fill="#00ff00"/>
-    </svg>
-  </div>
-  <div id="hacking-screen">
-    <div id="hacking-content"></div>
+  <div class="app-shell">
+    <header class="top-bar">
+      <div class="brand">
+        <a class="brand-logo-link" href="https://yoxall.net/" target="_blank" rel="noopener noreferrer" aria-label="Yoxall — yoxall.net">
+          <span class="brand-wordmark">Yoxall</span>
+        </a>
+        <p class="brand-product">Making the stuff you like because we can!</p>
+      </div>
+    </header>
+    <main>
+    <div class="controls">
+      <div class="field label-readable">
+        <label for="wordInput">Enter name</label>
+        <input id="wordInput" type="text" maxlength="16" placeholder="HOME" autocomplete="off" spellcheck="false" aria-label="Enter name" />
+      </div>
+      <div class="field label-readable">
+        <label for="fontFamilySelect">Select font</label>
+        <select id="fontFamilySelect" aria-label="Select font">
+          <option value="impact" selected>Impact</option>
+          <option value="arialBlack">Arial Black</option>
+          <option value="haettenschweiler">Haettenschweiler</option>
+          <option value="franklin">Franklin Gothic Heavy</option>
+          <option value="britannic">Britannic Bold</option>
+          <option value="cooper">Cooper Black</option>
+          <option value="trebuchet">Trebuchet MS (bold)</option>
+        </select>
+      </div>
+      <div class="field label-readable">
+        <label for="outlineRange">Outline thickness</label>
+        <input id="outlineRange" type="range" min="0.5" max="16" value="2" step="0.5" aria-label="Outline thickness" />
+        <span id="outlineVal" class="val-pill">2px</span>
+      </div>
+      <div class="field label-readable">
+        <label for="outlineColorSelect">Outline colour</label>
+        <select id="outlineColorSelect" aria-label="Outline colour">
+          <option value="black" selected>Black</option>
+          <option value="white">White</option>
+        </select>
+      </div>
+      <button type="button" class="btn secondary" id="btnResetWord">Reset layout</button>
+    </div>
+    <div id="lettersHost" class="letters"></div>
+    <p id="emptyMsg" class="empty-state" hidden>Awaiting input</p>
+
+    <div class="preview-row">
+      <div class="preview-head">
+        <h2>Composite</h2>
+        <span class="rule" aria-hidden="true"></span>
+      </div>
+      <div class="preview-wrap">
+        <canvas id="exportCanvas" width="800" height="320"></canvas>
+      </div>
+      <div class="export-actions">
+        <button type="button" class="btn" id="btnDownload" disabled>Download PNG</button>
+        <button type="button" class="btn secondary" id="btnEmail" disabled>Upload to workshop</button>
+      </div>
+      <p class="brand-product thanks-foot">Thanks x</p>
+      <div class="status" id="statusLine" role="status"></div>
+    </div>
+    </main>
   </div>
 
   <script>
-    const matrixCanvas = document.getElementById('matrix');
-    const bgCanvas = document.getElementById('background-canvas');
-    const matrixCtx = matrixCanvas.getContext('2d');
-    const bgCtx = bgCanvas.getContext('2d');
+(function () {
+  /**
+   * Static hosting — uploads go through Formspree (free tier works for modest PNG sizes).
+   * 1. Create an account at https://formspree.io
+   * 2. New form → set “Send submissions to” to your Zoho address (e.g. you@yoxall.net)
+   * 3. Copy the form id from the integration URL (…/f/xxxxxxxx) and paste it below.
+   * 4. Deploy only the wwwroot/ folder; no server or SMTP required.
+   */
+  const FORMSPREE_FORM_ID = "";
 
-    function resizeCanvases() {
-      matrixCanvas.height = window.innerHeight;
-      matrixCanvas.width = window.innerWidth;
-      bgCanvas.height = window.innerHeight;
-      bgCanvas.width = window.innerWidth;
-      drops.length = Math.floor(matrixCanvas.width / fontSize);
-      drops.fill(1);
-      bgDrops.length = Math.floor(bgCanvas.width / bgFontSize);
-      bgDrops.fill(1);
+  const wordInput = document.getElementById("wordInput");
+  const lettersHost = document.getElementById("lettersHost");
+  const emptyMsg = document.getElementById("emptyMsg");
+  const outlineRange = document.getElementById("outlineRange");
+  const outlineVal = document.getElementById("outlineVal");
+  const outlineColorSelect = document.getElementById("outlineColorSelect");
+  const fontFamilySelect = document.getElementById("fontFamilySelect");
+  const exportCanvas = document.getElementById("exportCanvas");
+  const btnResetWord = document.getElementById("btnResetWord");
+  const btnDownload = document.getElementById("btnDownload");
+  const btnEmail = document.getElementById("btnEmail");
+  const statusLine = document.getElementById("statusLine");
+
+  /** Physical plate (mm) */
+  const MM_PLATE_W = 84;
+  const MM_PLATE_H = 52;
+  const MM_BORDER = 5;
+  /** Minimum gap between glyphs on the print (mm); keeps strokes from touching */
+  const EXPORT_GAP_MM = 0.032;
+  /** Inner printable area (mm) inside the 5 mm frame */
+  const MM_INNER_W = MM_PLATE_W - 2 * MM_BORDER;
+  const MM_INNER_H = MM_PLATE_H - 2 * MM_BORDER;
+  /** Combined preview: inner width in px (height follows plate aspect) */
+  const PREVIEW_INNER_W = 820;
+  /** Zoom UI: 1%–100% (photo scale inside mask) */
+  const ZOOM_MIN = 1;
+  const ZOOM_MAX = 100;
+  const SCALE_MIN = 0.01;
+  const SCALE_MAX = 1;
+
+  /** Current editor cell size — same aspect as one lithophane column for this word length */
+  let editorCellW = 220;
+  let editorCellH = 275;
+
+  /** Browser / canvas safety limits (strip is separate from final plate canvas) */
+  const MAX_STRIP_DIM = 8192;
+  const MAX_STRIP_PIXELS = 268435456;
+  /** Render export strip at this multiple of inner px (then scaled to inner) for sharper masks & photos */
+  const STRIP_SUPERSAMPLE = 2;
+
+  let cachedMaxDpi = 0;
+  function getMaxExportDpi() {
+    if (cachedMaxDpi > 0) return cachedMaxDpi;
+    const maxDim = 8192;
+    const maxArea = 268435456;
+    let dpi = Math.floor(Math.min((maxDim * 25.4) / MM_PLATE_W, (maxDim * 25.4) / MM_PLATE_H));
+    while (dpi >= 72) {
+      const W = Math.ceil((MM_PLATE_W * dpi) / 25.4);
+      const H = Math.ceil((MM_PLATE_H * dpi) / 25.4);
+      if (W <= maxDim && H <= maxDim && W * H <= maxArea) break;
+      dpi--;
     }
+    cachedMaxDpi = Math.max(72, dpi);
+    return cachedMaxDpi;
+  }
 
-    const katakana = 'アァイィウヴエェオカガキギクグケゲコゴサザシジスズセゼソゾタダチッヂツヅテデトドナニヌネノハバパヒビピフブプヘベペホボポマミムメモヤユヨラリルレロワヲン';
-    const latin = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    const nums = '0123456789';
-    const alphabet = katakana + latin + nums;
+  /** Shrink strip size proportionally if it exceeds canvas limits */
+  function clampStripDimensions(wIn, hIn) {
+    let w = Math.max(1, Math.round(wIn));
+    let h = Math.max(1, Math.round(hIn));
+    let s = 1;
+    if (w > MAX_STRIP_DIM) s = Math.min(s, MAX_STRIP_DIM / w);
+    if (h > MAX_STRIP_DIM) s = Math.min(s, MAX_STRIP_DIM / h);
+    if (w * h > MAX_STRIP_PIXELS) s = Math.min(s, Math.sqrt(MAX_STRIP_PIXELS / (w * h)));
+    w = Math.max(1, Math.floor(w * s));
+    h = Math.max(1, Math.floor(h * s));
+    return { w, h };
+  }
 
-    const fontSize = 16;
-    const bgFontSize = 12;
-    let drops = [];
-    let bgDrops = [];
-    resizeCanvases();
+  /** Plate & inner size in pixels at max export DPI */
+  function getExportPlatePixels() {
+    const dpi = getMaxExportDpi();
+    const ppm = dpi / 25.4;
+    const W = Math.round(MM_PLATE_W * ppm);
+    const H = Math.round(MM_PLATE_H * ppm);
+    const border = Math.round(MM_BORDER * ppm);
+    const innerW = Math.max(1, W - 2 * border);
+    const innerH = Math.max(1, H - 2 * border);
+    return { dpi, W, H, border, innerW, innerH };
+  }
 
-    function drawMatrix(ctx, canvas, fontSize, drops, isBackground = false) {
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+  /** Bold display stacks for all-caps masking (Impact default). */
+  const FONT_STACKS = {
+    impact: 'Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif',
+    arialBlack: '"Arial Black", Gadget, sans-serif',
+    haettenschweiler: 'Haettenschweiler, "Franklin Gothic Heavy", Impact, sans-serif',
+    franklin: '"Franklin Gothic Heavy", "Arial Black", Impact, sans-serif',
+    britannic: '"Britannic Bold", "Arial Black", Impact, sans-serif',
+    cooper: '"Cooper Black", "Arial Black", Impact, sans-serif',
+    trebuchet: '"Trebuchet MS", "Lucida Grande", "Arial Black", sans-serif',
+  };
 
-      const isError = loginDiv.classList.contains('error');
-      ctx.fillStyle = isError ? '#ff0000' : '#0F0';
-      ctx.font = `${fontSize}px monospace`;
+  function getFontStack() {
+    const k = fontFamilySelect && fontFamilySelect.value;
+    return FONT_STACKS[k] || FONT_STACKS.impact;
+  }
 
-      for (let i = 0; i < drops.length; i++) {
-        const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
-        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+  /** @type {{ char: string, img: HTMLImageElement | null, scale: number, ox: number, oy: number, cellW: number, cellH: number, layoutFontSize: number, canvas: HTMLCanvasElement, ctx: CanvasRenderingContext2D, fileInput: HTMLInputElement, zoomInput: HTMLInputElement, zoomNumber: HTMLInputElement, zoomLabel: HTMLElement, btnFit: HTMLButtonElement }[]} */
+  let slots = [];
 
-        drops[i]++;
-        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-          drops[i] = 0;
-        }
-      }
-    }
+  function allowedChars(word) {
+    return word.toUpperCase().split("").filter(c => /[A-Z0-9]/.test(c));
+  }
 
-    function draw() {
-      drawMatrix(matrixCtx, matrixCanvas, fontSize, drops);
-      drawMatrix(bgCtx, bgCanvas, bgFontSize, bgDrops, true);
-    }
-
-    let matrixInterval;
-
-    const cursor = document.getElementById('cursor');
-    const bootScreen = document.getElementById('boot-screen');
-    const bootContent = document.getElementById('boot-content');
-    const bootCursor = document.getElementById('boot-cursor');
-    const overlay = document.getElementById('overlay');
-    const quoteDiv = document.getElementById('quote');
-    const loginDiv = document.getElementById('login');
-    const errorMessage = document.getElementById('error-message');
-    const allSeeingEye = document.getElementById('all-seeing-eye');
-    const hackingScreen = document.getElementById('hacking-screen');
-    const hackingContent = document.getElementById('hacking-content');
-
-    const quotes = [
-      '"What is real? How do you define real?"',
-      '"This is your last chance. After   this, there is no turning back."',
-      '"You take the red pill, you stay   in Wonderland, and I show you how deep the rabbit hole goes."',
-      '"And dont you even get me started on the Pyramids..."'
+  /** Their word first, then random meme-y kebab (new pick each download) */
+  function exportPngFilename(rawWord) {
+    const w = (rawWord || "")
+      .toUpperCase()
+      .replace(/[^A-Z0-9]/g, "")
+      .slice(0, 24) || "YAY";
+    const memes = [
+      "cat-slayer",
+      "built-different",
+      "main-character-energy",
+      "certified-menace",
+      "chaos-gremlin",
+      "no-thoughts-head-empty",
+      "absolute-unit",
+      "just-vibes",
+      "based",
+      "goated-with-the-sauce",
+      "slay-king",
+      "legend-status",
+      "maxxing",
+      "core-memory",
+      "sending-it",
+      "era",
+      "locked-in",
+      "unhinged-but-correct",
+      "touch-grass-later",
+      "main-event",
+      "chef-kiss",
+      "its-giving-art",
+      "main-character",
+      "npc-repellent",
+      "sigma-grindset",
+      "full-send",
     ];
+    return `${w}-${memes[Math.floor(Math.random() * memes.length)]}.png`;
+  }
 
-    const bootMessages = [
-      "Yoxall Inc. Secure System v3.1.4\n",
-      "Copyright 1986 Yoxall Inc. All Rights Reserved.\n\n",
-      "Initializing Interface...\n\n",
-      "╔══════════════════════════════╗\n",
-      "║     YOXALL INC. BOOT MENU    ║\n",
-      "╚══════════════════════════════╝\n\n",
-      "[ OK ] Loading Kernel Modules...\n",
-      "[ OK ] Mounting Virtual Filesystem...\n",
-      "[ OK ] Initializing Network Protocols...\n",
-      "[ OK ] Establishing Secure Connection...\n",
-      "[ OK ] System Ready.\n\n",
-      "Booting into your mind...\n"
-    ];
+  function setStatus(text, kind) {
+    statusLine.textContent = text || "";
+    statusLine.className = "status" + (kind === "ok" ? " ok" : kind === "err" ? " err" : "");
+  }
 
-    async function typeBootMessages() {
-      bootContent.textContent = '';
-      bootCursor.style.display = 'inline-block';
-      for (const message of bootMessages) {
-        for (let i = 0; i < message.length; i++) {
-          bootContent.textContent += message[i];
-          await new Promise(r => setTimeout(r, 15)); // Faster typing
-        }
-        await new Promise(r => setTimeout(r, 200)); // Pause between lines
-      }
-      // Blink cursor for a bit before fading
-      await new Promise(r => setTimeout(r, 2000));
-      bootCursor.style.display = 'none';
-      bootScreen.style.opacity = 0;
-      setTimeout(() => {
-        bootScreen.style.display = 'none';
-        if (!matrixInterval) {
-          matrixInterval = setInterval(draw, 35);
-        }
-        waitForWaterfall();
-      }, 1000);
-    }
+  function innerHeightPreviewPx() {
+    return Math.round((PREVIEW_INNER_W * MM_INNER_H) / MM_INNER_W);
+  }
 
-    async function waitForWaterfall() {
-      while (Math.max(...drops) * fontSize < matrixCanvas.height) {
-        await new Promise(r => setTimeout(r, 100)); // Check every 100ms
-      }
-      await new Promise(r => setTimeout(r, 1000)); // Additional 1-second delay
-      allSeeingEye.style.opacity = 1; // Show eye after delay
-      playSequence();
-    }
+  /** Outline slider is “px at preview inner height”; scale to any raster height */
+  function outlinePxAtHeight(targetHPx) {
+    const ref = Math.max(1, innerHeightPreviewPx());
+    return Number(outlineRange.value) * (targetHPx / ref);
+  }
 
-    async function typeQuote(text, element) {
-      element.innerHTML = ''; // Clear previous content
-      element.style.opacity = 1;
-      const chars = text.split('');
-      const spans = [];
+  function formatOutlinePxLabel() {
+    const v = Number(outlineRange.value);
+    const s = Number.isInteger(v) ? String(v) : v.toFixed(1);
+    return `${s}px`;
+  }
 
-      // Create spans for each character, including spaces
-      chars.forEach(char => {
-        const span = document.createElement('span');
-        span.className = 'quote-char';
-        span.textContent = char === ' ' ? '\u00A0' : alphabet.charAt(Math.floor(Math.random() * alphabet.length));
-        element.appendChild(span);
-        spans.push(span);
-      });
+  /** Fully opaque stroke for lithophane (no gray fringe) */
+  function getOutlineColor() {
+    return outlineColorSelect.value === "white" ? "#ffffff" : "#000000";
+  }
 
-      if (text === '"What is real? How do you define real?"') {
-        const firstPart = '"What is real?"';
-        const secondPart = ' How do you define real?"';
-        const firstChars = firstPart.split('');
-        const secondChars = secondPart.split('');
-
-        // First part
-        let spanIndex = 0;
-        for (let i = 0; i < firstChars.length && spanIndex < spans.length; i++, spanIndex++) {
-          const span = spans[spanIndex];
-          if (firstChars[i] === ' ') {
-            span.textContent = '\u00A0'; // Non-breaking space
-            await new Promise(r => setTimeout(r, 25)); // Match final pause
-            continue;
-          }
-          for (let j = 0; j < 5; j++) {
-            if (span) {
-              span.textContent = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
-              await new Promise(r => setTimeout(r, 16)); // 2x faster (33ms -> ~16ms)
-            }
-          }
-          if (span) {
-            span.textContent = firstChars[i];
-            await new Promise(r => setTimeout(r, 25)); // 2x faster (50ms -> 25ms)
-          }
-        }
-        await new Promise(r => setTimeout(r, 500)); // 500ms delay
-        // Second part
-        for (let i = 0; i < secondChars.length && spanIndex < spans.length; i++, spanIndex++) {
-          const span = spans[spanIndex];
-          if (secondChars[i] === ' ') {
-            span.textContent = '\u00A0'; // Non-breaking space
-            await new Promise(r => setTimeout(r, 25)); // Match final pause
-            continue;
-          }
-          for (let j = 0; j < 5; j++) {
-            if (span) {
-              span.textContent = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
-              await new Promise(r => setTimeout(r, 16)); // 2x faster (33ms -> ~16ms)
-            }
-          }
-          if (span) {
-            span.textContent = secondChars[i];
-            await new Promise(r => setTimeout(r, 25)); // 2x faster (50ms -> 25ms)
-          }
-        }
+  function fitFontSize(ctx, letter, maxW, maxH) {
+    let low = 8;
+    let high = Math.min(maxW, maxH);
+    let best = low;
+    while (low <= high) {
+      const mid = (low + high) >> 1;
+      ctx.font = `bold ${mid}px ${getFontStack()}`;
+      const m = ctx.measureText(letter);
+      const w = m.width;
+      const h = mid * 0.85;
+      if (w <= maxW * 0.97 && h <= maxH * 0.93) {
+        best = mid;
+        low = mid + 1;
       } else {
-        // Other quotes
-        for (let i = 0; i < chars.length && i < spans.length; i++) {
-          const span = spans[i];
-          if (chars[i] === ' ') {
-            span.textContent = '\u00A0'; // Non-breaking space
-            await new Promise(r => setTimeout(r, 25)); // Match final pause
-            continue;
-          }
-          for (let j = 0; j < 5; j++) {
-            if (span) {
-              span.textContent = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
-              await new Promise(r => setTimeout(r, 16)); // 2x faster (33ms -> ~16ms)
+        high = mid - 1;
+      }
+    }
+    return Math.max(12, best);
+  }
+
+  /**
+   * One solid outline band (no strokeText — canvas strokes are centered on the path and AA reads as two thin lines).
+   * Filled glyph minus a slightly smaller glyph = uniform ring in opaque color.
+   */
+  function drawSolidOutlineRing(ctx, w, h, letter, cx, cy, fs, outlinePx, fillRgb) {
+    if (outlinePx <= 0) return;
+    const ring = document.createElement("canvas");
+    ring.width = w;
+    ring.height = h;
+    const r = ring.getContext("2d");
+    if (!r) return;
+
+    r.font = `bold ${fs}px ${getFontStack()}`;
+    r.textAlign = "center";
+    r.textBaseline = "middle";
+    r.fillStyle = fillRgb;
+    r.fillText(letter, cx, cy);
+
+    const capApprox = fs * 0.9;
+    const shrink = Math.max(0.52, 1 - (2 * outlinePx) / Math.max(1, capApprox));
+
+    r.globalCompositeOperation = "destination-out";
+    r.fillStyle = "#ffffff";
+    r.save();
+    r.translate(cx, cy);
+    r.scale(shrink, shrink);
+    r.translate(-cx, -cy);
+    r.fillText(letter, cx, cy);
+    r.restore();
+
+    ctx.save();
+    ctx.globalCompositeOperation = "source-over";
+    ctx.drawImage(ring, 0, 0);
+    ctx.restore();
+  }
+
+  /**
+   * Draw one masked letter into an existing context (uses destination-in — isolate to small canvases only).
+   * @param {number | null} forcedFontSize  If set (px for this canvas), used instead of auto fit — for packed row layout.
+   */
+  /**
+   * @param {{ hiResUpscale?: boolean } | undefined} opts  Export path: pre-upscale tiny uploads so large prints stay cleaner
+   */
+  function drawMaskedLetter(ctx, w, h, letter, img, scale, ox, oy, outlinePx, forcedFontSize, opts) {
+    if (!letter) return;
+
+    const fontSize =
+      forcedFontSize != null && forcedFontSize > 0
+        ? forcedFontSize
+        : fitFontSize(ctx, letter, w, h);
+    const fs = Math.max(8, fontSize);
+    ctx.font = `bold ${fs}px ${getFontStack()}`;
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    const cx = w / 2;
+    const cy = h / 2;
+
+    ctx.save();
+    if (img && img.complete && img.naturalWidth > 0) {
+      ctx.imageSmoothingEnabled = true;
+      if ("imageSmoothingQuality" in ctx) ctx.imageSmoothingQuality = "high";
+      let drawImg = img;
+      let drawScale = scale;
+      if (opts && opts.hiResUpscale) {
+        const nw = img.naturalWidth;
+        const nh = img.naturalHeight;
+        const projected = Math.max(nw, nh) * Math.abs(scale);
+        const need = Math.max(w, h);
+        if (projected > 0 && projected < need * 0.9) {
+          const boost = Math.min(8, need / projected);
+          if (boost > 1.06) {
+            const uw = Math.min(MAX_STRIP_DIM, Math.ceil(nw * boost));
+            const uh = Math.min(MAX_STRIP_DIM, Math.ceil(nh * boost));
+            const oc = document.createElement("canvas");
+            oc.width = Math.max(1, uw);
+            oc.height = Math.max(1, uh);
+            const ox2 = oc.getContext("2d");
+            if (ox2) {
+              ox2.imageSmoothingEnabled = true;
+              if ("imageSmoothingQuality" in ox2) ox2.imageSmoothingQuality = "high";
+              ox2.drawImage(img, 0, 0, oc.width, oc.height);
+              drawImg = oc;
+              drawScale = scale / boost;
             }
-          }
-          if (span) {
-            span.textContent = chars[i];
-            await new Promise(r => setTimeout(r, 25)); // 2x faster (50ms -> 25ms)
           }
         }
       }
+      ctx.translate(cx + ox, cy + oy);
+      ctx.scale(drawScale, drawScale);
+      ctx.drawImage(drawImg, -drawImg.width / 2, -drawImg.height / 2);
+    } else {
+      ctx.fillStyle = "#12161f";
+      ctx.fillRect(0, 0, w, h);
     }
+    ctx.restore();
 
-    async function playSequence() {
-      for (const quote of quotes) {
-        await typeQuote(quote, quoteDiv);
-        await new Promise(r => setTimeout(r, 3000)); // Display for 3 seconds after typing
-        quoteDiv.style.opacity = 0;
-        await new Promise(r => setTimeout(r, 1000)); // Wait 1 second for fade-out
-        quoteDiv.innerHTML = ''; // Clear spans for next quote
+    ctx.save();
+    ctx.globalCompositeOperation = "destination-in";
+    ctx.font = `bold ${fs}px ${getFontStack()}`;
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillStyle = "#ffffff";
+    ctx.fillText(letter, cx, cy);
+    ctx.restore();
+
+    const strokeColor = getOutlineColor();
+    drawSolidOutlineRing(ctx, w, h, letter, cx, cy, fs, outlinePx, strokeColor);
+  }
+
+  /**
+   * Render one letter to its own canvas so compositing never wipes other letters on a shared surface.
+   * Photo pan/zoom are scaled from preview cell → this cell (sx, imageScale).
+   * Mask font: `packedFontSize` comes from the same computePackedLayout as this cell, so it already
+   * matches c.height — do not multiply by c/refH (that was for old preview-only strips and breaks hi-res export).
+   */
+  function letterToOffscreen(slot, w, h, outlinePx, packedFontSize, hiResUpscale) {
+    const c = document.createElement("canvas");
+    c.width = Math.max(1, Math.round(w));
+    c.height = Math.max(1, Math.round(h));
+    const ctx = c.getContext("2d");
+    if (!ctx) return c;
+    const refW = Math.max(1, slot.cellW);
+    const refH = Math.max(1, slot.cellH);
+    const sx = c.width / refW;
+    const sy = c.height / refH;
+    const imageScale = slot.scale * (c.height / refH);
+    const pfs = packedFontSize > 0 ? packedFontSize : slot.layoutFontSize;
+    const drawFs =
+      pfs > 0
+        ? packedFontSize > 0
+          ? pfs
+          : pfs * (c.height / refH)
+        : null;
+    const letterOpts = hiResUpscale ? { hiResUpscale: true } : undefined;
+    drawMaskedLetter(
+      ctx,
+      c.width,
+      c.height,
+      slot.char,
+      slot.img,
+      imageScale,
+      slot.ox * sx,
+      slot.oy * sy,
+      outlinePx,
+      drawFs,
+      letterOpts
+    );
+    return c;
+  }
+
+  function renderSlot(slot) {
+    const outlinePx = outlinePxAtHeight(slot.canvas.height);
+    const { ctx, canvas } = slot;
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    const drawFs = slot.layoutFontSize > 0 ? slot.layoutFontSize : null;
+    drawMaskedLetter(ctx, canvas.width, canvas.height, slot.char, slot.img, slot.scale, slot.ox, slot.oy, outlinePx, drawFs);
+  }
+
+  function clampZoomPercent(p) {
+    const n = Number(p);
+    if (!Number.isFinite(n)) return 100;
+    return Math.min(ZOOM_MAX, Math.max(ZOOM_MIN, Math.round(n)));
+  }
+
+  function updateZoomLabel(slot) {
+    slot.scale = Math.min(SCALE_MAX, Math.max(SCALE_MIN, slot.scale));
+    const pct = clampZoomPercent(Math.round(slot.scale * 100));
+    slot.scale = pct / 100;
+    slot.zoomLabel.textContent = `${pct}%`;
+    slot.zoomInput.value = String(pct);
+    slot.zoomNumber.value = String(pct);
+  }
+
+  /**
+   * Pack glyphs: one font size for the row, each cell width ≈ glyph advance — maximized to fill innerW × innerH.
+   * @returns {{ n: number, gapPx: number, widths: number[], ch: number, fontSize: number, totalWidth: number } | null}
+   */
+  function computePackedLayout(innerWpx, innerHpx, gapPxInput, charList) {
+    const n = charList.length;
+    if (n === 0) return null;
+    const m = document.createElement("canvas").getContext("2d");
+    if (!m) return null;
+
+    const g = Math.max(0, Math.round(gapPxInput));
+    const vFill = 0.995;
+    const capRatio = 0.96;
+    const maxH = Math.floor(innerHpx * vFill);
+    let low = 8;
+    let high = maxH;
+    let best = 8;
+
+    while (low <= high) {
+      const mid = (low + high) >> 1;
+      m.font = `bold ${mid}px ${getFontStack()}`;
+      let tw = 0;
+      for (let i = 0; i < n; i++) {
+        tw += m.measureText(charList[i]).width;
       }
-      loginDiv.style.opacity = 1;
-      loginDiv.querySelectorAll('input, button').forEach(el => {
-        el.style.animation = 'scaleIn 0.5s ease-out';
-      });
-    }
-
-    function handleLogin() {
-      const username = document.getElementById('username').value;
-      const password = document.getElementById('password').value;
-      loginDiv.classList.add('error');
-      if (username && password) {
-        errorMessage.textContent = 'Access Denied: Invalid credentials. Redirecting...';
+      tw += (n - 1) * g;
+      const capH = mid * capRatio;
+      if (tw <= innerWpx + 0.75 && capH <= innerHpx * vFill) {
+        best = mid;
+        low = mid + 1;
       } else {
-        errorMessage.textContent = 'Input Required: Enter username and password. Redirecting...';
+        high = mid - 1;
       }
-      errorMessage.style.opacity = 1;
-      setTimeout(() => {
-        window.location.href = 'https://www.youtube.com/watch?v=xvFZjo5PgG0';
-      }, 3000);
     }
 
-    // Custom cursor movement
-    document.addEventListener('mousemove', (e) => {
-      cursor.style.left = `${e.clientX}px`;
-      cursor.style.top = `${e.clientY}px`;
+    let fontSize = Math.max(12, best);
+    m.font = `bold ${fontSize}px ${getFontStack()}`;
+    while (fontSize < maxH) {
+      const tryFs = fontSize + 1;
+      m.font = `bold ${tryFs}px ${getFontStack()}`;
+      let tw = 0;
+      for (let i = 0; i < n; i++) {
+        tw += Math.ceil(m.measureText(charList[i]).width);
+      }
+      tw += (n - 1) * g;
+      if (tw <= innerWpx && tryFs * capRatio <= innerHpx * vFill) fontSize = tryFs;
+      else break;
+    }
+
+    m.font = `bold ${fontSize}px ${getFontStack()}`;
+    const widths = [];
+    for (let i = 0; i < n; i++) {
+      widths.push(Math.max(1, Math.ceil(m.measureText(charList[i]).width)));
+    }
+    let totalWidth = widths.reduce((a, b) => a + b, 0) + (n - 1) * g;
+    let spare = innerWpx - totalWidth;
+    let si = 0;
+    while (spare > 0) {
+      widths[si % n]++;
+      spare--;
+      si++;
+    }
+    totalWidth = widths.reduce((a, b) => a + b, 0) + (n - 1) * g;
+
+    const ch = Math.max(1, innerHpx);
+    return { n, gapPx: g, widths, ch, fontSize, totalWidth };
+  }
+
+  /** @param {{ hiResPhoto?: boolean } | undefined} drawOpts */
+  function drawPackedRow(ctx, originX, originY, innerWpx, layout, drawOpts) {
+    const hiRes = !!(drawOpts && drawOpts.hiResPhoto);
+    const { widths, gapPx, ch, fontSize } = layout;
+    const total = layout.totalWidth;
+    let x = originX + Math.floor((innerWpx - total) / 2);
+    for (let i = 0; i < layout.n; i++) {
+      const slot = slots[i];
+      const cw = widths[i];
+      const oPx = outlinePxAtHeight(ch);
+      const piece = letterToOffscreen(slot, cw, ch, oPx, fontSize, hiRes);
+      ctx.drawImage(piece, Math.round(x), Math.round(originY));
+      x += cw + gapPx;
+    }
+  }
+
+  function renderExportPreview() {
+    const innerW = PREVIEW_INNER_W;
+    const innerH = innerHeightPreviewPx();
+    const gapPrev = Math.max(0, Math.round((EXPORT_GAP_MM * innerW) / MM_INNER_W));
+
+    exportCanvas.width = Math.max(1, innerW);
+    exportCanvas.height = Math.max(1, innerH);
+    const xctx = exportCanvas.getContext("2d");
+    if (!xctx) return;
+    xctx.setTransform(1, 0, 0, 1, 0, 0);
+    xctx.clearRect(0, 0, exportCanvas.width, exportCanvas.height);
+
+    const charList = slots.map(s => s.char);
+    const layout = computePackedLayout(innerW, innerH, gapPrev, charList);
+    if (layout) drawPackedRow(xctx, 0, 0, innerW, layout, { hiResPhoto: false });
+
+  }
+
+  function refreshButtons() {
+    const ok = slots.length > 0;
+    btnDownload.disabled = !ok;
+    btnEmail.disabled = !ok;
+  }
+
+  function renderAll() {
+    slots.forEach(renderSlot);
+    slots.forEach(updateZoomLabel);
+    renderExportPreview();
+    refreshButtons();
+  }
+
+  function resetTransforms() {
+    slots.forEach(s => {
+      s.scale = 1;
+      s.ox = 0;
+      s.oy = 0;
+    });
+    renderAll();
+  }
+
+  function resetSlot(slot) {
+    slot.scale = 1;
+    slot.ox = 0;
+    slot.oy = 0;
+    renderSlot(slot);
+    updateZoomLabel(slot);
+    renderExportPreview();
+  }
+
+  /** Scale photo to cover the letter viewport (min upscaling capped at 100%); center pan */
+  function fitPhotoToLetter(slot) {
+    const im = slot.img;
+    if (!im || !im.complete || im.naturalWidth <= 0 || im.naturalHeight <= 0) return;
+    const w = slot.canvas.width;
+    const h = slot.canvas.height;
+    if (w <= 0 || h <= 0) return;
+    const nw = im.naturalWidth;
+    const nh = im.naturalHeight;
+    const cover = Math.max(w / nw, h / nh);
+    slot.scale = Math.min(SCALE_MAX, Math.max(SCALE_MIN, cover));
+    slot.ox = 0;
+    slot.oy = 0;
+    renderSlot(slot);
+    updateZoomLabel(slot);
+    renderExportPreview();
+  }
+
+  function attachPointerPanZoom(canvas, slot) {
+    let dragging = false;
+    let lastX = 0;
+    let lastY = 0;
+
+    canvas.addEventListener("pointerdown", e => {
+      dragging = true;
+      lastX = e.clientX;
+      lastY = e.clientY;
+      canvas.setPointerCapture(e.pointerId);
+    });
+    canvas.addEventListener("pointermove", e => {
+      if (!dragging) return;
+      const dxScr = e.clientX - lastX;
+      const dyScr = e.clientY - lastY;
+      lastX = e.clientX;
+      lastY = e.clientY;
+      const r = canvas.getBoundingClientRect();
+      const sx = r.width > 0 ? canvas.width / r.width : 1;
+      const sy = r.height > 0 ? canvas.height / r.height : 1;
+      slot.ox += dxScr * sx;
+      slot.oy += dyScr * sy;
+      renderSlot(slot);
+      renderExportPreview();
+    });
+    function endDrag(e) {
+      dragging = false;
+      try { canvas.releasePointerCapture(e.pointerId); } catch (_) {}
+    }
+    canvas.addEventListener("pointerup", endDrag);
+    canvas.addEventListener("pointercancel", endDrag);
+
+    canvas.addEventListener(
+      "wheel",
+      e => {
+        e.preventDefault();
+        const factor = e.deltaY > 0 ? 0.94 : 1.06;
+        slot.scale = Math.min(SCALE_MAX, Math.max(SCALE_MIN, slot.scale * factor));
+        renderSlot(slot);
+        updateZoomLabel(slot);
+        renderExportPreview();
+      },
+      { passive: false }
+    );
+  }
+
+  function applyZoomFromInput(slot, percent) {
+    const p = clampZoomPercent(percent);
+    slot.scale = p / 100;
+    renderSlot(slot);
+    updateZoomLabel(slot);
+    renderExportPreview();
+  }
+
+  function createCard(char, index, cellW, cellH, layoutFontSize) {
+    const card = document.createElement("div");
+    card.className = "letter-card";
+
+    const glyph = document.createElement("div");
+    glyph.className = "glyph";
+    glyph.textContent = char;
+    glyph.style.fontFamily = getFontStack();
+
+    const viewport = document.createElement("div");
+    viewport.className = "viewport";
+
+    const canvas = document.createElement("canvas");
+    canvas.width = cellW;
+    canvas.height = cellH;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return null;
+
+    viewport.appendChild(canvas);
+
+    const zoomRow = document.createElement("div");
+    zoomRow.className = "zoom-row";
+
+    const zoomMinus = document.createElement("button");
+    zoomMinus.type = "button";
+    zoomMinus.className = "btn secondary small";
+    zoomMinus.textContent = "−";
+    zoomMinus.title = "Zoom out";
+
+    const zoomPlus = document.createElement("button");
+    zoomPlus.type = "button";
+    zoomPlus.className = "btn secondary small";
+    zoomPlus.textContent = "+";
+    zoomPlus.title = "Zoom in";
+
+    const zoomInput = document.createElement("input");
+    zoomInput.type = "range";
+    zoomInput.min = String(ZOOM_MIN);
+    zoomInput.max = String(ZOOM_MAX);
+    zoomInput.step = "1";
+    zoomInput.value = "100";
+    zoomInput.setAttribute("aria-label", `Zoom for letter ${char}`);
+
+    const zoomNumber = document.createElement("input");
+    zoomNumber.type = "number";
+    zoomNumber.className = "zoom-num";
+    zoomNumber.min = String(ZOOM_MIN);
+    zoomNumber.max = String(ZOOM_MAX);
+    zoomNumber.step = "1";
+    zoomNumber.value = "100";
+    zoomNumber.title = "Photo zoom % (1–100)";
+
+    const zoomLabel = document.createElement("span");
+    zoomLabel.className = "zoom-val";
+    zoomLabel.textContent = "100%";
+
+    const btnFit = document.createElement("button");
+    btnFit.type = "button";
+    btnFit.className = "btn secondary small";
+    btnFit.textContent = "Fit";
+    btnFit.title = "Best fit — scale photo to fill this letter; drag to reposition";
+    btnFit.disabled = true;
+
+    zoomRow.appendChild(zoomMinus);
+    zoomRow.appendChild(zoomInput);
+    zoomRow.appendChild(zoomPlus);
+    zoomRow.appendChild(zoomNumber);
+    zoomRow.appendChild(zoomLabel);
+    zoomRow.appendChild(btnFit);
+
+    const fileInput = document.createElement("input");
+    fileInput.type = "file";
+    fileInput.accept = "image/*";
+
+    const label = document.createElement("label");
+    label.className = "file";
+    label.htmlFor = `f-${index}-${char}`;
+    fileInput.id = `f-${index}-${char}`;
+    label.textContent = "Import";
+
+    const clearBtn = document.createElement("button");
+    clearBtn.type = "button";
+    clearBtn.className = "btn secondary ghost-clear";
+    clearBtn.textContent = "Clear";
+
+    const actions = document.createElement("div");
+    actions.className = "actions";
+    actions.appendChild(zoomRow);
+    actions.appendChild(label);
+    actions.appendChild(fileInput);
+    actions.appendChild(clearBtn);
+
+    const slot = {
+      char,
+      img: null,
+      scale: 1,
+      ox: 0,
+      oy: 0,
+      cellW,
+      cellH,
+      layoutFontSize: layoutFontSize || 0,
+      canvas,
+      ctx,
+      fileInput,
+      zoomInput,
+      zoomNumber,
+      zoomLabel,
+      btnFit,
+    };
+
+    zoomInput.addEventListener("input", () => {
+      applyZoomFromInput(slot, Number(zoomInput.value));
+    });
+    zoomNumber.addEventListener("change", () => {
+      applyZoomFromInput(slot, Number(zoomNumber.value));
+    });
+    zoomMinus.addEventListener("click", () => {
+      applyZoomFromInput(slot, Number(zoomInput.value) - 5);
+    });
+    zoomPlus.addEventListener("click", () => {
+      applyZoomFromInput(slot, Number(zoomInput.value) + 5);
+    });
+    btnFit.addEventListener("click", () => fitPhotoToLetter(slot));
+
+    fileInput.addEventListener("change", () => {
+      const f = fileInput.files && fileInput.files[0];
+      if (!f) return;
+      const url = URL.createObjectURL(f);
+      const im = new Image();
+      im.onload = () => {
+        URL.revokeObjectURL(url);
+        slot.img = im;
+        btnFit.disabled = false;
+        fitPhotoToLetter(slot);
+      };
+      im.onerror = () => URL.revokeObjectURL(url);
+      im.src = url;
     });
 
-    overlay.addEventListener('click', () => {
-      overlay.style.opacity = 0;
-      setTimeout(() => {
-        overlay.style.display = 'none';
-        bootScreen.style.display = 'block';
-        bootScreen.style.opacity = 1;
-        typeBootMessages();
-      }, 1000);
+    clearBtn.addEventListener("click", () => {
+      slot.img = null;
+      fileInput.value = "";
+      btnFit.disabled = true;
+      resetSlot(slot);
     });
 
-    window.addEventListener('resize', resizeCanvases);
+    attachPointerPanZoom(canvas, slot);
 
-    // Scale-in animation for login elements
-    const styleSheet = document.createElement('style');
-    styleSheet.textContent = `
-      @keyframes scaleIn {
-        from { transform: translate(-50%, -50%) scale(0.95); opacity: 0; }
-        to { transform: translate(-50%, -50%) scale(1); opacity: 1; }
-      }
-    `;
-    document.head.appendChild(styleSheet);
+    card.appendChild(glyph);
+    card.appendChild(viewport);
+    card.appendChild(actions);
 
-    // Hacking Prank
-    function startHackingPrank() {
-      hackingScreen.style.display = 'block';
-      quoteDiv.style.display = 'none';
-      loginDiv.style.display = 'none';
-      allSeeingEye.style.display = 'none';
-      // Start typing hack commands
-      typeHackCommands();
+    lettersHost.appendChild(card);
+    return slot;
+  }
+
+  /**
+   * @param {typeof slots | null | undefined} prevSlots  If letters match `chars`, copy img / pan / zoom into new cards (font change).
+   */
+  function rebuild(prevSlots) {
+    const chars = allowedChars(wordInput.value || "");
+    const prev = prevSlots;
+    const canPreserve =
+      prev &&
+      prev.length === chars.length &&
+      prev.every((s, i) => s && s.char === chars[i]);
+
+    lettersHost.innerHTML = "";
+    slots = [];
+    emptyMsg.hidden = chars.length > 0;
+    setStatus("");
+
+    const n = chars.length;
+    const innerHPr = innerHeightPreviewPx();
+    const gapPrev = Math.max(0, Math.round((EXPORT_GAP_MM * PREVIEW_INNER_W) / MM_INNER_W));
+    const packed = n > 0 ? computePackedLayout(PREVIEW_INNER_W, innerHPr, gapPrev, chars) : null;
+
+    if (n > 0) {
+      editorCellH = innerHPr;
+      editorCellW = packed ? packed.widths[0] : 220;
+    } else {
+      editorCellH = 275;
+      editorCellW = 220;
     }
 
-    async function typeText(text, speed) {
-      for (let i = 0; i < text.length; i++) {
-        hackingContent.textContent += text[i];
-        await new Promise(r => setTimeout(r, speed));
+    chars.forEach((c, i) => {
+      const cw = packed ? packed.widths[i] : 220;
+      const ch = packed ? packed.ch : 275;
+      const fs = packed ? packed.fontSize : 0;
+      const s = createCard(c, i, cw, ch, fs);
+      if (!s) return;
+      if (canPreserve && prev[i]) {
+        const p = prev[i];
+        s.img = p.img;
+        s.scale = p.scale;
+        s.ox = p.ox;
+        s.oy = p.oy;
+        updateZoomLabel(s);
       }
+      if (s.img && s.img.complete && s.btnFit) s.btnFit.disabled = false;
+      slots.push(s);
+    });
+    renderAll();
+  }
+
+  /**
+   * Raster strip — layout at strip pixel size (preview = low px; print = supersampled inner).
+   */
+  function buildMasterStripCanvas(targetStripW, targetStripH, drawOpts) {
+    const { w, h } = clampStripDimensions(targetStripW, targetStripH);
+    const gapPrev = Math.max(0, Math.round((EXPORT_GAP_MM * w) / MM_INNER_W));
+    const charList = slots.map(s => s.char);
+    const layout = computePackedLayout(w, h, gapPrev, charList);
+    const strip = document.createElement("canvas");
+    strip.width = Math.max(1, w);
+    strip.height = Math.max(1, h);
+    const sctx = strip.getContext("2d");
+    if (!sctx || !layout) return strip;
+    sctx.setTransform(1, 0, 0, 1, 0, 0);
+    sctx.clearRect(0, 0, strip.width, strip.height);
+    drawPackedRow(sctx, 0, 0, w, layout, drawOpts);
+    return strip;
+  }
+
+  function buildPrintReadyCanvas() {
+    const { W, H, border, innerW, innerH } = getExportPlatePixels();
+
+    const canvas = document.createElement("canvas");
+    canvas.width = W;
+    canvas.height = H;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return canvas;
+
+    ctx.fillStyle = "#ffffff";
+    ctx.fillRect(0, 0, W, H);
+
+    if (slots.length === 0) return canvas;
+
+    const strip = buildMasterStripCanvas(
+      Math.round(innerW * STRIP_SUPERSAMPLE),
+      Math.round(innerH * STRIP_SUPERSAMPLE),
+      { hiResPhoto: true }
+    );
+    ctx.imageSmoothingEnabled = true;
+    if ("imageSmoothingQuality" in ctx) ctx.imageSmoothingQuality = "high";
+    ctx.drawImage(strip, 0, 0, strip.width, strip.height, border, border, innerW, innerH);
+
+    return canvas;
+  }
+
+  async function submitEmail() {
+    setStatus("");
+    const id = (FORMSPREE_FORM_ID || "").trim();
+    if (!id) {
+      setStatus("Upload isn’t configured — add Formspree id in the page script.", "err");
+      return;
     }
+    const c = buildPrintReadyCanvas();
+    const blob = await new Promise(resolve => c.toBlob(resolve, "image/png"));
+    if (!blob) {
+      setStatus("Could not render file.", "err");
+      return;
+    }
+    const word = (wordInput.value || "").trim() || "(none)";
+    const fd = new FormData();
+    fd.append("_subject", `Letter mask — ${word}`);
+    fd.append("word", word);
+    fd.append("attachment", blob, exportPngFilename(wordInput.value));
 
-    async function typeHackCommands() {
-      hackingContent.textContent = '';
-      const fastSpeed = 5; // Faster for non-personal
-      const slowSpeed = 30; // Slower for personal
-      const shortPause = 200;
-      const longPause = 1500; // Longer pause for personal data
-
-      await typeText("WARNING: Unauthorized access detected!\n", fastSpeed);
-      await new Promise(r => setTimeout(r, shortPause));
-      await typeText("[!] Exploit triggered: CVE-1986-0420 (Buffer Overflow)\n", fastSpeed);
-      await new Promise(r => setTimeout(r, shortPause));
-      await typeText("Bypassing firewall protections...\n", fastSpeed);
-      await new Promise(r => setTimeout(r, shortPause));
-      await typeText("Root access established.\n", fastSpeed);
-      await new Promise(r => setTimeout(r, shortPause));
-      await typeText("Initiating deep system scan...\n", fastSpeed);
-      await new Promise(r => setTimeout(r, shortPause));
-
-      // Personal data - slow and spread out
-      await typeText(`Target Device: `, fastSpeed);
-      await typeText(`${navigator.userAgent}\n`, slowSpeed);
-      await new Promise(r => setTimeout(r, longPause));
-
-      await typeText(`Display: `, fastSpeed);
-      await typeText(`${screen.width} x ${screen.height} pixels\n`, slowSpeed);
-      await new Promise(r => setTimeout(r, longPause));
-
-      await typeText(`Language Preference: `, fastSpeed);
-      await typeText(`${navigator.language}\n`, slowSpeed);
-      await new Promise(r => setTimeout(r, longPause));
-
-      await typeText(`Processor: `, fastSpeed);
-      await typeText(`${navigator.hardwareConcurrency} cores detected\n`, slowSpeed);
-      await new Promise(r => setTimeout(r, longPause));
-
-      // Fake IP
-      const fakeIP = `192.168.${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}`;
-      await typeText(`Network: `, fastSpeed);
-      await typeText(`IP ${fakeIP}\n`, slowSpeed);
-      await new Promise(r => setTimeout(r, longPause));
-
-      // Battery level
-      if (navigator.getBattery) {
-        await navigator.getBattery().then(async (battery) => {
-          await typeText(`Power: `, fastSpeed);
-          await typeText(`${Math.round(battery.level * 100)}% battery remaining\n`, slowSpeed);
-          await new Promise(r => setTimeout(r, longPause));
-        });
-      } else {
-        await typeText(`Power: `, fastSpeed);
-        await typeText(`Battery data restricted\n`, slowSpeed);
-        await new Promise(r => setTimeout(r, longPause));
+    btnEmail.disabled = true;
+    try {
+      const res = await fetch(`https://formspree.io/f/${id}`, {
+        method: "POST",
+        body: fd,
+        headers: { Accept: "application/json" },
+      });
+      const data = await res.json().catch(() => ({}));
+      if (res.ok)
+        setStatus("Received.", "ok");
+      else {
+        const msg =
+          (data && (data.error || (data.errors && data.errors[0] && data.errors[0].message))) ||
+          "Unavailable.";
+        setStatus(typeof msg === "string" ? msg : "Unavailable.", "err");
       }
-
-      // Location
-      await typeText("Triangulating location...\n", fastSpeed);
-      await new Promise(r => setTimeout(r, shortPause));
-      navigator.geolocation.getCurrentPosition(
-        async (position) => {
-          await typeText(`Coordinates: `, fastSpeed);
-          await typeText(`Lat ${position.coords.latitude.toFixed(2)}, Long ${position.coords.longitude.toFixed(2)}\n`, slowSpeed);
-          await new Promise(r => setTimeout(r, longPause));
-          await typeText("Locking onto target...\n", fastSpeed);
-          await new Promise(r => setTimeout(r, shortPause));
-          await typeText("Extracting sensitive data...\n", fastSpeed);
-          await new Promise(r => setTimeout(r, shortPause));
-          await typeText("Encrypting storage drives...\n", fastSpeed);
-          await new Promise(r => setTimeout(r, shortPause));
-          await typeText("Uploading to darknet server...\n", fastSpeed);
-          await new Promise(r => setTimeout(r, shortPause));
-          await typeText("System fully compromised.\n", fastSpeed);
-          await new Promise(r => setTimeout(r, shortPause));
-          await typeText("You are now under surveillance.\n", fastSpeed);
-        },
-        async () => {
-          await typeText("Geolocation restricted. Using IP triangulation...\n", fastSpeed);
-          await typeText(`Location: [REDACTED CITY], Earth\n`, slowSpeed);
-          await new Promise(r => setTimeout(r, longPause));
-          await typeText("Locking onto target...\n", fastSpeed);
-          await new Promise(r => setTimeout(r, shortPause));
-          await typeText("Extracting sensitive data...\n", fastSpeed);
-          await new Promise(r => setTimeout(r, shortPause));
-          await typeText("Encrypting storage drives...\n", fastSpeed);
-          await new Promise(r => setTimeout(r, shortPause));
-          await typeText("Uploading to darknet server...\n", fastSpeed);
-          await new Promise(r => setTimeout(r, shortPause));
-          await typeText("System fully compromised.\n", fastSpeed);
-          await new Promise(r => setTimeout(r, shortPause));
-          await typeText("You are now under surveillance.\n", fastSpeed);
-        }
-      );
+    } catch (e) {
+      setStatus("Connection failed.", "err");
+    } finally {
+      btnEmail.disabled = slots.length === 0;
     }
+  }
+
+  wordInput.addEventListener("input", rebuild);
+  outlineRange.addEventListener("input", () => {
+    outlineVal.textContent = formatOutlinePxLabel();
+    renderAll();
+  });
+  outlineColorSelect.addEventListener("change", () => {
+    renderAll();
+  });
+  fontFamilySelect.addEventListener("change", () => rebuild(slots.slice()));
+  btnResetWord.addEventListener("click", resetTransforms);
+  btnDownload.addEventListener("click", () => {
+    setStatus("");
+    const c = buildPrintReadyCanvas();
+    c.toBlob(blob => {
+      if (!blob) {
+        setStatus("Could not render file.", "err");
+        return;
+      }
+      const a = document.createElement("a");
+      a.download = exportPngFilename(wordInput.value);
+      a.href = URL.createObjectURL(blob);
+      a.click();
+      URL.revokeObjectURL(a.href);
+      setStatus("Saved.", "ok");
+    }, "image/png");
+  });
+  btnEmail.addEventListener("click", () => submitEmail());
+
+  outlineVal.textContent = formatOutlinePxLabel();
+  rebuild();
+})();
   </script>
 </body>
 </html>
-
