@@ -7,7 +7,7 @@
   <title>Letter mask · Yoxall</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@500;600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
     :root {
       --void: #050608;
@@ -37,7 +37,6 @@
       min-height: 100vh;
       position: relative;
     }
-    /* Subtle datum grid — texture, not gimmick */
     body::before {
       content: "";
       position: fixed;
@@ -96,7 +95,6 @@
       outline: 1px solid rgba(45, 212, 191, 0.65);
       outline-offset: 4px;
     }
-    /* Vector-free wordmark: always uses the same tokens as the rest of the UI */
     .brand-wordmark {
       font-family: "IBM Plex Sans", system-ui, sans-serif;
       font-weight: 600;
@@ -406,7 +404,6 @@
       overflow: auto;
       box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.45);
     }
-    /* Corner ticks — readout frame, not decoration overload */
     .preview-wrap::before,
     .preview-wrap::after {
       content: "";
@@ -428,7 +425,8 @@
       right: 6px;
       border-width: 0 1px 1px 0;
     }
-    #exportCanvas {
+    #exportCanvas,
+    #lithophaneCanvas {
       display: block;
       width: 100%;
       max-width: 100%;
@@ -470,6 +468,27 @@
       outline: 1px solid rgba(45, 212, 191, 0.65);
       outline-offset: 2px;
     }
+
+    @media (max-width: 768px) {
+      .controls {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.25rem;
+      }
+      .field {
+        width: 100%;
+      }
+      .field input[type="text"],
+      .field select {
+        width: 100%;
+        font-size: 1rem;
+        padding: 0.75rem 0.75rem;
+      }
+      .field select {
+        padding-right: 2.5rem;
+        min-width: auto;
+      }
+    }
   </style>
 </head>
 <body>
@@ -491,13 +510,12 @@
       <div class="field label-readable">
         <label for="fontFamilySelect">Select font</label>
         <select id="fontFamilySelect" aria-label="Select font">
-          <option value="impact" selected>Impact</option>
+          <option value="impact" selected>Impact (classic)</option>
           <option value="arialBlack">Arial Black</option>
-          <option value="haettenschweiler">Haettenschweiler</option>
+          <option value="haettenschweiler">Haettenschweiler (super narrow)</option>
           <option value="franklin">Franklin Gothic Heavy</option>
-          <option value="britannic">Britannic Bold</option>
-          <option value="cooper">Cooper Black</option>
-          <option value="trebuchet">Trebuchet MS (bold)</option>
+          <option value="cooper">Cooper Black (chunky)</option>
+          <option value="anton">Anton (modern bold)</option>
         </select>
       </div>
       <div class="field label-readable">
@@ -517,9 +535,10 @@
     <div id="lettersHost" class="letters"></div>
     <p id="emptyMsg" class="empty-state" hidden>Awaiting input</p>
 
+    <!-- Full colour composite (downloadable) -->
     <div class="preview-row">
       <div class="preview-head">
-        <h2>Composite</h2>
+        <h2>Composite (what you download)</h2>
         <span class="rule" aria-hidden="true"></span>
       </div>
       <div class="preview-wrap">
@@ -529,21 +548,27 @@
         <button type="button" class="btn" id="btnDownload" disabled>Download PNG</button>
         <button type="button" class="btn secondary" id="btnEmail" disabled>Upload to workshop</button>
       </div>
-      <p class="brand-product thanks-foot">Thanks x</p>
-      <div class="status" id="statusLine" role="status"></div>
     </div>
+
+    <!-- Lithophane simulation preview -->
+    <div class="preview-row">
+      <div class="preview-head">
+        <h2>Lithophane preview (back-lit simulation)</h2>
+        <span class="rule" aria-hidden="true"></span>
+      </div>
+      <div class="preview-wrap">
+        <canvas id="lithophaneCanvas" width="800" height="320"></canvas>
+      </div>
+      <p class="brand-product thanks-foot">This is only a simulation — your final lithophane will look very close when back-lit</p>
+    </div>
+
+    <p class="brand-product thanks-foot">Thanks x</p>
+    <div class="status" id="statusLine" role="status"></div>
     </main>
   </div>
 
   <script>
 (function () {
-  /**
-   * Static hosting — uploads go through Formspree (free tier works for modest PNG sizes).
-   * 1. Create an account at https://formspree.io
-   * 2. New form → set “Send submissions to” to your Zoho address (e.g. you@yoxall.net)
-   * 3. Copy the form id from the integration URL (…/f/xxxxxxxx) and paste it below.
-   * 4. Deploy only the wwwroot/ folder; no server or SMTP required.
-   */
   const FORMSPREE_FORM_ID = "";
 
   const wordInput = document.getElementById("wordInput");
@@ -554,36 +579,30 @@
   const outlineColorSelect = document.getElementById("outlineColorSelect");
   const fontFamilySelect = document.getElementById("fontFamilySelect");
   const exportCanvas = document.getElementById("exportCanvas");
+  const lithophaneCanvas = document.getElementById("lithophaneCanvas");
   const btnResetWord = document.getElementById("btnResetWord");
   const btnDownload = document.getElementById("btnDownload");
   const btnEmail = document.getElementById("btnEmail");
   const statusLine = document.getElementById("statusLine");
 
-  /** Physical plate (mm) */
   const MM_PLATE_W = 84;
   const MM_PLATE_H = 52;
   const MM_BORDER = 5;
-  /** Minimum gap between glyphs on the print (mm); keeps strokes from touching */
   const EXPORT_GAP_MM = 0.032;
-  /** Inner printable area (mm) inside the 5 mm frame */
   const MM_INNER_W = MM_PLATE_W - 2 * MM_BORDER;
   const MM_INNER_H = MM_PLATE_H - 2 * MM_BORDER;
-  /** Combined preview: inner width in px (height follows plate aspect) */
   const PREVIEW_INNER_W = 820;
-  /** Zoom UI: 1%–100% (photo scale inside mask) */
+
   const ZOOM_MIN = 1;
   const ZOOM_MAX = 100;
   const SCALE_MIN = 0.01;
   const SCALE_MAX = 1;
 
-  /** Current editor cell size — same aspect as one lithophane column for this word length */
   let editorCellW = 220;
   let editorCellH = 275;
 
-  /** Browser / canvas safety limits (strip is separate from final plate canvas) */
   const MAX_STRIP_DIM = 8192;
   const MAX_STRIP_PIXELS = 268435456;
-  /** Render export strip at this multiple of inner px (then scaled to inner) for sharper masks & photos */
   const STRIP_SUPERSAMPLE = 2;
 
   let cachedMaxDpi = 0;
@@ -602,7 +621,6 @@
     return cachedMaxDpi;
   }
 
-  /** Shrink strip size proportionally if it exceeds canvas limits */
   function clampStripDimensions(wIn, hIn) {
     let w = Math.max(1, Math.round(wIn));
     let h = Math.max(1, Math.round(hIn));
@@ -615,7 +633,6 @@
     return { w, h };
   }
 
-  /** Plate & inner size in pixels at max export DPI */
   function getExportPlatePixels() {
     const dpi = getMaxExportDpi();
     const ppm = dpi / 25.4;
@@ -627,63 +644,29 @@
     return { dpi, W, H, border, innerW, innerH };
   }
 
-  /** Bold display stacks for all-caps masking (Impact default). */
   const FONT_STACKS = {
     impact: 'Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif',
     arialBlack: '"Arial Black", Gadget, sans-serif',
     haettenschweiler: 'Haettenschweiler, "Franklin Gothic Heavy", Impact, sans-serif',
     franklin: '"Franklin Gothic Heavy", "Arial Black", Impact, sans-serif',
-    britannic: '"Britannic Bold", "Arial Black", Impact, sans-serif',
     cooper: '"Cooper Black", "Arial Black", Impact, sans-serif',
-    trebuchet: '"Trebuchet MS", "Lucida Grande", "Arial Black", sans-serif',
+    anton: 'Anton, sans-serif'
   };
 
   function getFontStack() {
-    const k = fontFamilySelect && fontFamilySelect.value;
+    const k = fontFamilySelect.value;
     return FONT_STACKS[k] || FONT_STACKS.impact;
   }
 
-  /** @type {{ char: string, img: HTMLImageElement | null, scale: number, ox: number, oy: number, cellW: number, cellH: number, layoutFontSize: number, canvas: HTMLCanvasElement, ctx: CanvasRenderingContext2D, fileInput: HTMLInputElement, zoomInput: HTMLInputElement, zoomNumber: HTMLInputElement, zoomLabel: HTMLElement, btnFit: HTMLButtonElement }[]} */
   let slots = [];
 
   function allowedChars(word) {
     return word.toUpperCase().split("").filter(c => /[A-Z0-9]/.test(c));
   }
 
-  /** Their word first, then random meme-y kebab (new pick each download) */
   function exportPngFilename(rawWord) {
-    const w = (rawWord || "")
-      .toUpperCase()
-      .replace(/[^A-Z0-9]/g, "")
-      .slice(0, 24) || "YAY";
-    const memes = [
-      "cat-slayer",
-      "built-different",
-      "main-character-energy",
-      "certified-menace",
-      "chaos-gremlin",
-      "no-thoughts-head-empty",
-      "absolute-unit",
-      "just-vibes",
-      "based",
-      "goated-with-the-sauce",
-      "slay-king",
-      "legend-status",
-      "maxxing",
-      "core-memory",
-      "sending-it",
-      "era",
-      "locked-in",
-      "unhinged-but-correct",
-      "touch-grass-later",
-      "main-event",
-      "chef-kiss",
-      "its-giving-art",
-      "main-character",
-      "npc-repellent",
-      "sigma-grindset",
-      "full-send",
-    ];
+    const w = (rawWord || "").toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 24) || "YAY";
+    const memes = ["cat-slayer","built-different","main-character-energy","certified-menace","chaos-gremlin","no-thoughts-head-empty","absolute-unit","just-vibes","based","goated-with-the-sauce","slay-king","legend-status","maxxing","core-memory","sending-it","era","locked-in","unhinged-but-correct","touch-grass-later","main-event","chef-kiss","its-giving-art","main-character","npc-repellent","sigma-grindset","full-send"];
     return `${w}-${memes[Math.floor(Math.random() * memes.length)]}.png`;
   }
 
@@ -696,7 +679,6 @@
     return Math.round((PREVIEW_INNER_W * MM_INNER_H) / MM_INNER_W);
   }
 
-  /** Outline slider is “px at preview inner height”; scale to any raster height */
   function outlinePxAtHeight(targetHPx) {
     const ref = Math.max(1, innerHeightPreviewPx());
     return Number(outlineRange.value) * (targetHPx / ref);
@@ -708,7 +690,6 @@
     return `${s}px`;
   }
 
-  /** Fully opaque stroke for lithophane (no gray fringe) */
   function getOutlineColor() {
     return outlineColorSelect.value === "white" ? "#ffffff" : "#000000";
   }
@@ -722,8 +703,8 @@
       ctx.font = `bold ${mid}px ${getFontStack()}`;
       const m = ctx.measureText(letter);
       const w = m.width;
-      const h = mid * 0.85;
-      if (w <= maxW * 0.97 && h <= maxH * 0.93) {
+      const h = mid * 0.82;
+      if (w <= maxW * 0.97 && h <= maxH * 0.92) {
         best = mid;
         low = mid + 1;
       } else {
@@ -733,35 +714,25 @@
     return Math.max(12, best);
   }
 
-  /**
-   * One solid outline band (no strokeText — canvas strokes are centered on the path and AA reads as two thin lines).
-   * Filled glyph minus a slightly smaller glyph = uniform ring in opaque color.
-   */
   function drawSolidOutlineRing(ctx, w, h, letter, cx, cy, fs, outlinePx, fillRgb) {
     if (outlinePx <= 0) return;
     const ring = document.createElement("canvas");
-    ring.width = w;
-    ring.height = h;
+    ring.width = Math.round(w);
+    ring.height = Math.round(h);
     const r = ring.getContext("2d");
     if (!r) return;
 
     r.font = `bold ${fs}px ${getFontStack()}`;
     r.textAlign = "center";
     r.textBaseline = "middle";
-    r.fillStyle = fillRgb;
-    r.fillText(letter, cx, cy);
-
-    const capApprox = fs * 0.9;
-    const shrink = Math.max(0.52, 1 - (2 * outlinePx) / Math.max(1, capApprox));
+    r.lineJoin = "round";
+    r.lineWidth = outlinePx * 2;
+    r.strokeStyle = fillRgb;
+    r.strokeText(letter, cx, cy);
 
     r.globalCompositeOperation = "destination-out";
     r.fillStyle = "#ffffff";
-    r.save();
-    r.translate(cx, cy);
-    r.scale(shrink, shrink);
-    r.translate(-cx, -cy);
     r.fillText(letter, cx, cy);
-    r.restore();
 
     ctx.save();
     ctx.globalCompositeOperation = "source-over";
@@ -769,24 +740,11 @@
     ctx.restore();
   }
 
-  /**
-   * Draw one masked letter into an existing context (uses destination-in — isolate to small canvases only).
-   * @param {number | null} forcedFontSize  If set (px for this canvas), used instead of auto fit — for packed row layout.
-   */
-  /**
-   * @param {{ hiResUpscale?: boolean } | undefined} opts  Export path: pre-upscale tiny uploads so large prints stay cleaner
-   */
   function drawMaskedLetter(ctx, w, h, letter, img, scale, ox, oy, outlinePx, forcedFontSize, opts) {
     if (!letter) return;
 
-    const fontSize =
-      forcedFontSize != null && forcedFontSize > 0
-        ? forcedFontSize
-        : fitFontSize(ctx, letter, w, h);
+    const fontSize = forcedFontSize != null && forcedFontSize > 0 ? forcedFontSize : fitFontSize(ctx, letter, w, h);
     const fs = Math.max(8, fontSize);
-    ctx.font = `bold ${fs}px ${getFontStack()}`;
-    ctx.textAlign = "center";
-    ctx.textBaseline = "middle";
     const cx = w / 2;
     const cy = h / 2;
 
@@ -838,16 +796,9 @@
     ctx.fillText(letter, cx, cy);
     ctx.restore();
 
-    const strokeColor = getOutlineColor();
-    drawSolidOutlineRing(ctx, w, h, letter, cx, cy, fs, outlinePx, strokeColor);
+    drawSolidOutlineRing(ctx, w, h, letter, cx, cy, fs, outlinePx, getOutlineColor());
   }
 
-  /**
-   * Render one letter to its own canvas so compositing never wipes other letters on a shared surface.
-   * Photo pan/zoom are scaled from preview cell → this cell (sx, imageScale).
-   * Mask font: `packedFontSize` comes from the same computePackedLayout as this cell, so it already
-   * matches c.height — do not multiply by c/refH (that was for old preview-only strips and breaks hi-res export).
-   */
   function letterToOffscreen(slot, w, h, outlinePx, packedFontSize, hiResUpscale) {
     const c = document.createElement("canvas");
     c.width = Math.max(1, Math.round(w));
@@ -860,26 +811,9 @@
     const sy = c.height / refH;
     const imageScale = slot.scale * (c.height / refH);
     const pfs = packedFontSize > 0 ? packedFontSize : slot.layoutFontSize;
-    const drawFs =
-      pfs > 0
-        ? packedFontSize > 0
-          ? pfs
-          : pfs * (c.height / refH)
-        : null;
+    const drawFs = pfs > 0 ? pfs : null;
     const letterOpts = hiResUpscale ? { hiResUpscale: true } : undefined;
-    drawMaskedLetter(
-      ctx,
-      c.width,
-      c.height,
-      slot.char,
-      slot.img,
-      imageScale,
-      slot.ox * sx,
-      slot.oy * sy,
-      outlinePx,
-      drawFs,
-      letterOpts
-    );
+    drawMaskedLetter(ctx, c.width, c.height, slot.char, slot.img, imageScale, slot.ox * sx, slot.oy * sy, outlinePx, drawFs, letterOpts);
     return c;
   }
 
@@ -907,10 +841,6 @@
     slot.zoomNumber.value = String(pct);
   }
 
-  /**
-   * Pack glyphs: one font size for the row, each cell width ≈ glyph advance — maximized to fill innerW × innerH.
-   * @returns {{ n: number, gapPx: number, widths: number[], ch: number, fontSize: number, totalWidth: number } | null}
-   */
   function computePackedLayout(innerWpx, innerHpx, gapPxInput, charList) {
     const n = charList.length;
     if (n === 0) return null;
@@ -918,8 +848,8 @@
     if (!m) return null;
 
     const g = Math.max(0, Math.round(gapPxInput));
-    const vFill = 0.995;
-    const capRatio = 0.96;
+    const vFill = 0.92;
+    const capRatio = 0.88;
     const maxH = Math.floor(innerHpx * vFill);
     let low = 8;
     let high = maxH;
@@ -929,9 +859,7 @@
       const mid = (low + high) >> 1;
       m.font = `bold ${mid}px ${getFontStack()}`;
       let tw = 0;
-      for (let i = 0; i < n; i++) {
-        tw += m.measureText(charList[i]).width;
-      }
+      for (let i = 0; i < n; i++) tw += m.measureText(charList[i]).width;
       tw += (n - 1) * g;
       const capH = mid * capRatio;
       if (tw <= innerWpx + 0.75 && capH <= innerHpx * vFill) {
@@ -948,9 +876,7 @@
       const tryFs = fontSize + 1;
       m.font = `bold ${tryFs}px ${getFontStack()}`;
       let tw = 0;
-      for (let i = 0; i < n; i++) {
-        tw += Math.ceil(m.measureText(charList[i]).width);
-      }
+      for (let i = 0; i < n; i++) tw += Math.ceil(m.measureText(charList[i]).width);
       tw += (n - 1) * g;
       if (tw <= innerWpx && tryFs * capRatio <= innerHpx * vFill) fontSize = tryFs;
       else break;
@@ -975,7 +901,6 @@
     return { n, gapPx: g, widths, ch, fontSize, totalWidth };
   }
 
-  /** @param {{ hiResPhoto?: boolean } | undefined} drawOpts */
   function drawPackedRow(ctx, originX, originY, innerWpx, layout, drawOpts) {
     const hiRes = !!(drawOpts && drawOpts.hiResPhoto);
     const { widths, gapPx, ch, fontSize } = layout;
@@ -1000,13 +925,51 @@
     exportCanvas.height = Math.max(1, innerH);
     const xctx = exportCanvas.getContext("2d");
     if (!xctx) return;
+
     xctx.setTransform(1, 0, 0, 1, 0, 0);
-    xctx.clearRect(0, 0, exportCanvas.width, exportCanvas.height);
+    xctx.fillStyle = "#000000";
+    xctx.fillRect(0, 0, exportCanvas.width, exportCanvas.height);
 
     const charList = slots.map(s => s.char);
     const layout = computePackedLayout(innerW, innerH, gapPrev, charList);
     if (layout) drawPackedRow(xctx, 0, 0, innerW, layout, { hiResPhoto: false });
 
+    renderLithophanePreview();
+  }
+
+  /** FIXED Lithophane preview — no inversion, strong contrast for realistic back-lit look */
+  function renderLithophanePreview() {
+    const innerW = PREVIEW_INNER_W;
+    const innerH = innerHeightPreviewPx();
+
+    lithophaneCanvas.width = Math.max(1, innerW);
+    lithophaneCanvas.height = Math.max(1, innerH);
+    const lctx = lithophaneCanvas.getContext("2d");
+
+    // Copy the exact composite
+    lctx.drawImage(exportCanvas, 0, 0);
+
+    const imageData = lctx.getImageData(0, 0, lithophaneCanvas.width, lithophaneCanvas.height);
+    const data = imageData.data;
+
+    for (let i = 0; i < data.length; i += 4) {
+      const r = data[i];
+      const g = data[i + 1];
+      const b = data[i + 2];
+
+      // Grayscale (no inversion — brighter photo = brighter light transmission)
+      let gray = Math.round(0.299 * r + 0.587 * g + 0.114 * b);
+
+      // Strong contrast boost (typical lithophane "dramatic" look)
+      gray = Math.max(0, Math.min(255, (gray - 128) * 2.4 + 128));
+
+      data[i] = gray;
+      data[i + 1] = gray;
+      data[i + 2] = gray;
+      data[i + 3] = 255;
+    }
+
+    lctx.putImageData(imageData, 0, 0);
   }
 
   function refreshButtons() {
@@ -1023,11 +986,7 @@
   }
 
   function resetTransforms() {
-    slots.forEach(s => {
-      s.scale = 1;
-      s.ox = 0;
-      s.oy = 0;
-    });
+    slots.forEach(s => { s.scale = 1; s.ox = 0; s.oy = 0; });
     renderAll();
   }
 
@@ -1040,7 +999,6 @@
     renderExportPreview();
   }
 
-  /** Scale photo to cover the letter viewport (min upscaling capped at 100%); center pan */
   function fitPhotoToLetter(slot) {
     const im = slot.img;
     if (!im || !im.complete || im.naturalWidth <= 0 || im.naturalHeight <= 0) return;
@@ -1060,8 +1018,7 @@
 
   function attachPointerPanZoom(canvas, slot) {
     let dragging = false;
-    let lastX = 0;
-    let lastY = 0;
+    let lastX = 0, lastY = 0;
 
     canvas.addEventListener("pointerdown", e => {
       dragging = true;
@@ -1090,18 +1047,14 @@
     canvas.addEventListener("pointerup", endDrag);
     canvas.addEventListener("pointercancel", endDrag);
 
-    canvas.addEventListener(
-      "wheel",
-      e => {
-        e.preventDefault();
-        const factor = e.deltaY > 0 ? 0.94 : 1.06;
-        slot.scale = Math.min(SCALE_MAX, Math.max(SCALE_MIN, slot.scale * factor));
-        renderSlot(slot);
-        updateZoomLabel(slot);
-        renderExportPreview();
-      },
-      { passive: false }
-    );
+    canvas.addEventListener("wheel", e => {
+      e.preventDefault();
+      const factor = e.deltaY > 0 ? 0.94 : 1.06;
+      slot.scale = Math.min(SCALE_MAX, Math.max(SCALE_MIN, slot.scale * factor));
+      renderSlot(slot);
+      updateZoomLabel(slot);
+      renderExportPreview();
+    }, { passive: false });
   }
 
   function applyZoomFromInput(slot, percent) {
@@ -1128,7 +1081,6 @@
     canvas.width = cellW;
     canvas.height = cellH;
     const ctx = canvas.getContext("2d");
-    if (!ctx) return null;
 
     viewport.appendChild(canvas);
 
@@ -1175,12 +1127,7 @@
     btnFit.title = "Best fit — scale photo to fill this letter; drag to reposition";
     btnFit.disabled = true;
 
-    zoomRow.appendChild(zoomMinus);
-    zoomRow.appendChild(zoomInput);
-    zoomRow.appendChild(zoomPlus);
-    zoomRow.appendChild(zoomNumber);
-    zoomRow.appendChild(zoomLabel);
-    zoomRow.appendChild(btnFit);
+    zoomRow.append(zoomMinus, zoomInput, zoomPlus, zoomNumber, zoomLabel, btnFit);
 
     const fileInput = document.createElement("input");
     fileInput.type = "file";
@@ -1199,41 +1146,20 @@
 
     const actions = document.createElement("div");
     actions.className = "actions";
-    actions.appendChild(zoomRow);
-    actions.appendChild(label);
-    actions.appendChild(fileInput);
-    actions.appendChild(clearBtn);
+    actions.append(zoomRow, label, fileInput, clearBtn);
 
     const slot = {
-      char,
-      img: null,
-      scale: 1,
-      ox: 0,
-      oy: 0,
-      cellW,
-      cellH,
+      char, img: null, scale: 1, ox: 0, oy: 0,
+      cellW, cellH,
       layoutFontSize: layoutFontSize || 0,
-      canvas,
-      ctx,
-      fileInput,
-      zoomInput,
-      zoomNumber,
-      zoomLabel,
-      btnFit,
+      canvas, ctx,
+      fileInput, zoomInput, zoomNumber, zoomLabel, btnFit
     };
 
-    zoomInput.addEventListener("input", () => {
-      applyZoomFromInput(slot, Number(zoomInput.value));
-    });
-    zoomNumber.addEventListener("change", () => {
-      applyZoomFromInput(slot, Number(zoomNumber.value));
-    });
-    zoomMinus.addEventListener("click", () => {
-      applyZoomFromInput(slot, Number(zoomInput.value) - 5);
-    });
-    zoomPlus.addEventListener("click", () => {
-      applyZoomFromInput(slot, Number(zoomInput.value) + 5);
-    });
+    zoomInput.addEventListener("input", () => applyZoomFromInput(slot, Number(zoomInput.value)));
+    zoomNumber.addEventListener("change", () => applyZoomFromInput(slot, Number(zoomNumber.value)));
+    zoomMinus.addEventListener("click", () => applyZoomFromInput(slot, Number(zoomInput.value) - 5));
+    zoomPlus.addEventListener("click", () => applyZoomFromInput(slot, Number(zoomInput.value) + 5));
     btnFit.addEventListener("click", () => fitPhotoToLetter(slot));
 
     fileInput.addEventListener("change", () => {
@@ -1260,24 +1186,15 @@
 
     attachPointerPanZoom(canvas, slot);
 
-    card.appendChild(glyph);
-    card.appendChild(viewport);
-    card.appendChild(actions);
-
+    card.append(glyph, viewport, actions);
     lettersHost.appendChild(card);
     return slot;
   }
 
-  /**
-   * @param {typeof slots | null | undefined} prevSlots  If letters match `chars`, copy img / pan / zoom into new cards (font change).
-   */
   function rebuild(prevSlots) {
     const chars = allowedChars(wordInput.value || "");
     const prev = prevSlots;
-    const canPreserve =
-      prev &&
-      prev.length === chars.length &&
-      prev.every((s, i) => s && s.char === chars[i]);
+    const canPreserve = prev && prev.length === chars.length && prev.every((s, i) => s && s.char === chars[i]);
 
     lettersHost.innerHTML = "";
     slots = [];
@@ -1317,9 +1234,6 @@
     renderAll();
   }
 
-  /**
-   * Raster strip — layout at strip pixel size (preview = low px; print = supersampled inner).
-   */
   function buildMasterStripCanvas(targetStripW, targetStripH, drawOpts) {
     const { w, h } = clampStripDimensions(targetStripW, targetStripH);
     const gapPrev = Math.max(0, Math.round((EXPORT_GAP_MM * w) / MM_INNER_W));
@@ -1338,7 +1252,6 @@
 
   function buildPrintReadyCanvas() {
     const { W, H, border, innerW, innerH } = getExportPlatePixels();
-
     const canvas = document.createElement("canvas");
     canvas.width = W;
     canvas.height = H;
@@ -1389,12 +1302,9 @@
         headers: { Accept: "application/json" },
       });
       const data = await res.json().catch(() => ({}));
-      if (res.ok)
-        setStatus("Received.", "ok");
+      if (res.ok) setStatus("Received.", "ok");
       else {
-        const msg =
-          (data && (data.error || (data.errors && data.errors[0] && data.errors[0].message))) ||
-          "Unavailable.";
+        const msg = (data && (data.error || (data.errors && data.errors[0] && data.errors[0].message))) || "Unavailable.";
         setStatus(typeof msg === "string" ? msg : "Unavailable.", "err");
       }
     } catch (e) {
@@ -1404,14 +1314,12 @@
     }
   }
 
-  wordInput.addEventListener("input", rebuild);
+  wordInput.addEventListener("input", () => rebuild(slots.slice()));
   outlineRange.addEventListener("input", () => {
     outlineVal.textContent = formatOutlinePxLabel();
     renderAll();
   });
-  outlineColorSelect.addEventListener("change", () => {
-    renderAll();
-  });
+  outlineColorSelect.addEventListener("change", renderAll);
   fontFamilySelect.addEventListener("change", () => rebuild(slots.slice()));
   btnResetWord.addEventListener("click", resetTransforms);
   btnDownload.addEventListener("click", () => {
@@ -1430,9 +1338,10 @@
       setStatus("Saved.", "ok");
     }, "image/png");
   });
-  btnEmail.addEventListener("click", () => submitEmail());
+  btnEmail.addEventListener("click", submitEmail);
 
   outlineVal.textContent = formatOutlinePxLabel();
+  fontFamilySelect.value = "impact";
   rebuild();
 })();
   </script>
