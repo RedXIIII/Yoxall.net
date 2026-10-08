@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://yoxall.net/sitemap.xml
