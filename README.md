@@ -1,23 +1,31 @@
 # The Record
 
-A static, responsive archive of documented secret programmes, corporate deception, ancient discoveries, and open questions. Includes 18 sourced dossiers, animated code rain, optional ambient audio, search, filters, shareable file links and reduced-motion support.
+An independent, source-led archive at https://yoxall.net, hosted by GitHub Pages from the root of `main`.
 
-## Preview
+## Edit and build
 
-From this directory, run `python -m http.server 4173` and visit http://localhost:4173. No build step or package installation is required.
+The original records are in `assets/modern-records.js` and `assets/ancient-records.js`. New records and long-form additions are in `assets/extension-records.json`. Homepage markup is in `index.html`; the message-board template is in `templates/board.html`.
 
-## Structure
+Run `node build.cjs` after changing records or page templates. It writes the collection pages, individual `/files/` pages, source directory, catalogue, sitemap and board page. Commit the generated pages alongside their sources; Pages does not need a runtime build step.
 
-- `index.html`: page structure and metadata
-- `assets/styles.css`: responsive design
-- `assets/app.js`: interactions, dialogs, rain and opt-in audio
-- `assets/modern-records.js` and `assets/ancient-records.js`: dossier content and source links
-- `assets/ATTRIBUTION.md`: image rights and provenance
+Run `python validate.py` to check every local page, resource and fragment link. For a local preview, serve the root with `python -m http.server 4174 --bind 127.0.0.1`.
 
-The domain's repository is **RedXIIII/Yoxall.net**. Preserve its existing `CNAME` containing `yoxall.net` when publishing. The similarly named RedXIIIuk/yoxall-site repository is a separate Pages site.
+## Editorial standards
 
-Google Fonts supplies Space Grotesk, IBM Plex Mono and Instrument Serif. All documentary images are served locally. There are no analytics, user accounts or external data APIs. Motion preferences are stored locally; ambient audio starts only after a visitor enables it.
+Every dossier names its sources and the limit of its evidence. Programme existence, proposals, inquiry findings, civil settlements, archaeological finds and unresolved hypotheses are kept distinct. Current files are a dated editorial snapshot, reviewed 8 October 2026; there is no automatic news monitoring.
 
-## Editorial maintenance
+The `region` field distinguishes England from other British locations and overseas actions. Keep those distinctions when adding records. Add a specific assessment and proposed tests for every current file.
 
-Each dossier carries its evidence status, primary sources and limits. Keep proposals distinct from executed operations, settlements distinct from court findings, and archaeological objects distinct from interpretations. Verify source and image licence details when adding files.
+## Signal Room
+
+The board is shared through public Nostr relays (`relay.damus.io`, `nos.lol`, `relay.nostr.net`), using signed kind-1 events with the topic `the-record-yoxall-net-v1`. Visitors choose an unverified display name. A browser-generated signing identity, draft, muted-author list and recent verified messages stay in local storage. Clearing browser data loses that identity.
+
+Public posts are transmitted to independent relays and can be read, copied and retained by others. Relay availability, retention and acceptance policies are outside this repository's control. Posting is successful only after at least one relay acknowledges acceptance. The browser verifies signatures and displays message text without executing HTML. The local posting cooldown and hide-author controls are convenience measures; they are not server-side moderation or comprehensive spam protection.
+
+The local `nostr-tools` bundle and its license are documented in `assets/vendor/README.md`. No API keys, Cloudinary credentials or service accounts are needed. For a larger community, replace or supplement public relays with an operated relay and a documented moderation process.
+
+## Privacy and media
+
+No analytics or signup system is installed. Fonts come from Google Fonts. The Signal Room connects to the relays above. Search, bookmarks and motion preferences are local to the visitor's browser. Media credits and license links are in `assets/ATTRIBUTION.md` and the reading room.
+
+Keep `CNAME` as `yoxall.net`. Publishing this repository updates that domain; `RedXIIIuk/yoxall-site` is a different project.
