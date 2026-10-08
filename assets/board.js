@@ -142,7 +142,7 @@
     };
   }
   function renderMessage(post, options) {
-    const { document: doc, catalogue, posts, reply, mute, ownKey } = options;
+    const { document: doc, catalogue, posts, visibleIds, reply, mute, ownKey } = options;
     const make = (tag, className, text) => { const node = doc.createElement(tag); if (className) node.className = className; if (text !== undefined) node.textContent = text; return node; };
     const item = make('article', 'signal-post'); item.id = 'signal-' + post.event.id;
     const heading = make('div', 'signal-post-heading');
@@ -154,7 +154,7 @@
     if (post.reply) {
       const parent = posts.get(post.reply);
       const context = make('p', 'signal-reply-context', parent ? 'In reply to ' + parent.name + ' / ' + fingerprint(parent.event.pubkey) : 'Reply to an earlier signal outside this loaded window.');
-      if (parent) { const link = make('a', '', 'See signal ↗'); link.href = '#signal-' + parent.event.id; context.append(link); }
+      if (parent && visibleIds?.has(parent.event.id)) { const link = make('a', '', 'See signal ↗'); link.href = '#signal-' + parent.event.id; context.append(link); }
       item.append(context);
     }
     item.append(make('p', 'signal-message', post.body));
@@ -201,8 +201,9 @@
       const activeAction = doc.activeElement?.dataset?.signalAction;
       const selected = $('board-filter').value;
       const visible = [...posts.values()].filter(post => !muted.has(post.event.pubkey) && (selected === 'all' || post.topic === selected)).sort((a, b) => b.event.created_at - a.event.created_at || a.event.id.localeCompare(b.event.id));
+      const displayed = visible.slice(0, 100), visibleIds = new Set(displayed.map(post => post.event.id));
       const list = $('board-feed');
-      list.replaceChildren(...visible.slice(0, 100).map(post => renderMessage(post, { document: doc, catalogue, posts, ownKey,
+      list.replaceChildren(...displayed.map(post => renderMessage(post, { document: doc, catalogue, posts, visibleIds, ownKey,
         reply(post) { replyId = post.event.id; topic.value = post.topic; file.value = post.file; updateReply(); saveDraft(); body.focus(); status.textContent = 'Reply selected. Write your signal below.'; },
         mute(post) { if (muted.size >= 50 && !muted.has(post.event.pubkey)) { status.textContent = 'The browser mute list is full. Clear it to add another author.'; return; } muted.add(post.event.pubkey); store.set(storageKeys.muted, JSON.stringify([...muted])); render(); status.textContent = 'Author muted in this browser. Public messages remain on the relays.'; }
       })));
