@@ -1,0 +1,1578 @@
+[
+  {
+    "id": "hard-stone-vessels",
+    "title": "The jar that makes you look twice",
+    "hook": "Hard stone, a narrow mouth, and a question hidden inside.",
+    "theme": "Ancient engineering",
+    "region": "Egypt",
+    "period": "Predynastic and Early Dynastic Egypt · modern investigations, 1993–2025",
+    "relatedUrls": [
+      "/files/vessels.html",
+      "/files/pyramid-void.html",
+      "/files/merer.html"
+    ],
+    "opening": [
+      "At first it looks like a small container. Then the material changes the picture. The Metropolitan Museum of Art catalogues this jar as diorite, made around 3100–2650 BCE. It stands only 5.7 centimetres high. Its opening invites an awkward question: how do you hollow hard stone through a mouth much smaller than the body?",
+      "Ben van Kerkwyk’s UnchartedX brings modern metrology to that ancient puzzle: scan the vessels, inspect their curves and ask whether their precision points to lost advanced machining. He argues that it does. Testing that interpretation means looking beyond a photograph. What would the stone have to preserve for the measurements to identify its makers’ tools?"
+    ],
+    "chapters": [
+      {
+        "title": "The surface becomes a dataset",
+        "paragraphs": [
+          "In its 2023 account, UnchartedX described laboratory inspection alongside structured-light and CT scanning of several vessels. This is a productive move away from judging a polished photograph: a scan can expose uneven walls, changing centres and differences between inner and outer surfaces. Those features can become measurements that other investigators can question or repeat.",
+          "But geometry does not supply an excavation history. The same post corrected an ownership detail for one large vessel; a 2025 update described scans from the Petrie Museum. Private collections and museum collections require object-specific documentation. An impressive scan is evidence about the scanned shape. Its archaeological age, material history and manufacturing interpretation need additional evidence."
+        ],
+        "sourceIds": [
+          "ux-2023",
+          "ux-2025"
+        ]
+      },
+      {
+        "title": "A comparison changes the question",
+        "paragraphs": [
+          "Looking down a narrow opening, the eye supplies a deceptively simple test: does the interior look smooth? A scan asks harder questions. How round is each cross-section? Do the centres of successive sections line up? Could a series of individually impressive circles still describe a cavity that wanders slightly through the stone?",
+          "Now consider the mouth. Can the chosen instrument see every internal surface, or does the opening conceal parts of it? Which regions were measured, and which were reconstructed? A December 2025 study compared 19 Petrie Museum vessels with 49 modern examples. Its assessment turns on these distinctions: geometry, uncertainty and the difference between a measured shape and an intended dimension."
+        ],
+        "sourceIds": [
+          "petrie-2025",
+          "met-jar"
+        ]
+      },
+      {
+        "title": "What abrasive work leaves behind",
+        "paragraphs": [
+          "Experimental archaeologist Denys Stocks investigated early vessel drilling by testing materials and techniques. Experiments matter because they turn an explanation into work that produces a hole, debris and tool wear. They can show that a proposed process is feasible and help identify its traces. Reconstructing one process does not automatically reproduce every vessel or establish one universal method. Matching a polished shape is only part of that comparison; the work itself must leave comparable evidence.",
+          "Another clue survives in an Amarna stone fragment examined by Met researchers Anna Serotta and Federico Carò. A drill-hole residue contained corundum-rich abrasive and bronze corrosion products. The abrasive helps explain how a relatively soft metal tool could work demanding stone. This is later New Kingdom evidence, so it cannot simply be transferred to every Predynastic object."
+        ],
+        "sourceIds": [
+          "stocks",
+          "met-abrasive"
+        ]
+      }
+    ],
+    "evidence": {
+      "headline": "The craftsmanship survives the argument",
+      "summary": "The 2025 Petrie sample’s overall geometry overlapped modern handmade comparators. Its interiors combined strong circularity with weaker concentricity, interpreted by the author as consistent with rotational grinding and tool repositioning. These are relative quality scores, not engineering tolerances. The pictured Met jar was not measured. The cited evidence does not demonstrate necessary lost advanced machining or impossibility of modern reproduction.",
+      "verdictKey": "mixed",
+      "verdictLabel": "Craftsmanship established; lost advanced machining unproved",
+      "claims": [
+        {
+          "claim": "Egyptian artisans made vessels from demanding stone.",
+          "finding": "Museum objects and experimental research establish the material problem.",
+          "status": "supported",
+          "sourceIds": [
+            "met-jar",
+            "stocks"
+          ]
+        },
+        {
+          "claim": "The Petrie sample proves modern machine-level precision throughout.",
+          "finding": "Overall scores overlapped handmade comparators; inner circularity was a distinct result.",
+          "status": "unsupported",
+          "sourceIds": [
+            "petrie-2025"
+          ]
+        },
+        {
+          "claim": "A precise scan dates a privately owned vessel.",
+          "finding": "Geometry alone does not establish archaeological provenance or antiquity.",
+          "status": "unsupported",
+          "sourceIds": [
+            "ux-2023",
+            "petrie-2025"
+          ]
+        },
+        {
+          "claim": "Lost advanced machining is required.",
+          "finding": "That interpretation has not been demonstrated by the cited evidence.",
+          "status": "unsupported",
+          "sourceIds": [
+            "stocks",
+            "met-abrasive",
+            "petrie-2025"
+          ]
+        }
+      ],
+      "remaining": [
+        "The interesting unfinished work is now specific. Which marks remain beneath the polish? Can an experimentally made interior reproduce the same distribution of circularity and displaced centres? A persuasive answer would connect an authenticated object, a documented measurement procedure and a process that leaves matching physical traces.",
+        "There is room to investigate exceptional individual vessels without turning a class average into a verdict on every object. There is also room to admire the pictured jar without attaching somebody else’s tolerance claim to it. Its small scale concentrates the achievement: a patterned, stubborn material made into a controlled and delicate form."
+      ],
+      "nextTest": "Measure authenticated vessels independently, publish uncertainty and full inner-surface data, then compare experimentally produced tool traces and geometry against the originals."
+    },
+    "sources": [
+      {
+        "id": "met-jar",
+        "label": "The Met: diorite jar 2021.41.59",
+        "url": "https://www.metmuseum.org/art/collection/search/329827",
+        "note": "Object catalogue supplies its material, assigned date, dimensions and public-domain image. This jar has no precision claim here."
+      },
+      {
+        "id": "ux-2023",
+        "label": "UnchartedX: the 2023 vase measurement programme",
+        "url": "https://unchartedx.com/site/2023/11/02/ancient-precision-confirmed/",
+        "note": "The named proponent’s own account, including methods, interpretation and a provenance correction; not independent verification of every inference."
+      },
+      {
+        "id": "ux-2025",
+        "label": "UnchartedX: provenance and Petrie Museum scanning",
+        "url": "https://unchartedx.com/site/2025/04/23/ancient-hard-stone-vases-provenance/",
+        "note": "First-party April 2025 update establishes that its discussion includes museum scanning as well as private collections."
+      },
+      {
+        "id": "petrie-2025",
+        "label": "Published 2025 comparative vessel metrology",
+        "url": "https://www.nature.com/articles/s40494-025-02196-7",
+        "note": "Original study, 16 December 2025. Relative geometry and proposed manufacturing processes require separate interpretation."
+      },
+      {
+        "id": "stocks",
+        "label": "Stocks: experimental stone-vessel manufacture",
+        "url": "https://doi.org/10.1017/S0003598X00045804",
+        "note": "Original 1993 experimental archaeology paper; publisher abstract is accessible, full text may require access."
+      },
+      {
+        "id": "met-abrasive",
+        "label": "The Met: drill-hole abrasive analysis",
+        "url": "https://www.metmuseum.org/perspectives/ancient-egyptian-technology",
+        "note": "First-party researcher account of the later Amarna fragment, with material analysis and its limits."
+      }
+    ],
+    "image": {
+      "src": "/assets/egyptian-diorite-vessel.jpg",
+      "alt": "Early Dynastic diorite jar, Met object 2021.41.59, with a small mouth and two lugs.",
+      "credit": "The Metropolitan Museum of Art, Bequest of Nanette B. Kelekian, 2020. Public Domain / CC0. Resized photograph; this is not a vase measured in the 2025 study."
+    },
+    "reviewed": "2026-10-09"
+  },
+  {
+    "id": "mary-celeste",
+    "title": "Mary Celeste: a ship without its people",
+    "hook": "The abandonment is real. Much of the famous mystery was added later.",
+    "theme": "Maritime mysteries",
+    "region": "Atlantic Ocean near the Azores; Gibraltar inquiry",
+    "period": "1872; influential fictional retelling in 1884",
+    "relatedUrls": [],
+    "opening": [
+      "In early December 1872, a passing vessel found Mary Celeste at sea without the people who had sailed aboard her. Captain Benjamin Briggs, his wife, their young daughter and seven crew members were gone. The ship remained afloat. The absence was real, and no surviving witness supplied the missing decision at the centre of it.",
+      "That makes the story compelling before any supernatural detail is added. A captain could not know the later verdict that his vessel would survive. Why might he have judged a smaller boat safer at the time? The useful mystery concerns that judgement, rather than an inventory of ominous details invented after the disappearance."
+    ],
+    "chapters": [
+      {
+        "title": "What the abandoned vessel could actually tell investigators",
+        "paragraphs": [
+          "Mary Celeste had left New York for Genoa carrying alcohol. Dei Gratia found her after the last recorded log entry of 25 November. There was damage and water in the hold, but not a destroyed vessel. Her boat, navigational equipment and papers were missing. Those absences point towards evacuation; they cannot tell us exactly what prompted it or what happened afterwards.",
+          "At the Gibraltar salvage proceedings, suspicions of violence and criminal conduct were examined. They did not produce proof of foul play. The difference between a prosecutor's theory and an established finding is essential here. Investigators confronted an incomplete scene, and the dramatic possibilities available to them were not interchangeable with evidence for those possibilities."
+        ],
+        "sourceIds": [
+          "mc-rmg",
+          "mc-smithsonian"
+        ]
+      },
+      {
+        "title": "A fictional witness walks into a real disappearance",
+        "paragraphs": [
+          "Arthur Conan Doyle later gave readers what the historical record lacked: a narrator who could tell them what happened. His fictional J. Habakuk Jephson's Statement borrowed the abandoned-vessel premise while changing the ship's name to Marie Celeste and altering people, voyage details and cargo. It is a story presented with the apparatus of testimony, rather than testimony about the actual voyage.",
+          "The original text is useful evidence of how a mystery can acquire a second life. A detailed account feels more complete than an unresolved investigation. Yet detail supplied by a novelist cannot repair missing historical observations. Read the fiction beside the maritime record, and its authority dissolves: the supposedly clarifying witness belongs to a different, invented voyage."
+        ],
+        "sourceIds": [
+          "mc-doyle",
+          "mc-rmg"
+        ]
+      },
+      {
+        "title": "An apparently bad decision can have an unknown reason",
+        "paragraphs": [
+          "A modern reconstruction discussed by Smithsonian examined weather, drift and the vessel's condition. It proposed that uncertainty about water in the hold, together with a pump problem and difficult conditions, could have helped make abandonment seem necessary. This is an attempt to recover a practical decision from the available evidence, rather than a claim to possess a survivor's account.",
+          "A plausible reconstruction still needs to be labelled as one. Knowing the ship did not sink does not tell us what its captain believed it was about to do. Conversely, uncertainty about his judgement does not establish piracy, a supernatural attack or any other favoured theory. The strongest reading preserves the disappearance while removing invented certainty from both the legend and its proposed solutions."
+        ],
+        "sourceIds": [
+          "mc-smithsonian"
+        ]
+      }
+    ],
+    "evidence": {
+      "headline": "An authentic disappearance with an unresolved cause",
+      "summary": "The deserted vessel, missing boat and missing people are documented. No explanation for the decision to abandon has been conclusively established. Later fiction and modern reconstructions supply very different kinds of material, neither of which should be mistaken for a contemporary eyewitness account.",
+      "verdictKey": "open",
+      "verdictLabel": "Abandonment documented; cause unresolved",
+      "claims": [
+        {
+          "claim": "Mary Celeste was discovered without its passengers and crew.",
+          "finding": "The historical abandonment is documented.",
+          "status": "supported",
+          "sourceIds": [
+            "mc-rmg"
+          ]
+        },
+        {
+          "claim": "Investigators proved a violent crime caused the disappearance.",
+          "finding": "The salvage proceedings established no such conclusion.",
+          "status": "unsupported",
+          "sourceIds": [
+            "mc-rmg",
+            "mc-smithsonian"
+          ]
+        },
+        {
+          "claim": "Doyle's narrator supplies the missing survivor's testimony.",
+          "finding": "The narrator and the altered voyage belong to fiction.",
+          "status": "unsupported",
+          "sourceIds": [
+            "mc-doyle"
+          ]
+        },
+        {
+          "claim": "A practical danger caused Briggs to order an evacuation.",
+          "finding": "It is plausible, but the decision and its precise cause remain unobserved.",
+          "status": "open",
+          "sourceIds": [
+            "mc-smithsonian"
+          ]
+        }
+      ],
+      "remaining": [
+        "The central unknown is narrow and human: what information made leaving seem necessary, and what then happened to the boat? The surviving ship alone cannot answer it.",
+        "A theory becomes stronger by explaining the documented conditions with fewer unsupported assumptions. It does not become established merely because it offers an ending to a story that otherwise has none."
+      ],
+      "nextTest": "Does a proposed reconstruction fit the contemporary vessel evidence without importing details from later fiction?"
+    },
+    "sources": [
+      {
+        "id": "mc-rmg",
+        "label": "Royal Museums Greenwich: the Mary Celeste mystery",
+        "url": "https://www.rmg.co.uk/stories/maritime-history/mystery-mary-celeste",
+        "note": "Maritime curator's account of the voyage, discovery, vessel evidence, salvage inquiry and later fictional contamination. Discovery is described here as early December because authoritative retellings differ by a day."
+      },
+      {
+        "id": "mc-smithsonian",
+        "label": "Smithsonian: evidence and a modern reconstruction",
+        "url": "https://www.smithsonianmag.com/history/abandoned-ship-the-mary-celeste-174488104/",
+        "note": "Authoritative historical reporting, 2007, discussing the inquiry and Anne MacGregor's weather, drift and pump hypothesis. The reconstruction is identified as a hypothesis, not a settled finding."
+      },
+      {
+        "id": "mc-doyle",
+        "label": "Doyle's original fictional Jephson statement",
+        "url": "https://www.gutenberg.org/files/294/294-h/294-h.htm",
+        "note": "Primary literary text in The Captain of the Pole-Star and Other Tales. J. Habakuk Jephson's Statement first appeared in 1884; it is cited as evidence of a fictional retelling, not of events aboard Mary Celeste."
+      }
+    ],
+    "reviewed": "2026-10-09"
+  },
+  {
+    "id": "pyramid-hidden-spaces",
+    "title": "The pyramid answered in particles",
+    "hook": "A familiar monument revealed a space no photograph could show.",
+    "theme": "Ancient engineering",
+    "region": "Giza, Egypt",
+    "period": "Fourth Dynasty monument · discoveries reported in 2017 and 2023",
+    "relatedUrls": [
+      "/files/pyramid-void.html",
+      "/files/merer.html",
+      "/files/vessels.html"
+    ],
+    "opening": [
+      "A photograph of the Great Pyramid gives the impression of something completely known: an unmistakable outline, a famous entrance, familiar chambers. The stone hides much more than the outline reveals. In 2017 an international team announced a large internal void above the Grand Gallery. They had detected it without opening a new passage through the masonry.",
+      "The clue arrived from the sky. Cosmic-ray interactions produce muons, particles that can pass through substantial thicknesses of stone. Count enough of them from enough directions and differences in density become visible. A region transmitting more particles than expected can betray a space that the eye cannot see. The pyramid was being examined with a natural particle probe."
+    ],
+    "chapters": [
+      {
+        "title": "A signal earns a second look",
+        "paragraphs": [
+          "The ScanPyramids Big Void was first detected using nuclear-emulsion films inside the Queen’s Chamber. The discovery did not rest on that instrument alone. Scintillator detectors in the same chamber and gas detectors outside the pyramid independently supported it. Different equipment and viewpoints turned an unexpected signal into a finding that could survive a serious cross-check.",
+          "The 2017 paper reported a minimum length of 30 metres and a position above the Grand Gallery. It deliberately left the intended purpose unresolved. The finding was a density measurement, not a photograph of furnishings. Calling it a treasury, a burial chamber or evidence of unknown builders would add a story that the particles had not supplied."
+        ],
+        "sourceIds": [
+          "big-void",
+          "cea-2017"
+        ]
+      },
+      {
+        "title": "Another space, another investigation",
+        "paragraphs": [
+          "Near the north face, a separate anomaly lay behind the great angled stone beams known as chevrons. Investigators followed it through further measurements. In 2023 a paper characterised the North Face Corridor as roughly nine metres long, with a cross-section around two metres by two metres. This was a distinct feature, not a close-up of the Big Void.",
+          "The distinction matters because the two discoveries are easily merged into one sensational chamber. The corridor was close enough to the surface for additional investigation. The ScanPyramids researchers used several detector positions and compared the observations with simulations containing the known architecture. Shape and location became more constrained, while the architectural meaning remained a question."
+        ],
+        "sourceIds": [
+          "corridor"
+        ]
+      },
+      {
+        "title": "When the measurement meets the camera",
+        "paragraphs": [
+          "Researchers from Cairo University and the Technical University of Munich also examined the north-face masonry with ground-penetrating radar and ultrasound. Those techniques contributed a different kind of evidence, confirming an air anomaly behind the chevrons. Matching results across methods helped identify where a very small route for inspection could be considered.",
+          "CEA’s March 2023 account describes an ultrathin endoscope passed between stone joints. The corridor could finally be seen rather than inferred only from particle counts. That progression is the remarkable part: a predicted absence inside solid-looking architecture became a visible space. The camera confirmed the corridor; it did not answer the separate Big Void’s purpose."
+        ],
+        "sourceIds": [
+          "tum-ndt",
+          "cea-2023"
+        ]
+      }
+    ],
+    "evidence": {
+      "headline": "Hidden architecture is established",
+      "summary": "Two distinct internal features are supported by modern measurements. The North Face Corridor was also inspected by endoscope. The discoveries demonstrate that important architectural questions remain inside the Great Pyramid; they provide no evidence here for treasure, extraterrestrial builders or a concealed advanced civilisation.",
+      "verdictKey": "documented",
+      "verdictLabel": "Spaces detected; architectural purposes still under investigation",
+      "claims": [
+        {
+          "claim": "A large void lies above the Grand Gallery.",
+          "finding": "Three detector technologies supported the 2017 result.",
+          "status": "supported",
+          "sourceIds": [
+            "big-void",
+            "cea-2017"
+          ]
+        },
+        {
+          "claim": "The 2023 corridor is the same feature.",
+          "finding": "The north-face structure and Big Void occupy different locations.",
+          "status": "unsupported",
+          "sourceIds": [
+            "big-void",
+            "corridor"
+          ]
+        },
+        {
+          "claim": "The corridor was visually inspected.",
+          "finding": "The research team reports endoscopic observation.",
+          "status": "supported",
+          "sourceIds": [
+            "cea-2023"
+          ]
+        },
+        {
+          "claim": "The Big Void’s contents and function are known.",
+          "finding": "Density measurements do not establish either conclusion.",
+          "status": "open",
+          "sourceIds": [
+            "big-void"
+          ]
+        }
+      ],
+      "remaining": [
+        "The next architectural question is more difficult than the discovery headline. Was a space intended to relieve loads, aid construction or serve some other purpose? Each explanation must fit its dimensions, position and relationship to the surrounding stonework. An attractive theory that cannot fit the measured geometry would explain very little.",
+        "The mystery survives because the monument is real and access is limited. More viewpoints can sharpen an internal outline, while carefully approved investigations may add direct observations. Any proposed intervention also has to preserve the structure that makes the question possible. The gap in knowledge is a research problem with measurable boundaries, rather than an invitation to fill the space with anything imaginable."
+      ],
+      "nextTest": "Combine further muon viewpoints with architectural modelling and conservation-approved inspection to distinguish competing explanations for each feature separately."
+    },
+    "sources": [
+      {
+        "id": "big-void",
+        "label": "ScanPyramids: original 2017 Big Void paper",
+        "url": "https://www.nature.com/articles/nature24647",
+        "note": "Original discovery, including detector cross-checks, minimum length and explicitly unresolved purpose."
+      },
+      {
+        "id": "cea-2017",
+        "label": "CEA: the three muography systems",
+        "url": "https://irfu.cea.fr/Phocea/Vie_des_labos/Ast/ast.php?id_ast=4212&t=fait_marquant",
+        "note": "First-party detector team account of independent measurements and density imaging."
+      },
+      {
+        "id": "corridor",
+        "label": "Original 2023 North Face Corridor study",
+        "url": "https://doi.org/10.1038/s41467-023-36351-0",
+        "note": "Original muon characterisation of the separate corridor’s geometry and location."
+      },
+      {
+        "id": "tum-ndt",
+        "label": "Cairo and TUM: radar and ultrasound study",
+        "url": "https://portal.fis.tum.de/en/publications/localization-and-shape-determination-of-a-hidden-corridor-in-the-/",
+        "note": "Research-team publication record explains the complementary non-destructive measurements."
+      },
+      {
+        "id": "cea-2023",
+        "label": "CEA: from muography to endoscopic images",
+        "url": "https://www.cea.fr/drf/Pages/Actualites/En-direct-des-labos/2023/Decouverte-couloir-dissimule-pyramide-kheops.aspx",
+        "note": "First-party March 2023 account of confirmation and the ultrathin endoscope."
+      },
+      {
+        "id": "photo",
+        "label": "Giza photograph: author and source",
+        "url": "https://commons.wikimedia.org/wiki/File:All_Gizah_Pyramids.jpg",
+        "note": "Ricardo Liberato; retouching by Ikiwaner. Image credit only, not evidence of internal features."
+      },
+      {
+        "id": "photo-licence",
+        "label": "Photograph licence: CC BY-SA 2.0",
+        "url": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "note": "Applies to the Giza photograph and any adapted image version, not this original narrative."
+      }
+    ],
+    "image": {
+      "src": "/assets/giza-pyramids.jpg",
+      "alt": "The actual pyramids and subsidiary pyramids at Giza, seen in daylight.",
+      "credit": "Ricardo Liberato; Commons retouching by Ikiwaner. CC BY-SA 2.0. Wikimedia photograph, resized. Exterior view: the hidden spaces are not shown."
+    },
+    "reviewed": "2026-10-09"
+  },
+  {
+    "id": "atlantis-and-the-lost-port",
+    "title": "The island in the story, the city under the sea",
+    "hook": "A vanished empire haunts the imagination. A drowned port has an address.",
+    "theme": "Lost worlds",
+    "region": "Plato’s account / Aboukir Bay, Egypt",
+    "period": "Fourth-century BCE literary account · Thonis-Heracleion rediscovered in 2000",
+    "relatedUrls": [
+      "/files/atlantis.html",
+      "/files/heracleion.html",
+      "/files/troy.html",
+      "/files/doggerland.html"
+    ],
+    "opening": [
+      "An island empire disappears in a terrible day and night. The sea closes over its power and the survivors lose access to its past. Atlantis is an exceptionally durable image of catastrophe. Its foundational evidence, however, is a narrative in Plato’s Timaeus and Critias, rather than an excavated island with an agreed identification.",
+      "A real drowned city lies off Egypt’s Mediterranean coast. Thonis-Heracleion emerged from underwater surveys as monuments, harbour remains and inscribed objects. Setting these two accounts beside one another reveals what makes a lost-world claim persuasive. A powerful story can launch a search; physical remains can give that search a location, a chronology and an identity."
+    ],
+    "chapters": [
+      {
+        "title": "What Plato actually supplies",
+        "paragraphs": [
+          "In the Timaeus, the story is passed through speakers who describe an account received by Solon in Egypt. Atlantis lies beyond the Pillars of Heracles and threatens lands around the Mediterranean. Athens resists; earthquakes and floods later destroy the island. These are features of the text. Their presence in an ancient work does not make them independently witnessed events.",
+          "The Critias expands the imagined society with rulers, canals, resources and a moral decline. Its richness makes it tempting to treat every description as a coordinate waiting to be decoded. Yet literary detail can also serve an argument about political order and power. Penn Museum’s discussion places the dialogues in that philosophical setting, rather than reading them as a surviving archaeological survey."
+        ],
+        "sourceIds": [
+          "timaeus",
+          "critias",
+          "penn"
+        ]
+      },
+      {
+        "title": "A bay begins to return a city",
+        "paragraphs": [
+          "Franck Goddio’s team began research in Aboukir Bay in 1996 and made the discoveries identifying Thonis-Heracleion in 2000. The site lies about 6.5 kilometres from the present coastline, beneath roughly ten metres of water. Mapping and excavation produced an interconnected setting: temples, port basins, channels and objects from the city’s working and religious life.",
+          "This collection of evidence can be interrogated in ways that a resemblance to Plato cannot. A statue can be catalogued. An inscription can be translated. Coins and ceramics can be compared with dated material elsewhere. A harbour can be mapped relative to neighbouring structures. Together, those relationships begin to reconstruct an inhabited place rather than merely a promising shape on a seabed image."
+        ],
+        "sourceIds": [
+          "goddio"
+        ]
+      },
+      {
+        "title": "Two names find one location",
+        "paragraphs": [
+          "The identification also settled a historical puzzle. Thonis was the Egyptian name and Heracleion the Greek name of the same city. The British Museum’s account of the excavated stela explains how inscribed evidence established that link. This matters more than a general similarity between ruined ports: names and objects connect an actual location to an actual historical record.",
+          "The port’s remains speak to contact between Egyptian and Greek worlds. The museum’s exhibition account used the Decree of Sais and its taxes on traded goods to introduce that exchange. Religious objects and major monuments add another part of the city’s life. Recovering a lost place reveals institutions, commerce and belief alongside the dramatic fact of its submergence."
+        ],
+        "sourceIds": [
+          "bm-2016",
+          "bm-2017"
+        ]
+      }
+    ],
+    "evidence": {
+      "headline": "One story survives in texts; one city survives in objects",
+      "summary": "Thonis-Heracleion is a documented submerged Egyptian port with inscribed evidence and mapped remains. Atlantis has no established archaeological identification in these sources. The port’s discovery shows that lost places can be recovered; it does not establish a connection to Plato’s island.",
+      "verdictKey": "mixed",
+      "verdictLabel": "Drowned port documented; Atlantis identification unestablished",
+      "claims": [
+        {
+          "claim": "Plato describes Atlantis and its destruction.",
+          "finding": "The account exists in his dialogues.",
+          "status": "supported",
+          "sourceIds": [
+            "timaeus",
+            "critias"
+          ]
+        },
+        {
+          "claim": "Thonis-Heracleion is a real submerged city.",
+          "finding": "Excavated objects and structures establish a physical site.",
+          "status": "supported",
+          "sourceIds": [
+            "goddio",
+            "bm-2016"
+          ]
+        },
+        {
+          "claim": "Thonis and Heracleion were two separate ports.",
+          "finding": "Inscribed evidence identifies two names for the same city.",
+          "status": "unsupported",
+          "sourceIds": [
+            "bm-2016"
+          ]
+        },
+        {
+          "claim": "Heracleion’s discovery confirms Atlantis.",
+          "finding": "The evidence identifies an Egyptian port, without establishing that connection.",
+          "status": "unsupported",
+          "sourceIds": [
+            "goddio",
+            "timaeus",
+            "penn"
+          ]
+        }
+      ],
+      "remaining": [
+        "Atlantis remains available for investigation, but a proposed location needs more than water, walls and catastrophe. It must explain the textual account, date its own remains and supply independent evidence for the proposed identity. Continually changing the story’s defining details to fit each new site makes a hypothesis harder to test.",
+        "Heracleion already offers a more tangible mystery: the reconstruction of a city whose plan and daily routines are still being recovered. The sea concealed a large archive rather than a single spectacular object. New finds can revise how the port worked and how it changed. There is no need to rename it Atlantis for that achievement to be extraordinary."
+      ],
+      "nextTest": "For any Atlantis identification, seek independently dated remains and specific corroboration of identity; at Heracleion, continue contextual excavation and publication of the city’s archaeological record."
+    },
+    "sources": [
+      {
+        "id": "timaeus",
+        "label": "Plato: Timaeus 25",
+        "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0180%3Atext%3DTim.%3Apage%3D25",
+        "note": "Primary ancient text in translation; establishes what the narrative says, not that its events occurred."
+      },
+      {
+        "id": "critias",
+        "label": "Plato: Critias",
+        "url": "https://classics.mit.edu/Plato/critias.html",
+        "note": "Primary ancient account in translation, including political order and moral decline."
+      },
+      {
+        "id": "penn",
+        "label": "Penn Museum: the dialogues’ philosophical context",
+        "url": "https://www.penn.museum/sites/expedition/atlantis-lost-and-found/",
+        "note": "Museum scholarly discussion interprets the Atlantis narrative within Plato’s political and moral project."
+      },
+      {
+        "id": "goddio",
+        "label": "Excavation team: Thonis-Heracleion",
+        "url": "https://www.franckgoddio.org/projects/sunken-civilizations/heracleion",
+        "note": "First-party survey and excavation account gives discovery history, location and physical remains."
+      },
+      {
+        "id": "bm-2016",
+        "label": "British Museum: inscriptions and the city’s identity",
+        "url": "https://www.britishmuseum.org/sites/default/files/2020-06/British-Museum_Egypt_Sudan_Newsletter3_2016.pdf",
+        "note": "Museum researchers’ account explains the stela linking Thonis and Heracleion."
+      },
+      {
+        "id": "bm-2017",
+        "label": "British Museum: the recovered city and trade",
+        "url": "https://www.britishmuseum.org/sites/default/files/2020-06/British_Museum_Egypt_Sudan_Newsletter4_2017.pdf",
+        "note": "First-party exhibition report discusses the Decree of Sais and interaction between Egypt and the Greek world."
+      }
+    ],
+    "reviewed": "2026-10-09"
+  },
+  {
+    "id": "doggerland-beneath-the-waves",
+    "title": "The country beneath the crossing",
+    "hook": "Before Britain was an island, people lived where the North Sea rolls.",
+    "theme": "Lost worlds",
+    "region": "Southern North Sea / Britain and continental Europe",
+    "period": "Late Ice Age and Mesolithic landscapes · research through 2026",
+    "relatedUrls": [
+      "/files/doggerland.html",
+      "/files/altar-journey.html",
+      "/files/english-landscapes.html"
+    ],
+    "opening": [
+      "The sea between Britain and continental Europe looks like a permanent boundary. It is a comparatively recent arrangement. Beneath parts of the North Sea lie the remains of a landscape that once connected the shores: rivers, changing coastlines and environments used by prehistoric people. Archaeologists call that drowned region Doggerland.",
+      "It has no surviving capital that can summarise the whole story. Its evidence is scattered through seabed sediments, recovered objects and reconstructed terrain. A familiar version ends with a single enormous wave. The research reveals a more unsettling history: a lived-in landscape repeatedly transformed, with its final disappearance occurring unevenly rather than at one simple, universal moment."
+    ],
+    "chapters": [
+      {
+        "title": "The sea gives pieces back",
+        "paragraphs": [
+          "The Rijksmuseum van Oudheden’s research programme describes tools, worked bone and antler, and human and animal remains recovered from the North Sea. Fishing nets and sand brought ashore for beach projects have returned fragments of the lost landscape. Some objects carry clear signs of human workmanship even when their original location has been disturbed.",
+          "That disturbance creates the central difficulty. An object lifted from a seabed or found in redeposited beach sand may have lost the neighbours and sediment layers that would explain its setting. It can establish past activity without identifying an intact settlement. Archaeologists must work from those fragments toward locations where objects and environmental evidence can still be studied together."
+        ],
+        "sourceIds": [
+          "rmo"
+        ]
+      },
+      {
+        "title": "A forest becomes readable",
+        "paragraphs": [
+          "A 2026 study led by Robin Allaby examined ancient DNA in 252 sediment samples from 41 cores along a prehistoric river system in southern Doggerland. The team combined DNA with sediment analysis to distinguish more secure local signals from mixed material. Fine deposits and coarse, reworked deposits cannot be interpreted in exactly the same way.",
+          "The secure signals indicated temperate trees including oak, elm and hazel more than 16,000 years ago. Such woodland could have offered resources in a region often pictured as harsh Ice Age terrain. The researchers propose favourable refuges for plants and animals, potentially for people as well. This reconstructs an environment; it does not reveal a human village merely because tree DNA survives."
+        ],
+        "sourceIds": [
+          "dna-2026",
+          "warwick"
+        ]
+      },
+      {
+        "title": "The catastrophe with an aftermath",
+        "paragraphs": [
+          "The Storegga tsunami, around 6200 BCE, was a real event generated by a vast submarine landslide off Norway. James Walker and colleagues published evidence from the southern North Sea in 2020. Their analysis challenged the assumption that its arrival necessarily caused the definitive, wholesale drowning of Doggerland. Local topography changes how a wave reaches, damages and retreats from a coast.",
+          "Gradual sea-level rise belongs in the same story. Bradford’s later landscape simulation makes that changing geography visible across thousands of years, while the 2026 environmental research supports survival of some land after the tsunami. A catastrophic wave and a landscape’s eventual inundation are related questions, but they are not automatically the same event."
+        ],
+        "sourceIds": [
+          "storegga",
+          "bradford-map",
+          "warwick"
+        ]
+      }
+    ],
+    "evidence": {
+      "headline": "The lost landscape is real; its ending was complex",
+      "summary": "Archaeological finds and environmental records establish a drowned prehistoric world. The Storegga tsunami is documented, but the cited studies do not support reducing every part of Doggerland’s disappearance to one wave. The identity and lives of particular communities remain much harder to reconstruct than the former landscape.",
+      "verdictKey": "documented",
+      "verdictLabel": "Drowned landscape documented; settlement history incomplete",
+      "claims": [
+        {
+          "claim": "Land once connected Britain and continental Europe.",
+          "finding": "Mapped landscapes and marine sediment research support the connection.",
+          "status": "supported",
+          "sourceIds": [
+            "bradford-map",
+            "dna-2026"
+          ]
+        },
+        {
+          "claim": "People used the now-submerged region.",
+          "finding": "Human remains and worked objects form part of the archaeological record.",
+          "status": "supported",
+          "sourceIds": [
+            "rmo"
+          ]
+        },
+        {
+          "claim": "One tsunami permanently erased all Doggerland.",
+          "finding": "Research distinguishes local tsunami impacts from later inundation.",
+          "status": "unsupported",
+          "sourceIds": [
+            "storegga",
+            "warwick"
+          ]
+        },
+        {
+          "claim": "Tree DNA identifies a specific human settlement.",
+          "finding": "It reconstructs habitat; an occupation site requires further evidence.",
+          "status": "unsupported",
+          "sourceIds": [
+            "dna-2026"
+          ]
+        }
+      ],
+      "remaining": [
+        "The next discovery may look far less dramatic than a monument rising from the water. A securely located tool beside dated sediments, plant remains and an occupation surface could tell researchers more about daily life than an impressive object stripped of context. Linking evidence together is what turns an underwater landscape into a history of its inhabitants.",
+        "Doggerland also changes the map of what is missing. Present shorelines cannot define the whole prehistoric world because many former places lie offshore. Recovering them expands the area in which ancient lives can be investigated. It does not establish a hidden industrial civilisation; it gives real prehistoric communities back a portion of the land they once inhabited."
+      ],
+      "nextTest": "Locate intact occupation deposits, date their sediment sequences and connect recovered objects with local environmental records before inferring particular settlements or population movements."
+    },
+    "sources": [
+      {
+        "id": "rmo",
+        "label": "Rijksmuseum van Oudheden: Doggerland finds and research",
+        "url": "https://www.rmo.nl/onderzoek/onderzoeksprojecten/doggerland-onderzoek/",
+        "note": "Museum account of recovered artifacts and remains. Its simplified tsunami wording is assessed against the original studies below."
+      },
+      {
+        "id": "dna-2026",
+        "label": "Allaby and colleagues: original 2026 DNA study",
+        "url": "https://wrap.warwick.ac.uk/id/eprint/199290/",
+        "note": "Open-access original PNAS paper, doi:10.1073/pnas.2508402123, with environmental findings and sediment-context checks."
+      },
+      {
+        "id": "warwick",
+        "label": "Warwick research team: the early woodland evidence",
+        "url": "https://warwick.ac.uk/news/pressreleases/north-sea-lost-world/",
+        "note": "First-party 2026 account explains the environmental implications and post-tsunami survival of some land."
+      },
+      {
+        "id": "storegga",
+        "label": "Walker and colleagues: tsunami and later inundation",
+        "url": "https://doi.org/10.15184/aqy.2020.49",
+        "note": "Original 2020 research stresses topographic variation and rejects a simple final-drowning interpretation."
+      },
+      {
+        "id": "bradford-map",
+        "label": "Bradford: modelling Doggerland’s changing geography",
+        "url": "https://www.bradford.ac.uk/news/archive/2025/final-days-of-doggerland-interactive-map-and-animation-1.php",
+        "note": "First-party landscape reconstruction project; a model is distinct from a map of directly excavated settlements."
+      }
+    ],
+    "reviewed": "2026-10-09"
+  },
+  {
+    "id": "antikythera-sky-in-gears",
+    "title": "A sky folded into bronze",
+    "hook": "A corroded wreck fragment contained a machine for celestial time.",
+    "theme": "Ancient engineering",
+    "region": "Antikythera, Greece / ancient Mediterranean",
+    "period": "Museum dating: c. 150–100 BCE · recovered in 1900–1901",
+    "relatedUrls": [
+      "/files/antikythera.html",
+      "/files/roman-concrete.html",
+      "/files/vessels.html"
+    ],
+    "opening": [
+      "A lump of corroded bronze from a shipwreck can conceal an astonishing amount of information. The Antikythera mechanism reached the National Archaeological Museum during salvage in 1900–1901. What survived was fragmentary and difficult to read. Inside it were gear teeth: the remains of an ancient machine built to represent celestial cycles.",
+      "The museum places its creation around 150–100 BCE. Its date makes the surviving engineering remarkable, but the object also belongs to a world with astronomical observations, mathematics and mechanical devices. The mystery is how that knowledge was assembled into this particular instrument, and how much of its original arrangement can still be recovered."
+    ],
+    "chapters": [
+      {
+        "title": "Seeing through the corrosion",
+        "paragraphs": [
+          "The mechanism has been studied through successive generations of imaging. Early researchers offered different interpretations; later X-rays and tomography provided more detail. In 2006, a research team reported high-resolution X-ray tomography and surface imaging that clarified gear functions and doubled the number of deciphered inscriptions. What looked inaccessible became a source of readable mechanical evidence.",
+          "Those inscriptions matter as much as the gears. They describe functions and displays, helping constrain what a reconstruction must do. A clever modern model could calculate many things; the difficult task is finding a model that fits the surviving components and text. Each fragment supplies restrictions as well as possibilities."
+        ],
+        "sourceIds": [
+          "museum",
+          "decoding-2006"
+        ]
+      },
+      {
+        "title": "A cycle becomes a prediction",
+        "paragraphs": [
+          "One of the strongest findings is an eclipse system built around the Saros cycle of 223 lunar months. Tony Freeth’s research explains how marks distributed along a spiral dial represented eclipse possibilities. The device translated a long astronomical cycle into a physical scale that a user could consult, with inscriptions adding information about the predicted events.",
+          "That is already an extraordinary act of compression. A cycle extending over years becomes a relationship between gear teeth, a pointer and a labelled dial. It should not be mistaken for a flawless forecast of every eclipse visible from any location. The predictive scheme was constructed from ancient astronomical knowledge, and researchers still debate details of its reconstruction."
+        ],
+        "sourceIds": [
+          "eclipse-2019"
+        ]
+      },
+      {
+        "title": "Rebuilding the missing front",
+        "paragraphs": [
+          "Only about a third of the original mechanism survives. A 2021 study proposed a reconstruction of its front display that combined the remaining evidence with inscriptions concerning the Sun, Moon and five planets known in antiquity. Its authors set out a model designed to satisfy multiple constraints, rather than simply adding whatever gearing would look impressive.",
+          "A reconstruction is a reasoned answer to incomplete evidence. It is not the recovery of missing original gears. The same paper notes how earlier models differed and how new readings forced changes. The mechanism’s sophistication is established by surviving hardware; the exact arrangement of every absent component belongs to an investigation that remains open."
+        ],
+        "sourceIds": [
+          "cosmos-2021"
+        ]
+      }
+    ],
+    "evidence": {
+      "headline": "An ancient astronomical calculator is established",
+      "summary": "Surviving gears, imaging and inscriptions demonstrate a sophisticated mechanical instrument for celestial and calendar cycles. Some functions are well supported; missing parts leave aspects of the design unsettled. Calling it an analogue computer describes its calculating function, without implying electronics or technology detached from its ancient setting.",
+      "verdictKey": "documented",
+      "verdictLabel": "Ancient calculator documented; complete design partly reconstructed",
+      "claims": [
+        {
+          "claim": "The object contains ancient bronze gearing.",
+          "finding": "The fragments and museum research establish the mechanism.",
+          "status": "supported",
+          "sourceIds": [
+            "museum",
+            "decoding-2006"
+          ]
+        },
+        {
+          "claim": "It represented eclipse possibilities.",
+          "finding": "A 223-month Saros dial and inscriptions support that function.",
+          "status": "supported",
+          "sourceIds": [
+            "eclipse-2019"
+          ]
+        },
+        {
+          "claim": "A published model recovers every original component.",
+          "finding": "Much of the instrument is missing; reconstruction remains inferential.",
+          "status": "unsupported",
+          "sourceIds": [
+            "cosmos-2021"
+          ]
+        },
+        {
+          "claim": "Its maker and full manufacturing history are settled.",
+          "finding": "The cited research does not establish a complete workshop history.",
+          "status": "open",
+          "sourceIds": [
+            "museum",
+            "cosmos-2021"
+          ]
+        }
+      ],
+      "remaining": [
+        "The lost technology here is a specific machine and the full tradition that produced it, rather than evidence of an otherwise invisible modern industry. A remarkable survivor cannot tell researchers how common such instruments were. Nor does the absence of a complete second example prove that this one appeared without predecessors.",
+        "There is still a powerful story in the gap. Somebody converted observations of the sky into a compact mechanical arrangement that outlived its owner, its voyage and centuries underwater. Recovering that arrangement requires the patient comparison of teeth, holes and almost unreadable letters. The achievement grows more intelligible as the evidence improves, while the identity of its makers remains tantalising."
+      ],
+      "nextTest": "Use improved imaging and new readings to test competing reconstructions against every surviving fragment; further securely dated components or comparable instruments would constrain the missing design and workshop history."
+    },
+    "sources": [
+      {
+        "id": "museum",
+        "label": "National Archaeological Museum: mechanism history",
+        "url": "https://antikythera-mechanism.namuseum.gr/en/science-historian/",
+        "note": "First-party museum timeline, dating and account of successive investigations."
+      },
+      {
+        "id": "decoding-2006",
+        "label": "Original 2006 tomography and inscriptions paper",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/17136087/",
+        "note": "Original research abstract, doi:10.1038/nature05357, explains imaging, gearing and newly deciphered text."
+      },
+      {
+        "id": "eclipse-2019",
+        "label": "Freeth: the eclipse prediction scheme",
+        "url": "https://www.nature.com/articles/s41599-018-0210-9",
+        "note": "Original 2019 analysis distinguishes eclipse possibilities from an unrestricted perfect prediction."
+      },
+      {
+        "id": "cosmos-2021",
+        "label": "Original 2021 model of the front display",
+        "url": "https://www.nature.com/articles/s41598-021-84310-w",
+        "note": "Research reconstruction addressing inscriptions and fragmentary evidence; it is a proposed model, not a recovered complete machine."
+      },
+      {
+        "id": "photo",
+        "label": "Mechanism photograph: author and source",
+        "url": "https://commons.wikimedia.org/wiki/File:Antikythera_Mechanism_(NAMA)_2017.jpg",
+        "note": "Peulle (Petter Ulleland), 2017. Image credit; actual displayed fragments."
+      },
+      {
+        "id": "photo-licence",
+        "label": "Photograph licence: CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "note": "Applies to the mechanism photograph and any adapted image version, not this original narrative."
+      }
+    ],
+    "image": {
+      "src": "/assets/antikythera-mechanism.jpg",
+      "alt": "Three corroded fragments of the real Antikythera mechanism displayed in Athens.",
+      "credit": "Peulle (Petter Ulleland), via Wikimedia Commons. CC BY-SA 4.0. Photograph resized; fragments of the original artifact, not a reconstruction."
+    },
+    "reviewed": "2026-10-09"
+  },
+  {
+    "id": "altar-stone-journey",
+    "title": "The stone that points north",
+    "hook": "A six-tonne block at Stonehenge carries a distant geological signature.",
+    "theme": "Ancient engineering",
+    "region": "Stonehenge, England / northeast Scotland",
+    "period": "Neolithic monument · provenance studies, 2024–2026",
+    "relatedUrls": [
+      "/files/altar-journey.html",
+      "/files/stonehenge.html",
+      "/files/doggerland.html"
+    ],
+    "opening": [
+      "Among Stonehenge’s stones, one long sandstone block carries a question about distance. The Altar Stone is estimated to weigh six tonnes. Its familiar name may suggest a function, but researchers still question how it originally stood. The more revealing record lies inside the stone: mineral grains with ages and chemistry that can be compared with rocks elsewhere.",
+      "For years, its origin was associated with Wales. In 2024, researchers presented a strikingly different match: northeast Scotland’s Orcadian Basin. The change made an already difficult transport question much larger. A geological source can be investigated in a laboratory. The human journey from that region to Salisbury Plain leaves a different, much less complete trail."
+    ],
+    "chapters": [
+      {
+        "title": "A fingerprint older than the monument",
+        "paragraphs": [
+          "The 2024 team analysed zircon, apatite and rutile grains in Altar Stone fragments. These minerals preserve clues to the older rocks from which the sandstone’s sediment was derived. Comparisons across Britain and Ireland found a strong similarity with Old Red Sandstone from the Orcadian Basin, rather than the previously proposed Anglo-Welsh source.",
+          "That result points to a region, not an identified quarry. Sedimentary rocks collect material from earlier landscapes, so investigators compare populations of grains and several kinds of evidence. The published study argued for an origin at least 750 kilometres from Stonehenge. Such a match makes long-distance movement a serious archaeological problem without identifying a single departure point."
+        ],
+        "sourceIds": [
+          "provenance-2024"
+        ]
+      },
+      {
+        "title": "The missing travel record",
+        "paragraphs": [
+          "The research team suggested transport by sea as a plausible answer to the practical obstacles of a long overland journey. Curtin’s first-party account emphasised the implications for prehistoric organisation and connections. Those implications are compelling, but a proposed maritime route is not the discovery of the vessel that carried the stone or a chain of dated stopping places.",
+          "English Heritage’s stone guide describes the Altar Stone as a large slab of greenish Old Red Sandstone, partly buried beneath fallen stones of the largest trilithon. Whether it originally lay flat or stood upright is uncertain. The central object is therefore surrounded by more than one open question: how it arrived, how it was set and what significance its builders attached to it."
+        ],
+        "sourceIds": [
+          "curtin",
+          "english-heritage"
+        ]
+      },
+      {
+        "title": "Could ice have done part of the work?",
+        "paragraphs": [
+          "In 2026, a follow-up compared candidate sandstones with ice-flow models. Caithness gave the closest zircon-age match, but ice movement mostly pointed northeast. A local southeastward pathway toward Dogger Bank could hypothetically shorten the human journey. The analysis tests a scenario; it does not recover a route.",
+          "There is a chronological obstacle: Dogger Bank was submerged before the stone’s likely arrival at Stonehenge. The study allows possible intermediate glacial help but requires substantial human movement for final placement. Its natural transport model creates additional constraints rather than solving the journey."
+        ],
+        "sourceIds": [
+          "routes-2026"
+        ]
+      }
+    ],
+    "evidence": {
+      "headline": "The source region is clearer than the journey",
+      "summary": "Geochemical evidence strongly supports a northeastern Scottish origin. The exact source and transport sequence remain unresolved. Boats, overland movement and possible intermediate glacial dispersal must be assessed against different evidence; the published research does not demonstrate a complete route or remove the requirement for substantial human transport.",
+      "verdictKey": "open",
+      "verdictLabel": "Scottish provenance supported; exact source and route open",
+      "claims": [
+        {
+          "claim": "The Altar Stone has a northeastern Scottish signature.",
+          "finding": "Multi-mineral age and chemistry comparisons support that provenance.",
+          "status": "supported",
+          "sourceIds": [
+            "provenance-2024"
+          ]
+        },
+        {
+          "claim": "An exact quarry has been identified.",
+          "finding": "The 2026 study still treats the source within the basin as unresolved.",
+          "status": "open",
+          "sourceIds": [
+            "routes-2026"
+          ]
+        },
+        {
+          "claim": "A maritime journey has been proved.",
+          "finding": "Sea transport is a proposed interpretation, not a demonstrated itinerary.",
+          "status": "unsupported",
+          "sourceIds": [
+            "provenance-2024",
+            "curtin"
+          ]
+        },
+        {
+          "claim": "Ice alone delivered the stone to Stonehenge.",
+          "finding": "The model does not account for final placement; human movement remains necessary.",
+          "status": "unsupported",
+          "sourceIds": [
+            "routes-2026"
+          ]
+        }
+      ],
+      "remaining": [
+        "The route would tell a human story as well as an engineering one. Choosing a far-travelled block may reflect relationships and meanings that the rock itself cannot name. Geological analysis can narrow where to look; archaeology must investigate how people selected, worked and moved material through their own landscape.",
+        "Source and route should advance together. A better match within the Scottish basin could change which transport scenarios are physically possible. Dated archaeological evidence along a proposed path could strengthen a human itinerary. Until those pieces meet, the remarkable established fact is the distant geological connection, with the journey still awaiting a persuasive reconstruction."
+      ],
+      "nextTest": "Find a closer multi-mineral source match, refine transport and inundation chronologies, and seek archaeological evidence capable of distinguishing proposed human routes."
+    },
+    "sources": [
+      {
+        "id": "provenance-2024",
+        "label": "Original 2024 Altar Stone provenance paper",
+        "url": "https://www.nature.com/articles/s41586-024-07652-1",
+        "note": "Multi-mineral age and chemistry analysis supports the Orcadian Basin source; sea transport is proposed rather than demonstrated."
+      },
+      {
+        "id": "curtin",
+        "label": "Curtin research team: the six-tonne transport problem",
+        "url": "https://www.curtin.edu.au/news/media-release/great-scott-stonehenges-altar-stone-origins-reveal-advanced-ancient-britain/",
+        "note": "First-party 2024 explanation of the research and its suggested human implications."
+      },
+      {
+        "id": "english-heritage",
+        "label": "English Heritage: the Altar Stone’s form and name",
+        "url": "https://www.english-heritage.org.uk/visit/places/stonehenge/things-to-do/stone-circle/stones-of-stonehenge",
+        "note": "Site custodian’s guide supplies object context. Geological conclusions here follow the newer original papers."
+      },
+      {
+        "id": "routes-2026",
+        "label": "Original 2026 provenance and transport modelling",
+        "url": "https://eprints.whiterose.ac.uk/id/eprint/241788/",
+        "note": "Original open-access paper, online 4 June 2026, doi:10.1002/jqs.70080. Glacial assistance remains conditional."
+      }
+    ],
+    "reviewed": "2026-10-09"
+  },
+  {
+    "id": "stargate",
+    "title": "Stargate: the spies who tried to see without looking",
+    "hook": "The psychic spying programme was real. Its claimed power is another question.",
+    "theme": "Secret research",
+    "region": "United States",
+    "period": "1972–1995",
+    "relatedUrls": [
+      "/files/mkultra.html",
+      "/files/uap.html"
+    ],
+    "opening": [
+      "A secret installation is valuable precisely because outsiders cannot see inside it. Imagine an intelligence collector who could describe that installation without entering it, photographing it or intercepting a message. That was the extraordinary possibility behind remote viewing: attempting to obtain information about a distant target through mental impressions rather than ordinary senses.",
+      "This was more than a rumour attached to the CIA. The agency says it began research at Stanford Research Institute in 1972. Other American defence and intelligence organisations later carried the work forward. The unsettling part of the story is already documented: public institutions spent years investigating a capability that sounded supernatural. Whether they found it requires a different kind of evidence."
+    ],
+    "chapters": [
+      {
+        "title": "An extraordinary claim enters the laboratory",
+        "paragraphs": [
+          "In 1974, researchers Russell Targ and Harold Puthoff published a paper in Nature describing experiments conducted under sensory shielding. They argued that their findings suggested a perceptual ability beyond the usual channels. Publication made the claim available for scientific scrutiny; it did not turn the proposed explanation into an established human capacity.",
+          "The distinction matters because remote viewing contained two questions. Could a participant produce descriptions that judges rated unusually well against a target? And, if that happened, had ordinary information, experimental weaknesses and other explanations been excluded? An interesting score is the beginning of that investigation. Calling it psychic perception already supplies the answer."
+        ],
+        "sourceIds": [
+          "sg-nature",
+          "sg-air"
+        ]
+      },
+      {
+        "title": "The file that records an impression",
+        "paragraphs": [
+          "One surviving 1980 session record concerns the American hostages in Iran. It preserves the attempt to obtain information through a viewer's impressions. The document explicitly treats the session as raw intelligence, leaving interpretation and evaluation to the organisation requesting it. An archive can therefore prove that a session happened without proving that its contents described the target accurately.",
+          "That qualification is easy to lose when a declassified page is presented as a revelation. The institutional stamp authenticates a record of what people did, requested or reported. It does not independently authenticate every statement inside. To demonstrate useful intelligence, the impressions would need to be checked against information unavailable to the viewer, with successes and failures counted under consistent rules."
+        ],
+        "sourceIds": [
+          "sg-session",
+          "sg-air"
+        ]
+      },
+      {
+        "title": "Two tests for a remarkable possibility",
+        "paragraphs": [
+          "In 1995, the programme returned to CIA scrutiny. The agency commissioned the American Institutes for Research to examine laboratory work and operational applications. The review brought in a statistician and a psychologist with contrasting positions on remote viewing. A programme that had moved through several institutions now faced an assessment designed to distinguish intriguing experiments from an intelligence capability.",
+          "There were two tests to apply. First, did the laboratory evidence establish an effect, and could its cause be distinguished from ordinary explanations? Second, did the operational material provide information specific and dependable enough to be useful? Those questions could produce different answers. A striking statistical result would not automatically locate a hostage, and an apparently helpful description would not automatically explain how it had been obtained."
+        ],
+        "sourceIds": [
+          "sg-air",
+          "sg-cia"
+        ]
+      }
+    ],
+    "evidence": {
+      "headline": "A real programme is not proof of a paranormal mechanism",
+      "summary": "The records support the existence of remote-viewing research and operational experiments. The commissioned review found laboratory results worth examining but no unambiguous demonstration of their paranormal origin, and no sufficient operational usefulness to justify continuation. Operational descriptions were too vague, inconsistent or dependent on interpretation to provide the specific, dependable intelligence required. The CIA declined to restart the programme.",
+      "verdictKey": "mixed",
+      "verdictLabel": "Programme documented; psychic capability not established",
+      "claims": [
+        {
+          "claim": "The CIA investigated remote viewing.",
+          "finding": "The agency confirms research beginning in 1972.",
+          "status": "supported",
+          "sourceIds": [
+            "sg-cia"
+          ]
+        },
+        {
+          "claim": "Some laboratory results exceeded chance expectations.",
+          "finding": "The AIR review acknowledged significant results, with disputed interpretation.",
+          "status": "supported",
+          "sourceIds": [
+            "sg-air"
+          ]
+        },
+        {
+          "claim": "Declassified session transcripts prove accurate psychic perception.",
+          "finding": "They preserve impressions; accuracy and mechanism require separate validation.",
+          "status": "unsupported",
+          "sourceIds": [
+            "sg-session",
+            "sg-air"
+          ]
+        },
+        {
+          "claim": "The reviewed programme supplied reliable, actionable intelligence.",
+          "finding": "The operational evaluation did not support continuing its use.",
+          "status": "unsupported",
+          "sourceIds": [
+            "sg-air"
+          ]
+        }
+      ],
+      "remaining": [
+        "The laboratory disagreement should remain visible. It is inaccurate to pretend that every reviewer interpreted every result identically. It is equally inaccurate to treat a disagreement over statistics as an established paranormal discovery.",
+        "A convincing new claim would need repeatable performance under controls that prevent ordinary information transfer, followed by independently verified usefulness. The historical programme cannot substitute for that demonstration."
+      ],
+      "nextTest": "Can an independently run, preregistered test reproduce useful target information while excluding ordinary information channels?"
+    },
+    "sources": [
+      {
+        "id": "sg-cia",
+        "label": "CIA: did the agency study psychic powers?",
+        "url": "https://www.cia.gov/stories/story/ask-molly-did-cia-really-study-psychic-powers",
+        "note": "Official agency retrospective, 27 October 2021. Establishes the research history and the decision against restarting the programme."
+      },
+      {
+        "id": "sg-air",
+        "label": "Original 1995 AIR evaluation — university-hosted scan",
+        "url": "https://www.alice.id.tue.nl/references/mumford-rose-goslin-1995.pdf",
+        "note": "An Evaluation of Remote Viewing: Research and Applications, Mumford, Rose and Goslin, 29 September 1995. Original CIA-commissioned report hosted by Eindhoven University of Technology; the canonical CIA catalogue currently redirects."
+      },
+      {
+        "id": "sg-nature",
+        "label": "Targ and Puthoff's original Nature paper, 1974",
+        "url": "https://www.nature.com/articles/251602a0",
+        "note": "Information transmission under conditions of sensory shielding, 18 October 1974. Cited for the authors' published claim, rather than as independent confirmation of its proposed mechanism."
+      },
+      {
+        "id": "sg-session",
+        "label": "CIA archive: remote-viewing session D-8",
+        "url": "https://www.cia.gov/readingroom/document/cia-rdp96-00788r001000090001-2",
+        "note": "Session summary dated 26 August 1980 concerning the hostages in Iran. Describes the record as raw intelligence requiring interpretation and evaluation."
+      }
+    ],
+    "reviewed": "2026-10-09"
+  },
+  {
+    "id": "philadelphia-experiment",
+    "title": "The Philadelphia Experiment: the ship that vanished in a letter",
+    "hook": "An invisibility claim surfaced in letters. What could the Navy's logs show?",
+    "theme": "Wartime mysteries",
+    "region": "Philadelphia and Norfolk, United States — locations claimed by the legend",
+    "period": "Claimed 1943; circulated in the 1950s",
+    "relatedUrls": [
+      "/files/uap.html"
+    ],
+    "opening": [
+      "The story promises a secret experiment with consequences its inventors could not control: a warship made invisible, transported between ports, and a crew catastrophically harmed. Its alleged setting is the Second World War. Its supporting trail, however, emerges years later through letters and an unusually annotated book.",
+      "That gap is the first useful clue. The Philadelphia Experiment must be tested as a historical claim about a particular ship, in particular places, during a particular period. Before asking whether the Navy possessed a fantastic machine, it is worth asking whether USS Eldridge was even where the story puts it."
+    ],
+    "chapters": [
+      {
+        "title": "A correspondent describes a vanished ship",
+        "paragraphs": [
+          "After UFO author Morris K. Jessup published his 1955 book, a correspondent using the name Carlos Miguel Allende sent him an extraordinary account. Allende alleged that a wartime naval experiment had made a ship invisible and transported it between Philadelphia and Norfolk. The voyage, he claimed, had taken place with terrible consequences for members of the crew.",
+          "The alleged participant was USS Eldridge. The story also named a merchant vessel, SS Andrew Furuseth, as a vantage point for witnesses. These details gave the account something more concrete than an unnamed secret: identifiable ships whose histories could be investigated. Yet the material reaching Jessup was correspondence about an alleged event years earlier, rather than a wartime experimental report."
+        ],
+        "sourceIds": [
+          "pe-onr",
+          "pe-nhhc"
+        ]
+      },
+      {
+        "title": "The book enters a naval office",
+        "paragraphs": [
+          "An anonymously annotated copy of Jessup's book subsequently arrived at the Office of Naval Research. Two officers became interested in the comments and their apparent connection to the correspondence. The ONR account says they arranged a small private reproduction of the annotated material. The story now had a physical object associated with a naval office, as well as its named ships.",
+          "That association helps explain its appeal. An unusual claim circulating among people connected to naval research can feel as though it has crossed a threshold from rumour to classified knowledge. But several distinct events need to be tracked: receiving a book, becoming curious about its annotations, and conducting the wartime experiment those annotations describe. The questions raised by the officers' interest could be checked against the institutional chronology."
+        ],
+        "sourceIds": [
+          "pe-onr"
+        ]
+      },
+      {
+        "title": "A real naval technology and a testable itinerary",
+        "paragraphs": [
+          "There was also a genuine naval technology involving electrical systems and a ship's magnetic signature: degaussing. It helped protect vessels against magnetic mines, and naval engineers continue to work on magnetic-signature reduction. This provides a separate, documented research thread to examine alongside Allende's claims. Its actual purpose and effects can be compared with the extraordinary capabilities described in the letters.",
+          "Eldridge's published service history records a destroyer escort commissioned in August 1943 and later assigned to Mediterranean convoy protection. More detailed records offered a way to test the alleged journey. The relevant questions were concrete: where was Eldridge during the claimed period, where was Andrew Furuseth, and were the two ships together when the supposed witnesses said they were? The logs could answer without assuming a mechanism for the alleged disappearance."
+        ],
+        "sourceIds": [
+          "pe-navsea",
+          "pe-danfs"
+        ]
+      }
+    ],
+    "evidence": {
+      "headline": "The central claim fails its checkable historical test",
+      "summary": "The allegation has a traceable history in postwar correspondence. Its named ship's documented movements contradict the claimed Philadelphia setting. Officer interest in the letters and the existence of degaussing do not authenticate the extraordinary event. The Navy's reviewed deck logs and war diary place Eldridge away from Philadelphia in the relevant 1943 period; Andrew Furuseth was not alongside it at Norfolk as alleged. ONR itself was established in 1946. Degaussing reduces magnetic signatures, not optical visibility, and does not teleport a vessel.",
+      "verdictKey": "explained",
+      "verdictLabel": "Unsupported legend; ship records contradict its setting",
+      "claims": [
+        {
+          "claim": "USS Eldridge took part in a Philadelphia teleportation experiment in 1943.",
+          "finding": "The Navy's review places Eldridge elsewhere during the relevant period.",
+          "status": "unsupported",
+          "sourceIds": [
+            "pe-nhhc",
+            "pe-danfs"
+          ]
+        },
+        {
+          "claim": "ONR's reproduction of the annotations confirmed a secret project.",
+          "finding": "Its account describes the personal interest of two officers; ONR did not exist in 1943.",
+          "status": "unsupported",
+          "sourceIds": [
+            "pe-onr"
+          ]
+        },
+        {
+          "claim": "Naval magnetic-signature reduction is real.",
+          "finding": "Degaussing reduces vulnerability to magnetic mines.",
+          "status": "supported",
+          "sourceIds": [
+            "pe-navsea"
+          ]
+        },
+        {
+          "claim": "Degaussing makes a ship optically invisible or teleports it.",
+          "finding": "Those effects are not what the technology does.",
+          "status": "unsupported",
+          "sourceIds": [
+            "pe-nhhc",
+            "pe-navsea"
+          ]
+        }
+      ],
+      "remaining": [
+        "The precise way every element of the legend developed is less certain than the ship's whereabouts. A possible conflation should not be promoted into a proven explanation for every later embellishment. The Navy offers degaussing as one possible source of confusion, rather than a demonstrated origin for the whole story.",
+        "A historical claim could be reconsidered if authentic contemporary evidence emerged. It would need to survive comparison with the existing logs, rather than requiring all conflicting records to be dismissed simply because they conflict."
+      ],
+      "nextTest": "Is there an authenticated wartime record that independently supports the alleged event and reconciles the ships' documented movements?"
+    },
+    "sources": [
+      {
+        "id": "pe-nhhc",
+        "label": "Naval History and Heritage Command: Philadelphia Experiment",
+        "url": "https://www.history.navy.mil/research/library/online-reading-room/title-list-alphabetically/p/philadelphia-experiment.html",
+        "note": "Official naval historical review of deck logs, war diary, alleged witness-vessel movements and the distinction between degaussing and optical invisibility."
+      },
+      {
+        "id": "pe-onr",
+        "label": "Office of Naval Research information sheet, 1996",
+        "url": "https://www.history.navy.mil/research/library/online-reading-room/title-list-alphabetically/p/philadelphia-experiment/philadelphia-experiment-onr-info-sheet.html",
+        "note": "Official account of the Jessup correspondence, annotated book, private officer interest and ONR's 1946 establishment."
+      },
+      {
+        "id": "pe-danfs",
+        "label": "USS Eldridge: original Navy ship history — university mirror",
+        "url": "https://www.ibiblio.org/hyperwar/USN/ships/dafs/DE/de173.html",
+        "note": "University-hosted transcription of the Dictionary of American Naval Fighting Ships entry, originally published by the Navy's Naval History Division. Provides commissioning and service chronology."
+      },
+      {
+        "id": "pe-navsea",
+        "label": "NAVSEA Carderock: magnetic-signature engineering",
+        "url": "https://www.navsea.navy.mil/Portals/103/Documents/NSWC_Carderock/WAVES_YiR_2023.pdf?ver=W2tVGlvFYX8SS93YZTwXRw%3D%3D",
+        "note": "Official WAVES 2023 year-in-review, including degaussing and magnetic-signature calibration. Used to explain the real protective technology, not to establish the legend's origin."
+      }
+    ],
+    "reviewed": "2026-10-09"
+  },
+  {
+    "id": "dyatlov-pass",
+    "title": "Dyatlov Pass: the fatal night beneath the snow",
+    "hook": "A strange evacuation becomes a question that snow mechanics can test.",
+    "theme": "Survival mysteries",
+    "region": "Northern Ural Mountains, Russia",
+    "period": "1–2 February 1959; scientific studies in 2021–2022",
+    "relatedUrls": [],
+    "opening": [
+      "Nine hikers died in the northern Urals during the night of 1–2 February 1959. Their tent had been cut from inside, and they left it inadequately dressed for the cold. Some suffered severe injuries. The combination of an apparently urgent escape and an incomplete record made the incident fertile ground for explanations far beyond ordinary mountain danger.",
+      "No complete eyewitness reconstruction survived. The question is therefore not whether a later investigator can narrate every movement with confidence. It is whether a proposed mechanism can account for important observations, survive the objections against it and produce consequences that can be checked. A small snow slab offers exactly that kind of testable proposition."
+    ],
+    "chapters": [
+      {
+        "title": "The observations that made a simple avalanche answer difficult",
+        "paragraphs": [
+          "The 2021 scientific study begins with the reasons an avalanche explanation had been challenged: the slope appeared too gentle, obvious debris was absent when searchers arrived, a slide would have needed to occur hours after the camp was prepared, and some injuries seemed unusually severe for a small event. Those are substantive objections, rather than inconveniences to be edited out.",
+          "The discovery also came well after the fatal night. Searchers encountered an altered mountain scene, not a preserved recording of the weather and snow at the moment of evacuation. That leaves room for reconstruction, but it creates a limit: an explanation must state which conditions are inferred and how much its result depends on them."
+        ],
+        "sourceIds": [
+          "dp-model",
+          "dp-eth"
+        ]
+      },
+      {
+        "title": "Change the shape of the snow, change the question",
+        "paragraphs": [
+          "Johan Gaume and Alexander Puzrin modelled a locally steeper snow surface, a weak buried layer, the cut made to establish the tent platform, and further loading by windblown snow. In that combination, a relatively small slab could fail after a delay. The injury analysis also explored compression against the hard sleeping support, rather than assuming a vast avalanche was required.",
+          "The study supplies a physical route through several objections at once. Its strength is that the route can be examined: change the snow structure or loading assumptions and the calculation changes. Its limit is equally important. A mechanism that could work under reconstructed conditions does not demonstrate that those were the precise conditions or that every later action unfolded as imagined."
+        ],
+        "sourceIds": [
+          "dp-model",
+          "dp-eth"
+        ]
+      },
+      {
+        "title": "The mountain supplies new evidence, not a recording of 1959",
+        "paragraphs": [
+          "Follow-up work reported in 2022 documented small slab avalanches in the area. That observation matters because it challenges the categorical claim that such events cannot occur there. The researchers and guides examined present-day terrain and conditions; they did not uncover a direct observation of the slide proposed for the fatal night.",
+          "The case now has more than an abstract calculation: there is field evidence for the relevant kind of mountain hazard. Even so, nearby modern avalanches cannot identify the exact trigger, timing or sequence in 1959. The sensible change in the story is from an allegedly impossible natural explanation to a scientifically supported possibility, while the complete course of the disaster remains uncertain."
+        ],
+        "sourceIds": [
+          "dp-followup",
+          "dp-epfl"
+        ]
+      }
+    ],
+    "evidence": {
+      "headline": "A plausible avalanche mechanism, not a complete reconstruction",
+      "summary": "Peer-reviewed modelling addresses several specific objections to a small slab avalanche. Subsequent field observations support the occurrence of such avalanches in the area. Neither kind of evidence proves the entire proposed sequence on the night the hikers died.",
+      "verdictKey": "mixed",
+      "verdictLabel": "Avalanche explanation supported; exact sequence unresolved",
+      "claims": [
+        {
+          "claim": "Nine members of the hiking party died in February 1959.",
+          "finding": "The historical disaster is established.",
+          "status": "supported",
+          "sourceIds": [
+            "dp-eth"
+          ]
+        },
+        {
+          "claim": "A delayed small snow slab is physically impossible at this location.",
+          "finding": "The model supplies a conditional mechanism; field observations document regional slab avalanches.",
+          "status": "unsupported",
+          "sourceIds": [
+            "dp-model",
+            "dp-followup"
+          ]
+        },
+        {
+          "claim": "The scientific studies prove every event of the fatal night.",
+          "finding": "They test a mechanism and its plausibility, not the complete historical sequence.",
+          "status": "unsupported",
+          "sourceIds": [
+            "dp-model",
+            "dp-followup"
+          ]
+        },
+        {
+          "claim": "A slab avalanche was the precise cause of the evacuation.",
+          "finding": "It is supported as a plausible explanation, but no direct observation confirms that specific event.",
+          "status": "mixed",
+          "sourceIds": [
+            "dp-model",
+            "dp-followup"
+          ]
+        }
+      ],
+      "remaining": [
+        "The uncertain sequence after leaving the tent should remain uncertain. Filling it with a confident narrative would make the account more satisfying at the cost of making its evidence less visible.",
+        "Unexplained details do not automatically support extraordinary attackers or secret weapons. Those claims would require their own affirmative evidence, beyond objections to a natural mechanism."
+      ],
+      "nextTest": "Which reconstructed snow conditions are independently supported, and which predictions can further field measurements test?"
+    },
+    "sources": [
+      {
+        "id": "dp-model",
+        "label": "Original 2021 slab-avalanche modelling study",
+        "url": "https://www.nature.com/articles/s43247-020-00081-8",
+        "note": "Gaume and Puzrin, Mechanisms of slab avalanche release and impact in the Dyatlov Pass incident in 1959, Communications Earth & Environment, 28 January 2021. Conditional modelling; not a proof of the complete historical sequence."
+      },
+      {
+        "id": "dp-followup",
+        "label": "Original 2022 follow-up field report",
+        "url": "https://www.nature.com/articles/s43247-022-00393-x",
+        "note": "Puzrin and Gaume, Post-publication careers: follow-up expeditions reveal avalanches at Dyatlov Pass, 24 March 2022. Documents modern regional avalanches, not the proposed 1959 event."
+      },
+      {
+        "id": "dp-eth",
+        "label": "ETH Zurich: the mechanism and its limits",
+        "url": "https://ethz.ch/en/news-and-events/eth-news/news/2021/01/a-new-take-on-an-old-mystery.html",
+        "note": "Institutional account of the original researchers' work, including the historical context and model's explanatory scope."
+      },
+      {
+        "id": "dp-epfl",
+        "label": "EPFL: the follow-up expeditions",
+        "url": "https://actu.epfl.ch/news/intense-press-coverage-prompts-new-expeditions-to-/",
+        "note": "Research institution's account, 24 March 2022, of subsequent fieldwork and observations. Read alongside the original paper's qualifications."
+      }
+    ],
+    "reviewed": "2026-10-09"
+  },
+  {
+    "id": "cottingley",
+    "title": "Cottingley: the fairies that survived a photograph",
+    "hook": "Two Yorkshire cousins presented fairy photographs. Why did a famous author believe them?",
+    "theme": "Photographic mysteries",
+    "region": "Cottingley, West Yorkshire, England",
+    "period": "Photographs in 1917 and 1920",
+    "relatedUrls": [
+      "/files/english-landscapes.html"
+    ],
+    "opening": [
+      "Beside a beck behind a Yorkshire home, two cousins produced photographs they presented as images of fairies. Elsie Wright and Frances Griffiths made their first two pictures in 1917 and three more in 1920. An ordinary family camera had supplied something their advocates regarded as extraordinary: a visible record of beings usually confined to stories and reported sightings.",
+      "One advocate was Arthur Conan Doyle, the creator of Sherlock Holmes. He helped turn the photographs into a public question: could a camera register something that most people never saw? His reputation added attention, but it was the images themselves, and the explanations offered for them, that the case depended on. What had persuaded a writer so closely associated with a fictional detective?"
+    ],
+    "chapters": [
+      {
+        "title": "From a family photograph to a public claim",
+        "paragraphs": [
+          "Bradford's museum account follows the photographs through the Theosophical movement and Edward Gardner to Doyle. Gardner investigated, and photographic negatives became central to the discussion. An expert assessment that they showed no retouching offered the advocates a technical reason to take the claim seriously, beyond accepting the cousins' statements about what they had seen.",
+          "The two early pictures presented different scenes. In one, Frances appeared beside the fairy figures; in the other, Elsie posed with a figure described as a gnome. The latter survives in a museum collection as a photograph dated September 1917. These were tangible objects that could be enlarged, inspected and circulated, giving the debate something more persistent than a reported encounter."
+        ],
+        "sourceIds": [
+          "cf-bradford",
+          "cf-nsm",
+          "cf-object"
+        ]
+      },
+      {
+        "title": "Read the believer's case in his own words",
+        "paragraphs": [
+          "Doyle's 1922 book, The Coming of the Fairies, preserves his side of the argument through photographs and correspondence. He treated assurances about the negatives, together with his assessment of the cousins' abilities and circumstances, as reasons for belief. The book records how an advocate assembled a case. Its account of his confidence should be read as his position, not as a fact about the beings he proposed.",
+          "He also pursued technical opinions and reports from Gardner's visits. Doyle was interested in whether the pictures could be dismissed as a photographic trick, and whether the people who produced them possessed the skills such a trick would require. The investigation combined examination of objects with judgements about character. For the reader following it, the crucial question is what those different kinds of inquiry actually tested."
+        ],
+        "sourceIds": [
+          "cf-doyle",
+          "cf-nsm"
+        ]
+      },
+      {
+        "title": "A second series raises the stakes",
+        "paragraphs": [
+          "When the cousins were together again in 1920, Gardner supplied new photographic equipment, and three more pictures followed. In his book, Doyle describes receiving the new prints while in Australia and becoming more confident in the claim. The additional images appeared, to him, to strengthen a case that no longer depended on just one occasion beside the beck.",
+          "The photographs and cameras later entered museum collections. Conservation work has examined the surviving equipment, including CT scanning with the University of Bradford. The objects make it possible to investigate the history of the photography itself. Before accepting the advocates' conclusion, however, the original question remains: what do authentic photographs establish about the subjects placed before a camera?"
+        ],
+        "sourceIds": [
+          "cf-nsm",
+          "cf-doyle",
+          "cf-cameras"
+        ]
+      }
+    ],
+    "evidence": {
+      "headline": "The photographic process was not the deception's weak point",
+      "summary": "The historical photographs and Doyle's advocacy are real. Museum accounts describe staged cutout figures and later admissions. The disputed personal claim about the fifth image supplies no independent basis for treating it as a photograph of a fairy. The admissions emerged in the 1980s. Paper figures held with hatpins could be photographed in a real scene without retouching the negative: the camera faithfully recorded a staged subject.",
+      "verdictKey": "explained",
+      "verdictLabel": "Staged photographs; no authenticated fairy evidence",
+      "claims": [
+        {
+          "claim": "The cousins produced the famous photographs in 1917 and 1920.",
+          "finding": "The series and its surviving objects are documented.",
+          "status": "supported",
+          "sourceIds": [
+            "cf-nsm",
+            "cf-object"
+          ]
+        },
+        {
+          "claim": "An unretouched negative proves the photographed subject was a living fairy.",
+          "finding": "It does not exclude a staged scene in front of the camera.",
+          "status": "unsupported",
+          "sourceIds": [
+            "cf-bradford",
+            "cf-nsm"
+          ]
+        },
+        {
+          "claim": "Doyle promoted the photographs as evidence for fairies.",
+          "finding": "His own book preserves that argument.",
+          "status": "supported",
+          "sourceIds": [
+            "cf-doyle"
+          ]
+        },
+        {
+          "claim": "The fifth photograph has independent authentication as a fairy image.",
+          "finding": "Frances's later assertion is recorded, but does not establish the claim.",
+          "status": "unsupported",
+          "sourceIds": [
+            "cf-bradford"
+          ]
+        }
+      ],
+      "remaining": [
+        "There are still historical questions about how the cousins and their advocates understood the episode. Letters and surviving objects can refine that history without reopening a paranormal conclusion unsupported by the evidence. In the later accounts, Frances maintained that the fifth photograph was genuine, while Elsie regarded all five as faked. The disagreement is part of the history, but supplies no independent authentication of the final image.",
+        "The case remains useful because its deception worked before digital editing. Authentic pixels, prints or negatives can preserve an inauthentic event; verifying the medium is only part of verifying the claim."
+      ],
+      "nextTest": "What does each technical examination authenticate: the photographic object, the absence of retouching, or the nature of the subject?"
+    },
+    "sources": [
+      {
+        "id": "cf-bradford",
+        "label": "Bradford District Museums: Cottingley Fairies",
+        "url": "https://bradfordmuseums.org/cottingley-fairies/",
+        "note": "Curatorial account, 19 June 2017, drawing on correspondence and photographs. Describes the negatives' assessment, cutouts, admissions and disagreement over the fifth image."
+      },
+      {
+        "id": "cf-nsm",
+        "label": "National Science and Media Museum: the staged photographs",
+        "url": "https://blog.scienceandmediamuseum.org.uk/the-story-of-the-cottingley-fairies-shows-that-image-manipulation-is-nothing-new/",
+        "note": "Museum history, 29 July 2012, explaining paper figures, hatpins, the image series and surviving cameras."
+      },
+      {
+        "id": "cf-doyle",
+        "label": "Doyle's original The Coming of the Fairies, 1922",
+        "url": "https://www.gutenberg.org/files/47506/47506-h/47506-h.htm",
+        "note": "Primary literary and historical evidence for Doyle's reasoning and advocacy. His conclusions are presented as claims made by an advocate, not as established science."
+      },
+      {
+        "id": "cf-object",
+        "label": "Science Museum Group: the original gnome photograph",
+        "url": "https://collection.sciencemuseumgroup.org.uk/objects/co469853/iris-and-the-gnome",
+        "note": "Collection record for the September 1917 photograph. Iris is the pseudonym used for Elsie in the published Cottingley story."
+      },
+      {
+        "id": "cf-cameras",
+        "label": "Museum conservation: examining the Cottingley cameras",
+        "url": "https://blog.scienceandmediamuseum.org.uk/blog-from-the-basement-cottingley-fairy-cameras/",
+        "note": "Conservation account, 17 July 2024, documenting the surviving cameras and CT examination with the University of Bradford."
+      }
+    ],
+    "reviewed": "2026-10-09"
+  },
+  {
+    "id": "northwoods",
+    "title": "Northwoods: the war pretext that stayed on paper",
+    "hook": "A genuine military memorandum proposed manufactured grievances against Cuba.",
+    "theme": "Secret research",
+    "region": "United States and Cuba",
+    "period": "March 1962; public archival release decades later",
+    "relatedUrls": [
+      "/files/northwoods.html",
+      "/files/mincemeat.html"
+    ],
+    "opening": [
+      "The document proposes an airliner incident designed to make Cuba appear responsible. The plan's passengers would leave the aircraft before a substituted drone was destroyed. The outrage would be real even though the supposed attack was manufactured. This is not a reconstruction of a flight that occurred: it is an option inside an authentic 1962 military proposal.",
+      "That distinction does not make the document ordinary. A plan for deception can be historically consequential even when it remains a plan. Northwoods is disturbing because senior military officials put such options into formal writing. It needs no invented execution story to establish that fact."
+    ],
+    "chapters": [
+      {
+        "title": "After the failed invasion, the pressure continued",
+        "paragraphs": [
+          "The Bay of Pigs invasion failed in 1961. The Kennedy administration subsequently pursued Operation Mongoose, a covert effort against Fidel Castro's government. The State Department's history places Northwoods's period within that wider campaign of pressure and planning. The proposal therefore belonged to a documented policy context, rather than appearing as an isolated fantasy without institutional connections.",
+          "Context still has limits. Mongoose was a broader programme, and its existence does not tell us which particular Northwoods options were authorised. Treating all anti-Castro activity as one undifferentiated operation would obscure the precise question: what did this memorandum recommend, who transmitted it, and did its recommendation become an order to act?"
+        ],
+        "sourceIds": [
+          "nw-state",
+          "nw-archive"
+        ]
+      },
+      {
+        "title": "The memo turns public outrage into a planning requirement",
+        "paragraphs": [
+          "On 13 March 1962, Joint Chiefs chairman Lyman Lemnitzer sent the Secretary of Defense a memorandum titled Justification for US Military Intervention in Cuba. It proposed incidents that could place the United States in the apparent position of responding to Cuban aggression. The options included manufactured attacks and an airliner deception using a substituted unmanned aircraft.",
+          "Other language contemplated real or simulated harm, including the sinking of a refugee boat. It would be wrong to sanitise the proposal as harmless theatre. It would also be wrong to replace the airliner scheme with a claim that its written instructions required murdering its passengers. The original pages are strong evidence precisely because their disturbing details can be read without adding new ones."
+        ],
+        "sourceIds": [
+          "nw-memo"
+        ]
+      },
+      {
+        "title": "Recommendation is not authorisation",
+        "paragraphs": [
+          "A separate contemporary record of Cuba planning preserves Kennedy's scepticism about circumstances warranting American military intervention. Its note of a 16 March meeting says no decision approving the use of American forces was expressed or implied. That helps establish the surrounding policy debate. It is not a transcript of Kennedy rejecting each Northwoods option individually.",
+          "The declassified proposal later reached the public through the Kennedy Assassination Records Review Board, and the National Security Archive published it online in 2001. The accessible record establishes a proposed deception, rather than an executed Northwoods operation. A recommendation's existence cannot stand in for operational orders, participating units or evidence that its manufactured incidents actually occurred."
+        ],
+        "sourceIds": [
+          "nw-frus",
+          "nw-archive",
+          "nw-rejection"
+        ]
+      }
+    ],
+    "evidence": {
+      "headline": "The proposal is authentic; the proposed operation was not executed",
+      "summary": "Northwoods documents senior military consideration of manufactured pretexts for intervention. Its status is an unexecuted proposal. The contemporary policy record supplies context about intervention planning, but should not be inflated into a word-for-word account of a presidential decision on every suggested incident.",
+      "verdictKey": "documented",
+      "verdictLabel": "Authentic, unexecuted proposal",
+      "claims": [
+        {
+          "claim": "The Joint Chiefs transmitted a plan for manufactured grievances against Cuba.",
+          "finding": "The signed March 1962 memorandum establishes the proposal.",
+          "status": "supported",
+          "sourceIds": [
+            "nw-memo"
+          ]
+        },
+        {
+          "claim": "Every option contemplated only harmless simulation.",
+          "finding": "Some wording expressly allowed real harm as an alternative to simulation.",
+          "status": "unsupported",
+          "sourceIds": [
+            "nw-memo"
+          ]
+        },
+        {
+          "claim": "The memorandum proves Northwoods attacks were carried out.",
+          "finding": "It records recommendations, not an executed operation.",
+          "status": "unsupported",
+          "sourceIds": [
+            "nw-memo",
+            "nw-frus"
+          ]
+        },
+        {
+          "claim": "Northwoods authenticates unrelated later false-flag allegations.",
+          "finding": "Those events require their own specific evidence.",
+          "status": "unsupported",
+          "sourceIds": [
+            "nw-memo"
+          ]
+        }
+      ],
+      "remaining": [
+        "The historical force of Northwoods lies in the proposal itself and the level at which it circulated. Reducing it to a fake would discard an authentic record; converting it into an executed attack would misread that record.",
+        "It also supplies no shortcut for deciding other cases. A documented willingness to propose deception makes scrutiny reasonable, but it cannot identify the perpetrators or mechanism of a separate event."
+      ],
+      "nextTest": "For any alleged implementation, where are the authenticated authorisation, operational records and independently corroborated event evidence?"
+    },
+    "sources": [
+      {
+        "id": "nw-memo",
+        "label": "Original Joint Chiefs Northwoods memorandum, 13 March 1962",
+        "url": "https://nsarchive.gwu.edu/sites/default/files/2022-10/Joint-Chiefs-pretexts-to-invade-Cuba-March-1962_0.pdf",
+        "note": "Fifteen-page primary document, including cover memoranda and proposed pretexts. The airliner option substitutes a drone after passengers disembark; other options expressly include real or simulated harm."
+      },
+      {
+        "id": "nw-archive",
+        "label": "National Security Archive: provenance and historical setting",
+        "url": "https://nsarchive.gwu.edu/CMC-60/joint-chiefs-pretexts-to-invade-Cuba-1962",
+        "note": "Archival description linking the document to Mongoose and explaining its route through the Kennedy Assassination Records Review Board and online publication in 2001."
+      },
+      {
+        "id": "nw-frus",
+        "label": "Contemporary Cuba planning record and 16 March meeting note",
+        "url": "https://history.state.gov/historicaldocuments/frus1961-63v10/d314",
+        "note": "Foreign Relations of the United States, document 314. Records no decision approving the use of American forces at the noted meeting; does not provide a line-by-line presidential rejection of Northwoods."
+      },
+      {
+        "id": "nw-state",
+        "label": "State Department: Bay of Pigs and Operation Mongoose",
+        "url": "https://history.state.gov/milestones/1961-1968/bay-of-pigs",
+        "note": "Official historical context for the failed 1961 invasion and subsequent covert anti-Castro programme. Context does not imply authorisation of the Northwoods proposals."
+      },
+      {
+        "id": "nw-rejection",
+        "label": "SAGE academic chapter: the proposal was not implemented",
+        "url": "https://cmn-cdn-001.sagepub.com/books/titles/259159/att_sb1_107808.pdf",
+        "note": "The Leader's Light or Shadow, pages 16–17, published by SAGE. A secondary academic account referencing historian Kathryn Olmsted; cited narrowly for non-implementation, with the proposal's details checked against the original memorandum."
+      }
+    ],
+    "reviewed": "2026-10-09"
+  }
+]
