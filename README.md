@@ -29,3 +29,9 @@ The local `nostr-tools` bundle and its license are documented in `assets/vendor/
 No analytics or signup system is installed. Fonts come from Google Fonts. The Signal Room connects to the relays above. Search, bookmarks and motion preferences are local to the visitor's browser. Media credits and license links are in `assets/ATTRIBUTION.md` and the reading room.
 
 Keep `CNAME` as `yoxall.net`. Publishing this repository updates that domain; `RedXIIIuk/yoxall-site` is a different project.
+
+## UFO observation room
+
+The curated observation catalogue is `assets/uap-records.json`. `uap-build.cjs` generates `/ufo.html` and the observation files when the normal build runs. Every item preserves its release/source context, assessment and location precision. Regional pins are deliberately approximate; no flight tracks or exact military sensor positions are inferred. The British archive includes reports and photographic material with different levels of corroboration.
+
+`assets/uap-globe.js` draws an interactive sphere using locally served Natural Earth land geometry. The accessible observation index also works without the globe. Official media loads only after a visitor requests the player; its independent host may change or become unavailable, so every clip retains a source-player link. No videos start automatically. Review assessments and verify media endpoints when updating the catalogue. The curation snapshot is 9 October 2026.
