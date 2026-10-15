@@ -43,4 +43,4 @@ The curated observation catalogue is `assets/uap-records.json`. `uap-build.cjs` 
 
 The published HTML currently displays one temporary joke page on every existing route. `temporary-joke.cjs` reapplies it; do not run the archive build while the joke is active.
 
-The complete pre-joke site is preserved on GitHub branch `backup/before-darren-prank-2026-10-15` at commit `97b587ee2e568d40236ab4fa5524d811b85d53ce`. Restore by reverting the joke PR, which also restores the normal robots and sitemap files. A ZIP backup is stored outside this publishing folder at `../research/site-before-darren-prank-2026-10-15.zip`.
+The complete pre-joke site is preserved on GitHub branch `backup/before-darren-prank-2026-10-15` at commit `97b587ee2e568d40236ab4fa5524d811b85d53ce`. Restore the complete tree from that backup, or revert all joke updates in reverse order, to restore the pages, normal robots and sitemap files. A ZIP backup is stored outside this publishing folder at `../research/site-before-darren-prank-2026-10-15.zip`.
