@@ -37,8 +37,8 @@ const page = `<!doctype html>
   <title>Darren is a Bellend! — Proper Grime Banter</title>
   <link rel="canonical" href="https://yoxall.net/">
   <link rel="icon" href="/assets/single-icon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/assets/single.css?v=ep3">
-  <script src="/assets/single-player.js?v=ep3" defer></script>
+  <link rel="stylesheet" href="/assets/single.css?v=ep4">
+  <script src="/assets/single-player.js?v=ep4" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to the EP</a>

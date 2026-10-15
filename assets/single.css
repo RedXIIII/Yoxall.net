@@ -121,6 +121,7 @@ input[type=range]:disabled{opacity:.4}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.vinyl,.equalizer i{animation:none!important}.drop-button{transition:none}}
 body[data-track="bellend-fm"]{--acid:#ffbc65}
 body[data-track="daz-fm-live"]{--acid:#8ddcff}
+body[data-track="planner-fm"]{--acid:#ffb4d4}
 .drop-button:hover{background:var(--acid);filter:brightness(1.07)}
 .vinyl-label{border-color:var(--acid)}
 .now-track{display:flex;gap:13px;margin-bottom:20px;border-bottom:1px solid var(--line);padding-bottom:17px}
@@ -140,6 +141,7 @@ body[data-track="daz-fm-live"]{--acid:#8ddcff}
 .track-link[aria-current=true]{background:#d7ff3f08;border-left-color:var(--acid)}
 body[data-track="bellend-fm"] .track-link[aria-current=true]{background:#ffbc6508}
 body[data-track="daz-fm-live"] .track-link[aria-current=true]{background:#8ddcff08}
+body[data-track="planner-fm"] .track-link[aria-current=true]{background:#ffb4d408}
 .track-number{font:9px var(--mono);color:#768694}
 .track-info{min-width:0}
 .track-info strong{display:block;font:700 12px/1.6 Arial,sans-serif;color:#c9d2dc}
