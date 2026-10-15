@@ -30,9 +30,17 @@ const page = `<!doctype html>
     .punchline{color:#ed4b49;font-size:.94em;letter-spacing:.005em;-webkit-text-stroke:2px #1b1820;text-shadow:5px 6px 0 #1b1820;paint-order:stroke fill}
     .art{position:relative;min-width:0;transform:rotate(5deg);animation:wobble 4.5s ease-in-out infinite;transform-origin:50% 75%}
     svg{display:block;width:100%;height:auto;overflow:visible;filter:drop-shadow(12px 15px 0 #1b182018)}
+    .music-controls{position:fixed;right:max(20px,env(safe-area-inset-right));bottom:max(25px,env(safe-area-inset-bottom));z-index:3;display:flex;align-items:center;flex-wrap:wrap;justify-content:flex-end;gap:12px;max-width:calc(100% - 40px)}
+    .music-controls [hidden]{display:none!important}
+    .music-controls audio{display:block;width:min(300px,75vw);height:44px}
+    .music-controls button{font:700 14px/1.2 Arial,sans-serif;color:#1b1820;background:#fff4ce;border:3px solid #1b1820;border-radius:50px;padding:12px 19px;box-shadow:3px 3px 0 #ed4b49;cursor:pointer;min-height:44px}
+    .music-controls button:hover{background:#ffe4a2}
+    .music-controls button:focus-visible,.music-controls a:focus-visible{outline:3px solid #ed4b49;outline-offset:5px}
+    .music-controls a{font:700 12px/1.4 Arial,sans-serif;color:#1b1820;background:#fff4ce;padding:8px 10px;text-underline-offset:3px}
+    .audio-status{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
     @keyframes wobble{0%,75%,100%{transform:rotate(5deg)}82%{transform:rotate(0deg)}89%{transform:rotate(9deg)}95%{transform:rotate(3deg)}}
     @media(min-width:1500px){main{gap:55px}}
-    @media(max-width:720px){main{grid-template-columns:1fr;gap:20px;padding:48px 24px 30px;max-width:470px}h1{font-size:clamp(70px,19vw,98px)}.join{margin:16px 0 6px}.name::after{height:6px;bottom:-8px}.punchline{-webkit-text-stroke:1.5px #1b1820;text-shadow:3px 4px 0 #1b1820}.art{width:76%;max-width:320px;margin:0 auto}.name{white-space:nowrap}}
+    @media(max-width:720px){main{grid-template-columns:1fr;gap:20px;padding:48px 24px 96px;max-width:470px}h1{font-size:clamp(70px,19vw,98px)}.join{margin:16px 0 6px}.name::after{height:6px;bottom:-8px}.punchline{-webkit-text-stroke:1.5px #1b1820;text-shadow:3px 4px 0 #1b1820}.art{width:76%;max-width:320px;margin:0 auto}.name{white-space:nowrap}}
     @media(prefers-reduced-motion:reduce){.art{animation:none}}
   </style>
 </head>
@@ -74,6 +82,15 @@ const page = `<!doctype html>
       </svg>
     </div>
   </main>
+  <div class="music-controls" aria-label="Background music controls">
+    <audio id="joke-song" src="/assets/darren-darren.mp3" loop preload="auto" controls aria-label="Background music">
+      <a href="/assets/darren-darren.mp3">Play the song</a>
+    </audio>
+    <button id="music-toggle" type="button" aria-pressed="false" aria-controls="joke-song" hidden>Play song ♪</button>
+    <a id="music-fallback" href="/assets/darren-darren.mp3" target="_blank" rel="noopener" hidden>Open audio ↗</a>
+    <span id="music-status" class="audio-status" role="status" aria-live="polite"></span>
+  </div>
+  <script src="/assets/joke-audio.js" defer></script>
 </body>
 </html>
 `;
