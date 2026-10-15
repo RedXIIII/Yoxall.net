@@ -343,6 +343,143 @@
     ]
   },
   {
+    "id": "three-in-the-morning",
+    "title": "Three In The Morning",
+    "subtitle": "After hours. No sleep. Bass deep.",
+    "station": "PLANNER FM / AFTER HOURS",
+    "src": "/assets/three-in-the-morning.mp3",
+    "duration": 218.09,
+    "downloadName": "Three In The Morning - Planner FM.mp3",
+    "lyrics": [
+      {
+        "name": "Intro",
+        "note": "Vinyl crackle, distant thunder, deep distorted voice",
+        "lines": [
+          "Yeah...",
+          "Three in the fucking morning.",
+          "House is quiet.",
+          "For about five minutes.",
+          "Planner FM...",
+          "After hours."
+        ]
+      },
+      {
+        "name": "DROP",
+        "note": "Filthy distorted 808, sinister phonk cowbell",
+        "lines": []
+      },
+      {
+        "name": "Verse 1",
+        "note": "Dark Cockney grime flow",
+        "lines": [
+          "Three-year-old girl, little angel in bed,",
+          "Never slept a full night, doing in my head!",
+          "Up at one, up at three, up at four,",
+          "Little feet coming padding across the floor.",
+          "",
+          "Six-year-old boy, little whirlwind of fun,",
+          "Solid as a nut, yeah, that's my son!",
+          "Absolute handful, heart made of gold,",
+          "Wouldn't swap either for the world, I'm told."
+        ]
+      },
+      {
+        "name": "Hook",
+        "note": "Deep aggressive vocals, crushing bass",
+        "lines": [
+          "NO SLEEP! (NAH!)",
+          "NO REST! (WHAT!)",
+          "THREE HOURS DOWN!",
+          "AND I'M DOING MY BEST!",
+          "",
+          "WORK TIRED! (OI!)",
+          "HOME TIRED! (YEAH!)",
+          "EVERYBODY'S SLEEPING!",
+          "BUT I'M STILL FUCKING WIRED!"
+        ]
+      },
+      {
+        "name": "Instrumental",
+        "note": "Distorted cowbell riff, sliding 808",
+        "lines": []
+      },
+      {
+        "name": "Verse 2",
+        "note": "Rapid gritty flow",
+        "lines": [
+          "Clock in at work, eyes half shut,",
+          "Another damn job, another fucking rut!",
+          "Damp on the ceiling, mould on the wall,",
+          "Deadlines ticking and the customers call.",
+          "",
+          "Back through the door, dad mode engaged,",
+          "Running on fumes but I'm back on the stage!",
+          "Dinner, bath, bedtime fight,",
+          "Love the little bastards with all of my might!"
+        ]
+      },
+      {
+        "name": "DJ Rewind",
+        "note": "Deep pitch-shifted voice",
+        "lines": [
+          "WHEEL IT!",
+          "ONE MORE TIME!",
+          "NOBODY FUCKING SLEEPS ROUND HERE!"
+        ]
+      },
+      {
+        "name": "DROP",
+        "note": "Enormous distorted sub-bass",
+        "lines": []
+      },
+      {
+        "name": "Verse 3",
+        "note": "Lower voice, dark rolling flow",
+        "lines": [
+          "House goes quiet, everyone's out,",
+          "Finally some peace, no kids about.",
+          "Headphones on, let the bassline rip,",
+          "Roll up a spliff, take a slow little hit.",
+          "",
+          "Smoke for the pain, let the mind unwind,",
+          "Another filthy bassline taking shape in my mind.",
+          "No sleep, no rest, but I've still got love,",
+          "Two little angels and the stars above."
+        ]
+      },
+      {
+        "name": "Final Hook",
+        "note": "Aggressive layered MC chants",
+        "lines": [
+          "NO SLEEP! (NAH!)",
+          "NO REST! (WHAT!)",
+          "HOUSE FULL OF LOVE!",
+          "AND I'M FUCKING KNACKERED!",
+          "",
+          "NO SLEEP! (OI!)",
+          "BASS DEEP! (BOH!)",
+          "THREE IN THE MORNING!",
+          "AND THE WHOLE HOUSE SLEEPS!"
+        ]
+      },
+      {
+        "name": "Outro",
+        "note": "Beat strips back to cowbell and sub",
+        "lines": [
+          "Love my kids...",
+          "Love my life...",
+          "",
+          "Could do with a fucking kip though."
+        ]
+      },
+      {
+        "name": "Deep bass hit",
+        "note": "Tape stops",
+        "lines": []
+      }
+    ]
+  },
+  {
     "id": "bellend-fm",
     "title": "Bellend FM: The Daz Transmission",
     "subtitle": "The Daz transmission. Nothing but love.",
@@ -452,6 +589,140 @@
       }
     ],
     "station": "BELLEND FM"
+  },
+  {
+    "id": "set-phasers-to-offensive",
+    "title": "Set Phasers to Offensive",
+    "subtitle": "The distress signal has a bassline.",
+    "station": "DEEP SPACE FREQUENCY",
+    "src": "/assets/set-phasers-to-offensive.mp3",
+    "duration": 187.63,
+    "downloadName": "Set Phasers to Offensive - Planner FM.mp3",
+    "lyrics": [
+      {
+        "name": "Intro",
+        "note": "Pirate radio static, sinister cowbell",
+        "lines": [
+          "Check one, check two...",
+          "Calling all ships!",
+          "This is a fucking distress signal!",
+          "The Empire's got an HR department!",
+          "WHAT THE FUCK HAPPENED TO SCI-FI?!"
+        ]
+      },
+      {
+        "name": "DROP",
+        "note": "Filthy distorted phonk 808, icy square-wave bass",
+        "lines": []
+      },
+      {
+        "name": "Verse 1",
+        "note": "Aggressive Cockney grime flow",
+        "lines": [
+          "Back in the day, Sisko ran the station,",
+          "Didn't need a fucking sensitivity presentation!",
+          "O'Neill cracked jokes while he kicked Goa'uld arse,",
+          "Teal'c raised one eyebrow, pure fucking class!",
+          "",
+          "Picard had brains, Worf had steel,",
+          "Proper fucking Klingons, proper fucking deal!",
+          "Londo and G'Kar, political war,",
+          "Now the villain needs consent just to kick down a door!"
+        ]
+      },
+      {
+        "name": "Hook",
+        "note": "Aggressive MC and crew chanting",
+        "lines": [
+          "MAKE SPACE BASED AGAIN! (OI!)",
+          "WHAT THE FUCK'S GOIN' ON?! (WHAT!)",
+          "HE'LL BLOW UP A PLANET!",
+          "BUT WON'T GET YOUR PRONOUNS WRONG!",
+          "",
+          "BILLIONS DEAD! (OI!)",
+          "WHOLE WORLDS GONE! (YEAH!)",
+          "BUT THE EVIL OVERLORD'S",
+          "GOT HIS INCLUSION BADGE ON!"
+        ]
+      },
+      {
+        "name": "DJ Rewind",
+        "note": "Vinyl scratch",
+        "lines": [
+          "BOH! BOH! BOH!",
+          "WHEEL THAT!",
+          "THE DEATH STAR'S GOT A DIVERSITY OFFICER!",
+          "RELOAD!"
+        ]
+      },
+      {
+        "name": "DROP",
+        "note": "Crushing distorted 808 and sinister cowbell",
+        "lines": []
+      },
+      {
+        "name": "Verse 2",
+        "note": "Rapid double-time grime flow",
+        "lines": [
+          "Darth Vader choking blokes across the room,",
+          "Now he'd ask permission before he seals your doom!",
+          "The Borg used to say resistance was futile,",
+          "Now they're asking if assimilation's inclusive!",
+          "",
+          "Daleks screaming EXTERMINATE!",
+          "Now they're checking if the language is appropriate!",
+          "He'll glass your planet, burn your whole civilisation,",
+          "Then send HR a fucking clarification!",
+          "",
+          "Give me dark plots, give me alien dread,",
+          "Give me proper bad guys who want everyone dead!",
+          "Not another corporate lecture in space,",
+          "Give me a bastard with a terrifying face!"
+        ]
+      },
+      {
+        "name": "Final Hook",
+        "note": "Massive bass, aggressive crew shouting",
+        "lines": [
+          "HE'LL KILL YOUR WHOLE PLANET! (BASED!)",
+          "BUT HE WON'T MISGENDER! (NAH!)",
+          "HE'LL WIPE OUT YOUR SPECIES! (OI!)",
+          "BUT HE WON'T OFFEND YA! (WHAT!)",
+          "",
+          "WHERE'S THE BORG?! (GONE!)",
+          "WHERE'S THE THREAT?! (DEAD!)",
+          "STOP FUCKING PREACHING!",
+          "GIVE ME SCI-FI INSTEAD!"
+        ]
+      },
+      {
+        "name": "Outro",
+        "note": "Cowbell fading, distorted computer voice",
+        "lines": [
+          "Computer...",
+          "Set phasers to offensive."
+        ]
+      },
+      {
+        "name": "Computer voice",
+        "note": "",
+        "lines": [
+          "That terminology may cause distress."
+        ]
+      },
+      {
+        "name": "MC",
+        "note": "Shouting",
+        "lines": [
+          "IT'S A FUCKING PHASER!"
+        ]
+      },
+      {
+        "name": "Massive distorted bass drop",
+        "note": "Static",
+        "lines": []
+      }
+    ]
   },
   {
     "id": "original",
