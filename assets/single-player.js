@@ -13,9 +13,12 @@
   const links = [...document.querySelectorAll('[data-track-index]')];
   const lyricPanels = [...document.querySelectorAll('[data-track-lyrics]')];
   const share = $('share-single');
+  const recordBrowser = $('record-browser');
+  const recordCards = [...document.querySelectorAll('[data-record-index]')];
   const lyricNav = $('lyrics-nav');
   if (lyricNav) lyricNav.addEventListener('click', () => { $('lyrics').open = true; });
   let active = 0, repeatAll = true, playAttempt = 0, metadataReady = false;
+  let pointerStart = null, ignoreClickUntil = 0;
   const selected = () => tracks[active];
   const shareUrl = () => 'https://yoxall.net/' + (active ? '?track=' + encodeURIComponent(selected().id) : '');
   function announce(text) { if (status.textContent !== text) status.textContent = text; }
@@ -48,7 +51,22 @@
     $('playing-number').textContent = String(active + 1).padStart(2, '0');
     $('playing-title').textContent = track.title;
     $('playing-subtitle').textContent = track.subtitle;
-    $('vinyl-track').textContent = 'TRACK ' + String(active + 1).padStart(2, '0');
+    $('vinyl-track').textContent = 'RECORD ' + String(active + 1).padStart(2, '0');
+    $('crate-position').textContent = String(active + 1).padStart(2, '0') + ' / ' + String(tracks.length).padStart(2, '0');
+    $('playing-story').textContent = track.sleeveNote;
+    recordCards.forEach(card => {
+      let offset = Number(card.dataset.recordIndex) - active;
+      if (offset > tracks.length / 2) offset -= tracks.length;
+      if (offset < -tracks.length / 2) offset += tracks.length;
+      const depth = Math.abs(offset);
+      card.style.setProperty('--offset', String(offset));
+      card.style.setProperty('--depth', String(depth));
+      card.style.setProperty('--side', String(Math.sign(offset)));
+      card.dataset.far = String(depth > 2);
+      card.classList.toggle('is-active', offset === 0);
+      card.setAttribute('aria-hidden', String(offset !== 0));
+      card.querySelector('a').tabIndex = offset === 0 ? 0 : -1;
+    });
     $('lyrics-heading').textContent = 'TRACK ' + String(active + 1).padStart(2, '0') + ' / THE LYRIC SHEET';
     audio.setAttribute('aria-label', track.title + ' — Planner FM');
     links.forEach(link => {
@@ -89,8 +107,9 @@
       } else failed();
     }
   }
-  function selectTrack(index, updateUrl = true) {
+  function selectTrack(index, updateUrl = true, autoplay = true) {
     if (!Number.isInteger(index) || !tracks[index]) return;
+    const moveRecordFocus = document.activeElement && recordBrowser.contains(document.activeElement);
     ++playAttempt;
     audio.pause();
     active = index;
@@ -99,10 +118,15 @@
     audio.loop = false;
     audio.load();
     renderTrack();
+    if (moveRecordFocus) recordBrowser.focus({preventScroll: true});
     if (updateUrl) {
       try { history.replaceState(null, '', active ? '/?track=' + encodeURIComponent(selected().id) : '/'); } catch {}
     }
-    play();
+    if (autoplay) play();
+    else {
+      state.textContent = 'CUED / PRESS TUNE IN';
+      announce('Cued ' + selected().title + '. Press Tune in to play.');
+    }
   }
   audio.addEventListener('playing', () => {
     if (audio.paused) return;
@@ -138,6 +162,7 @@
   });
   links.forEach(link => link.addEventListener('click', event => {
     event.preventDefault();
+    if (Date.now() < ignoreClickUntil) return;
     const index = Number(link.dataset.trackIndex);
     if (index !== active) selectTrack(index);
     else if (audio.paused) play();
@@ -150,6 +175,30 @@
   });
   restart.addEventListener('click', () => { audio.currentTime = 0; updateTime(); play(); });
   $('music-next').addEventListener('click', () => selectTrack((active + 1) % tracks.length));
+  function flipRecord(direction) {
+    selectTrack((active + direction + tracks.length) % tracks.length, true, !audio.paused);
+  }
+  $('record-prev').addEventListener('click', () => flipRecord(-1));
+  $('record-next').addEventListener('click', () => flipRecord(1));
+  recordBrowser.addEventListener('keydown', event => {
+    if (event.altKey || event.ctrlKey || event.metaKey) return;
+    if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+    event.preventDefault();
+    flipRecord(event.key === 'ArrowRight' ? 1 : -1);
+  });
+  recordBrowser.addEventListener('pointerdown', event => {
+    if (event.isPrimary === false || (event.pointerType === 'mouse' && event.button !== 0)) return;
+    pointerStart = {id: event.pointerId, x: event.clientX, y: event.clientY};
+  });
+  recordBrowser.addEventListener('pointerup', event => {
+    if (!pointerStart || pointerStart.id !== event.pointerId) return;
+    const dx = event.clientX - pointerStart.x, dy = event.clientY - pointerStart.y;
+    pointerStart = null;
+    if (Math.abs(dx) < 45 || Math.abs(dx) < Math.abs(dy) * 1.4) return;
+    ignoreClickUntil = Date.now() + 450;
+    flipRecord(dx < 0 ? 1 : -1);
+  });
+  recordBrowser.addEventListener('pointercancel', () => { pointerStart = null; });
   loop.addEventListener('click', () => {
     repeatAll = !repeatAll;
     loop.setAttribute('aria-pressed', String(repeatAll));
@@ -182,6 +231,8 @@
   audio.hidden = true;
   audio.loop = false;
   controls.hidden = false;
+  $('record-controls').hidden = false;
+  $('record-help').textContent = 'FLIP A SLEEVE. TAP TO PLAY.  ← → KEYS / DRAG OR SWIPE';
   const requested = new URLSearchParams(location.search).get('track');
   const initial = tracks.findIndex(track => track.id === requested);
   selectTrack(initial >= 0 ? initial : 0, false);
