@@ -114,114 +114,126 @@
         "note": "Massive bass hit, radio static",
         "lines": []
       }
-    ]
+    ],
+    "artwork": "/assets/sleeves/planner-fm.webp",
+    "thumbnail": "/assets/sleeves/planner-fm-thumb.webp",
+    "artworkAlt": "Lyric-inspired Planner FM: No Slots, No Peace sleeve with the hooded Planner FM MC.",
+    "sleeveNote": "Twenty missed calls. One very full diary. The repairs desk becomes the decks."
   },
   {
-    "id": "daz-fm-live",
-    "title": "Daz FM Live: No Licence, No Manners",
-    "subtitle": "Off the dial. Off the leash.",
-    "station": "DAZ FM",
-    "src": "/assets/daz-fm-live.mp3",
-    "duration": 148.73,
-    "downloadName": "Daz FM Live - No Licence, No Manners.mp3",
+    "id": "bellend-fm",
+    "title": "Bellend FM: The Daz Transmission",
+    "subtitle": "The Daz transmission. Nothing but love.",
+    "src": "/assets/bellend-fm-daz-transmission.mp3",
+    "duration": 154.03,
+    "downloadName": "Bellend FM - The Daz Transmission.mp3",
     "lyrics": [
       {
         "name": "Intro",
-        "note": "Distorted pirate radio static",
+        "note": "Crackling pirate radio transmission",
         "lines": [
-          "Check one, check two!",
-          "Daz FM, we’re live in the fucking building!",
-          "No licence, no manners!",
-          "Oi Darren!",
-          "YOU READY, YOU MUG?!"
+          "Yo, yo, yo!",
+          "Bellend FM!",
+          "One-four-oh on the dial!",
+          "Darren, you absolute fucking weapon!",
+          "DJ, DROP THAT!"
         ]
       },
       {
         "name": "Drop",
-        "note": "Crushing distorted square-wave bass",
+        "note": "Filthy distorted bass, square-wave wobble",
         "lines": []
       },
       {
         "name": "Verse 1",
-        "note": "Rapid aggressive Cockney flow",
+        "note": "Aggressive rapid grime flow",
         "lines": [
-          "Daz on the mic, Daz on the scene,",
-          "Ugliest bassline you’ve ever fucking seen!",
-          "Top lad, geezer, absolute G,",
-          "Still a massive twat between you and me!",
+          "Who’s that bloke? That’s Darren, mate!",
+          "Top lad, yeah, proper first-rate!",
+          "Solid geezer, one of the best,",
+          "Still a massive knob like all the rest!",
           "",
-          "Oi! Who’s that? Daz in the place!",
-          "Big bad bass getting right in your face!",
-          "Knobhead energy, maximum levels,",
-          "Good bloke rolling with a crew full of devils!"
+          "Oi! Daz! You fucking tit!",
+          "Certified wanker, admit that shit!",
+          "Good old boy, but the facts don’t bend,",
+          "Darren’s a bellend, start to end!"
         ]
       },
       {
         "name": "Hook",
-        "note": "MCs trading shouted bars",
+        "note": "Heavy bass, crew shouting",
         "lines": [
-          "WHO’S THAT?! (DAZ!)",
-          "WHAT’S HE LIKE?! (MAD!)",
-          "PROPER FUCKING MENACE!",
-          "BUT HE AIN’T THAT BAD!",
+          "BELLEND! (OI!)",
+          "DARREN’S A BELLEND! (YEAH!)",
+          "KNOBHEAD! (WHAT!)",
+          "PROPER FUCKING BELLEND!",
           "",
-          "WHO’S THAT?! (DAZ!)",
-          "WHAT’S HE DONE?! (FUCK ALL!)",
-          "BIG UP THE GEEZER!",
-          "LET THE BASSLINE ROLL!"
+          "Big up Daz! (OI!)",
+          "Big up the crew! (WHAT!)",
+          "He’s a fucking tosser!",
+          "BUT WE LOVE HIM TOO!"
         ]
       },
       {
         "name": "DJ rewind",
-        "note": "Vinyl scratching",
+        "note": "Vinyl rewind, siren",
         "lines": [
-          "BOH! BOH!",
-          "WHEEL IT! WHEEL IT!",
-          "BRING THAT DIRTY FUCKER BACK!"
+          "BOH! BOH! BOH!",
+          "REWIND THAT!",
+          "BRING THE FUCKING BASS BACK!"
         ]
       },
       {
         "name": "Drop",
-        "note": "Filthy sub-bass, double-time drums",
+        "note": "Bass twice as heavy",
         "lines": []
       },
       {
         "name": "Verse 2",
-        "note": "Fast grime flow",
+        "note": "Double-time, two MCs trading bars",
         "lines": [
-          "One-four-oh, let the speakers crack,",
-          "Daz and the crew with the bassline attack!",
-          "No fake beef, no bullshit chat,",
-          "Just a bunch of mad bastards taking the piss out of Daz!",
+          "D to the A to the double R,",
+          "Absolute legend, absolute star!",
+          "E to the N, that’s our man,",
+          "Biggest bloody bellend in the whole damn gang!",
           "",
-          "He’s a legend, a tosser, a proper good bloke,",
-          "One more bass drop and the speakers are smoked!"
+          "Wanker on Monday, tosser on Friday,",
+          "Still got his back every single day!",
+          "No beef, no drama, nothing to prove,",
+          "Just a massive bellend with a filthy groove!"
         ]
       },
       {
         "name": "Final hook",
-        "note": "Shouted over heavy bass",
+        "note": "Aggressive crowd chant",
         "lines": [
-          "DAZ! (OI!)",
-          "DAZ! (WHAT!)",
-          "ABSOLUTE MENACE!",
-          "YOU SILLY FUCKING TWAT!"
+          "DARREN’S A BELLEND! (OI!)",
+          "PROPER FUCKING BELLEND! (WHAT!)",
+          "TOP LAD! BIG KNOB!",
+          "CERTIFIED FUCKING BELLEND!"
         ]
       },
       {
         "name": "Outro",
-        "note": "Sudden silence, radio crackle",
+        "note": "Music cuts, radio static",
         "lines": [
-          "Big love, Darren.",
-          "Now get off the fucking frequency."
+          "Darren…",
+          "You’re alright, son.",
+          "",
+          "Still a cunt though."
         ]
       },
       {
         "name": "End",
-        "note": "Static",
+        "note": "Radio static",
         "lines": []
       }
-    ]
+    ],
+    "station": "BELLEND FM",
+    "artwork": "/assets/sleeves/bellend-fm.webp",
+    "thumbnail": "/assets/sleeves/bellend-fm-thumb.webp",
+    "artworkAlt": "Lyric-inspired Bellend FM: The Daz Transmission sleeve with the hooded Planner FM MC.",
+    "sleeveNote": "One-four-oh on the dial. A rewind for Daz, with nothing but love."
   },
   {
     "id": "awaabs-law",
@@ -340,7 +352,11 @@
         "note": "Massive distorted bass hit, static",
         "lines": []
       }
-    ]
+    ],
+    "artwork": "/assets/sleeves/awaabs-law.webp",
+    "thumbnail": "/assets/sleeves/awaabs-law-thumb.webp",
+    "artworkAlt": "Lyric-inspired Awaab’s Law sleeve with the hooded Planner FM MC.",
+    "sleeveNote": "Cold spots on the scan. Pressure on the clock. The bass keeps moving."
   },
   {
     "id": "three-in-the-morning",
@@ -477,118 +493,122 @@
         "note": "Tape stops",
         "lines": []
       }
-    ]
+    ],
+    "artwork": "/assets/sleeves/three-in-the-morning.webp",
+    "thumbnail": "/assets/sleeves/three-in-the-morning-thumb.webp",
+    "artworkAlt": "Lyric-inspired Three In The Morning sleeve with the hooded Planner FM MC.",
+    "sleeveNote": "Headphones on when the house finally sleeps. Running on love and fumes."
   },
   {
-    "id": "bellend-fm",
-    "title": "Bellend FM: The Daz Transmission",
-    "subtitle": "The Daz transmission. Nothing but love.",
-    "src": "/assets/bellend-fm-daz-transmission.mp3",
-    "duration": 154.03,
-    "downloadName": "Bellend FM - The Daz Transmission.mp3",
+    "id": "daz-fm-live",
+    "title": "Daz FM Live: No Licence, No Manners",
+    "subtitle": "Off the dial. Off the leash.",
+    "station": "DAZ FM",
+    "src": "/assets/daz-fm-live.mp3",
+    "duration": 148.73,
+    "downloadName": "Daz FM Live - No Licence, No Manners.mp3",
     "lyrics": [
       {
         "name": "Intro",
-        "note": "Crackling pirate radio transmission",
+        "note": "Distorted pirate radio static",
         "lines": [
-          "Yo, yo, yo!",
-          "Bellend FM!",
-          "One-four-oh on the dial!",
-          "Darren, you absolute fucking weapon!",
-          "DJ, DROP THAT!"
+          "Check one, check two!",
+          "Daz FM, we’re live in the fucking building!",
+          "No licence, no manners!",
+          "Oi Darren!",
+          "YOU READY, YOU MUG?!"
         ]
       },
       {
         "name": "Drop",
-        "note": "Filthy distorted bass, square-wave wobble",
+        "note": "Crushing distorted square-wave bass",
         "lines": []
       },
       {
         "name": "Verse 1",
-        "note": "Aggressive rapid grime flow",
+        "note": "Rapid aggressive Cockney flow",
         "lines": [
-          "Who’s that bloke? That’s Darren, mate!",
-          "Top lad, yeah, proper first-rate!",
-          "Solid geezer, one of the best,",
-          "Still a massive knob like all the rest!",
+          "Daz on the mic, Daz on the scene,",
+          "Ugliest bassline you’ve ever fucking seen!",
+          "Top lad, geezer, absolute G,",
+          "Still a massive twat between you and me!",
           "",
-          "Oi! Daz! You fucking tit!",
-          "Certified wanker, admit that shit!",
-          "Good old boy, but the facts don’t bend,",
-          "Darren’s a bellend, start to end!"
+          "Oi! Who’s that? Daz in the place!",
+          "Big bad bass getting right in your face!",
+          "Knobhead energy, maximum levels,",
+          "Good bloke rolling with a crew full of devils!"
         ]
       },
       {
         "name": "Hook",
-        "note": "Heavy bass, crew shouting",
+        "note": "MCs trading shouted bars",
         "lines": [
-          "BELLEND! (OI!)",
-          "DARREN’S A BELLEND! (YEAH!)",
-          "KNOBHEAD! (WHAT!)",
-          "PROPER FUCKING BELLEND!",
+          "WHO’S THAT?! (DAZ!)",
+          "WHAT’S HE LIKE?! (MAD!)",
+          "PROPER FUCKING MENACE!",
+          "BUT HE AIN’T THAT BAD!",
           "",
-          "Big up Daz! (OI!)",
-          "Big up the crew! (WHAT!)",
-          "He’s a fucking tosser!",
-          "BUT WE LOVE HIM TOO!"
+          "WHO’S THAT?! (DAZ!)",
+          "WHAT’S HE DONE?! (FUCK ALL!)",
+          "BIG UP THE GEEZER!",
+          "LET THE BASSLINE ROLL!"
         ]
       },
       {
         "name": "DJ rewind",
-        "note": "Vinyl rewind, siren",
+        "note": "Vinyl scratching",
         "lines": [
-          "BOH! BOH! BOH!",
-          "REWIND THAT!",
-          "BRING THE FUCKING BASS BACK!"
+          "BOH! BOH!",
+          "WHEEL IT! WHEEL IT!",
+          "BRING THAT DIRTY FUCKER BACK!"
         ]
       },
       {
         "name": "Drop",
-        "note": "Bass twice as heavy",
+        "note": "Filthy sub-bass, double-time drums",
         "lines": []
       },
       {
         "name": "Verse 2",
-        "note": "Double-time, two MCs trading bars",
+        "note": "Fast grime flow",
         "lines": [
-          "D to the A to the double R,",
-          "Absolute legend, absolute star!",
-          "E to the N, that’s our man,",
-          "Biggest bloody bellend in the whole damn gang!",
+          "One-four-oh, let the speakers crack,",
+          "Daz and the crew with the bassline attack!",
+          "No fake beef, no bullshit chat,",
+          "Just a bunch of mad bastards taking the piss out of Daz!",
           "",
-          "Wanker on Monday, tosser on Friday,",
-          "Still got his back every single day!",
-          "No beef, no drama, nothing to prove,",
-          "Just a massive bellend with a filthy groove!"
+          "He’s a legend, a tosser, a proper good bloke,",
+          "One more bass drop and the speakers are smoked!"
         ]
       },
       {
         "name": "Final hook",
-        "note": "Aggressive crowd chant",
+        "note": "Shouted over heavy bass",
         "lines": [
-          "DARREN’S A BELLEND! (OI!)",
-          "PROPER FUCKING BELLEND! (WHAT!)",
-          "TOP LAD! BIG KNOB!",
-          "CERTIFIED FUCKING BELLEND!"
+          "DAZ! (OI!)",
+          "DAZ! (WHAT!)",
+          "ABSOLUTE MENACE!",
+          "YOU SILLY FUCKING TWAT!"
         ]
       },
       {
         "name": "Outro",
-        "note": "Music cuts, radio static",
+        "note": "Sudden silence, radio crackle",
         "lines": [
-          "Darren…",
-          "You’re alright, son.",
-          "",
-          "Still a cunt though."
+          "Big love, Darren.",
+          "Now get off the fucking frequency."
         ]
       },
       {
         "name": "End",
-        "note": "Radio static",
+        "note": "Static",
         "lines": []
       }
     ],
-    "station": "BELLEND FM"
+    "artwork": "/assets/sleeves/daz-fm-live.webp",
+    "thumbnail": "/assets/sleeves/daz-fm-live-thumb.webp",
+    "artworkAlt": "Lyric-inspired Daz FM Live: No Licence, No Manners sleeve with the hooded Planner FM MC.",
+    "sleeveNote": "No licence. No manners. The rooftop is live and the speakers are working overtime."
   },
   {
     "id": "set-phasers-to-offensive",
@@ -722,7 +742,172 @@
         "note": "Static",
         "lines": []
       }
-    ]
+    ],
+    "artwork": "/assets/sleeves/set-phasers-to-offensive.webp",
+    "thumbnail": "/assets/sleeves/set-phasers-to-offensive-thumb.webp",
+    "artworkAlt": "Lyric-inspired Set Phasers to Offensive sleeve with the hooded Planner FM MC.",
+    "sleeveNote": "A distress signal from deep space. Even the villains have paperwork."
+  },
+  {
+    "id": "planning-team-tunes",
+    "title": "Planning Team Tunes: Whole Crew Inside",
+    "subtitle": "No slots. Just bangers.",
+    "station": "PLANNER FM / WHOLE CREW",
+    "src": "/assets/planning-team-tunes.mp3",
+    "duration": 187.63,
+    "downloadName": "Planning Team Tunes - Whole Crew Inside.mp3",
+    "lyrics": [
+      {
+        "name": "Intro",
+        "note": "Pirate radio static",
+        "lines": [
+          "Oi, oi!",
+          "Planner FM!",
+          "Whole crew of wrong'uns!",
+          "No names protected!",
+          "No fucks given!",
+          "DJ, RUN THAT!"
+        ]
+      },
+      {
+        "name": "DROP",
+        "note": "Filthy distorted square-wave bass",
+        "lines": []
+      },
+      {
+        "name": "Verse 1",
+        "note": "Fast aggressive Cockney flow",
+        "lines": [
+          "Jack's from Wales, got a filthy mind,",
+          "Sheep start running when he falls behind!",
+          "Every joke's dirty, every punchline grim,",
+          "Someone call the farmer, keep the flock from him!",
+          "",
+          "Smara walks in, and the whole room grins,",
+          "Sharp as a spark when the madness begins!",
+          "Runs this circus, somehow stays sane,",
+          "Surrounded by bellends, it's a fucking shame!"
+        ]
+      },
+      {
+        "name": "Verse 2",
+        "note": "Rapid skippy grime flow",
+        "lines": [
+          "Amanda's on one, wants a four-four beat,",
+          "House music pumping, won't stay in her seat!",
+          "Says it's proper music, yeah, alright, love,",
+          "This ain't Ibiza, it's a fucking office, bruv!"
+        ]
+      },
+      {
+        "name": "Brief house beat",
+        "note": "Four kicks",
+        "lines": []
+      },
+      {
+        "name": "MC",
+        "note": "Shouting",
+        "lines": [
+          "NAH! FUCK THAT!",
+          "WRONG FUCKING GENRE!",
+          "WHEEL IT!"
+        ]
+      },
+      {
+        "name": "DROP",
+        "note": "Brutal Eskimo square-wave bass",
+        "lines": [
+          "Zoe's got that look, you know the one,",
+          "Half the crew's thick and she's fucking done!",
+          "Rolls her eyes, cracks a little grin,",
+          "Another day of dealing with the idiots within!",
+          "",
+          "Darren's gone quiet, head down on the screen,",
+          "Actually asleep — the calmest he's ever been!",
+          "We thought Charlie was knackered, running on fumes,",
+          "But Darren's fully checked out in the middle of the room!"
+        ]
+      },
+      {
+        "name": "Hook",
+        "note": "Aggressive crew chanting",
+        "lines": [
+          "WHO'S THAT?! (JACK!)",
+          "BAA BAA! (WHAT!)",
+          "WHO'S FAST ASLEEP?! (DARREN!)",
+          "WAKE UP, YOU TWAT!",
+          "",
+          "WHO WANTS HOUSE?! (AMANDA!)",
+          "WHO'S HAD ENOUGH?! (ZOE!)",
+          "WHO RUNS THIS SHIT?! (SMARA!)",
+          "GOOD FUCKING LUCK!"
+        ]
+      },
+      {
+        "name": "DJ rewind",
+        "note": "Screeching vinyl",
+        "lines": [
+          "BOH! BOH! BOH!",
+          "WHOLE CREW INSIDE!",
+          "RELOAD THAT FILTH!"
+        ]
+      },
+      {
+        "name": "DROP",
+        "note": "Huge distorted bass, double-time flow",
+        "lines": []
+      },
+      {
+        "name": "Verse 3",
+        "note": "Fast MC trading bars",
+        "lines": [
+          "Phones going mental, diaries fucked,",
+          "Ops on the road and we're all out of luck!",
+          "One's taking the piss, one's making a brew,",
+          "Nobody knows what the fuck we're meant to do!",
+          "",
+          "Big up the names that ain't in the track,",
+          "Whole fucking team, yeah, we got your back!",
+          "Every last one of us slightly deranged,",
+          "Wouldn't swap the bastards, wouldn't have 'em changed!"
+        ]
+      },
+      {
+        "name": "Final Hook",
+        "note": "Crowd shouting over bass",
+        "lines": [
+          "PLANNER FM! (OI!)",
+          "WRONG'UNS INSIDE! (WHAT!)",
+          "SHEEP IN THE FIELD!",
+          "AND THE BASSLINE'S WIDE!",
+          "",
+          "NO FUCKING TALENT! (NAH!)",
+          "NO FUCKING CLASS! (OI!)",
+          "BUT WE GET SHIT DONE!",
+          "NOW DROP THAT BASS!"
+        ]
+      },
+      {
+        "name": "Outro",
+        "note": "Beat stops, phone rings",
+        "lines": [
+          "Hello, repairs planning...",
+          "",
+          "Sorry, Jack's unavailable.",
+          "",
+          "...He's in a field."
+        ]
+      },
+      {
+        "name": "Sheep bleats",
+        "note": "Massive bass hit – Static",
+        "lines": []
+      }
+    ],
+    "artwork": "/assets/sleeves/planning-team-tunes.webp",
+    "thumbnail": "/assets/sleeves/planning-team-tunes-thumb.webp",
+    "artworkAlt": "Lyric-inspired Planning Team Tunes: Whole Crew Inside sleeve with the hooded Planner FM MC.",
+    "sleeveNote": "The whole crew inside. Jack is unavailable. The sheep ornament knows why."
   },
   {
     "id": "original",
@@ -807,6 +992,10 @@
         ]
       }
     ],
-    "station": "ESTATE CREW"
+    "station": "ESTATE CREW",
+    "artwork": "/assets/sleeves/original.webp",
+    "thumbnail": "/assets/sleeves/original-thumb.webp",
+    "artworkAlt": "Lyric-inspired Darren is a Bellend! sleeve with the hooded Planner FM MC.",
+    "sleeveNote": "Heart of gold. Questionable title. One last toast to the group-chat legend."
   }
 ]
