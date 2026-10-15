@@ -1,0 +1,305 @@
+[
+  {
+    "id": "original",
+    "title": "Darren is a Bellend!",
+    "subtitle": "The original disrespect.",
+    "src": "/assets/darren-bellend-single.mp3",
+    "duration": 130.03,
+    "downloadName": "Darren is a Bellend!.mp3",
+    "lyrics": [
+      {
+        "name": "Intro",
+        "note": "Spoken, low voice, bass rumbling",
+        "lines": [
+          "Oi.",
+          "Yeah.",
+          "Darren.",
+          "You know what time it is.",
+          "Listen."
+        ]
+      },
+      {
+        "name": "Drop",
+        "note": "Heavy distorted square-wave bass",
+        "lines": []
+      },
+      {
+        "name": "Verse 1",
+        "note": "Fast aggressive grime flow",
+        "lines": [
+          "Darren’s a geezer, Darren’s a lad,",
+          "Top-tier mate, best one we’ve had.",
+          "Heart of gold but he’s still a prick,",
+          "Proper good bloke but a massive dick.",
+          "",
+          "Oi! Bellend! That’s my guy!",
+          "Big man’s flexin’, don’t ask why.",
+          "Knobhead, tosser, absolute tit,",
+          "Still roll with Darren, that’s legit."
+        ]
+      },
+      {
+        "name": "Hook",
+        "note": "Deep bass, aggressive shouted delivery",
+        "lines": [
+          "DARREN’S A BELLEND! (OI!)",
+          "PROPER FUCKING BELLEND! (WHAT!)",
+          "WANKER! TOSSER! (YEAH!)",
+          "BUT HE’S STILL MY BREDDER! (OI!)"
+        ]
+      },
+      {
+        "name": "Verse 2",
+        "note": "Double-time grime flow",
+        "lines": [
+          "Big up Daz, yeah, big up the man,",
+          "Certified bellend, number one fan.",
+          "Top lad, top geezer, solid all day,",
+          "Still gonna call him a knob anyway.",
+          "",
+          "No bad blood, nah, nothing but love,",
+          "But the man’s still a weapon, bruv.",
+          "Raise that glass, put your hands in the air,",
+          "DARREN’S A BELLEND, AND WE DON’T CARE!"
+        ]
+      },
+      {
+        "name": "Final hook",
+        "note": "Bass drops harder",
+        "lines": [
+          "DARREN’S A BELLEND! (OI!)",
+          "PROPER FUCKING BELLEND! (WHAT!)",
+          "TOP LAD! BIG KNOB! (YEAH!)",
+          "DARREN, YOU ABSOLUTE SOD!"
+        ]
+      },
+      {
+        "name": "Outro",
+        "note": "Beat cuts, spoken",
+        "lines": [
+          "Safe, Daz.",
+          "You fucking bellend."
+        ]
+      }
+    ],
+    "station": "BANTER RECORDS"
+  },
+  {
+    "id": "bellend-fm",
+    "title": "Bellend FM: The Daz Transmission",
+    "subtitle": "140 on the dial. No filter on Daz.",
+    "src": "/assets/bellend-fm-daz-transmission.mp3",
+    "duration": 154.03,
+    "downloadName": "Bellend FM - The Daz Transmission.mp3",
+    "lyrics": [
+      {
+        "name": "Intro",
+        "note": "Crackling pirate radio transmission",
+        "lines": [
+          "Yo, yo, yo!",
+          "Bellend FM!",
+          "One-four-oh on the dial!",
+          "Darren, you absolute fucking weapon!",
+          "DJ, DROP THAT!"
+        ]
+      },
+      {
+        "name": "Drop",
+        "note": "Filthy distorted bass, square-wave wobble",
+        "lines": []
+      },
+      {
+        "name": "Verse 1",
+        "note": "Aggressive rapid grime flow",
+        "lines": [
+          "Who’s that bloke? That’s Darren, mate!",
+          "Top lad, yeah, proper first-rate!",
+          "Solid geezer, one of the best,",
+          "Still a massive knob like all the rest!",
+          "",
+          "Oi! Daz! You fucking tit!",
+          "Certified wanker, admit that shit!",
+          "Good old boy, but the facts don’t bend,",
+          "Darren’s a bellend, start to end!"
+        ]
+      },
+      {
+        "name": "Hook",
+        "note": "Heavy bass, crew shouting",
+        "lines": [
+          "BELLEND! (OI!)",
+          "DARREN’S A BELLEND! (YEAH!)",
+          "KNOBHEAD! (WHAT!)",
+          "PROPER FUCKING BELLEND!",
+          "",
+          "Big up Daz! (OI!)",
+          "Big up the crew! (WHAT!)",
+          "He’s a fucking tosser!",
+          "BUT WE LOVE HIM TOO!"
+        ]
+      },
+      {
+        "name": "DJ rewind",
+        "note": "Vinyl rewind, siren",
+        "lines": [
+          "BOH! BOH! BOH!",
+          "REWIND THAT!",
+          "BRING THE FUCKING BASS BACK!"
+        ]
+      },
+      {
+        "name": "Drop",
+        "note": "Bass twice as heavy",
+        "lines": []
+      },
+      {
+        "name": "Verse 2",
+        "note": "Double-time, two MCs trading bars",
+        "lines": [
+          "D to the A to the double R,",
+          "Absolute legend, absolute star!",
+          "E to the N, that’s our man,",
+          "Biggest bloody bellend in the whole damn gang!",
+          "",
+          "Wanker on Monday, tosser on Friday,",
+          "Still got his back every single day!",
+          "No beef, no drama, nothing to prove,",
+          "Just a massive bellend with a filthy groove!"
+        ]
+      },
+      {
+        "name": "Final hook",
+        "note": "Aggressive crowd chant",
+        "lines": [
+          "DARREN’S A BELLEND! (OI!)",
+          "PROPER FUCKING BELLEND! (WHAT!)",
+          "TOP LAD! BIG KNOB!",
+          "CERTIFIED FUCKING BELLEND!"
+        ]
+      },
+      {
+        "name": "Outro",
+        "note": "Music cuts, radio static",
+        "lines": [
+          "Darren…",
+          "You’re alright, son.",
+          "",
+          "Still a cunt though."
+        ]
+      },
+      {
+        "name": "End",
+        "note": "Radio static",
+        "lines": []
+      }
+    ],
+    "station": "BELLEND FM"
+  },
+  {
+    "id": "daz-fm-live",
+    "title": "Daz FM Live: No Licence, No Manners",
+    "subtitle": "Off the dial. Off the leash.",
+    "station": "DAZ FM",
+    "src": "/assets/daz-fm-live.mp3",
+    "duration": 148.73,
+    "downloadName": "Daz FM Live - No Licence, No Manners.mp3",
+    "lyrics": [
+      {
+        "name": "Intro",
+        "note": "Distorted pirate radio static",
+        "lines": [
+          "Check one, check two!",
+          "Daz FM, we’re live in the fucking building!",
+          "No licence, no manners!",
+          "Oi Darren!",
+          "YOU READY, YOU MUG?!"
+        ]
+      },
+      {
+        "name": "Drop",
+        "note": "Crushing distorted square-wave bass",
+        "lines": []
+      },
+      {
+        "name": "Verse 1",
+        "note": "Rapid aggressive Cockney flow",
+        "lines": [
+          "Daz on the mic, Daz on the scene,",
+          "Ugliest bassline you’ve ever fucking seen!",
+          "Top lad, geezer, absolute G,",
+          "Still a massive twat between you and me!",
+          "",
+          "Oi! Who’s that? Daz in the place!",
+          "Big bad bass getting right in your face!",
+          "Knobhead energy, maximum levels,",
+          "Good bloke rolling with a crew full of devils!"
+        ]
+      },
+      {
+        "name": "Hook",
+        "note": "MCs trading shouted bars",
+        "lines": [
+          "WHO’S THAT?! (DAZ!)",
+          "WHAT’S HE LIKE?! (MAD!)",
+          "PROPER FUCKING MENACE!",
+          "BUT HE AIN’T THAT BAD!",
+          "",
+          "WHO’S THAT?! (DAZ!)",
+          "WHAT’S HE DONE?! (FUCK ALL!)",
+          "BIG UP THE GEEZER!",
+          "LET THE BASSLINE ROLL!"
+        ]
+      },
+      {
+        "name": "DJ rewind",
+        "note": "Vinyl scratching",
+        "lines": [
+          "BOH! BOH!",
+          "WHEEL IT! WHEEL IT!",
+          "BRING THAT DIRTY FUCKER BACK!"
+        ]
+      },
+      {
+        "name": "Drop",
+        "note": "Filthy sub-bass, double-time drums",
+        "lines": []
+      },
+      {
+        "name": "Verse 2",
+        "note": "Fast grime flow",
+        "lines": [
+          "One-four-oh, let the speakers crack,",
+          "Daz and the crew with the bassline attack!",
+          "No fake beef, no bullshit chat,",
+          "Just a bunch of mad bastards taking the piss out of Daz!",
+          "",
+          "He’s a legend, a tosser, a proper good bloke,",
+          "One more bass drop and the speakers are smoked!"
+        ]
+      },
+      {
+        "name": "Final hook",
+        "note": "Shouted over heavy bass",
+        "lines": [
+          "DAZ! (OI!)",
+          "DAZ! (WHAT!)",
+          "ABSOLUTE MENACE!",
+          "YOU SILLY FUCKING TWAT!"
+        ]
+      },
+      {
+        "name": "Outro",
+        "note": "Sudden silence, radio crackle",
+        "lines": [
+          "Big love, Darren.",
+          "Now get off the fucking frequency."
+        ]
+      },
+      {
+        "name": "End",
+        "note": "Static",
+        "lines": []
+      }
+    ]
+  }
+]
