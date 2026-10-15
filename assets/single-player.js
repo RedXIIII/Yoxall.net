@@ -1,7 +1,7 @@
 (() => {
   'use strict';
   const $ = id => document.getElementById(id);
-  const audio = $('joke-song'), controls = $('custom-player'), toggle = $('music-toggle');
+  const audio = $('release-audio'), controls = $('custom-player'), toggle = $('music-toggle');
   if (!audio || !controls || !toggle) return;
   let tracks;
   try { tracks = JSON.parse($('track-data').textContent); } catch { return; }
@@ -13,6 +13,8 @@
   const links = [...document.querySelectorAll('[data-track-index]')];
   const lyricPanels = [...document.querySelectorAll('[data-track-lyrics]')];
   const share = $('share-single');
+  const lyricNav = $('lyrics-nav');
+  if (lyricNav) lyricNav.addEventListener('click', () => { $('lyrics').open = true; });
   let active = 0, repeatAll = true, playAttempt = 0, metadataReady = false;
   const selected = () => tracks[active];
   const shareUrl = () => 'https://yoxall.net/' + (active ? '?track=' + encodeURIComponent(selected().id) : '');
@@ -25,8 +27,8 @@
     document.body.classList.toggle('is-playing', playing);
     toggle.setAttribute('aria-pressed', String(playing));
     toggle.setAttribute('aria-label', (playing ? 'Pause ' : 'Play ') + selected().title);
-    label.textContent = playing ? 'PAUSE THE BANTER' : 'DROP THE TRACK';
-    hint.textContent = playing ? 'A moment of silence? Couldn’t be us.' : selected().subtitle;
+    label.textContent = playing ? 'PAUSE THE SET' : 'TUNE IN';
+    hint.textContent = playing ? 'You’re locked into Planner FM.' : selected().subtitle;
   }
   function updateTime() {
     const length = metadataReady && Number.isFinite(audio.duration) && audio.duration > 0 ? audio.duration : 0;
@@ -42,13 +44,13 @@
   function renderTrack() {
     const track = selected();
     document.body.dataset.track = track.id;
-    document.title = track.title + ' — Proper Grime Banter';
+    document.title = track.title + ' — Planner FM / Estate Sessions';
     $('playing-number').textContent = String(active + 1).padStart(2, '0');
     $('playing-title').textContent = track.title;
     $('playing-subtitle').textContent = track.subtitle;
     $('vinyl-track').textContent = 'TRACK ' + String(active + 1).padStart(2, '0');
-    $('lyrics-heading').textContent = 'TRACK ' + String(active + 1).padStart(2, '0') + ' / KNOW THE BARS';
-    audio.setAttribute('aria-label', track.title + ' by Proper Grime Banter');
+    $('lyrics-heading').textContent = 'TRACK ' + String(active + 1).padStart(2, '0') + ' / THE LYRIC SHEET';
+    audio.setAttribute('aria-label', track.title + ' — Planner FM');
     links.forEach(link => {
       if (Number(link.dataset.trackIndex) === active) link.setAttribute('aria-current', 'true');
       else link.removeAttribute('aria-current');
@@ -59,7 +61,7 @@
     $('download-track').setAttribute('href', track.src);
     $('download-track').setAttribute('download', track.downloadName);
     $('share-url').value = shareUrl();
-    if (share) share.textContent = 'SEND TO THE GROUP CHAT ↗';
+    if (share) share.textContent = 'PASS THE FREQUENCY ↗';
     setPlaying(false);
     updateTime();
   }
@@ -82,8 +84,8 @@
       if (attempt !== playAttempt || error.name === 'AbortError') return;
       if (error.name === 'NotAllowedError') {
         setPlaying(false);
-        state.textContent = 'TAP PLAY. LET THE BANTER COMMENCE.';
-        announce('Press Drop the track to play ' + selected().title + '.');
+        state.textContent = 'TAP TUNE IN TO START THE SET';
+        announce('Press Tune in to play ' + selected().title + '.');
       } else failed();
     }
   }
@@ -113,7 +115,7 @@
     if (!audio.paused) return;
     setPlaying(false);
     if (audio.error) { failed(); return; }
-    state.textContent = 'PAUSED / DARREN CAN BREATHE';
+    state.textContent = 'ON HOLD / THE DIARY CAN WAIT';
     announce('The track is paused.');
   });
   audio.addEventListener('ended', () => {
@@ -165,7 +167,7 @@
     share.addEventListener('click', async () => {
       try {
         await navigator.clipboard.writeText(shareUrl());
-        share.textContent = 'LINK COPIED. YOU KNOW WHAT TO DO. ✓';
+        share.textContent = 'FREQUENCY COPIED ✓';
         announce('A link to the selected track has been copied.');
       } catch {
         $('share-fallback').hidden = false;
