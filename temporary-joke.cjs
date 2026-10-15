@@ -1,96 +1,87 @@
 'use strict';
 
-// Temporary takeover. The complete site is preserved at the backup branch below.
+// Temporary single release. The original site remains on the pre-joke backup branch.
 const fs = require('node:fs');
 const path = require('node:path');
 const { execFileSync } = require('node:child_process');
 const root = __dirname;
+const lyrics = [
+  {name:'Intro',note:'Spoken, low voice, bass rumbling',lines:['Oi.','Yeah.','Darren.','You know what time it is.','Listen.']},
+  {name:'Drop',note:'Heavy distorted square-wave bass',lines:[]},
+  {name:'Verse 1',note:'Fast aggressive grime flow',lines:["Darren’s a geezer, Darren’s a lad,","Top-tier mate, best one we’ve had.","Heart of gold but he’s still a prick,","Proper good bloke but a massive dick.",'','Oi! Bellend! That’s my guy!','Big man’s flexin’, don’t ask why.','Knobhead, tosser, absolute tit,','Still roll with Darren, that’s legit.']},
+  {name:'Hook',note:'Deep bass, aggressive shouted delivery',lines:['DARREN’S A BELLEND! (OI!)','PROPER FUCKING BELLEND! (WHAT!)','WANKER! TOSSER! (YEAH!)','BUT HE’S STILL MY BREDDER! (OI!)']},
+  {name:'Verse 2',note:'Double-time grime flow',lines:['Big up Daz, yeah, big up the man,','Certified bellend, number one fan.','Top lad, top geezer, solid all day,','Still gonna call him a knob anyway.','','No bad blood, nah, nothing but love,','But the man’s still a weapon, bruv.','Raise that glass, put your hands in the air,','DARREN’S A BELLEND, AND WE DON’T CARE!']},
+  {name:'Final hook',note:'Bass drops harder',lines:['DARREN’S A BELLEND! (OI!)','PROPER FUCKING BELLEND! (WHAT!)','TOP LAD! BIG KNOB! (YEAH!)','DARREN, YOU ABSOLUTE SOD!']},
+  {name:'Outro',note:'Beat cuts, spoken',lines:['Safe, Daz.','You fucking bellend.']}
+];
+const escape = value => String(value).replace(/[&<>\"]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[ch]));
+const lyricMarkup = lyrics.map(section => `<section class="lyric-block${section.name.toLowerCase().includes('hook') ? ' lyric-hook' : ''}"><h3>${escape(section.name)}</h3><p class="lyric-note">${escape(section.note)}</p>${section.lines.length ? `<p class="lyric-lines">${section.lines.map(escape).join('<br>')}</p>` : ''}</section>`).join('');
 const page = `<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow, noarchive">
-  <meta name="theme-color" content="#fff4ce">
-  <title>Darren is a Bellend</title>
+  <meta name="theme-color" content="#0b0d10">
+  <meta name="description" content="Darren is a Bellend! — Proper Grime Banter. A deeply unserious single.">
+  <meta property="og:type" content="music.song">
+  <meta property="og:title" content="Darren is a Bellend! — Proper Grime Banter">
+  <meta property="og:description" content="The diss nobody asked for. Drop the track.">
+  <meta property="og:url" content="https://yoxall.net/">
+  <meta property="og:image" content="https://yoxall.net/assets/darren-bellend-cover.jpg">
+  <meta property="og:image:width" content="1280">
+  <meta property="og:image:height" content="1280">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Darren is a Bellend! — Proper Grime Banter</title>
   <link rel="canonical" href="https://yoxall.net/">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M15 77Q29 63 29 42a21 21 0 0142 0q0 21 14 35z' fill='%23f6bd38' stroke='%231a1720' stroke-width='6'/%3E%3Ccircle cx='50' cy='84' r='8' fill='%231a1720'/%3E%3Ccircle cx='41' cy='43' r='4'/%3E%3Ccircle cx='59' cy='43' r='4'/%3E%3C/svg%3E">
-  <style>
-    *{box-sizing:border-box}
-    html{background:#fff4ce;color:#1b1820}
-    body{margin:0;min-height:100svh;display:grid;place-items:center;overflow-x:hidden;background:radial-gradient(#6b513a18 .8px,transparent .8px);background-size:8px 8px}
-    body::before,body::after{content:"";position:fixed;left:0;right:0;height:12px;background:repeating-linear-gradient(135deg,#1b1820 0 14px,#fff4ce 14px 28px);z-index:2}
-    body::before{top:0}body::after{bottom:0}
-    main{width:min(1240px,100%);display:grid;grid-template-columns:1.1fr 1fr;align-items:center;gap:12px;padding:64px 54px}
-    h1{position:relative;margin:0;z-index:1;font-family:Impact,"Arial Black",sans-serif;font-size:clamp(90px,11.8vw,168px);font-weight:900;line-height:.89;letter-spacing:-.045em;text-align:center;transform:rotate(-3deg)}
-    h1>span{display:block}
-    .name{position:relative;width:fit-content;margin:auto;letter-spacing:.04em;font-kerning:none}
-    .name::after{content:"";display:block;position:absolute;left:3%;right:-1%;bottom:-10px;height:8px;background:#e94b4b;border-radius:70% 20% 70% 30%;transform:rotate(-2deg);z-index:-1}
-    .join{font-family:Georgia,serif;font-style:italic;font-size:.34em;line-height:1.4;letter-spacing:-.04em;margin:22px 0 8px}
-    .punchline{color:#ed4b49;font-size:.94em;letter-spacing:.005em;-webkit-text-stroke:2px #1b1820;text-shadow:5px 6px 0 #1b1820;paint-order:stroke fill}
-    .art{position:relative;min-width:0;transform:rotate(5deg);animation:wobble 4.5s ease-in-out infinite;transform-origin:50% 75%}
-    svg{display:block;width:100%;height:auto;overflow:visible;filter:drop-shadow(12px 15px 0 #1b182018)}
-    .music-controls{position:fixed;right:max(20px,env(safe-area-inset-right));bottom:max(25px,env(safe-area-inset-bottom));z-index:3;display:flex;align-items:center;flex-wrap:wrap;justify-content:flex-end;gap:12px;max-width:calc(100% - 40px)}
-    .music-controls [hidden]{display:none!important}
-    .music-controls audio{display:block;width:min(300px,75vw);height:44px}
-    .music-controls button{font:700 14px/1.2 Arial,sans-serif;color:#1b1820;background:#fff4ce;border:3px solid #1b1820;border-radius:50px;padding:12px 19px;box-shadow:3px 3px 0 #ed4b49;cursor:pointer;min-height:44px}
-    .music-controls button:hover{background:#ffe4a2}
-    .music-controls button:focus-visible,.music-controls a:focus-visible{outline:3px solid #ed4b49;outline-offset:5px}
-    .music-controls a{font:700 12px/1.4 Arial,sans-serif;color:#1b1820;background:#fff4ce;padding:8px 10px;text-underline-offset:3px}
-    .audio-status{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
-    @keyframes wobble{0%,75%,100%{transform:rotate(5deg)}82%{transform:rotate(0deg)}89%{transform:rotate(9deg)}95%{transform:rotate(3deg)}}
-    @media(min-width:1500px){main{gap:55px}}
-    @media(max-width:720px){main{grid-template-columns:1fr;gap:20px;padding:48px 24px 96px;max-width:470px}h1{font-size:clamp(70px,19vw,98px)}.join{margin:16px 0 6px}.name::after{height:6px;bottom:-8px}.punchline{-webkit-text-stroke:1.5px #1b1820;text-shadow:3px 4px 0 #1b1820}.art{width:76%;max-width:320px;margin:0 auto}.name{white-space:nowrap}}
-    @media(prefers-reduced-motion:reduce){.art{animation:none}}
-  </style>
+  <link rel="icon" href="/assets/single-icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/single.css">
+  <script src="/assets/single-player.js" defer></script>
 </head>
 <body>
-  <main>
-    <h1 aria-label="Darren is a Bellend"><span class="name">Darren</span> <span class="join">is a</span> <span class="punchline">Bellend</span></h1>
-    <div class="art" aria-hidden="true">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 500">
-        <defs>
-          <linearGradient id="rim" x1="0" x2="1"><stop stop-color="#b77818"/><stop offset=".35" stop-color="#ffe8a2"/><stop offset=".65" stop-color="#efb846"/><stop offset="1" stop-color="#a96e18"/></linearGradient>
-          <radialGradient id="brass" cx=".32" cy=".25" r=".78"><stop stop-color="#fff2bc"/><stop offset=".38" stop-color="#ffda70"/><stop offset=".76" stop-color="#e9ad32"/><stop offset="1" stop-color="#b67c20"/></radialGradient>
-        </defs>
-        <g fill="none" stroke="#1b1820" stroke-width="6" stroke-linecap="round">
-          <path d="M62 184q-28 29-22 65m44-54q-18 19-15 43M413 179q28 28 23 65m-45-53q18 19 15 43M73 370l-23 14m355-15 25 17"/>
-        </g>
-        <path d="m72 54 7 20 22 2-17 14 5 22-19-12-18 12 5-22-17-14 23-2z" fill="#ed4b49" stroke="#1b1820" stroke-width="4"/>
-        <path d="m414 420 5 15 17 1-13 11 4 17-14-9-14 9 4-17-13-11 17-1z" fill="#77bfa0" stroke="#1b1820" stroke-width="4"/>
-        <g transform="rotate(-10 240 250)" stroke="#1b1820" stroke-linejoin="round">
-          <ellipse cx="240" cy="82" rx="25" ry="30" fill="none" stroke-width="12"/>
-          <ellipse cx="240" cy="82" rx="25" ry="30" fill="none" stroke="#eab744" stroke-width="5"/>
-          <path d="M219 104h42l8 20h-58z" fill="url(#rim)" stroke-width="6"/>
-          <path d="M240 365v52" fill="none" stroke-width="13"/>
-          <circle cx="240" cy="418" r="26" fill="url(#brass)" stroke-width="7"/>
-          <path d="M93 360q53-48 53-128c0-68 38-115 94-115s94 47 94 115q0 80 53 128z" fill="url(#brass)" stroke-width="7"/>
-          <path d="M168 210q9-57 54-69" fill="none" stroke="#fff7d1" stroke-width="13" stroke-linecap="round"/>
-          <path d="M307 279q7 42 31 64" fill="none" stroke="#af751c" stroke-width="10" stroke-linecap="round" opacity=".5"/>
-          <ellipse cx="194" cy="224" rx="30" ry="39" fill="#fffdf4" stroke-width="5"/>
-          <ellipse cx="281" cy="215" rx="35" ry="44" fill="#fffdf4" stroke-width="5"/>
-          <ellipse cx="203" cy="232" rx="12" ry="18" fill="#1b1820" stroke="none"/>
-          <ellipse cx="273" cy="224" rx="13" ry="20" fill="#1b1820" stroke="none"/>
-          <circle cx="207" cy="225" r="5" fill="white" stroke="none"/><circle cx="277" cy="216" r="5" fill="white" stroke="none"/>
-          <path d="M187 280q53 66 105-7-53 18-105 7z" fill="#1b1820" stroke-width="5"/>
-          <path d="M224 306q16-17 35-9-16 16-35 9" fill="#f5828a" stroke="none"/>
-          <path d="m176 173 29-7m62-11 32 11" fill="none" stroke-width="7" stroke-linecap="round"/>
-          <ellipse cx="167" cy="270" rx="15" ry="8" fill="#ec8062" stroke="none" opacity=".65"/><ellipse cx="310" cy="260" rx="15" ry="8" fill="#ec8062" stroke="none" opacity=".65"/>
-          <rect x="87" y="349" width="306" height="35" rx="17" fill="url(#rim)" stroke-width="7"/>
-          <path d="M108 359h260" fill="none" stroke="#fff3be" stroke-width="5" stroke-linecap="round"/>
-        </g>
-      </svg>
-    </div>
-  </main>
-  <div class="music-controls" aria-label="Background music controls">
-    <audio id="joke-song" src="/assets/darren-darren.mp3" loop preload="auto" controls aria-label="Background music">
-      <a href="/assets/darren-darren.mp3">Play the song</a>
-    </audio>
-    <button id="music-toggle" type="button" aria-pressed="false" aria-controls="joke-song" hidden>Play song ♪</button>
-    <a id="music-fallback" href="/assets/darren-darren.mp3" target="_blank" rel="noopener" hidden>Open audio ↗</a>
-    <span id="music-status" class="audio-status" role="status" aria-live="polite"></span>
+  <a class="skip-link" href="#main">Skip to the single</a>
+  <div class="ambient" aria-hidden="true"></div>
+  <div class="page-shell">
+    <header class="masthead">
+      <a class="label-brand" href="/" aria-label="Banter Records home"><span class="label-mark" aria-hidden="true">◉</span>BANTER<span>RECORDS</span></a>
+      <span class="masthead-note">UNSIGNED. UNHINGED.</span>
+      <span class="edition">BNT–001 <span class="edition-dot" aria-hidden="true"></span> THE UNOFFICIAL SINGLE</span>
+    </header>
+    <main id="main" class="release">
+      <section class="visual-column" aria-label="Single artwork">
+        <div class="record-display">
+          <div class="vinyl" aria-hidden="true"><div class="vinyl-label"><span>BANTER RECORDS</span><strong>SIDE A</strong><i></i><span>33⅓ / ABSOLUTE NONSENSE</span></div></div>
+          <figure class="sleeve"><img src="/assets/darren-bellend-cover.jpg" width="1280" height="1280" alt="Darren is a Bellend! by Proper Grime Banter: a grime crew and speakers on a rainy estate at night." fetchpriority="high"><figcaption class="advisory"><span>ADVISORY</span><strong>EXCESSIVE<br>DARREN</strong></figcaption></figure>
+        </div>
+        <div class="sleeve-caption"><span>01 / THE SINGLE</span><span>0% SUBTLETY. 100% BANTER.</span></div>
+        <p class="sleeve-note">PRESS PLAY. <span>MAKE IT THE GROUP CHAT’S PROBLEM.</span></p>
+      </section>
+      <section class="release-copy" aria-labelledby="release-title">
+        <div class="release-kicker"><span class="release-type">GRIME / BANTER</span><span>THE DISS NOBODY ASKED FOR</span></div>
+        <h1 id="release-title"><span>Darren</span><small>is a</small><strong>Bellend!</strong></h1>
+        <div class="artist-row"><span class="artist-icon" aria-hidden="true">↳</span><p>PROPER GRIME BANTER<span>A deeply unserious release.</span></p></div>
+        <section class="player" aria-label="Play the single">
+          <div class="player-topline"><span id="player-state">READY TO CAUSE A SCENE</span><span class="equalizer" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span></div>
+          <audio id="joke-song" src="/assets/darren-bellend-single.mp3" loop preload="metadata" controls aria-label="Darren is a Bellend! by Proper Grime Banter"><a href="/assets/darren-bellend-single.mp3">Play the single</a></audio>
+          <div id="custom-player" hidden>
+            <button id="music-toggle" class="drop-button" type="button" aria-pressed="false" aria-controls="joke-song" aria-label="Play Darren is a Bellend!">
+              <span class="play-disc" aria-hidden="true"><svg class="play-icon" viewBox="0 0 24 24"><path d="m8 4 13 8-13 8z"/></svg><svg class="pause-icon" viewBox="0 0 24 24"><path d="M6 4h5v16H6zm8 0h5v16h-5z"/></svg></span>
+              <span class="drop-copy"><strong id="play-label">DROP THE TRACK</strong><span id="play-hint">Darren’s villain origin story starts here.</span></span><span class="drop-arrow" aria-hidden="true">↗</span>
+            </button>
+            <div class="seek-row"><span id="music-current">0:00</span><label class="seek-label"><span class="sr-only">Seek through the single</span><input id="music-seek" type="range" min="0" max="1000" step="1" value="0" aria-valuetext="0:00 of 2:10" disabled></label><span id="music-duration">2:10</span></div>
+            <div class="transport"><button id="music-restart" type="button" aria-label="Restart the single">↶ <span>RUN IT BACK</span></button><button id="music-loop" type="button" aria-pressed="true">↻ <span>LOOP ON</span></button><button id="music-mute" type="button" aria-pressed="false">◖ <span>SOUND ON</span></button></div>
+          </div>
+          <a id="music-fallback" class="fallback-link" href="/assets/darren-bellend-single.mp3" target="_blank" rel="noopener" hidden>Open the track directly ↗</a>
+          <p id="music-status" class="sr-only" role="status" aria-live="polite"></p>
+        </section>
+        <div class="release-actions"><button id="share-single" type="button" hidden>SEND TO THE GROUP CHAT <span aria-hidden="true">↗</span></button><a href="/assets/darren-bellend-single.mp3" download="Darren is a Bellend!.mp3">KEEP THE EVIDENCE ↓</a></div>
+        <label id="share-fallback" class="share-fallback" hidden>Copy this link<input id="share-url" type="text" value="https://yoxall.net/" readonly></label>
+        <div class="liner-note"><span>LINER NOTES / 001</span><p>No bad blood. Nothing but love.<br>Absolutely no filter.</p></div>
+        <details class="lyrics" id="lyrics"><summary><span>KNOW THE BARS</span><span aria-hidden="true">+</span></summary><div class="lyrics-content"><p class="lyrics-intro">The full lyric sheet. Strong language. Strong friendship.</p>${lyricMarkup}</div></details>
+      </section>
+    </main>
+    <footer class="release-footer"><span>ONE TRACK. ONE VERY SPECIFIC TARGET.</span><span>BEST SERVED LOUD. <b>ALL BANTER.</b></span><span class="catalogue">BNT–001 / SIDE A</span></footer>
   </div>
-  <script src="/assets/joke-audio.js" defer></script>
 </body>
 </html>
 `;
@@ -101,4 +92,4 @@ if (!pages.includes('index.html') || !pages.includes('404.html')) throw Error('E
 for (const file of pages) fs.writeFileSync(path.join(root, file), page);
 fs.writeFileSync(path.join(root, 'robots.txt'), 'User-agent: *\nDisallow: /\n');
 fs.writeFileSync(path.join(root, 'sitemap.xml'), '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://yoxall.net/</loc></url></urlset>\n');
-console.log('Applied the same temporary joke page to ' + pages.length + ' existing routes, including the 404 fallback.');
+console.log('Applied the single release page to ' + pages.length + ' existing routes, including the 404 fallback.');
