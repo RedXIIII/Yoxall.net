@@ -12,9 +12,9 @@ const page = `<!doctype html>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow, noarchive">
   <meta name="theme-color" content="#fff4ce">
-  <title>Darren is a Knob</title>
+  <title>Darren is a Bellend</title>
   <link rel="canonical" href="https://yoxall.net/">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23f6bd38' stroke='%231a1720' stroke-width='8'/%3E%3Ccircle cx='35' cy='42' r='7'/%3E%3Ccircle cx='65' cy='42' r='7'/%3E%3Cpath d='M30 61Q50 82 70 61' fill='none' stroke='%231a1720' stroke-width='6'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M15 77Q29 63 29 42a21 21 0 0142 0q0 21 14 35z' fill='%23f6bd38' stroke='%231a1720' stroke-width='6'/%3E%3Ccircle cx='50' cy='84' r='8' fill='%231a1720'/%3E%3Ccircle cx='41' cy='43' r='4'/%3E%3Ccircle cx='59' cy='43' r='4'/%3E%3C/svg%3E">
   <style>
     *{box-sizing:border-box}
     html{background:#fff4ce;color:#1b1820}
@@ -24,10 +24,10 @@ const page = `<!doctype html>
     main{width:min(1240px,100%);display:grid;grid-template-columns:1.1fr 1fr;align-items:center;gap:12px;padding:64px 54px}
     h1{position:relative;margin:0;z-index:1;font-family:Impact,"Arial Black",sans-serif;font-size:clamp(90px,11.8vw,168px);font-weight:900;line-height:.89;letter-spacing:-.045em;text-align:center;transform:rotate(-3deg)}
     h1>span{display:block}
-    .name{position:relative;width:fit-content;margin:auto}
+    .name{position:relative;width:fit-content;margin:auto;letter-spacing:.04em;font-kerning:none}
     .name::after{content:"";display:block;position:absolute;left:3%;right:-1%;bottom:-10px;height:8px;background:#e94b4b;border-radius:70% 20% 70% 30%;transform:rotate(-2deg);z-index:-1}
     .join{font-family:Georgia,serif;font-style:italic;font-size:.34em;line-height:1.4;letter-spacing:-.04em;margin:22px 0 8px}
-    .punchline{color:#ed4b49;font-size:1.36em;letter-spacing:-.035em;-webkit-text-stroke:2px #1b1820;text-shadow:5px 6px 0 #1b1820;paint-order:stroke fill}
+    .punchline{color:#ed4b49;font-size:.94em;letter-spacing:.005em;-webkit-text-stroke:2px #1b1820;text-shadow:5px 6px 0 #1b1820;paint-order:stroke fill}
     .art{position:relative;min-width:0;transform:rotate(5deg);animation:wobble 4.5s ease-in-out infinite;transform-origin:50% 75%}
     svg{display:block;width:100%;height:auto;overflow:visible;filter:drop-shadow(12px 15px 0 #1b182018)}
     @keyframes wobble{0%,75%,100%{transform:rotate(5deg)}82%{transform:rotate(0deg)}89%{transform:rotate(9deg)}95%{transform:rotate(3deg)}}
@@ -38,37 +38,38 @@ const page = `<!doctype html>
 </head>
 <body>
   <main>
-    <h1 aria-label="Darren is a Knob"><span class="name">Darren</span> <span class="join">is a</span> <span class="punchline">Knob</span></h1>
+    <h1 aria-label="Darren is a Bellend"><span class="name">Darren</span> <span class="join">is a</span> <span class="punchline">Bellend</span></h1>
     <div class="art" aria-hidden="true">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 500">
         <defs>
-          <linearGradient id="plate" x1="0" x2="1" y1="0" y2=".5"><stop stop-color="#bc801a"/><stop offset=".3" stop-color="#ffe49a"/><stop offset=".55" stop-color="#e7ab38"/><stop offset=".83" stop-color="#ffdfa0"/><stop offset="1" stop-color="#b77a18"/></linearGradient>
+          <linearGradient id="rim" x1="0" x2="1"><stop stop-color="#b77818"/><stop offset=".35" stop-color="#ffe8a2"/><stop offset=".65" stop-color="#efb846"/><stop offset="1" stop-color="#a96e18"/></linearGradient>
           <radialGradient id="brass" cx=".32" cy=".25" r=".78"><stop stop-color="#fff2bc"/><stop offset=".38" stop-color="#ffda70"/><stop offset=".76" stop-color="#e9ad32"/><stop offset="1" stop-color="#b67c20"/></radialGradient>
         </defs>
         <g fill="none" stroke="#1b1820" stroke-width="6" stroke-linecap="round">
-          <path d="M55 165l-22-13m27-13-9-23M403 152l25-18m-34-4 8-27M74 374l-24 12m354-12 25 17"/>
+          <path d="M62 184q-28 29-22 65m44-54q-18 19-15 43M413 179q28 28 23 65m-45-53q18 19 15 43M73 370l-23 14m355-15 25 17"/>
         </g>
         <path d="m72 54 7 20 22 2-17 14 5 22-19-12-18 12 5-22-17-14 23-2z" fill="#ed4b49" stroke="#1b1820" stroke-width="4"/>
         <path d="m414 420 5 15 17 1-13 11 4 17-14-9-14 9 4-17-13-11 17-1z" fill="#77bfa0" stroke="#1b1820" stroke-width="4"/>
         <g transform="rotate(-10 240 250)" stroke="#1b1820" stroke-linejoin="round">
-          <rect x="142" y="38" width="196" height="420" rx="91" fill="url(#plate)" stroke-width="7"/>
-          <rect x="156" y="51" width="168" height="394" rx="78" fill="none" stroke="#fff1b6" stroke-width="3"/>
-          <g fill="#b9862a" stroke-width="4"><circle cx="240" cy="85" r="12"/><circle cx="240" cy="411" r="12"/></g>
-          <path d="m233 78 14 14m-14 326 14-14" fill="none" stroke-width="4"/>
-          <circle cx="248" cy="259" r="145" fill="#9e6b1e" stroke-width="7"/>
-          <circle cx="236" cy="245" r="145" fill="url(#brass)" stroke-width="7"/>
-          <circle cx="236" cy="245" r="128" fill="none" stroke="#fff2be" stroke-width="3"/>
-          <path d="M129 207c13-43 46-68 87-72" fill="none" stroke="#fff9dc" stroke-width="13" stroke-linecap="round"/>
-          <path d="M323 304c-18 26-46 43-74 47" fill="none" stroke="#9f6c1d" stroke-width="9" stroke-linecap="round" opacity=".5"/>
-          <ellipse cx="189" cy="227" rx="33" ry="42" fill="#fffdf4" stroke-width="5"/>
-          <ellipse cx="281" cy="216" rx="38" ry="47" fill="#fffdf4" stroke-width="5"/>
-          <ellipse cx="199" cy="235" rx="13" ry="19" fill="#1b1820" stroke="none"/>
-          <ellipse cx="272" cy="225" rx="14" ry="21" fill="#1b1820" stroke="none"/>
-          <circle cx="203" cy="228" r="5" fill="white" stroke="none"/><circle cx="276" cy="216" r="6" fill="white" stroke="none"/>
-          <path d="M183 289q56 64 109-8-53 18-109 8z" fill="#1b1820" stroke-width="5"/>
-          <path d="M220 314q18-20 40-9-16 17-40 9" fill="#f5828a" stroke="none"/>
-          <path d="m170 173 30-7m64-11 34 11" fill="none" stroke-width="7" stroke-linecap="round"/>
-          <ellipse cx="151" cy="272" rx="17" ry="9" fill="#ec8062" stroke="none" opacity=".65"/><ellipse cx="317" cy="262" rx="17" ry="9" fill="#ec8062" stroke="none" opacity=".65"/>
+          <ellipse cx="240" cy="82" rx="25" ry="30" fill="none" stroke-width="12"/>
+          <ellipse cx="240" cy="82" rx="25" ry="30" fill="none" stroke="#eab744" stroke-width="5"/>
+          <path d="M219 104h42l8 20h-58z" fill="url(#rim)" stroke-width="6"/>
+          <path d="M240 365v52" fill="none" stroke-width="13"/>
+          <circle cx="240" cy="418" r="26" fill="url(#brass)" stroke-width="7"/>
+          <path d="M93 360q53-48 53-128c0-68 38-115 94-115s94 47 94 115q0 80 53 128z" fill="url(#brass)" stroke-width="7"/>
+          <path d="M168 210q9-57 54-69" fill="none" stroke="#fff7d1" stroke-width="13" stroke-linecap="round"/>
+          <path d="M307 279q7 42 31 64" fill="none" stroke="#af751c" stroke-width="10" stroke-linecap="round" opacity=".5"/>
+          <ellipse cx="194" cy="224" rx="30" ry="39" fill="#fffdf4" stroke-width="5"/>
+          <ellipse cx="281" cy="215" rx="35" ry="44" fill="#fffdf4" stroke-width="5"/>
+          <ellipse cx="203" cy="232" rx="12" ry="18" fill="#1b1820" stroke="none"/>
+          <ellipse cx="273" cy="224" rx="13" ry="20" fill="#1b1820" stroke="none"/>
+          <circle cx="207" cy="225" r="5" fill="white" stroke="none"/><circle cx="277" cy="216" r="5" fill="white" stroke="none"/>
+          <path d="M187 280q53 66 105-7-53 18-105 7z" fill="#1b1820" stroke-width="5"/>
+          <path d="M224 306q16-17 35-9-16 16-35 9" fill="#f5828a" stroke="none"/>
+          <path d="m176 173 29-7m62-11 32 11" fill="none" stroke-width="7" stroke-linecap="round"/>
+          <ellipse cx="167" cy="270" rx="15" ry="8" fill="#ec8062" stroke="none" opacity=".65"/><ellipse cx="310" cy="260" rx="15" ry="8" fill="#ec8062" stroke="none" opacity=".65"/>
+          <rect x="87" y="349" width="306" height="35" rx="17" fill="url(#rim)" stroke-width="7"/>
+          <path d="M108 359h260" fill="none" stroke="#fff3be" stroke-width="5" stroke-linecap="round"/>
         </g>
       </svg>
     </div>
