@@ -1,0 +1,86 @@
+'use strict';
+
+// Temporary takeover. The complete site is preserved at the backup branch below.
+const fs = require('node:fs');
+const path = require('node:path');
+const { execFileSync } = require('node:child_process');
+const root = __dirname;
+const page = `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="theme-color" content="#fff4ce">
+  <title>Darren is a Knob</title>
+  <link rel="canonical" href="https://yoxall.net/">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23f6bd38' stroke='%231a1720' stroke-width='8'/%3E%3Ccircle cx='35' cy='42' r='7'/%3E%3Ccircle cx='65' cy='42' r='7'/%3E%3Cpath d='M30 61Q50 82 70 61' fill='none' stroke='%231a1720' stroke-width='6'/%3E%3C/svg%3E">
+  <style>
+    *{box-sizing:border-box}
+    html{background:#fff4ce;color:#1b1820}
+    body{margin:0;min-height:100svh;display:grid;place-items:center;overflow-x:hidden;background:radial-gradient(#6b513a18 .8px,transparent .8px);background-size:8px 8px}
+    body::before,body::after{content:"";position:fixed;left:0;right:0;height:12px;background:repeating-linear-gradient(135deg,#1b1820 0 14px,#fff4ce 14px 28px);z-index:2}
+    body::before{top:0}body::after{bottom:0}
+    main{width:min(1240px,100%);display:grid;grid-template-columns:1.1fr 1fr;align-items:center;gap:12px;padding:64px 54px}
+    h1{position:relative;margin:0;z-index:1;font-family:Impact,"Arial Black",sans-serif;font-size:clamp(90px,11.8vw,168px);font-weight:900;line-height:.89;letter-spacing:-.045em;text-align:center;transform:rotate(-3deg)}
+    h1>span{display:block}
+    .name{position:relative;width:fit-content;margin:auto}
+    .name::after{content:"";display:block;position:absolute;left:3%;right:-1%;bottom:-10px;height:8px;background:#e94b4b;border-radius:70% 20% 70% 30%;transform:rotate(-2deg);z-index:-1}
+    .join{font-family:Georgia,serif;font-style:italic;font-size:.34em;line-height:1.4;letter-spacing:-.04em;margin:22px 0 8px}
+    .punchline{color:#ed4b49;font-size:1.36em;letter-spacing:-.035em;-webkit-text-stroke:2px #1b1820;text-shadow:5px 6px 0 #1b1820;paint-order:stroke fill}
+    .art{position:relative;min-width:0;transform:rotate(5deg);animation:wobble 4.5s ease-in-out infinite;transform-origin:50% 75%}
+    svg{display:block;width:100%;height:auto;overflow:visible;filter:drop-shadow(12px 15px 0 #1b182018)}
+    @keyframes wobble{0%,75%,100%{transform:rotate(5deg)}82%{transform:rotate(0deg)}89%{transform:rotate(9deg)}95%{transform:rotate(3deg)}}
+    @media(min-width:1500px){main{gap:55px}}
+    @media(max-width:720px){main{grid-template-columns:1fr;gap:20px;padding:48px 24px 30px;max-width:470px}h1{font-size:clamp(70px,19vw,98px)}.join{margin:16px 0 6px}.name::after{height:6px;bottom:-8px}.punchline{-webkit-text-stroke:1.5px #1b1820;text-shadow:3px 4px 0 #1b1820}.art{width:76%;max-width:320px;margin:0 auto}.name{white-space:nowrap}}
+    @media(prefers-reduced-motion:reduce){.art{animation:none}}
+  </style>
+</head>
+<body>
+  <main>
+    <h1 aria-label="Darren is a Knob"><span class="name">Darren</span> <span class="join">is a</span> <span class="punchline">Knob</span></h1>
+    <div class="art" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 500">
+        <defs>
+          <linearGradient id="plate" x1="0" x2="1" y1="0" y2=".5"><stop stop-color="#bc801a"/><stop offset=".3" stop-color="#ffe49a"/><stop offset=".55" stop-color="#e7ab38"/><stop offset=".83" stop-color="#ffdfa0"/><stop offset="1" stop-color="#b77a18"/></linearGradient>
+          <radialGradient id="brass" cx=".32" cy=".25" r=".78"><stop stop-color="#fff2bc"/><stop offset=".38" stop-color="#ffda70"/><stop offset=".76" stop-color="#e9ad32"/><stop offset="1" stop-color="#b67c20"/></radialGradient>
+        </defs>
+        <g fill="none" stroke="#1b1820" stroke-width="6" stroke-linecap="round">
+          <path d="M55 165l-22-13m27-13-9-23M403 152l25-18m-34-4 8-27M74 374l-24 12m354-12 25 17"/>
+        </g>
+        <path d="m72 54 7 20 22 2-17 14 5 22-19-12-18 12 5-22-17-14 23-2z" fill="#ed4b49" stroke="#1b1820" stroke-width="4"/>
+        <path d="m414 420 5 15 17 1-13 11 4 17-14-9-14 9 4-17-13-11 17-1z" fill="#77bfa0" stroke="#1b1820" stroke-width="4"/>
+        <g transform="rotate(-10 240 250)" stroke="#1b1820" stroke-linejoin="round">
+          <rect x="142" y="38" width="196" height="420" rx="91" fill="url(#plate)" stroke-width="7"/>
+          <rect x="156" y="51" width="168" height="394" rx="78" fill="none" stroke="#fff1b6" stroke-width="3"/>
+          <g fill="#b9862a" stroke-width="4"><circle cx="240" cy="85" r="12"/><circle cx="240" cy="411" r="12"/></g>
+          <path d="m233 78 14 14m-14 326 14-14" fill="none" stroke-width="4"/>
+          <circle cx="248" cy="259" r="145" fill="#9e6b1e" stroke-width="7"/>
+          <circle cx="236" cy="245" r="145" fill="url(#brass)" stroke-width="7"/>
+          <circle cx="236" cy="245" r="128" fill="none" stroke="#fff2be" stroke-width="3"/>
+          <path d="M129 207c13-43 46-68 87-72" fill="none" stroke="#fff9dc" stroke-width="13" stroke-linecap="round"/>
+          <path d="M323 304c-18 26-46 43-74 47" fill="none" stroke="#9f6c1d" stroke-width="9" stroke-linecap="round" opacity=".5"/>
+          <ellipse cx="189" cy="227" rx="33" ry="42" fill="#fffdf4" stroke-width="5"/>
+          <ellipse cx="281" cy="216" rx="38" ry="47" fill="#fffdf4" stroke-width="5"/>
+          <ellipse cx="199" cy="235" rx="13" ry="19" fill="#1b1820" stroke="none"/>
+          <ellipse cx="272" cy="225" rx="14" ry="21" fill="#1b1820" stroke="none"/>
+          <circle cx="203" cy="228" r="5" fill="white" stroke="none"/><circle cx="276" cy="216" r="6" fill="white" stroke="none"/>
+          <path d="M183 289q56 64 109-8-53 18-109 8z" fill="#1b1820" stroke-width="5"/>
+          <path d="M220 314q18-20 40-9-16 17-40 9" fill="#f5828a" stroke="none"/>
+          <path d="m170 173 30-7m64-11 34 11" fill="none" stroke-width="7" stroke-linecap="round"/>
+          <ellipse cx="151" cy="272" rx="17" ry="9" fill="#ec8062" stroke="none" opacity=".65"/><ellipse cx="317" cy="262" rx="17" ry="9" fill="#ec8062" stroke="none" opacity=".65"/>
+        </g>
+      </svg>
+    </div>
+  </main>
+</body>
+</html>
+`;
+
+const pages = execFileSync('git', ['ls-files', '-z'], { cwd: root, encoding: 'utf8' })
+  .split('\0').filter(file => file.endsWith('.html'));
+if (!pages.includes('index.html') || !pages.includes('404.html')) throw Error('Expected homepage and fallback are missing');
+for (const file of pages) fs.writeFileSync(path.join(root, file), page);
+fs.writeFileSync(path.join(root, 'robots.txt'), 'User-agent: *\nDisallow: /\n');
+fs.writeFileSync(path.join(root, 'sitemap.xml'), '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://yoxall.net/</loc></url></urlset>\n');
+console.log('Applied the same temporary joke page to ' + pages.length + ' existing routes, including the 404 fallback.');

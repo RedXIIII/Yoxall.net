@@ -39,3 +39,8 @@ The curated observation catalogue is `assets/uap-records.json`. `uap-build.cjs` 
 ## Interesting stories
 
 `assets/story-records.json` contains original story-led investigations. `story-build.cjs` generates the index and individual narrative pages through the normal build. Each story separates the attributed account from a claim-by-claim assessment with linked sources, an explicit conclusion and remaining questions. Evidence is always reachable directly and native details elements work without JavaScript. Do not present legends, reconstructions or inference as witnessed fact. Do not copy channel scripts, branding or graphics. Existing archive dossiers and UFO files remain separate formats for concise research.
+# Temporary joke takeover — 15 October 2026
+
+The published HTML currently displays one temporary joke page on every existing route. `temporary-joke.cjs` reapplies it; do not run the archive build while the joke is active.
+
+The complete pre-joke site is preserved on GitHub branch `backup/before-darren-prank-2026-10-15` at commit `97b587ee2e568d40236ab4fa5524d811b85d53ce`. Restore by reverting the joke PR, which also restores the normal robots and sitemap files. A ZIP backup is stored outside this publishing folder at `../research/site-before-darren-prank-2026-10-15.zip`.
