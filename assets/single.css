@@ -119,3 +119,8 @@ body[data-track="get-your-tics-out"]{--acid:#e4c291}
 body[data-track="zoe-unplugged"]{--acid:#e0c1a0}
 
 body[data-track="cutter-is-go"]{--acid:#f0b2a8}
+
+/* A warmer frequency for Michelle’s closing bonus record. */
+.bonus-badge{display:inline-block;margin-left:5px;padding:1px 5px;border:1px solid #edc79f66;border-radius:2px;color:#edc79f;font:8px/1.6 var(--mono);letter-spacing:.08em;vertical-align:middle;white-space:nowrap}
+body[data-track="practically-perfect"]{--acid:#edc79f;--line:#edc79f30;background:radial-gradient(ellipse at 15% 23%,#754a303d,transparent 55%),var(--ink)}
+body[data-track="practically-perfect"] .ambient{background-image:linear-gradient(90deg,#0b10168a,#0b1016ed),url('/assets/sleeves/practically-perfect.webp');filter:none;opacity:.18}
