@@ -108,8 +108,8 @@
     updateTime();
   }
   function renderAlbum() {
-    if (deckArt) { deckArt.setAttribute('src', '/assets/sleeves/the-west-dont-rest-supplied.webp'); deckArt.setAttribute('alt', 'Planner FM — The Planning Sessions cover, using the supplied The West Don’t Rest artwork'); }
-    if (ambientArt) ambientArt.style.setProperty('--sleeve-image', 'url("/assets/sleeves/the-west-dont-rest-supplied.webp")');
+    if (deckArt) { deckArt.setAttribute('src', '/assets/sleeves/the-west-dont-rest-hooded.webp'); deckArt.setAttribute('alt', 'Planner FM — The Planning Sessions: hooded MC at a stormy Cornish planning desk'); }
+    if (ambientArt) ambientArt.style.setProperty('--sleeve-image', 'url("/assets/sleeves/the-west-dont-rest-hooded.webp")');
     document.body.dataset.track = 'album';
     document.body.classList.toggle('is-album-view', true);
     document.title = 'Planner FM — The Planning Sessions';
@@ -127,8 +127,8 @@
       card.querySelector('a').tabIndex = -1;
     });
     links.forEach(link => link.removeAttribute('aria-current'));
-    lyricPanels.forEach(panel => { panel.hidden = true; });
-    $('lyrics-heading').textContent = 'THE LYRIC SHEETS / CHOOSE A TRACK';
+    lyricPanels.forEach(panel => { panel.hidden = Number(panel.dataset.trackLyrics) !== 0; });
+    $('lyrics-heading').textContent = 'OPENING TRACK / THE LYRIC SHEET';
     $('download-track').hidden = true;
     state.textContent = 'THE FULL SESSION / READY WHEN YOU ARE';
     setPlaying(false);
