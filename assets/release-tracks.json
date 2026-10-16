@@ -1007,95 +1007,6 @@
     "sleeveNote": "The whole crew inside. Jack is unavailable. The sheep ornament knows why."
   },
   {
-    "id": "original",
-    "title": "Darren is a Bellend!",
-    "subtitle": "The group chat classic. Still on rotation.",
-    "src": "/assets/darren-bellend-single.mp3",
-    "duration": 130.03,
-    "downloadName": "Darren is a Bellend! - yoxall.net.mp3",
-    "lyrics": [
-      {
-        "name": "Intro",
-        "note": "Spoken, low voice, bass rumbling",
-        "lines": [
-          "Oi.",
-          "Yeah.",
-          "Darren.",
-          "You know what time it is.",
-          "Listen."
-        ]
-      },
-      {
-        "name": "Drop",
-        "note": "Heavy distorted square-wave bass",
-        "lines": []
-      },
-      {
-        "name": "Verse 1",
-        "note": "Fast aggressive grime flow",
-        "lines": [
-          "Darren’s a geezer, Darren’s a lad,",
-          "Top-tier mate, best one we’ve had.",
-          "Heart of gold but he’s still a prick,",
-          "Proper good bloke but a massive dick.",
-          "",
-          "Oi! Bellend! That’s my guy!",
-          "Big man’s flexin’, don’t ask why.",
-          "Knobhead, tosser, absolute tit,",
-          "Still roll with Darren, that’s legit."
-        ]
-      },
-      {
-        "name": "Hook",
-        "note": "Deep bass, aggressive shouted delivery",
-        "lines": [
-          "DARREN’S A BELLEND! (OI!)",
-          "PROPER FUCKING BELLEND! (WHAT!)",
-          "WANKER! TOSSER! (YEAH!)",
-          "BUT HE’S STILL MY BREDDER! (OI!)"
-        ]
-      },
-      {
-        "name": "Verse 2",
-        "note": "Double-time grime flow",
-        "lines": [
-          "Big up Daz, yeah, big up the man,",
-          "Certified bellend, number one fan.",
-          "Top lad, top geezer, solid all day,",
-          "Still gonna call him a knob anyway.",
-          "",
-          "No bad blood, nah, nothing but love,",
-          "But the man’s still a weapon, bruv.",
-          "Raise that glass, put your hands in the air,",
-          "DARREN’S A BELLEND, AND WE DON’T CARE!"
-        ]
-      },
-      {
-        "name": "Final hook",
-        "note": "Bass drops harder",
-        "lines": [
-          "DARREN’S A BELLEND! (OI!)",
-          "PROPER FUCKING BELLEND! (WHAT!)",
-          "TOP LAD! BIG KNOB! (YEAH!)",
-          "DARREN, YOU ABSOLUTE SOD!"
-        ]
-      },
-      {
-        "name": "Outro",
-        "note": "Beat cuts, spoken",
-        "lines": [
-          "Safe, Daz.",
-          "You fucking bellend."
-        ]
-      }
-    ],
-    "station": "ESTATE CREW",
-    "artwork": "/assets/sleeves/original.webp",
-    "thumbnail": "/assets/sleeves/original-thumb.webp",
-    "artworkAlt": "Lyric-inspired Darren is a Bellend! sleeve with the hooded Planner FM MC.",
-    "sleeveNote": "Heart of gold. Questionable title. One last toast to the group-chat legend."
-  },
-  {
     "id": "cutter-is-go",
     "title": "Cutter Is Go: Ctrl+Alt+Legend",
     "subtitle": "No cape. Just a restart.",
@@ -1452,129 +1363,6 @@
     "sleeveNote": "Banjo loaded. Cold spot located. The damp-and-mould cowboys ride again."
   },
   {
-    "id": "awaabs-law",
-    "title": "Awaab’s Law",
-    "subtitle": "Mould FM. The clock don’t stop.",
-    "station": "MOULD FM",
-    "src": "/assets/awaabs-law.mp3",
-    "duration": 173.23,
-    "downloadName": "Awaab's Law - yoxall.net.mp3",
-    "lyrics": [
-      {
-        "name": "Intro",
-        "note": "Crackling pirate radio, deep Cockney voice",
-        "lines": [
-          "Check one, check two!",
-          "Mould FM!",
-          "Damp crew inside!",
-          "Awaab’s Law, bruv!",
-          "The clock don’t fucking stop!"
-        ]
-      },
-      {
-        "name": "Drop",
-        "note": "Nasty distorted square-wave bass",
-        "lines": []
-      },
-      {
-        "name": "Verse 1",
-        "note": "Fast aggressive grime flow",
-        "lines": [
-          "Seven-thirty, screen lights red,",
-          "Mould on the wall, damp by the bed!",
-          "Customer’s ringing, job’s come through,",
-          "Ten working days, know what to do!",
-          "",
-          "Surveyor’s booked, get the diary straight,",
-          "Awaab’s Law, we don’t fuck about, mate!",
-          "TIC machine, find that cold spot,",
-          "Air Arc ready, give it what you got!"
-        ]
-      },
-      {
-        "name": "Hook",
-        "note": "Heavy bass, MCs shouting",
-        "lines": [
-          "TEN DAYS! (INSPECT!)",
-          "THREE DAYS! (REPORT!)",
-          "FIVE DAYS! (MAKE SAFE!)",
-          "NO TIME TO FUCK ABOUT!",
-          "",
-          "DAMP CREW! (OI!)",
-          "MOULD CREW! (WHAT!)",
-          "CLOCK’S STILL TICKING!",
-          "AND THE BASS DON’T STOP!"
-        ]
-      },
-      {
-        "name": "DJ rewind",
-        "note": "Siren, vinyl scratching",
-        "lines": [
-          "BOH! BOH! BOH!",
-          "WHEEL THAT!",
-          "DEADLINE PRESSURE!",
-          "RELOAD THE FUCKING BASS!"
-        ]
-      },
-      {
-        "name": "Drop",
-        "note": "Filthy growling sub-bass",
-        "lines": []
-      },
-      {
-        "name": "Verse 2",
-        "note": "Double-time aggressive grime",
-        "lines": [
-          "Black on the ceiling, green on the wall,",
-          "Another fucking emergency call!",
-          "Twenty-four hours if the danger’s severe,",
-          "Get the op dispatched, get the fucker there!",
-          "",
-          "Air Arc machines, TIC on the scan,",
-          "Chasing up jobs like a mad fucking man!",
-          "DRS full, no slots left free,",
-          "Supervisor’s ringing, don’t look at me!",
-          "",
-          "Condensation, leaks, ventilation,",
-          "Damp crew running the operation!",
-          "Fix that cause, don’t paint over the stain,",
-          "Or the fucking mould comes back again!"
-        ]
-      },
-      {
-        "name": "Final hook",
-        "note": "Multiple MCs, bass pounding",
-        "lines": [
-          "MOULD! (OI!)",
-          "DAMP! (WHAT!)",
-          "AWAAB’S LAW!",
-          "WE’VE GOT YOUR BACK!",
-          "",
-          "TEN! THREE! FIVE!",
-          "KEEP THAT FUCKING DIARY ALIVE!"
-        ]
-      },
-      {
-        "name": "Outro",
-        "note": "Bass cuts, telephone rings",
-        "lines": [
-          "Damp and mould planning, how can I help?",
-          "",
-          "…It’s fucking come back?!"
-        ]
-      },
-      {
-        "name": "End",
-        "note": "Massive distorted bass hit, static",
-        "lines": []
-      }
-    ],
-    "artwork": "/assets/sleeves/awaabs-law.webp",
-    "thumbnail": "/assets/sleeves/awaabs-law-thumb.webp",
-    "artworkAlt": "Lyric-inspired Awaab’s Law sleeve with the hooded Planner FM MC.",
-    "sleeveNote": "Cold spots on the scan. Pressure on the clock. The bass keeps moving."
-  },
-  {
     "id": "phone-down-bass-up",
     "title": "Phone Down, Bass Up",
     "subtitle": "Clock out. Hands up.",
@@ -1889,6 +1677,98 @@
     "artwork": "/assets/sleeves/practically-perfect.webp",
     "thumbnail": "/assets/sleeves/practically-perfect-thumb.webp",
     "artworkAlt": "Practically Perfect sleeve: Michelle and her partner sit close together on a coastal bench in warm sunset light.",
-    "sleeveNote": "After all the noise, this one’s for Michelle. My better half. Practically perfect in every way."
+    "sleeveNote": "After all the noise, this one’s for Michelle. My better half. Practically perfect in every way.",
+    "bonusLabel": "BONUS / FOR MICHELLE"
+  },
+  {
+    "id": "original",
+    "title": "Darren is a Bellend!",
+    "subtitle": "The group chat classic. Still on rotation.",
+    "src": "/assets/darren-bellend-single.mp3",
+    "duration": 130.03,
+    "downloadName": "Darren is a Bellend! - yoxall.net.mp3",
+    "lyrics": [
+      {
+        "name": "Intro",
+        "note": "Spoken, low voice, bass rumbling",
+        "lines": [
+          "Oi.",
+          "Yeah.",
+          "Darren.",
+          "You know what time it is.",
+          "Listen."
+        ]
+      },
+      {
+        "name": "Drop",
+        "note": "Heavy distorted square-wave bass",
+        "lines": []
+      },
+      {
+        "name": "Verse 1",
+        "note": "Fast aggressive grime flow",
+        "lines": [
+          "Darren’s a geezer, Darren’s a lad,",
+          "Top-tier mate, best one we’ve had.",
+          "Heart of gold but he’s still a prick,",
+          "Proper good bloke but a massive dick.",
+          "",
+          "Oi! Bellend! That’s my guy!",
+          "Big man’s flexin’, don’t ask why.",
+          "Knobhead, tosser, absolute tit,",
+          "Still roll with Darren, that’s legit."
+        ]
+      },
+      {
+        "name": "Hook",
+        "note": "Deep bass, aggressive shouted delivery",
+        "lines": [
+          "DARREN’S A BELLEND! (OI!)",
+          "PROPER FUCKING BELLEND! (WHAT!)",
+          "WANKER! TOSSER! (YEAH!)",
+          "BUT HE’S STILL MY BREDDER! (OI!)"
+        ]
+      },
+      {
+        "name": "Verse 2",
+        "note": "Double-time grime flow",
+        "lines": [
+          "Big up Daz, yeah, big up the man,",
+          "Certified bellend, number one fan.",
+          "Top lad, top geezer, solid all day,",
+          "Still gonna call him a knob anyway.",
+          "",
+          "No bad blood, nah, nothing but love,",
+          "But the man’s still a weapon, bruv.",
+          "Raise that glass, put your hands in the air,",
+          "DARREN’S A BELLEND, AND WE DON’T CARE!"
+        ]
+      },
+      {
+        "name": "Final hook",
+        "note": "Bass drops harder",
+        "lines": [
+          "DARREN’S A BELLEND! (OI!)",
+          "PROPER FUCKING BELLEND! (WHAT!)",
+          "TOP LAD! BIG KNOB! (YEAH!)",
+          "DARREN, YOU ABSOLUTE SOD!"
+        ]
+      },
+      {
+        "name": "Outro",
+        "note": "Beat cuts, spoken",
+        "lines": [
+          "Safe, Daz.",
+          "You fucking bellend."
+        ]
+      }
+    ],
+    "station": "ESTATE CREW",
+    "artwork": "/assets/sleeves/original.webp",
+    "thumbnail": "/assets/sleeves/original-thumb.webp",
+    "artworkAlt": "Lyric-inspired Darren is a Bellend! sleeve with the hooded Planner FM MC.",
+    "sleeveNote": "Heart of gold. Questionable title. One last toast to the group-chat legend.",
+    "bonus": true,
+    "bonusLabel": "BONUS / DARREN"
   }
 ]
