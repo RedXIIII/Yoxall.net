@@ -1,0 +1,2996 @@
+{
+  "enrichments": {
+    "mkultra": {
+      "region": "United States",
+      "narrative": [
+        "The disturbing part of MKULTRA is not a machine capable of rewriting a person. It is the decision to treat people as experimental material while hiding who paid for the work. Funding intermediaries and institutional research made the programme harder to recognise from the outside. Consent, sponsorship and accountability were different layers of the same concealment.",
+        "The surviving archive is incomplete. Records destroyed in 1973 left investigators dependent on testimony and the material recovered later. Missing files limit reconstruction; they do not justify inserting any desired story into the gaps. Read the hearing as a record of what officials acknowledged, what witnesses remembered and what investigators could still substantiate."
+      ],
+      "timeline": [
+        {
+          "date": "1953",
+          "title": "A covert research programme",
+          "text": "MKULTRA begins under CIA sponsorship."
+        },
+        {
+          "date": "1973",
+          "title": "The archive is damaged",
+          "text": "Many programme records are destroyed."
+        },
+        {
+          "date": "1977",
+          "title": "Surviving records reach the Senate",
+          "text": "A joint hearing examines newly recovered material and testimony."
+        }
+      ],
+      "question": "How can consent survive when even the sponsor of an experiment is concealed?",
+      "related": [
+        "porton",
+        "radiation",
+        "guatemala"
+      ]
+    },
+    "northwoods": {
+      "region": "United States / Cuba",
+      "narrative": [
+        "Read the memorandum as a planning document. Its language moves from a desired political outcome to fabricated events that could supply the justification. That reversal is the historical shock: the public explanation would have been manufactured to support an action already being contemplated.",
+        "An authentic proposal is strong evidence about its authors’ willingness to consider deception. Execution requires a different trail: authorisations, operational records, participants and corroboration. Keeping those questions separate makes the actual document more useful than treating it as a universal explanation for later events."
+      ],
+      "timeline": [
+        {
+          "date": "13 March 1962",
+          "title": "The memorandum is submitted",
+          "text": "Joint Chiefs planning proposes pretexts for intervention in Cuba."
+        },
+        {
+          "date": "1962",
+          "title": "The proposal remains a proposal",
+          "text": "The Northwoods scenario is not carried out."
+        },
+        {
+          "date": "Later declassification",
+          "title": "The plan becomes inspectable",
+          "text": "Released records allow the proposed incidents to be read directly."
+        }
+      ],
+      "question": "What does a genuine plan prove about intent, and what would prove execution?",
+      "related": [
+        "mincemeat",
+        "ajax",
+        "iran-contra"
+      ]
+    },
+    "dart-gun": {
+      "region": "United States",
+      "narrative": [
+        "The Senate demonstration gave a physical object to something that would otherwise sound like a thriller. A device could fire a small projectile quietly, and agency research considered covert delivery of dangerous agents. The committee’s task was to connect the object to programmes, retained materials and decisions.",
+        "Popular retellings often add a particular physiological effect, perfect invisibility and a list of alleged victims. Those are separate claims. Colby’s testimony acknowledged experimentation while denying knowledge of a record of operational use. A displayed weapon establishes capability research, rather than a proven history of specific assassinations."
+      ],
+      "timeline": [
+        {
+          "date": "Before 1975",
+          "title": "Covert delivery research",
+          "text": "Agency work includes devices and biological or chemical agents."
+        },
+        {
+          "date": "16 September 1975",
+          "title": "The object reaches a public hearing",
+          "text": "William Colby displays the dart device and answers questions."
+        }
+      ],
+      "question": "How much of a weapon’s legend survives comparison with the actual testimony?",
+      "related": [
+        "mkultra",
+        "porton"
+      ]
+    },
+    "cointelpro": {
+      "region": "United States",
+      "narrative": [
+        "COINTELPRO is a story about the difference between observing a movement and trying to change its fate. Infiltration and the deliberate encouragement of disagreement could make internal distrust appear to come from the movement itself. That makes an institutional operation difficult for its targets to recognise while it is happening.",
+        "The 1971 exposure and later congressional work transformed scattered suspicions into inspectable records. The FBI’s own history now acknowledges activities directed at groups with little or no evidence of unlawful conduct. The files support specific abuses; each alleged operation still needs its own evidence."
+      ],
+      "timeline": [
+        {
+          "date": "1956",
+          "title": "The programme begins",
+          "text": "FBI counterintelligence operations start and later widen."
+        },
+        {
+          "date": "1971",
+          "title": "An office burglary exposes files",
+          "text": "Stolen documents draw public attention; Hoover ends the programme."
+        },
+        {
+          "date": "1970s",
+          "title": "Congress investigates",
+          "text": "The wider intelligence investigations examine violations of rights."
+        }
+      ],
+      "question": "When an organisation fractures, what evidence could distinguish an internal conflict from deliberate outside disruption?",
+      "related": [
+        "spycops",
+        "uk-bulk",
+        "shamrock"
+      ]
+    },
+    "guatemala": {
+      "region": "United States / Guatemala",
+      "narrative": [
+        "The people selected for exposure were in institutions where their ability to refuse was already constrained. The later inquiry reconstructed experiments through researchers’ records, rather than assuming a lack of public complaint meant informed agreement. An official record can expose a violation long after the people harmed had any realistic opportunity to challenge it.",
+        "Guatemala and Tuskegee are often merged in online summaries. That loses the exact conduct in each case. Deliberate exposure, withheld treatment, deception and incomplete treatment records are different findings. The moral seriousness does not require collapsing them into one story."
+      ],
+      "timeline": [
+        {
+          "date": "1946–1948",
+          "title": "The exposure experiments",
+          "text": "US-supported research deliberately exposes vulnerable people without consent."
+        },
+        {
+          "date": "2010",
+          "title": "The records become public",
+          "text": "The United States apologises following the discovery."
+        },
+        {
+          "date": "2011",
+          "title": "An official investigation reports",
+          "text": "The presidential commission publishes its findings."
+        }
+      ],
+      "question": "Whose account is missing when researchers alone control an experiment’s record?",
+      "related": [
+        "tuskegee",
+        "radiation",
+        "blood"
+      ]
+    },
+    "tuskegee": {
+      "region": "United States",
+      "narrative": [
+        "Tuskegee was not wholly absent from the medical literature. What remained insufficiently challenged was its ethical reality: men were misled about their care and effective treatment was withheld. Publication within an institution’s professional world is different from meaningful transparency to those affected.",
+        "The arrival of penicillin makes the record especially stark. A study can begin under one set of practical conditions and become indefensible as treatment changes. The investigators’ desire to preserve the observation did not override the participants’ right to care. Men in the syphilitic group already had the disease before enrollment; the abuse was not deliberate infection."
+      ],
+      "timeline": [
+        {
+          "date": "1932",
+          "title": "The study starts",
+          "text": "The Public Health Service recruits 600 Black men in Alabama."
+        },
+        {
+          "date": "Penicillin era",
+          "title": "Treatment changes; the study does not",
+          "text": "Effective treatment becomes available but is not offered to infected participants."
+        },
+        {
+          "date": "1972",
+          "title": "Public reporting forces a reckoning",
+          "text": "Review follows and the study ends."
+        }
+      ],
+      "question": "Can an experiment be publicly described and still hide its most important truth from its participants?",
+      "related": [
+        "guatemala",
+        "blood",
+        "mkultra"
+      ]
+    },
+    "nsa": {
+      "region": "United States",
+      "narrative": [
+        "A call record can be revealing without containing speech. Repeated contacts, timing and duration can expose relationships and routines across a population. The distinction between metadata and content is essential to understanding the programme’s actual reach, rather than minimising its privacy implications.",
+        "The oversight report provides a second layer beyond the initial disclosure. It asks whether the legal authority justified the collection and whether the programme contributed enough to support its claimed necessity. A technological capacity, a legal basis and an operational benefit are three different questions."
+      ],
+      "timeline": [
+        {
+          "date": "2013",
+          "title": "The bulk programme is disclosed",
+          "text": "Public revelations are followed by government confirmation."
+        },
+        {
+          "date": "23 January 2014",
+          "title": "PCLOB publishes its assessment",
+          "text": "The oversight board recommends ending the Section 215 programme."
+        },
+        {
+          "date": "November 2015",
+          "title": "Bulk collection under this programme ends",
+          "text": "The transition changes the telephone-records arrangement."
+        }
+      ],
+      "question": "What can a network of contacts reveal even when nobody listens to the conversation?",
+      "related": [
+        "shamrock",
+        "uk-bulk",
+        "brokers"
+      ]
+    },
+    "tobacco": {
+      "region": "United States",
+      "narrative": [
+        "The racketeering case matters because it supplies a legal record of coordinated deception, rather than relying on the idea that all commercial disagreement is conspiracy. Internal knowledge, public messages and the design of addictive products could be compared in one extensive proceeding.",
+        "Corrective statements were part of the remedy: the public account had to change after the court’s findings. The historical question is not simply when a hazard became knowable. It is how organisations maintained a misleading account despite what they already knew, and how that conduct was established."
+      ],
+      "timeline": [
+        {
+          "date": "Decades before judgment",
+          "title": "Deception accumulates",
+          "text": "The litigation examines a prolonged campaign about addiction and health effects."
+        },
+        {
+          "date": "2006",
+          "title": "A civil racketeering judgment",
+          "text": "The federal court finds a coordinated pattern of deception."
+        },
+        {
+          "date": "After judgment",
+          "title": "Corrective statements",
+          "text": "Companies must publish court-ordered acknowledgments."
+        }
+      ],
+      "question": "When does persuasive marketing become a demonstrable conspiracy?",
+      "related": [
+        "pfoa",
+        "volkswagen",
+        "cambridge-analytica"
+      ]
+    },
+    "iran-contra": {
+      "region": "United States / Iran / Nicaragua",
+      "narrative": [
+        "Iran-Contra joined operations that were difficult to understand from any one public explanation. Arms shipments, hostage negotiations, intermediaries and support for the Contras created a trail across multiple institutions and accounts. The diversion connected parts of the story officials had treated separately.",
+        "The Walsh report also records concealment. Reconstructing an operation involves assessing destroyed material, inconsistent accounts and the evidence left elsewhere. It is more exact to trace who knew what and when than to assume every senior figure possessed the same knowledge."
+      ],
+      "timeline": [
+        {
+          "date": "Mid-1980s",
+          "title": "Secret operations develop",
+          "text": "Arms sales and support for the Contras are pursued through intermediaries."
+        },
+        {
+          "date": "November 1986",
+          "title": "The operations become public",
+          "text": "The arms dealings and diversion are disclosed."
+        },
+        {
+          "date": "1993",
+          "title": "Walsh’s final report",
+          "text": "The independent counsel records the investigation and its findings."
+        }
+      ],
+      "question": "How can accountability follow an operation designed to keep its parts apart?",
+      "related": [
+        "ajax",
+        "northwoods",
+        "rendition"
+      ]
+    },
+    "volkswagen": {
+      "region": "Germany / international",
+      "narrative": [
+        "The deception lived inside the difference between a test and normal use. A vehicle could behave one way when software recognised laboratory conditions and another on the road. Customers and regulators were therefore looking at a carefully managed representation of performance.",
+        "This makes Dieselgate a useful companion to older covert-operation files: the mechanism is contemporary software, but the paper trail still matters. Independent measurements, enforcement documents and the guilty plea establish what was done. The file concerns the affected systems and vehicles, rather than every diesel engine."
+      ],
+      "timeline": [
+        {
+          "date": "2015",
+          "title": "The defeat-device scheme is disclosed",
+          "text": "EPA explains how affected vehicles detect testing."
+        },
+        {
+          "date": "March 2017",
+          "title": "Volkswagen pleads guilty",
+          "text": "The company pleads to three federal felony counts."
+        },
+        {
+          "date": "April 2017",
+          "title": "Criminal sentence",
+          "text": "The sentence includes a $2.8 billion penalty."
+        }
+      ],
+      "question": "If a system knows it is being tested, what does its test result really establish?",
+      "related": [
+        "horizon",
+        "tobacco",
+        "welfare-ai"
+      ]
+    },
+    "pfoa": {
+      "region": "United States",
+      "narrative": [
+        "The reporting dispute turns on information flow. A regulator cannot evaluate a risk fully if material exposure and study information stays inside a manufacturer or reaches the agency by a different route. The case asks what the company was required to report and when.",
+        "The enforcement record should not be inflated into a different legal outcome. The 2005 agreement was a civil administrative settlement, with disputed reporting duties and no admission concerning the biomonitoring data. The distinction preserves the strength of the documented case while avoiding an invented criminal conviction."
+      ],
+      "timeline": [
+        {
+          "date": "1981 onwards",
+          "title": "Risk information accumulates",
+          "text": "EPA’s allegations concern material dating back to the early 1980s."
+        },
+        {
+          "date": "2005",
+          "title": "A reporting-case settlement",
+          "text": "DuPont agrees to a penalty and environmental projects."
+        },
+        {
+          "date": "Later review",
+          "title": "The information trail is examined",
+          "text": "GAO describes regulators receiving blood-test results through lawsuit counsel."
+        }
+      ],
+      "question": "What happens when the people assessing a risk do not receive the information held by its producer?",
+      "related": [
+        "tobacco",
+        "blood"
+      ]
+    },
+    "frogs": {
+      "region": "United States / laboratory study",
+      "narrative": [
+        "The meme compresses several biological claims into one phrase. The featured experiment examined genetically male African clawed frogs and reported changes in sexual development and reproductive function. That is not the same variable as sexual orientation, and a finding in frogs does not establish a corresponding effect in humans.",
+        "A striking result gains strength through replication, methods scrutiny and agreement across appropriate studies. Here, the disagreement is part of the scientific record. Read the original experiment and the historical EPA review together, keeping the reported effect, its reproducibility and the broader online narrative separate."
+      ],
+      "timeline": [
+        {
+          "date": "2010",
+          "title": "A striking experiment is published",
+          "text": "Hayes and colleagues report reproductive effects in PNAS."
+        },
+        {
+          "date": "Regulatory reviews",
+          "title": "Reproducibility is disputed",
+          "text": "EPA’s historical amphibian assessment reaches a different judgment about consistency."
+        },
+        {
+          "date": "Public retellings",
+          "title": "A biological result becomes a slogan",
+          "text": "The viral phrase exceeds what the experimental measurements establish."
+        }
+      ],
+      "question": "Which precise biological claim is being tested, and has it been independently reproduced?",
+      "related": [
+        "dark-oxygen",
+        "radiation"
+      ]
+    },
+    "troy": {
+      "region": "Türkiye",
+      "narrative": [
+        "An epic can preserve a geographical memory without becoming a literal excavation report. Hisarlik’s successive settlements make that distinction tangible: a place can be real, its fortifications impressive and its destruction archaeologically visible while the identity of a particular conflict remains disputed.",
+        "The layers are not interchangeable. Different building phases and destruction horizons belong to different communities and periods. Archaeologists compare those sequences with texts and regional history; they do not extract a named hero or a wooden horse from a general sign of conflict."
+      ],
+      "timeline": [
+        {
+          "date": "Bronze Age",
+          "title": "A substantial settlement",
+          "text": "Fortifications and settlement layers survive at Hisarlik."
+        },
+        {
+          "date": "19th–20th centuries",
+          "title": "Excavation reconstructs successive cities",
+          "text": "Investigators uncover and interpret a complex sequence of occupation."
+        },
+        {
+          "date": "Modern research",
+          "title": "The epic is compared with archaeology",
+          "text": "The site supports the setting while leaving specific narrative claims open."
+        }
+      ],
+      "question": "How much of a story can survive in stone when its characters survive only in poetry?",
+      "related": [
+        "atlantis",
+        "sutton-hoo",
+        "heracleion"
+      ]
+    },
+    "vessels": {
+      "region": "Egypt",
+      "narrative": [
+        "Start with an individual object. Which museum accession, which stone, what date, and what measurements? A photograph can show exquisite craftsmanship while concealing asymmetry, repair, wear and the interior surface. The Met jar here is a real, very small object. It should not silently stand in for every unprovenanced vessel circulating in precision claims.",
+        "Circularity asks how close one section is to a circle. Concentricity asks whether different sections share a centre. Smoothness, wall thickness and dimensional tolerances ask other questions again. A vessel can score well on one measure and less well on another. A comparison score is not an engineering tolerance in micrometres.",
+        "The 2025 study’s comparison with handmade modern vessels is especially useful because it supplies a reference population. The reported geometry was interpreted as consistent with rotational grinding. It does not measure the pictured Met jar, and it does not establish that an ancient object could not be reproduced using current technology.",
+        "Workshop remains help connect finished objects to work: cores, unfinished vessels, abrasive residues and marks. Experimental archaeology tests whether a proposed process can achieve a task with plausible materials. Successful replication demonstrates a possibility; it does not by itself identify the exact sequence used by every ancient artisan."
+      ],
+      "timeline": [
+        {
+          "date": "Early Dynastic period",
+          "title": "The pictured jar is made",
+          "text": "The Met dates its diorite jar to about 3100–2650 BCE."
+        },
+        {
+          "date": "1993",
+          "title": "Manufacturing is tested experimentally",
+          "text": "Denys Stocks publishes work on early vessel-making methods."
+        },
+        {
+          "date": "16 December 2025",
+          "title": "A measured comparison",
+          "text": "A study compares 19 Petrie Museum vessels with 49 modern vessels."
+        }
+      ],
+      "question": "What would a securely provenanced object, a full scan and a reproducible manufacturing trial establish together?",
+      "related": [
+        "merer",
+        "roman-concrete",
+        "antikythera"
+      ]
+    },
+    "pyramid-void": {
+      "region": "Egypt",
+      "narrative": [
+        "Muon imaging uses naturally occurring particles to infer how much material lies along a path through the pyramid. A region transmitting more particles than expected can indicate less dense material or empty space. Independent detector technologies strengthen the interpretation while still leaving the architecture to be characterised.",
+        "The Big Void and North Face Corridor are separate discoveries. Treating them as one chamber muddles location, dimensions and the work actually reported. Neither a density measurement nor a corridor image supplies an inventory of unknown contents or proves a particular ritual purpose.",
+        "This is an example of a mystery becoming more precise rather than simply disappearing. The existence of unseen architecture is strongly evidenced. Geometry, access, sequence and purpose become the next questions. An engineering space, a construction-related feature and a room for another use must be evaluated against additional evidence."
+      ],
+      "timeline": [
+        {
+          "date": "2017",
+          "title": "The Big Void is reported",
+          "text": "Three detector technologies support a void above the Grand Gallery."
+        },
+        {
+          "date": "2023",
+          "title": "The North Face Corridor is characterised",
+          "text": "A separate roughly nine-metre corridor is described."
+        },
+        {
+          "date": "The remaining question",
+          "title": "Form and purpose",
+          "text": "The Big Void’s detailed architecture and function require further investigation."
+        }
+      ],
+      "question": "Once an unseen space is detected, what would distinguish a chamber from a construction feature?",
+      "related": [
+        "merer",
+        "vessels",
+        "silbury"
+      ]
+    },
+    "antikythera": {
+      "region": "Greece",
+      "narrative": [
+        "The mechanism’s surviving gears demonstrate a level of mathematical and mechanical design that would be easy to dismiss without the object. Corrosion obscured the structure; imaging and the study of inscriptions made its astronomical functions progressively more legible.",
+        "The surviving fragments limit a full reconstruction. Proposed arrangements must fit the physical evidence, inscriptions and available space. This is remarkable ancient engineering, not proof of a lost industrial civilisation. The object expands what we know about particular technical traditions while leaving questions about workshops, manufacture and transmission."
+      ],
+      "timeline": [
+        {
+          "date": "Ancient manufacture",
+          "title": "An astronomical mechanism is built",
+          "text": "The device encodes astronomical cycles using gears."
+        },
+        {
+          "date": "1900–1901",
+          "title": "The wreck and fragments are recovered",
+          "text": "The corroded object enters the archaeological record."
+        },
+        {
+          "date": "Modern imaging",
+          "title": "Functions become clearer",
+          "text": "Internal structure and inscriptions inform competing reconstructions."
+        }
+      ],
+      "question": "What else might have existed in a technical tradition represented by one exceptional survivor?",
+      "related": [
+        "roman-concrete",
+        "vessels",
+        "bletchley"
+      ]
+    },
+    "heracleion": {
+      "region": "Egypt",
+      "narrative": [
+        "A sunken city is extraordinary without being Atlantis. Underwater survey connects buildings, objects and inscriptions to a particular port at the Nile’s edge. The name and location can be investigated against records as well as against the archaeological landscape.",
+        "A submerged site also demands a reconstruction of environmental change. Subsidence, sediment, water and earthquakes can operate over different periods. The evidence for this city does not transfer automatically to another legendary place. It shows why the search for drowned landscapes is serious work when conducted with specific, testable claims."
+      ],
+      "timeline": [
+        {
+          "date": "Ancient period",
+          "title": "A major port operates",
+          "text": "Thonis-Heracleion is part of the Egyptian maritime landscape."
+        },
+        {
+          "date": "Modern underwater survey",
+          "title": "The site is located and investigated",
+          "text": "Structures and finds connect the submerged remains to the recorded city."
+        },
+        {
+          "date": "Continuing research",
+          "title": "A drowned landscape is reconstructed",
+          "text": "Survey and excavation refine the history of the port."
+        }
+      ],
+      "question": "Which combination of inscriptions, geography and finds allows a lost city to recover its name?",
+      "related": [
+        "doggerland",
+        "atlantis",
+        "troy"
+      ]
+    },
+    "atlantis": {
+      "region": "Ancient Greek literature",
+      "narrative": [
+        "The investigation begins with Plato, rather than with a map covered in possible locations. Timaeus and Critias supply the account, its narrative setting and its relationship to an ideal society. A proposed historical identification must explain that literary evidence rather than borrowing only the dramatic destruction.",
+        "Real disasters and vanished cities can make the story feel plausible, but resemblance is not identification. A drowned settlement establishes that a settlement drowned. Evidence for Atlantis would need securely dated archaeology tied convincingly to the specific account, not only a circular feature or a remembered flood.",
+        "The productive comparison is with discoveries that acquired names through converging evidence. Troy and Thonis-Heracleion provide physical sites and independent records. Doggerland supplies a lost landscape but not an Atlantean empire. Those distinctions leave room for curiosity without announcing a discovery that has not been made."
+      ],
+      "timeline": [
+        {
+          "date": "4th century BCE",
+          "title": "Plato writes the account",
+          "text": "Timaeus and Critias preserve the Atlantis narrative."
+        },
+        {
+          "date": "Later reception",
+          "title": "The story attracts geographical searches",
+          "text": "Readers propose locations with differing relationships to the text."
+        },
+        {
+          "date": "The evidential position",
+          "title": "No established archaeological identification",
+          "text": "A literary account remains the starting record."
+        }
+      ],
+      "question": "What evidence would connect a real site to this particular story rather than to the general idea of a lost world?",
+      "related": [
+        "troy",
+        "heracleion",
+        "doggerland"
+      ]
+    }
+  },
+  "modern": [
+    {
+      "id": "porton",
+      "title": "Porton Down: the volunteer and the nerve agent",
+      "category": "Experiments",
+      "year": "1953 / 2004",
+      "region": "England / Wiltshire",
+      "status": "Inquest finding",
+      "hook": "A secret inquest said misadventure. A second inquest said unlawful killing.",
+      "summary": "Ronald Maddison died after taking part in a chemical-agent trial at Porton Down in 1953. Sarin was applied to his forearm through layers of cloth. The original inquest was held in secret on national-security grounds and recorded misadventure. A new inquest in 2004 returned a verdict of unlawful killing.",
+      "narrative": [
+        "The change between the two findings is central to the story. A death was known; the setting, evidence and official interpretation were harder to challenge. Secrecy changes who can examine an account and when. The Ministry of Defence’s own history now records the nerve-agent trial and the later verdict.",
+        "This file concerns a particular experiment and a particular death. It does not turn every volunteer study at Porton Down into the same event, nor establish a present-day operation. Read it alongside the separate aerial-trials file: laboratory exposure and releases used to study dispersal were different programmes."
+      ],
+      "facts": [
+        "Maddison died during a trial at Porton Down in 1953.",
+        "The original inquest was secret and recorded misadventure.",
+        "The 2004 inquest returned unlawful killing."
+      ],
+      "limits": "An inquest verdict is not a criminal conviction of a named individual. This case does not establish the intent or effects of every chemical-agent trial, or allegations about unrelated modern activity.",
+      "sources": [
+        {
+          "label": "Government account of Porton Down",
+          "url": "https://www.gov.uk/government/news/the-truth-about-porton-down"
+        },
+        {
+          "label": "MoD annual report 2004–05",
+          "url": "https://assets.publishing.service.gov.uk/media/5a7c83c6ed915d6969f456a8/0464.pdf"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "1953",
+          "title": "A volunteer dies",
+          "text": "Maddison dies following exposure in a Porton Down trial."
+        },
+        {
+          "date": "1953",
+          "title": "A secret inquest",
+          "text": "The first verdict is misadventure."
+        },
+        {
+          "date": "2004",
+          "title": "The finding changes",
+          "text": "A second inquest returns unlawful killing."
+        }
+      ],
+      "question": "What does an official account leave out when the public cannot examine the evidence?",
+      "related": [
+        "aerial-trials",
+        "mkultra",
+        "radiation"
+      ]
+    },
+    {
+      "id": "aerial-trials",
+      "title": "Britain’s Cold War aerial release trials",
+      "category": "Experiments",
+      "year": "1953–1976",
+      "region": "British / UK locations",
+      "status": "Acknowledged trials",
+      "hook": "Material was released over Britain to study how an attack might spread.",
+      "summary": "The government acknowledges aerial release trials during the Cold War to investigate how a biological attack could disperse across Britain. The Porton Down account dates the trials to 1953–1976. They used simulant materials rather than being described as attacks on the population.",
+      "narrative": [
+        "A dispersal experiment asks where released material travels, in what concentration and under which conditions. That question can require work outside a sealed laboratory. The historical record therefore includes activities people would not ordinarily associate with their daily environment.",
+        "The distinction between a simulant trial and a deliberate disease attack matters. The releases are a documented programme; the material, route, dose, exposure and consequences of any particular trial require its specific record. This is a reason to demand detailed evidence, rather than to attach the history to every aircraft trail observed today."
+      ],
+      "facts": [
+        "The government dates aerial release trials to 1953–1976.",
+        "Their stated purpose was to study potential biological-attack dispersal.",
+        "The acknowledged history is distinct from the Porton Down volunteer trials."
+      ],
+      "limits": "The existence of historical releases does not establish contemporary “chemtrail” claims. This file does not infer a particular health outcome from the bare fact of a release.",
+      "sources": [
+        {
+          "label": "Government account: aerial release trials",
+          "url": "https://www.gov.uk/government/news/the-truth-about-porton-down"
+        },
+        {
+          "label": "Porton Down veterans research context",
+          "url": "https://www.gov.uk/government/news/new-research-on-the-long-term-health-of-2-groups-of-older-veterans"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "1953",
+          "title": "The acknowledged trial period begins",
+          "text": "Cold War dispersal research includes aerial releases."
+        },
+        {
+          "date": "1976",
+          "title": "The cited trial period ends",
+          "text": "The government’s historical account defines the period."
+        },
+        {
+          "date": "Public account",
+          "title": "The releases are acknowledged",
+          "text": "A government explanation distinguishes their purpose from other trials."
+        }
+      ],
+      "question": "What would the specific flight and material records show about an individual release?",
+      "related": [
+        "porton",
+        "radiation"
+      ]
+    },
+    {
+      "id": "hillsborough",
+      "title": "Hillsborough: the account the evidence overturned",
+      "category": "Institutional failures",
+      "year": "1989 / 2012 / 2016",
+      "region": "England / Sheffield",
+      "status": "Inquiry findings",
+      "hook": "Families challenged the story for decades. The records supported them.",
+      "summary": "The disaster at Hillsborough on 15 April 1989 killed 97 people. Claims blaming Liverpool supporters persisted while families challenged the official handling. The 2012 Independent Panel found supporters were not responsible for the disaster and exposed alterations to police statements. The IOPC records the central failure as police control.",
+      "narrative": [
+        "Compare the original recollections with their edited versions. The panel identified removals that weakened accounts of management and communications failures while retaining hostile descriptions of the crowd. The important evidence is not only that wording changed, but what changed and whose account benefited.",
+        "Hillsborough also shows the difference between truth established in a report and outcomes in criminal proceedings. An inquiry, an inquest and a trial have different tasks and standards. The enduring record of failure and misleading narratives should be described precisely, without treating every subsequent legal question as resolved by the same finding."
+      ],
+      "facts": [
+        "The disaster took place in Sheffield in 1989.",
+        "The Independent Panel published its report in September 2012.",
+        "The panel examined altered police recollections and rejected blame of supporters."
+      ],
+      "limits": "Findings about institutional conduct do not establish criminal guilt for every person involved. The current IOPC material should be consulted for the later investigations and their legal context.",
+      "sources": [
+        {
+          "label": "Independent Panel report and publication",
+          "url": "https://www.gov.uk/government/publications/the-report-of-the-hillsborough-independent-panel"
+        },
+        {
+          "label": "Original report: statement alterations",
+          "url": "https://assets.publishing.service.gov.uk/media/5a7c9e4840f0b65b3de0a0ff/0581.pdf"
+        },
+        {
+          "label": "IOPC: Hillsborough investigations",
+          "url": "https://www.policeconduct.gov.uk/our-work/investigations/hillsborough"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "15 April 1989",
+          "title": "The disaster",
+          "text": "Supporters are crushed at the FA Cup semi-final."
+        },
+        {
+          "date": "12 September 2012",
+          "title": "The archive is re-examined",
+          "text": "The Independent Panel publishes its findings."
+        },
+        {
+          "date": "2016",
+          "title": "New inquests",
+          "text": "The new inquest process reaches an unlawful-killing conclusion."
+        }
+      ],
+      "question": "When a record is edited, how do we distinguish clarification from the manufacture of an account?",
+      "related": [
+        "orgreave",
+        "daniel-morgan",
+        "blood"
+      ]
+    },
+    {
+      "id": "horizon",
+      "title": "Horizon: the computer was treated as the witness",
+      "category": "Institutional failures",
+      "year": "1999 onwards",
+      "region": "England / wider UK",
+      "status": "Court findings",
+      "hook": "People said the figures were wrong. The system was said to be reliable.",
+      "summary": "Post Office branch accounts showed apparent shortfalls that led to prosecutions and devastating consequences for subpostmasters. The 2019 Horizon Issues judgment examined bugs, errors and defects, rather than accepting the system as infallible. In 2021, the Court of Appeal quashed 39 convictions as unsafe.",
+      "narrative": [
+        "A computer-generated figure can look neutral while depending on imperfect software, incomplete investigations and undisclosed technical knowledge. The litigation forced those components apart. The question was not whether a screen displayed a shortfall, but whether the shortfall reliably established money had been lost or stolen.",
+        "The scandal is a warning about institutional confidence becoming evidence in its own favour. Challenges could be treated as failures of the individual instead of prompts to investigate the system. The judgments provide the strongest starting point: they describe what was tested and found, rather than leaving the story at a slogan about bad computers."
+      ],
+      "facts": [
+        "The High Court examined Horizon’s reliability in 2019.",
+        "Bugs, errors and defects could cause apparent branch discrepancies.",
+        "The Court of Appeal quashed 39 convictions on 23 April 2021."
+      ],
+      "limits": "These judgments concern specific litigation and appeals. They do not automatically determine every individual case or establish that every discrepancy had the same technical cause. The wider inquiry and compensation questions have their own records.",
+      "sources": [
+        {
+          "label": "2019 Horizon Issues judgment",
+          "url": "https://www.judiciary.uk/wp-content/uploads/2019/12/bates-v-post-office-judgment.pdf"
+        },
+        {
+          "label": "Hamilton and others: 2021 appeal",
+          "url": "https://www.judiciary.uk/judgments/hamilton-others-v-post-office-limited/"
+        },
+        {
+          "label": "Court of Appeal annual review",
+          "url": "https://www.judiciary.uk/wp-content/uploads/2022/07/6.7883_JO_Court_of_Appeal_Criminal_Division_2020_21_FINAL_270122_WEB.pdf"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "1999 onwards",
+          "title": "Horizon enters branch accounting",
+          "text": "Apparent discrepancies lead to disputes and prosecutions."
+        },
+        {
+          "date": "December 2019",
+          "title": "Technical confidence is tested in court",
+          "text": "The Horizon Issues judgment examines defects and reliability."
+        },
+        {
+          "date": "23 April 2021",
+          "title": "Convictions are quashed",
+          "text": "The Court of Appeal allows 39 appeals."
+        }
+      ],
+      "question": "What evidence should be required before a machine-generated accusation becomes a criminal one?",
+      "related": [
+        "volkswagen",
+        "welfare-ai",
+        "blood"
+      ]
+    },
+    {
+      "id": "blood",
+      "title": "Infected blood: the truth that was hidden",
+      "category": "Institutional failures",
+      "year": "1970s–1980s / 2024",
+      "region": "England / wider UK",
+      "status": "Public inquiry finding",
+      "hook": "An inquiry found more than a tragedy. It found a hiding of the truth.",
+      "summary": "The Infected Blood Inquiry’s 2024 report examined infections through blood and blood products, the response of clinicians and government, and decades of delay. It concluded that the truth had been hidden through defensiveness, misleading statements, failures to inform and document destruction. It described a pervasive institutional failure rather than only a small secret plot.",
+      "narrative": [
+        "The inquiry’s wording is worth following closely. Concealment can operate through withheld facts, carefully limited statements and a refusal to investigate, as well as through explicit falsehood. Those processes can sustain a misleading public account without every participant sharing one organised plan.",
+        "The people affected and their families had to build and defend a record while living with its consequences. The report connects medical practice, public administration and the protection of institutional reputation. Its historical findings are different from the continuing questions about implementation and compensation, which the inquiry addressed again in July 2025."
+      ],
+      "facts": [
+        "The final inquiry report was published on 20 May 2024.",
+        "Its findings include failures of candour and deliberate document destruction.",
+        "An additional compensation report was published in July 2025."
+      ],
+      "limits": "The inquiry’s conclusions are attributed to the report. They are not a criminal conviction of every clinician or official, and do not support general claims that present-day blood treatment is a covert programme.",
+      "sources": [
+        {
+          "label": "The Inquiry Report: all seven volumes",
+          "url": "https://www.infectedbloodinquiry.org.uk/reports/inquiry-report"
+        },
+        {
+          "label": "Volume 7: government response and concealment",
+          "url": "https://www.infectedbloodinquiry.org.uk/sites/default/files/Volume_7.pdf"
+        },
+        {
+          "label": "Reports, including July 2025 compensation report",
+          "url": "https://www.infectedbloodinquiry.org.uk/reports"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "1970s–1980s",
+          "title": "Infections and harm",
+          "text": "Blood and blood products transmit serious infections."
+        },
+        {
+          "date": "20 May 2024",
+          "title": "The inquiry reports",
+          "text": "The published findings examine harm and the institutional response."
+        },
+        {
+          "date": "9 July 2025",
+          "title": "Compensation is revisited",
+          "text": "The inquiry publishes an additional report."
+        }
+      ],
+      "question": "What does a cover-up look like when it is sustained by routine institutional behaviour?",
+      "related": [
+        "horizon",
+        "tuskegee",
+        "hillsborough"
+      ]
+    },
+    {
+      "id": "spycops",
+      "title": "Undercover policing: inside the movements",
+      "category": "Surveillance",
+      "year": "1968 onwards",
+      "region": "England / London and beyond",
+      "status": "Published inquiry record",
+      "hook": "Political groups were infiltrated. The reports survive.",
+      "summary": "The Undercover Policing Inquiry examines covert police deployments into political and campaigning groups. Its 2023 Tranche 1 interim report reconstructs the early Special Demonstration Squad through officers’ evidence and surviving reports. The record shows extensive collection of information about individuals and political organisation, beyond a simple account of impending public disorder.",
+      "narrative": [
+        "An undercover report is not a transparent window into a group. It reflects the officer’s access, choices and the institution’s priorities. The inquiry can compare those reports with testimony from the people being observed and with the justification claimed for the deployment.",
+        "The report’s analysis of material from 1972 is revealing: hundreds of reports concern political activities and personal lives, while references to potential public-order issues form only part of the record. Some categories overlap. Treating every document as proof of a public-order threat would misread what was collected."
+      ],
+      "facts": [
+        "The Special Demonstration Squad began in 1968.",
+        "A Tranche 1 interim report was published in 2023.",
+        "The report analyses surviving police and Security Service records, including 634 reports for 1972."
+      ],
+      "limits": "The inquiry’s stages cover different periods. A finding in an early tranche does not settle every later deployment or allegation. Claims about particular relationships or officers need their own evidence and findings.",
+      "sources": [
+        {
+          "label": "2023 Tranche 1 interim report",
+          "url": "https://www.ucpi.org.uk/wp-content/uploads/2023/06/Undercover-Policing-Inquiry-Tranche-1-Interim-Report.pdf"
+        },
+        {
+          "label": "The Undercover Policing Inquiry: evidence and updates",
+          "url": "https://www.ucpi.org.uk/"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "1968",
+          "title": "The unit begins",
+          "text": "Covert deployments become part of the Special Demonstration Squad."
+        },
+        {
+          "date": "2015",
+          "title": "A public inquiry is established",
+          "text": "The investigation examines undercover policing over decades."
+        },
+        {
+          "date": "2023",
+          "title": "The early period is reconstructed",
+          "text": "The Tranche 1 interim report publishes findings and evidence."
+        }
+      ],
+      "question": "What distinguishes a proportionate investigation from collecting the political lives of citizens?",
+      "related": [
+        "cointelpro",
+        "uk-bulk",
+        "equipment-oversight"
+      ]
+    },
+    {
+      "id": "daniel-morgan",
+      "title": "Daniel Morgan: the murder and the institution",
+      "category": "Institutional failures",
+      "year": "1987 / 2021",
+      "region": "England / south London",
+      "status": "Independent panel finding",
+      "hook": "The panel’s finding was institutional corruption. The murder remained unresolved.",
+      "summary": "Private investigator Daniel Morgan was murdered in Sydenham in 1987. Repeated investigations did not secure a murder conviction. In 2021, an independent panel criticised corrupt practices, investigative failures and institutional defensiveness, concluding that aspects of the Metropolitan Police’s conduct amounted to institutional corruption.",
+      "narrative": [
+        "The panel’s task extended beyond identifying a killer. It examined whether the institution’s response itself prevented the truth from being established. Access to information and the protection of reputation became part of the history under investigation.",
+        "The Met disputed the panel’s application of institutional corruption in its response. That disagreement belongs beside the finding rather than being removed from the file. Subsequent oversight work also examined documents later found in a locked cabinet that had not been disclosed to the panel. These records concern the handling of the case; they do not establish a new murder suspect’s guilt."
+      ],
+      "facts": [
+        "Morgan was killed in south London on 10 March 1987.",
+        "The Independent Panel reported in June 2021.",
+        "Later oversight considered failures to disclose documents found at New Scotland Yard."
+      ],
+      "limits": "No murder conviction followed from the panel’s report. The institutional-corruption conclusion is the panel’s finding, disputed by the Met. It should not be converted into an unsupported accusation against a particular person.",
+      "sources": [
+        {
+          "label": "Daniel Morgan Independent Panel report",
+          "url": "https://www.gov.uk/government/publications/daniel-morgan-independent-panel-report"
+        },
+        {
+          "label": "Metropolitan Police response: Operation Drayfurn",
+          "url": "https://www.gov.uk/government/publications/daniel-morgan-independent-panel-report-metropolitan-police-service/operation-drayfurn-the-metropolitan-police-service-response-to-the-daniel-morgan-independent-panel-report-2022-accessible-version"
+        },
+        {
+          "label": "IOPC: undisclosed documents investigation",
+          "url": "https://www.policeconduct.gov.uk/our-work/learning/investigation-documents-not-disclosed-daniel-morgan-independent-panel"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "1987",
+          "title": "The murder",
+          "text": "Morgan is killed outside a pub in Sydenham."
+        },
+        {
+          "date": "2021",
+          "title": "The panel reports",
+          "text": "The findings criticise corruption and institutional conduct."
+        },
+        {
+          "date": "2023–2025",
+          "title": "The document trail remains an issue",
+          "text": "Previously undisclosed records are found and examined."
+        }
+      ],
+      "question": "Can an institution obstruct the search for truth while repeatedly claiming to seek it?",
+      "related": [
+        "hillsborough",
+        "orgreave"
+      ]
+    },
+    {
+      "id": "zinoviev",
+      "title": "The Zinoviev letter: a forgery in an election",
+      "category": "Manufactured narratives",
+      "year": "1924",
+      "region": "England / Westminster",
+      "status": "Historical forgery",
+      "hook": "A purported revolutionary instruction entered the press before polling day.",
+      "summary": "The Zinoviev letter purported to direct communist activity in Britain and became a damaging intervention in the 1924 election campaign. It is treated as a forgery in the government’s historical account. Contemporary Cabinet papers show officials unable to reach a positive conclusion on authenticity while acknowledging attempts to pass off forgeries in Russian affairs.",
+      "narrative": [
+        "The letter illustrates the power of apparently authoritative provenance. A document can become politically consequential before its origin has been tested adequately. The surviving Cabinet record even notes that the original had not been produced to the officials examining the matter.",
+        "Identifying a forgery does not by itself identify its author, every intermediary or its exact effect on voters. The public story often rushes from “fake” to “the election was stolen by this one letter”. A careful history asks about production, circulation, institutional handling and the wider electoral situation separately."
+      ],
+      "facts": [
+        "The letter became public during the October 1924 election campaign.",
+        "Contemporary officials had not seen its original.",
+        "The government’s historical account describes it as forged."
+      ],
+      "limits": "The precise authorship and the letter’s effect on the result are different questions from authenticity. It is not established that this document alone decided the election.",
+      "sources": [
+        {
+          "label": "National Archives: Cabinet authenticity papers",
+          "url": "https://www.nationalarchives.gov.uk/education/resources/twenties-britain-part-one/zinoviev-letter/"
+        },
+        {
+          "label": "Government history of the 1924 administration",
+          "url": "https://history.blog.gov.uk/2014/01/22/whats-the-context-britains-first-labour-government-takes-office-22-january-1924/"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "October 1924",
+          "title": "The letter enters public debate",
+          "text": "The purported instruction is used during the election campaign."
+        },
+        {
+          "date": "November 1924",
+          "title": "Cabinet committees assess authenticity",
+          "text": "The surviving record describes uncertainty and missing original evidence."
+        },
+        {
+          "date": "Later historical assessment",
+          "title": "The document is treated as a forgery",
+          "text": "Its authorship and consequences remain more complex questions."
+        }
+      ],
+      "question": "How far can a forged document travel before an institution asks to see the original?",
+      "related": [
+        "mincemeat",
+        "northwoods",
+        "cambridge-analytica"
+      ]
+    },
+    {
+      "id": "bletchley",
+      "title": "Bletchley Park: the secret that people kept",
+      "category": "Covert operations",
+      "year": "1939–1945",
+      "region": "England / Buckinghamshire",
+      "status": "Documented wartime work",
+      "hook": "A vast codebreaking operation was concealed for decades.",
+      "summary": "Bletchley Park housed wartime codebreaking work that produced intelligence from enemy communications. Enigma was one part of a much larger enterprise. Staff, intercepted messages, analysis and electromechanical machinery formed a system whose achievements remained secret long after the war.",
+      "narrative": [
+        "The popular image concentrates on one brilliant person or one machine. The operation depended on many roles: interception, making and testing hypotheses, operating equipment, interpretation and getting intelligence to users without revealing its source. The secrecy was organisational as well as technical.",
+        "This is a useful counterweight to the idea that large secrets are always impossible. People can keep information when duties are divided and disclosure has consequences. But the existence of one successfully concealed programme does not verify a different alleged programme. Bletchley’s history rests on records, surviving equipment and the accounts of its workforce."
+      ],
+      "facts": [
+        "Bletchley Park was a centre of British wartime codebreaking.",
+        "Enigma work involved changing settings, different networks and coordinated teams.",
+        "The museum preserves machinery, records and testimony from the operation."
+      ],
+      "limits": "Secrecy around wartime cryptanalysis is not evidence for unrelated contemporary conspiracy claims. Estimates of its exact contribution to shortening the war require more assumptions than the existence of the work.",
+      "sources": [
+        {
+          "label": "Bletchley Park: the site and its history",
+          "url": "https://bletchleypark.org.uk/"
+        },
+        {
+          "label": "Museum teaching notes: Enigma and wartime work",
+          "url": "https://bletchleypark.org.uk/wp-content/uploads/2021/10/teachers-notes-ks4-2019.pdf"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "Second World War",
+          "title": "A coordinated intelligence operation",
+          "text": "Codebreaking and analysis serve the Allied war effort."
+        },
+        {
+          "date": "Post-war decades",
+          "title": "The work remains largely concealed",
+          "text": "Former staff are constrained by secrecy."
+        },
+        {
+          "date": "1970s onwards",
+          "title": "The wider story becomes public",
+          "text": "Disclosure and research bring achievements into public history."
+        }
+      ],
+      "question": "How does a secret survive when thousands of people know a small part of it?",
+      "related": [
+        "cambridge-five",
+        "antikythera",
+        "uk-bulk"
+      ]
+    },
+    {
+      "id": "mincemeat",
+      "title": "Operation Mincemeat: the dead man with false papers",
+      "category": "Covert operations",
+      "year": "1943",
+      "region": "England / London; operation off Spain",
+      "status": "Documented deception",
+      "hook": "A body carried a fabricated officer’s identity and a fabricated plan.",
+      "summary": "British planners placed false military documents on a dead body and arranged for it to be found off the Spanish coast in 1943. The purpose was to mislead German intelligence about the intended Allied invasion. The papers pointed attention toward other destinations while the actual target was Sicily.",
+      "narrative": [
+        "The deception needed more than a false letter. The invented officer had to seem like a person whose papers could be believed. Context, identity and the circumstances of discovery helped make the manufactured account look like an accidental disclosure.",
+        "Mincemeat belongs in the archive as a real secret operation, rather than a claim that it began as a widely dismissed conspiracy theory. It also provides a comparison for Northwoods: here there is evidence of execution, while Northwoods remains a proposal. Similarity in the use of deception does not make the cases equivalent."
+      ],
+      "facts": [
+        "The deception was carried out in 1943.",
+        "Fake documents were carried by a body recovered off Spain.",
+        "The intended Allied invasion was Sicily."
+      ],
+      "limits": "The operation’s existence is established. Its precise independent contribution to the campaign outcome is harder to isolate from other Allied deception and German decisions.",
+      "sources": [
+        {
+          "label": "Imperial War Museums: Spies, Lies and Deception guide",
+          "url": "https://www.iwm.org.uk/sites/default/files/files/2023-10/spies_large_print_guide.pdf"
+        },
+        {
+          "label": "Hackney mortuary memorial record",
+          "url": "https://memorials.iwm.org.uk/memorial/99150"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "1943",
+          "title": "The fictional officer is assembled",
+          "text": "British planners prepare the body, identity and documents."
+        },
+        {
+          "date": "April 1943",
+          "title": "The papers are placed for discovery",
+          "text": "The body is released off the Spanish coast."
+        },
+        {
+          "date": "July 1943",
+          "title": "The Allies invade Sicily",
+          "text": "The deception is part of the campaign’s wider intelligence story."
+        }
+      ],
+      "question": "What makes a fabricated document feel like an accidental truth?",
+      "related": [
+        "northwoods",
+        "zinoviev",
+        "bletchley"
+      ]
+    },
+    {
+      "id": "uk-bulk",
+      "title": "British bulk interception: the safeguards failed",
+      "category": "Surveillance",
+      "year": "RIPA era / 2021 judgment",
+      "region": "England / British intelligence",
+      "status": "Court finding",
+      "hook": "The collection was real. Some of its safeguards breached human-rights protections.",
+      "summary": "In Big Brother Watch and Others v the United Kingdom, the European Court of Human Rights examined the former British bulk-interception regime. In 2021, its Grand Chamber found violations concerning interception, communications-data acquisition and protection of journalistic material. The findings concern the legal framework under the Regulation of Investigatory Powers Act 2000.",
+      "narrative": [
+        "The judgment did not say all bulk interception is inherently incompatible with the Convention. It examined authorisation and the safeguards needed as collected material is selected and examined. The independence of the authorising body and controls on selectors linked to individuals were material issues.",
+        "That nuance strengthens the file. A real capability, a deficient legal arrangement and a later replacement framework must not be merged into one timeless claim. The present oversight of investigatory powers has a separate record; use the connected current file to examine that question."
+      ],
+      "facts": [
+        "The Grand Chamber delivered its judgment on 25 May 2021.",
+        "It found violations under Articles 8 and 10 in parts of the former regime.",
+        "The judgment addresses RIPA-era arrangements, since replaced by a different framework."
+      ],
+      "limits": "The court did not rule that every bulk-interception system is unlawful, or find violations in every intelligence-sharing arrangement examined. The finding should not be presented as a judgment on all current powers.",
+      "sources": [
+        {
+          "label": "The full Grand Chamber judgment",
+          "url": "https://hudoc.echr.coe.int/fre?i=001-210077"
+        },
+        {
+          "label": "Court summary of the findings",
+          "url": "https://hudoc.echr.coe.int/app/conversion/pdf/?filename=Grand+Chamber+judgment+Big+Brother+Watch+and+Others+v.+the+United+Kingdom+-+UK+surveillance+regime%3A+some+aspects+contrary+to+the+Convention+.pdf&id=003-7028496-9484349&library=ECHR"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "RIPA 2000 framework",
+          "title": "The arrangements under examination",
+          "text": "Bulk interception and data acquisition operate under the earlier law."
+        },
+        {
+          "date": "2013 onwards",
+          "title": "The complaints develop",
+          "text": "Journalists and rights organisations challenge the regimes."
+        },
+        {
+          "date": "25 May 2021",
+          "title": "Grand Chamber findings",
+          "text": "The court identifies significant safeguard failures."
+        }
+      ],
+      "question": "What safeguards are needed between collecting communications and identifying a person?",
+      "related": [
+        "nsa",
+        "shamrock",
+        "equipment-oversight"
+      ]
+    },
+    {
+      "id": "mau-mau",
+      "title": "Mau Mau: abuse and the delayed acknowledgment",
+      "category": "Institutional failures",
+      "year": "1952–1963 / 2013",
+      "region": "British / colonial Kenya",
+      "status": "Acknowledgment and settlement",
+      "hook": "Decades later, Britain acknowledged torture and settled claims.",
+      "summary": "In June 2013, the British government announced a settlement for 5,228 Kenyan claimants concerning abuse during the Emergency and Mau Mau insurgency. Its statement acknowledged that Kenyans had suffered torture and other ill-treatment under the colonial administration and expressed sincere regret.",
+      "narrative": [
+        "The story belongs to British history, while the events occurred in Kenya. That geographical distinction matters: the people who experienced the abuse were not merely a footnote to a dispute in London. Litigation and the documentary record forced a public response to conduct whose acknowledgment had been delayed for decades.",
+        "A settlement establishes an agreement and the government’s stated position. It does not function as a trial judgment on every alleged incident. Read the acknowledgment, the scope of the claimants and the legal qualifications together. The gravity of the admitted suffering does not need an invented broader finding."
+      ],
+      "facts": [
+        "The settlement was announced on 6 June 2013.",
+        "It concerned 5,228 claimants.",
+        "The government acknowledged torture and ill-treatment and expressed regret."
+      ],
+      "limits": "The settlement did not establish legal liability for every colonial-era claim. It concerns a defined group and events in Kenya, rather than events physically in England.",
+      "sources": [
+        {
+          "label": "Government statement to Parliament",
+          "url": "https://www.gov.uk/government/news/statement-to-parliament-on-settlement-of-mau-mau-claims"
+        },
+        {
+          "label": "Parliamentary account of settlement and memorial",
+          "url": "https://www.parliament.uk/globalassets/documents/publications-records/house-of-lords-publications/hansard-bound-volumes/hlbv766writtens.pdf"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "1952–1963",
+          "title": "Period covered by the claims",
+          "text": "The abuses addressed by the later claims take place."
+        },
+        {
+          "date": "2013",
+          "title": "A settlement is announced",
+          "text": "The government acknowledges suffering and settles the defined claims."
+        },
+        {
+          "date": "Later commemoration",
+          "title": "The history enters a public memorial record",
+          "text": "Parliament records work on remembrance in Kenya."
+        }
+      ],
+      "question": "What changes when the archive of an imperial institution is read from the perspective of those it governed?",
+      "related": [
+        "rendition",
+        "blood"
+      ]
+    },
+    {
+      "id": "rendition",
+      "title": "Diego Garcia: the assurance that had to be corrected",
+      "category": "Covert operations",
+      "year": "2002 / 2008",
+      "region": "British / overseas territory",
+      "status": "Official acknowledgment",
+      "hook": "The government had denied use of the territory. Two refuelling flights were then acknowledged.",
+      "summary": "In February 2008, Foreign Secretary David Miliband corrected earlier assurances about rendition flights through Diego Garcia. New US information revealed two occasions in 2002 when aircraft carrying individual detainees refuelled there. The detainees remained on the aircraft, according to the statement.",
+      "narrative": [
+        "The record is unusually direct: Parliament was told that earlier explicit assurances needed correction. The original confidence had depended on an inadequate records search. A negative assurance is only as strong as the evidence and process behind it.",
+        "The later review compiled 391 flights that had attracted concerns. The statement explicitly warned that inclusion was not endorsement of an allegation. This distinction is useful whenever a suspicious itinerary is presented as proof: travel data can identify a question without settling what a flight carried or did."
+      ],
+      "facts": [
+        "Two refuelling occasions in 2002 were acknowledged in 2008.",
+        "The February statement corrected earlier government assurances.",
+        "A later list of concerning flights did not verify each allegation."
+      ],
+      "limits": "The acknowledgment concerned two flights. It did not establish that detainees were held on Diego Garcia or verify every flight on the later list. Diego Garcia is a British overseas connection, not an English location.",
+      "sources": [
+        {
+          "label": "21 February 2008: correction to Parliament",
+          "url": "https://hansard.parliament.uk/Commons/2008-02-21/debates/08022198000007/TerroristSuspects%28Renditions%29"
+        },
+        {
+          "label": "3 July 2008: the flight review",
+          "url": "https://hansard.parliament.uk/Commons/2008-07-03/debates/08070362000016/TerroristSuspects%28Rendition%29"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2002",
+          "title": "The two flights",
+          "text": "Detainee-carrying aircraft refuel on Diego Garcia."
+        },
+        {
+          "date": "February 2008",
+          "title": "Earlier assurances are corrected",
+          "text": "The Foreign Secretary acknowledges new US information."
+        },
+        {
+          "date": "July 2008",
+          "title": "Concerns are compiled",
+          "text": "The government explains the limitations of the wider flight list."
+        }
+      ],
+      "question": "What is the difference between “no evidence found” and a search strong enough to justify an assurance?",
+      "related": [
+        "mau-mau",
+        "iran-contra"
+      ]
+    },
+    {
+      "id": "cambridge-five",
+      "title": "The Cambridge spies: inside the British state",
+      "category": "Covert operations",
+      "year": "1930s–1960s / 2025 release",
+      "region": "England / Cambridge and London",
+      "status": "Declassified records",
+      "hook": "Soviet intelligence recruited men who reached the centre of British security.",
+      "summary": "Kim Philby, Guy Burgess, Donald Maclean, Anthony Blunt and John Cairncross passed classified information to the Soviet Union. Their British education and careers gave them access to sensitive institutions. A 2025 MI5 file release adds interrogation transcripts, surveillance material and confessions to the established history.",
+      "narrative": [
+        "“Spy ring” can imply a single continuously coordinated team. The National Archives cautions that the five took different paths and acted independently to a substantial degree, despite their connections. That makes the history more complex than the familiar label.",
+        "The new files show the evidential texture behind the story: interviews, intercepted conversations, memoranda and admissions. They support particular histories of access and betrayal. A person appearing in a released intelligence file is not automatically a spy; the same release includes investigations that established no cause for suspicion."
+      ],
+      "facts": [
+        "The five were recruited by Soviet intelligence during the 1930s.",
+        "They reached major British security institutions.",
+        "The January 2025 release includes further confessions and interrogation material."
+      ],
+      "limits": "The established espionage does not verify every allegation about a “sixth man” or every person named in a security file. A file can preserve suspicion that was later disproved.",
+      "sources": [
+        {
+          "label": "National Archives: January 2025 MI5 release",
+          "url": "https://www.nationalarchives.gov.uk/news/document-releases/latest-release-of-files-from-mi5/"
+        },
+        {
+          "label": "Confessions from the Cambridge Five",
+          "url": "https://www.nationalarchives.gov.uk/explore-the-collection/the-collection-blog/confessions-from-the-cambridge-five/"
+        },
+        {
+          "label": "MI5: the Maclean investigation",
+          "url": "https://www.mi5.gov.uk/news/october-2015-release-of-historical-mi5-files"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "1930s",
+          "title": "Recruitment",
+          "text": "The future spies are recruited by Soviet intelligence."
+        },
+        {
+          "date": "1951",
+          "title": "Burgess and Maclean flee",
+          "text": "Their disappearance intensifies suspicion of Philby."
+        },
+        {
+          "date": "14 January 2025",
+          "title": "More files become public",
+          "text": "Released records deepen the established history."
+        }
+      ],
+      "question": "How can access and trust make an institution harder to protect from an insider?",
+      "related": [
+        "bletchley",
+        "spycops",
+        "ajax"
+      ]
+    },
+    {
+      "id": "cambridge-analytica",
+      "title": "Cambridge Analytica: the data behind the pitch",
+      "category": "Corporate deception",
+      "year": "2010s / 2018 investigation",
+      "region": "England / British firms; international use",
+      "status": "Regulatory investigation",
+      "hook": "Personal data became political material. The promised influence was a separate claim.",
+      "summary": "The Information Commissioner investigated the use of data analytics in political campaigns, including Cambridge Analytica, Global Science Research and Facebook data. The 2018 report traces data flows, consent problems and relationships among organisations. It provides an evidential basis for concerns that had sounded like speculative accounts of invisible manipulation.",
+      "narrative": [
+        "The strongest question is concrete: which data were obtained, under what permission, passed to whom and used how? The regulatory investigation moves from the advertising pitch to those traceable actions. A person’s social-media information can travel further than the interaction that appeared to collect it.",
+        "Claims of uniquely powerful psychological control are harder to establish than improper data handling. Campaign outcomes depend on many forces. An archive should not mistake a company’s sales pitch for an independently measured effect, or assume that any one service determined an election."
+      ],
+      "facts": [
+        "The ICO published a final investigation report in November 2018.",
+        "The inquiry examined Facebook-derived information and political data analytics.",
+        "Data handling and measurable persuasive effectiveness are separate questions."
+      ],
+      "limits": "The investigation does not prove that psychographic targeting controlled voters or single-handedly decided an election. Allegations, regulatory findings and company claims must remain distinguishable.",
+      "sources": [
+        {
+          "label": "ICO final investigation report",
+          "url": "https://ico.org.uk/media2/migrated/2260271/investigation-into-the-use-of-data-analytics-in-political-campaigns-final-20181105.pdf"
+        },
+        {
+          "label": "ICO account of the investigation",
+          "url": "https://ico.org.uk/for-the-public/ico-40/cambridge-analytica-raids/"
+        },
+        {
+          "label": "Parliamentary report on campaign analytics",
+          "url": "https://publications.parliament.uk/pa/cm201719/cmselect/cmcumeds/1791/179107.htm"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2010s",
+          "title": "Data-driven campaigning expands",
+          "text": "Political organisations increasingly use personal-data analytics."
+        },
+        {
+          "date": "2018",
+          "title": "The scandal becomes a regulatory record",
+          "text": "The ICO investigates firms, platforms and data flows."
+        },
+        {
+          "date": "November 2018",
+          "title": "The final report is published",
+          "text": "The evidence and regulatory actions become publicly inspectable."
+        }
+      ],
+      "question": "Can the journey of the data be proven even when the claimed power of persuasion cannot?",
+      "related": [
+        "brokers",
+        "zinoviev",
+        "tobacco"
+      ]
+    },
+    {
+      "id": "paperclip",
+      "title": "Operation Paperclip: expertise with a Nazi past",
+      "category": "Covert operations",
+      "year": "1945 onwards",
+      "region": "United States / Germany",
+      "status": "Declassified programme",
+      "hook": "The recruitment programme included specialists whose Nazi records obstructed admission.",
+      "summary": "After the Second World War, US programmes recruited German and Austrian scientists and technicians. Paperclip brought military expertise into American projects despite serious concerns about some recruits’ Nazi affiliations. National Archives records describe requests for revised security reports after officials rejected particular admissions.",
+      "narrative": [
+        "A recruitment policy and its implementation can diverge. Truman’s conditions sought to exclude active supporters of Nazism, while military agencies pressed for people they considered valuable. The archive exposes the handling of that contradiction, rather than leaving the story at a list of famous scientists.",
+        "Some recruits had been members of Nazi organisations; individual wartime responsibility still requires case-specific evidence. Party membership, participation in forced-labour programmes and a proved war crime are different findings. The disturbing institutional choices become clearer when those distinctions are kept."
+      ],
+      "facts": [
+        "Paperclip recruited German and Austrian technical specialists.",
+        "Truman authorised the expanded programme in September 1946 with restrictions.",
+        "Archive records describe requests for revised security dossiers."
+      ],
+      "limits": "The programme does not establish that every recruited scientist committed a war crime. Individual histories and the institutions’ choices must be examined separately.",
+      "sources": [
+        {
+          "label": "National Archives: 1999 disclosure report",
+          "url": "https://www.archives.gov/iwg/reports/nazi-war-crimes-interim-report-october-1999"
+        },
+        {
+          "label": "Interagency Working Group final report",
+          "url": "https://www.archives.gov/iwg/reports/final-report-2007.pdf"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "1945",
+          "title": "Post-war technical recruitment",
+          "text": "US programmes seek German expertise."
+        },
+        {
+          "date": "September 1946",
+          "title": "Paperclip is authorised",
+          "text": "The expanded programme carries conditions concerning Nazi involvement."
+        },
+        {
+          "date": "Later declassification",
+          "title": "Recruitment decisions become inspectable",
+          "text": "Security files and policy records expose how cases were handled."
+        }
+      ],
+      "question": "What happens to an exclusion policy when an institution decides the expertise is too valuable to lose?",
+      "related": [
+        "bletchley",
+        "radiation",
+        "cambridge-five"
+      ]
+    },
+    {
+      "id": "radiation",
+      "title": "The human radiation experiments",
+      "category": "Experiments",
+      "year": "1944–1974 / 1995 inquiry",
+      "region": "United States",
+      "status": "Official investigation",
+      "hook": "Some patients received radioactive substances without understanding the experiment.",
+      "summary": "The Advisory Committee on Human Radiation Experiments investigated government-sponsored research and intentional environmental releases. Its record includes plutonium injections into unsuspecting hospital patients. The 1995 investigation reconstructed experiments, consent practices and ethical standards rather than treating all radiation research as a single kind of abuse.",
+      "narrative": [
+        "The historical problem was not simply that a substance was radioactive. It was who authorised exposure, what participants knew, whether treatment was the purpose and what risks were understood. A hospital setting can make an experimental intervention appear like ordinary care.",
+        "The DOE catalogue is valuable because it identifies studies and their records. It allows an investigation to move from a sweeping allegation to a particular experiment, sponsor and archive. The inquiry examined standards available at the time as well as later protections; historical context was not a reason to erase the subjects’ experience."
+      ],
+      "facts": [
+        "The presidential committee was established in 1994.",
+        "Its remit covered experiments and releases between 1944 and 1974.",
+        "The record includes plutonium injections into unsuspecting patients."
+      ],
+      "limits": "The inquiry does not establish that every radiation study was abusive or that every exposed participant suffered the same harm. The individual experiment and consent record matter.",
+      "sources": [
+        {
+          "label": "DOE experiment catalogue",
+          "url": "https://ehss.energy.gov/ohre/roadmap/experiments/index.html"
+        },
+        {
+          "label": "ACHRE report summary and remit",
+          "url": "https://ehss.energy.gov/ohre/roadmap/achre/summary.html"
+        },
+        {
+          "label": "Chair’s letter transmitting the 1995 report",
+          "url": "https://ehss.energy.gov/ohre/roadmap/achre/ruth_faden.html"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "1944 onwards",
+          "title": "The research period under review",
+          "text": "Government-sponsored human studies and releases take place."
+        },
+        {
+          "date": "1994",
+          "title": "A presidential committee is established",
+          "text": "Investigators begin an intensive reconstruction."
+        },
+        {
+          "date": "October 1995",
+          "title": "The final report",
+          "text": "The committee publishes findings and recommendations."
+        }
+      ],
+      "question": "How can a patient know an intervention is research when the institution presents it as care?",
+      "related": [
+        "mkultra",
+        "porton",
+        "guatemala"
+      ]
+    },
+    {
+      "id": "watergate",
+      "title": "Watergate: the tape inside the cover-up",
+      "category": "Manufactured narratives",
+      "year": "1972–1974",
+      "region": "United States",
+      "status": "Documented obstruction",
+      "hook": "The president’s own recording system preserved evidence of concealment.",
+      "summary": "The June 1972 break-in at Democratic National Committee headquarters led to a wider investigation into political espionage and a White House cover-up. Nixon’s recordings became decisive evidence. A June 23 conversation showed a plan to use the CIA to obstruct the FBI investigation under a misleading national-security explanation.",
+      "narrative": [
+        "The burglaries and the concealment are related but distinct parts of the record. An explanation that treats a covert political operation as a security matter can redirect institutional scrutiny. The surviving tape allows the strategy to be examined in the participants’ own conversation.",
+        "The archive also warns about transcripts. The National Archives treats a transcription as an interpretation of the recording, vulnerable to hearing errors. The original medium remains important. Watergate’s evidential force lies in multiple records converging, rather than in every later rumour about missing minutes."
+      ],
+      "facts": [
+        "Five burglars were arrested on 17 June 1972.",
+        "The existence of the White House recording system was revealed in 1973.",
+        "Nixon resigned in August 1974 after the tapes and investigations."
+      ],
+      "limits": "The record establishes the cover-up; it does not verify every theory about the erased 18½ minutes or settle every person’s prior knowledge of the initial burglary.",
+      "sources": [
+        {
+          "label": "Senate: the Watergate investigation",
+          "url": "https://www.senate.gov/about/powers-procedures/investigations/watergate.htm"
+        },
+        {
+          "label": "National Archives: listening to Nixon",
+          "url": "https://www.archives.gov/publications/prologue/2007/fall/tapes.html"
+        },
+        {
+          "label": "Original prosecution records",
+          "url": "https://www.archives.gov/research/investigations/watergate"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "17 June 1972",
+          "title": "The burglars are arrested",
+          "text": "The DNC break-in is discovered."
+        },
+        {
+          "date": "1973",
+          "title": "The tapes become known",
+          "text": "The investigation learns of the White House recording system."
+        },
+        {
+          "date": "1974",
+          "title": "The evidence forces the issue",
+          "text": "The Supreme Court orders surrender of tapes; Nixon resigns."
+        }
+      ],
+      "question": "What changes when an institution’s public explanation can be compared with its private recording?",
+      "related": [
+        "hillsborough",
+        "zinoviev",
+        "northwoods"
+      ]
+    },
+    {
+      "id": "shamrock",
+      "title": "SHAMROCK: the telegram copies",
+      "category": "Surveillance",
+      "year": "1945–1975",
+      "region": "United States",
+      "status": "Congressional record",
+      "hook": "Telegraph companies supplied international messages to intelligence agencies.",
+      "summary": "SHAMROCK was a long-running arrangement in which the NSA and its predecessors received copies of international telegram traffic leaving the United States. The Church Committee exposed it as part of the investigation of intelligence activity. Participating companies supplied material through an arrangement largely invisible to ordinary senders.",
+      "narrative": [
+        "This is a surveillance story before social networks and smartphones. The infrastructure carrying a message also offered an opportunity to copy it. Access depended on relationships with companies, not only on the interception technology imagined in popular spy stories.",
+        "The record distinguishes companies and periods rather than claiming every telegram in every direction was read. Copies supplied, messages selected and messages actually reviewed are different measures. That same distinction remains important when modern collection totals are presented as though every item received a human analyst’s attention."
+      ],
+      "facts": [
+        "The programme operated from August 1945 to May 1975.",
+        "International telegraph companies supplied message copies.",
+        "Congressional investigations brought the arrangement into the public record."
+      ],
+      "limits": "Receipt of traffic is not the same as reading every individual message. The arrangement’s existence does not establish that a particular person’s telegram was selected or examined.",
+      "sources": [
+        {
+          "label": "Senate hearing: Church Committee findings on SHAMROCK",
+          "url": "https://www.intelligence.senate.gov/wp-content/uploads/2024/08/sites-default-files-hearings-110399.pdf"
+        },
+        {
+          "label": "NSA declassified history of the investigations",
+          "url": "https://www.nsa.gov/portals/75/documents/news-features/declassified-documents/crypto-almanac-50th/time_of_investigations_part_1.pdf"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "August 1945",
+          "title": "The arrangement starts",
+          "text": "Copies of international telegrams become available to US intelligence."
+        },
+        {
+          "date": "May 1975",
+          "title": "The programme ends",
+          "text": "SHAMROCK ceases during the wider investigative period."
+        },
+        {
+          "date": "1975–1976",
+          "title": "Congress exposes the system",
+          "text": "Hearings and reports reconstruct intelligence collection."
+        }
+      ],
+      "question": "Who else receives a message when the company carrying it supplies another copy?",
+      "related": [
+        "nsa",
+        "uk-bulk",
+        "brokers"
+      ]
+    },
+    {
+      "id": "ajax",
+      "title": "Iran 1953: the coup in the released files",
+      "category": "Covert operations",
+      "year": "1952–1953",
+      "region": "British / US roles in Iran",
+      "status": "Declassified operation",
+      "hook": "A government’s overthrow was shaped by covert British and American planning.",
+      "summary": "Released US records document planning and implementation around the 1953 overthrow of Iranian prime minister Mohammad Mosaddeq. They show British approaches to the United States in late 1952 and the subsequent covert operation. The 2017 retrospective Foreign Relations volume filled major omissions in the earlier official documentary account.",
+      "narrative": [
+        "The history did not begin with declassification. Participants and writers had described the operation much earlier. What changed was the ability to compare claims with officially released records, including communications that had previously been withheld. “Newly acknowledged” should not be confused with “never previously reported”.",
+        "Foreign involvement is established, but an explanation of the coup must also account for Iranian actors and political conditions. Covert planning did not make everyone inside Iran a puppet, nor does one documented intervention prove every later regional event was centrally controlled. The specific operational trail is powerful enough."
+      ],
+      "facts": [
+        "British officials approached US counterparts about Mosaddeq’s ouster in late 1952.",
+        "The overthrow took place in August 1953.",
+        "Released State and CIA records describe covert planning and implementation."
+      ],
+      "limits": "The files establish foreign covert involvement, not an exhaustive account of every Iranian participant or a universal explanation for later politics. British involvement is labelled separately from events in England.",
+      "sources": [
+        {
+          "label": "National Security Archive: 2017 official-history release",
+          "url": "https://nsarchive.gwu.edu/briefing-book/iran/2017-06-15/iran-1953-state-department-finally-releases-updated-official-history"
+        },
+        {
+          "label": "Original records of British approaches",
+          "url": "https://nsarchive.gwu.edu/briefing-book/iran/2017-08-08/1953-iran-coup-new-us-documents-confirm-british-approached-us-late"
+        },
+        {
+          "label": "Further release of an internal CIA history",
+          "url": "https://nsarchive.gwu.edu/briefing-book/iran/2018-02-12/cia-declassifies-more-zendebad-shah-internal-study-1953-iran-coup"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "Late 1952",
+          "title": "British approaches",
+          "text": "British officials seek American support for an ouster."
+        },
+        {
+          "date": "August 1953",
+          "title": "The overthrow",
+          "text": "The covert operation is part of Mosaddeq’s removal."
+        },
+        {
+          "date": "2017–2018",
+          "title": "More of the record opens",
+          "text": "Official documents and internal histories are released."
+        }
+      ],
+      "question": "What changes when a government’s historical publication finally includes the operation it once left out?",
+      "related": [
+        "northwoods",
+        "iran-contra",
+        "rendition"
+      ]
+    }
+  ],
+  "ancient": [
+    {
+      "id": "gobekli",
+      "title": "Göbekli Tepe: monuments before the familiar world",
+      "hook": "People carved monumental pillars thousands of years before the pyramids.",
+      "year": "c. 9600–8200 BCE",
+      "status": "Archaeological find",
+      "category": "Ancient world",
+      "region": "Türkiye / southeastern Anatolia",
+      "summary": "At Göbekli Tepe, early Neolithic communities built large enclosures with carved limestone pillars during the transition from hunting and gathering to farming. UNESCO dates the monumental structures to roughly 9600–8200 BCE. Some T-shaped pillars stand up to 5.5 metres tall and carry animals, clothing details, and forms interpreted as stylised people. The site demonstrates organised construction far earlier than many familiar ancient monuments. Recent excavations also identify probable domestic buildings, complicating the popular picture of an isolated temple with no settlement.",
+      "narrative": [
+        "The pillars change the scale at which we imagine early communities working together. Their builders quarried limestone from the neighbouring plateau, shaped large monoliths, and integrated them into substantial architecture. Carved wild animals share the surfaces with belts, loincloths, and other details that support an interpretation of some pillars as human figures. These were planned spaces with a shared visual language. Similar imagery at other regional sites places Göbekli Tepe within a wider network of communities, rather than making it an inexplicable exception.",
+        "The buildings are usually interpreted as communal spaces associated with social gatherings and ritual, but a function is not a recovered instruction manual. UNESCO also records probable domestic structures identified by later excavations. That evidence matters: the story develops as more of the site is understood. Göbekli Tepe invites questions about cooperation, specialised craft, and changing ways of life during the emergence of farming. It does not establish a lost industrial civilisation, prove that religion single-handedly created agriculture, or make the builders’ methods impossible for humans."
+      ],
+      "facts": [
+        "UNESCO dates the monumental structures to c. 9600–8200 BCE.",
+        "Limestone T-shaped pillars include reliefs of animals and human attributes.",
+        "Later excavations have identified probable domestic buildings."
+      ],
+      "timeline": [
+        {
+          "date": "c. 9600–8200 BCE",
+          "title": "Monumental construction",
+          "text": "Early Neolithic communities build and use the distinctive enclosures."
+        },
+        {
+          "date": "Mid-1990s onward",
+          "title": "Excavation changes the picture",
+          "text": "Sustained archaeological research reveals the buildings and their wider context."
+        },
+        {
+          "date": "2018",
+          "title": "World Heritage recognition",
+          "text": "Göbekli Tepe is inscribed on UNESCO’s World Heritage List."
+        }
+      ],
+      "limits": "Ritual and social functions remain interpretations. Early monumental architecture does not demonstrate industrial technology, a vanished advanced civilisation, or a single settled explanation for the origins of farming.",
+      "question": "What kinds of cooperation were possible before the societies we usually associate with monumental building?",
+      "related": [
+        "stonehenge",
+        "skara-brae",
+        "silbury"
+      ],
+      "sources": [
+        {
+          "label": "UNESCO: Göbekli Tepe and its archaeological significance",
+          "url": "https://whc.unesco.org/en/list/1572/"
+        },
+        {
+          "label": "UNESCO: nomination and evaluation documents",
+          "url": "https://whc.unesco.org/en/list/1572/documents/"
+        }
+      ]
+    },
+    {
+      "id": "merer",
+      "title": "Merer’s diary: a pyramid project leaves paperwork",
+      "hook": "A crew’s daily log records stone deliveries for Khufu’s pyramid.",
+      "year": "Khufu’s reign · discovered 2013",
+      "status": "Contemporary document",
+      "category": "Ancient world",
+      "region": "Egypt / Wadi el-Jarf and Giza",
+      "summary": "Papyrus fragments found at the Red Sea harbour of Wadi el-Jarf in 2013 belonged to a work crew active near the end of Khufu’s reign. The best-preserved logs describe missions led by an official named Merer, including river transport of limestone from Tura to the Great Pyramid project at Giza. They are contemporary administrative evidence for part of the construction supply chain. They reveal journeys and organisation, while leaving the exact methods of raising and placing blocks to other evidence.",
+      "narrative": [
+        "The discovery was made at a harbour, rather than inside a pyramid. Excavators found the papers near the entrance to a storage gallery, among material associated with a crew that had worked at Giza before being sent to the Red Sea coast. The archive includes accounts and daily logs. Merer’s entries bring a vast royal project down to the scale of organised trips: a team, a route, a load of limestone, and a destination. The connection is unusually direct because the documents belong to the reign in which the Great Pyramid was being built.",
+        "Wadi el-Jarf supplies a second part of the story. Its galleries stored equipment for expeditions across the Red Sea, and the wider harbour system is linked to access to the Sinai’s resources. IFAO’s excavation account connects this logistical world with the pyramid project, including the likely importance of copper for tools. The diary does not contain a complete pyramid-building blueprint. Its value is more specific: it documents a functioning transport and administrative system where popular retellings sometimes offer only mystery. A surviving work log can answer one question precisely without answering every question about the monument."
+      ],
+      "facts": [
+        "The papyrus archive was discovered at Wadi el-Jarf in 2013.",
+        "Merer’s logs describe limestone transport from Tura to the Giza project.",
+        "The documents date to the end of Khufu’s reign."
+      ],
+      "timeline": [
+        {
+          "date": "Late reign of Khufu",
+          "title": "The crew keeps its records",
+          "text": "Daily logs record work that includes supplying the Great Pyramid project."
+        },
+        {
+          "date": "2013",
+          "title": "Papyrus emerges at the harbour",
+          "text": "Excavation recovers the crew’s archive near a storage-gallery entrance."
+        },
+        {
+          "date": "2017",
+          "title": "The best-preserved logs are published",
+          "text": "IFAO publishes the Merer journals, papyri Jarf A and B."
+        }
+      ],
+      "limits": "A contemporary supply log establishes transport and organisation. It does not describe every construction technique, settle all questions about labour, or explain precisely how each pyramid block was raised.",
+      "question": "How much of a monumental building project can be recovered from the routine paperwork of one crew?",
+      "related": [
+        "pyramid-void",
+        "vessels",
+        "roman-concrete"
+      ],
+      "sources": [
+        {
+          "label": "IFAO: Wadi el-Jarf excavation and the Merer archive",
+          "url": "https://www.ifao.egnet.net/recherche/archeologie/ouadi-el-jarf/"
+        },
+        {
+          "label": "IFAO: original publication announcement for the Merer journals",
+          "url": "https://www.ifao.egnet.net/uploads/publications/divers/MIFAO136_ann_01.pdf"
+        }
+      ]
+    },
+    {
+      "id": "roman-concrete",
+      "title": "Roman concrete: the lumps that helped repair the cracks",
+      "hook": "An apparent mixing flaw turned out to help concrete heal.",
+      "year": "Roman period · studies in 2023 and 2025",
+      "status": "Experimental evidence",
+      "category": "Ancient world",
+      "region": "Italy / Privernum and Pompeii",
+      "summary": "Small white lime-rich fragments in Roman concrete were often dismissed as evidence of poor mixing. A 2023 study connected them to hot mixing with quicklime and demonstrated crack-filling behaviour in reproduced mixtures. In 2025, researchers reported complementary evidence from an unfinished construction site preserved at Pompeii by the eruption of 79 CE. The research recovers a material process with practical consequences. It does not imply that all Roman concrete was identical, indestructible, or a direct substitute for modern structural concrete.",
+      "narrative": [
+        "The clue was inside the material. Roman concrete can contain conspicuous lime clasts, pale fragments whose presence looks untidy beside the idea of a carefully engineered recipe. Researchers examined their chemistry and proposed that mixing with reactive quicklime produced heat and left calcium-rich reserves in the hardened concrete. When water entered a crack, reactions involving those reserves could help deposit material that closed it. Laboratory reproductions gave the proposal something stronger than an attractive explanation: observable behaviour that could be tested against the ancient samples.",
+        "The later Pompeii study added a rare view of work interrupted. Raw-material piles, tools, and concrete survived at a construction site buried in 79 CE. Researchers identified quicklime mixed with other dry ingredients, supporting hot mixing beyond the earlier sampled wall. This connects chemical analysis with an archaeological working context. The results explain particular materials and processes, rather than proving that every surviving Roman building used one recipe. They also offer a useful reversal: a feature previously treated as defective may preserve evidence of a deliberate and effective manufacturing practice."
+      ],
+      "facts": [
+        "The 2023 study examined calcium-rich lime clasts in ancient concrete.",
+        "Reproduced mixtures demonstrated crack-filling behaviour.",
+        "A 2025 Pompeii study found evidence of quicklime in a preserved dry mix."
+      ],
+      "timeline": [
+        {
+          "date": "79 CE",
+          "title": "An unfinished site is buried",
+          "text": "The Vesuvius eruption preserves a Pompeian construction context."
+        },
+        {
+          "date": "2023",
+          "title": "Hot mixing is investigated",
+          "text": "Chemical analysis and reproductions link lime clasts with self-healing behaviour."
+        },
+        {
+          "date": "2025",
+          "title": "Pompeii supplies new evidence",
+          "text": "An unfinished worksite provides further evidence for the ancient manufacturing process."
+        }
+      ],
+      "limits": "The studies concern particular samples and tested mixtures. Self-healing does not mean unlimited repair, and the results do not establish that every Roman recipe outperforms every modern concrete or meets modern engineering requirements.",
+      "question": "Which other apparent imperfections in ancient objects might preserve clues to how they were made?",
+      "related": [
+        "vessels",
+        "antikythera",
+        "merer"
+      ],
+      "sources": [
+        {
+          "label": "Seymour and colleagues, 2023: original hot-mixing study",
+          "url": "https://doi.org/10.1126/sciadv.add1602"
+        },
+        {
+          "label": "MIT: the 2023 chemistry and reproduction findings",
+          "url": "https://news.mit.edu/2023/roman-concrete-durability-lime-casts-0106"
+        },
+        {
+          "label": "Original 2025 Pompeii construction-site study",
+          "url": "https://www.nature.com/articles/s41467-025-66634-7"
+        }
+      ]
+    },
+    {
+      "id": "derinkuyu",
+      "title": "Derinkuyu: a town’s refuge beneath the ground",
+      "hook": "Rooms, stores, a church, and air shafts disappear underground.",
+      "year": "Origins uncertain · Byzantine use",
+      "status": "Archaeological site",
+      "category": "Ancient world",
+      "region": "Türkiye / Cappadocia",
+      "summary": "Derinkuyu is a substantial complex cut into Cappadocia’s rock, with passages, storage areas, spaces for animals and food production, religious rooms, wells, and ventilation. UNESCO identifies the region’s subterranean towns as refuges used against raids in later periods. Official Turkish descriptions give a depth of roughly 85 metres, including the deep well system. The surviving architecture is extraordinary, but its earliest excavation and successive development are not captured by a single secure building date.",
+      "narrative": [
+        "An underground refuge had to do more than conceal an entrance. People needed air, water, provisions, and routes between rooms. Derinkuyu’s visible fabric addresses those practical demands with a connected system of carved spaces. Turkish museum descriptions identify stables, stores, a dining area, wine-production facilities, a school-like chamber, and a church. A shaft linked to the surface provided ventilation, while wells supplied water. The site is compelling because it preserves an organised response to living under threat, not simply a deep hole with a dramatic population estimate attached.",
+        "Its history belongs to the wider rock-cut landscape of Cappadocia. UNESCO places subterranean towns such as Derinkuyu and Kaymaklı within the region’s development of places of refuge, including resistance to Arab incursions. That supports a historical use without fixing every passage to one moment or one community. The complex may preserve different stages of enlargement and adaptation. Claims about its precise original builders, total ancient population, or undiscovered extent need evidence of their own. What can be visited today is only part of a real, carefully arranged underground environment."
+      ],
+      "facts": [
+        "Derinkuyu is part of the UNESCO-listed Cappadocia rock-site property.",
+        "Official descriptions identify ventilation, wells, stores, and religious spaces.",
+        "The site opened to visitors in 1965."
+      ],
+      "timeline": [
+        {
+          "date": "Byzantine period",
+          "title": "Subterranean refuge",
+          "text": "Cappadocia’s underground towns serve communities seeking protection during raids."
+        },
+        {
+          "date": "1965",
+          "title": "The site opens to visitors",
+          "text": "A portion of Derinkuyu becomes accessible as an archaeological visitor site."
+        },
+        {
+          "date": "1985",
+          "title": "World Heritage inscription",
+          "text": "The Cappadocia property, including Derinkuyu, enters UNESCO’s list."
+        }
+      ],
+      "limits": "The earliest origins and growth sequence remain uncertain. The roughly 85-metre depth includes the well system; it is not a claim that every visitor passage reaches that depth. Popular population figures are not established here.",
+      "question": "How did a refuge balance concealment with the everyday needs of the people sheltering inside?",
+      "related": [
+        "gobekli",
+        "troy",
+        "skara-brae"
+      ],
+      "sources": [
+        {
+          "label": "UNESCO: Göreme and the rock sites of Cappadocia",
+          "url": "https://whc.unesco.org/en/list/357/"
+        },
+        {
+          "label": "Türkiye’s Ministry of Culture: Derinkuyu’s rooms, wells, and ventilation",
+          "url": "https://kvmgm.ktb.gov.tr/TR-44132/nevsehir-muze-mudurlugu.html"
+        },
+        {
+          "label": "Official Derinkuyu visitor leaflet",
+          "url": "https://muze.gov.tr/s3/MysFileLibrary/cbd66a65-27a7-4ff1-8a20-fcb3e4a7a650.pdf"
+        }
+      ]
+    },
+    {
+      "id": "stonehenge",
+      "title": "Stonehenge: the monument that kept changing",
+      "hook": "The stones were one chapter in a much longer project.",
+      "year": "c. 3000–1500 BCE",
+      "status": "Archaeological monument",
+      "category": "Ancient world",
+      "region": "England / Wiltshire",
+      "summary": "Stonehenge began with an earthwork enclosure around 3000 BCE; its famous stone settings followed around 2500 BCE. Cremated remains show that burial was part of its early history. Later builders rearranged stones and connected the monument to the River Avon through an avenue. The site preserves repeated choices made over centuries, rather than one untouched design. Its construction and use can be investigated through dating, excavation, toolmarks, and its surrounding landscape, even though no contemporary explanation of its complete meaning survives.",
+      "narrative": [
+        "The familiar silhouette can hide the sequence. Before the great stone arrangements, people dug a circular ditch and banks and created the Aubrey Holes within them. Cremations in and around those features establish an early funerary role. Around 2500 BCE, the larger sarsens and smaller bluestones were placed in the centre. The achievement was both practical and social: acquiring materials, shaping stones, raising them, and maintaining a place that drew collective effort. English Heritage’s construction account examines workable techniques and the traces those activities would leave.",
+        "The builders’ successors altered what they inherited. Bluestones were rearranged, the Avenue joined the monument to the Avon, and later rings of pits were dug around the settings. Today’s Stonehenge also includes documented conservation and re-erection work, whose records help distinguish modern interventions from ancient features. The strongest question is therefore not only how the stones were moved, but why generations continued to return and change the place. Archaeology supports multiple phases and uses; it does not give one proven explanation for every feature, every ceremony, or every participant’s belief."
+      ],
+      "facts": [
+        "The earliest major enclosure dates to about 3000 BCE.",
+        "The principal stone settings were erected around 2500 BCE.",
+        "Cremations and later alterations document changing uses over centuries."
+      ],
+      "timeline": [
+        {
+          "date": "c. 3000 BCE",
+          "title": "The enclosure and cemetery",
+          "text": "The early ditch-and-bank monument develops with cremation burials."
+        },
+        {
+          "date": "c. 2500 BCE",
+          "title": "The great stone settings",
+          "text": "Sarsens and bluestones are erected in the monument’s centre."
+        },
+        {
+          "date": "c. 1800–1500 BCE",
+          "title": "The last prehistoric pits",
+          "text": "Two rings of pits are dug, possibly for an uncompleted rearrangement."
+        }
+      ],
+      "limits": "The monument had multiple phases. Plausible construction methods and known alignments do not establish a complete account of its purpose. Recorded modern restoration does not mean the prehistoric monument was fabricated.",
+      "question": "What made successive generations reshape the same place instead of starting somewhere new?",
+      "related": [
+        "seahenge",
+        "silbury",
+        "skara-brae"
+      ],
+      "sources": [
+        {
+          "label": "English Heritage: dated history of Stonehenge",
+          "url": "https://www.english-heritage.org.uk/visit/places/stonehenge/history-and-stories/history/"
+        },
+        {
+          "label": "English Heritage: investigating how Stonehenge was built",
+          "url": "https://www.english-heritage.org.uk/visit/places/stonehenge/history-and-stories/building-stonehenge/"
+        }
+      ]
+    },
+    {
+      "id": "sutton-hoo",
+      "title": "Sutton Hoo: a ship beneath a Suffolk mound",
+      "hook": "A buried ship revealed a world richer than its reputation.",
+      "year": "Early 7th century CE · excavated 1939",
+      "status": "Archaeological find",
+      "category": "Ancient world",
+      "region": "England / Suffolk",
+      "summary": "In 1939, excavation at Sutton Hoo exposed the impression of a decayed, roughly 27-metre ship and a burial chamber filled with exceptional objects. Weapons, the famous helmet, vessels, gold fittings, and materials connected to distant regions reveal the wealth and international reach of an early seventh-century elite. Edith Pretty donated the finds to the British Museum. The burial reshaped understanding of early medieval Britain, while the identity of the person buried remains unconfirmed.",
+      "narrative": [
+        "A mound on Edith Pretty’s property concealed a funerary undertaking on the scale of a public statement. Basil Brown and the excavation team uncovered a ship whose timber had largely vanished but whose outline survived in the soil. The chamber held objects that placed its occupant within a world of power, display, warfare, and feasting. Byzantine silverware and garnets linked to Sri Lanka complicate the old image of isolated, impoverished post-Roman communities. The connections are visible in the objects, even when the routes by which they travelled require further reconstruction.",
+        "The body did not survive in recognisable form, prompting early debate about whether the grave had ever contained one. The British Museum describes later phosphate analysis as evidence that a body had been present. Rædwald, an East Anglian king, is a frequently proposed identity, but it is not securely established. The absence of a name does not diminish the discovery. Sutton Hoo shows what a privileged burial could contain, and what a community could mobilise to create it. It supports a rich picture of one social world without making its wealth representative of everyone who lived in early medieval Britain."
+      ],
+      "facts": [
+        "The major ship burial was excavated in 1939.",
+        "Its chamber contained high-quality objects with far-reaching connections.",
+        "The buried person’s identity remains uncertain."
+      ],
+      "timeline": [
+        {
+          "date": "Early 7th century CE",
+          "title": "A ship becomes a grave",
+          "text": "A high-status burial is placed within a ship and covered by a mound."
+        },
+        {
+          "date": "1939",
+          "title": "The chamber is excavated",
+          "text": "Basil Brown and the excavation team recover the ship impression and grave goods."
+        },
+        {
+          "date": "1939",
+          "title": "The collection is donated",
+          "text": "Edith Pretty gives the finds to the British Museum."
+        }
+      ],
+      "limits": "Rædwald is a candidate, not a confirmed identification. An exceptional elite burial does not describe the living conditions of the entire population, and its international objects do not by themselves prove a particular direct trading route.",
+      "question": "What can a burial tell us about a society when the person’s name has disappeared?",
+      "related": [
+        "troy",
+        "vessels",
+        "stonehenge"
+      ],
+      "sources": [
+        {
+          "label": "British Museum: the ship, missing body, and burial interpretation",
+          "url": "https://www.britishmuseum.org/collection/death-and-memory/anglo-saxon-ship-burial-sutton-hoo"
+        },
+        {
+          "label": "British Museum: Sutton Hoo garnets and the Silk Roads",
+          "url": "https://www.britishmuseum.org/exhibitions/silk-roads/sri-lanka-suffolk-sutton-hoo-and-silk-roads"
+        },
+        {
+          "label": "British Museum: the excavation and donation history",
+          "url": "https://www.britishmuseum.org/blog/eighty-years-and-more-sutton-hoo"
+        }
+      ]
+    },
+    {
+      "id": "doggerland",
+      "title": "Doggerland: the landscape beneath the North Sea",
+      "hook": "The water between England and Europe covers an earlier landscape.",
+      "year": "Late Ice Age to Holocene · new study 2026",
+      "status": "Reconstructed landscape",
+      "category": "Ancient world",
+      "region": "England / North Sea off the East Anglian coast",
+      "summary": "Doggerland was a changing landmass between Britain and continental Europe, now largely covered by the North Sea. Researchers reconstruct its rivers and habitats using seismic surveys, sediment cores, and ancient environmental DNA. A 2026 study reported temperate tree DNA from more than 16,000 years ago and evidence that parts of the landscape survived the Storegga tsunami around 8,150 years ago. This is a real submerged landscape. A habitable environment is not, by itself, a newly excavated city or proof of occupation at every sampled location.",
+      "narrative": [
+        "The sea hides a geography that once joined what are now separate shores. Bradford-led work mapped extensive buried terrain between the Norfolk coast and Dogger Bank, including former river systems. Sediment cores add another scale of evidence: material from particular layers can preserve traces of the plants and conditions that existed before the water arrived. The result is not a single dramatic photograph of a lost civilisation. It is a landscape reconstructed by connecting geological structure, environmental records, and archaeological questions.",
+        "The 2026 research analysed sedimentary ancient DNA from 252 samples across 41 marine cores. It reported oak, elm, and hazel earlier than expected and suggested that some wooded places could have supported people late in the Ice Age. It also found evidence that portions of Doggerland remained above water after the Storegga tsunami, challenging the idea that one wave erased the entire landmass at once. The eventual loss involved a changing coastline and rising sea levels. The open archaeological question is where communities lived within that changing environment, and which traces can still be recovered from beneath the seabed."
+      ],
+      "facts": [
+        "Geophysical surveys reconstruct former terrain beneath the southern North Sea.",
+        "The 2026 study analysed 252 samples from 41 sediment cores.",
+        "Its findings suggest that parts of Doggerland survived the Storegga tsunami."
+      ],
+      "timeline": [
+        {
+          "date": "More than 16,000 years ago",
+          "title": "Woodland traces",
+          "text": "The 2026 analysis identifies temperate tree DNA in the submerged landscape’s older sediments."
+        },
+        {
+          "date": "About 8,150 years ago",
+          "title": "The Storegga tsunami",
+          "text": "A major tsunami affects the region, while evidence suggests some land survives afterward."
+        },
+        {
+          "date": "12 March 2026",
+          "title": "A new environmental reconstruction",
+          "text": "Researchers announce findings that revise the woodland and flooding history."
+        }
+      ],
+      "limits": "Environmental DNA and mapped rivers do not alone establish settlements or their populations. The 2026 findings concern sampled areas and should not be turned into a claim that the whole landscape survived unchanged or vanished in a single event.",
+      "question": "Where would people have chosen to live on the rivers and shores now buried beneath the sea?",
+      "related": [
+        "heracleion",
+        "atlantis",
+        "skara-brae"
+      ],
+      "sources": [
+        {
+          "label": "University of Bradford: the 2026 Doggerland DNA study",
+          "url": "https://www.bradford.ac.uk/news/archive/2026/north-sea-lost-worldhadhabitableforeststhousandsofyears-earlier-than-thought.php"
+        },
+        {
+          "label": "University of Bradford: mapping from Norfolk to Dogger Bank",
+          "url": "https://www.bradford.ac.uk/news/archive/2016/story-of-doggerland-europes-lost-world-1.php"
+        }
+      ]
+    },
+    {
+      "id": "skara-brae",
+      "title": "Skara Brae: a village with its furniture still in place",
+      "hook": "A storm exposed prehistoric homes connected by passages.",
+      "year": "Neolithic · exposed in 1850",
+      "status": "Archaeological find",
+      "category": "Ancient world",
+      "region": "Scotland / Orkney / Britain",
+      "summary": "A storm in 1850 stripped sand and vegetation from Skara Brae on Orkney, exposing a remarkably preserved Neolithic settlement. Stone-built houses retain hearths, beds, and other furniture, and were connected by passages, some roofed. Excavated food remains and objects illuminate a farming community that also fished and hunted. The site offers unusually close access to prehistoric domestic life. Its preservation does not mean every roof, household arrangement, or reason for its abandonment has been recovered.",
+      "narrative": [
+        "Skara Brae makes the distant past feel domestic. Its rooms preserve places for sleeping, storage, and a central fire, rather than only monumental spaces for exceptional events. The walls used two skins of drystone construction packed with materials that helped insulate and stabilise them. Connected passages organised movement between houses. Food remains, pottery, ornaments, and worked stone provide evidence of the residents’ activities; interpretations of particular rooms or objects can still change. Even this unusually complete settlement leaves its roofs uncertain, because much less of their form and materials survives.",
+        "The 1850 storm revealed the village, but later storms also damaged it. Excavation and scientific dating gradually established its Neolithic context. Historic Environment Scotland’s 2026 account describes a settlement abandoned around the middle of the third millennium BCE and cautions against the familiar story of everyone fleeing one sudden sandstorm. More recent work suggests departure may have been gradual. Environmental pressures are possibilities, rather than a settled final scene. Preservation gives a rich view of how people lived; it does not preserve every decision that led them to leave."
+      ],
+      "facts": [
+        "An 1850 storm exposed structures previously covered by sand and vegetation.",
+        "Stone furniture and connecting passages survive in the settlement.",
+        "The reason for its abandonment remains uncertain."
+      ],
+      "timeline": [
+        {
+          "date": "Neolithic period",
+          "title": "A close-built village",
+          "text": "A farming community lives in stone houses connected by passages."
+        },
+        {
+          "date": "1850",
+          "title": "The sand cover is breached",
+          "text": "Storm erosion reveals ancient housing and prompts excavation."
+        },
+        {
+          "date": "1970s",
+          "title": "Radiocarbon dates confirm the context",
+          "text": "The first radiocarbon results from the site confirm its Neolithic date."
+        }
+      ],
+      "limits": "The roofs, meanings of some objects, social roles, and causes of abandonment remain uncertain. The site is in Orkney, Scotland; it should not be labelled as an English monument or described as a securely established single-disaster evacuation.",
+      "question": "Which details of daily life survive in a house, and which disappear with the people who occupied it?",
+      "related": [
+        "stonehenge",
+        "gobekli",
+        "doggerland"
+      ],
+      "sources": [
+        {
+          "label": "Historic Environment Scotland: the 2026 story of Skara Brae",
+          "url": "https://blog.historicenvironment.scot/2026/01/the-story-of-skara-brae/"
+        },
+        {
+          "label": "UNESCO: Heart of Neolithic Orkney",
+          "url": "https://whc.unesco.org/en/list/514/"
+        }
+      ]
+    },
+    {
+      "id": "seahenge",
+      "title": "Seahenge: a timber circle returns from the shore",
+      "hook": "Ancient oak posts encircled an upside-down tree stump.",
+      "year": "2049 BCE · exposed in 1998",
+      "status": "Archaeological find",
+      "category": "Ancient world",
+      "region": "England / Norfolk",
+      "summary": "Seahenge was a Bronze Age timber monument at Holme next the Sea: an oval circuit of posts surrounding an inverted tree stump. Tree-ring dating places its construction in spring or early summer 2049 BCE, when the location was saltmarsh. Its modern exposure on the shore and excavation in 1999 revealed toolmarks and a structure that normally would not survive for millennia. Its function remains debated; a connection with commemoration or death is an interpretation, not a recovered certainty.",
+      "narrative": [
+        "Stone monuments dominate the surviving image of British prehistory because timber usually decays. Seahenge offers a different material world. Preserved oak records both construction choices and the marks of Early Bronze Age tools. The circle enclosed an upside-down stump, making the arrangement visually striking without telling us what its builders thought it meant. Environmental evidence places the structure in a saltmarsh; its present shoreline setting must not be projected unchanged into 2049 BCE. Changing coastal conditions helped reveal a monument whose original landscape had already disappeared.",
+        "Norfolk’s archaeological account considers several possible meanings, including marking a death or an event. Dendrochronology contributes firmer evidence by comparing the timbers’ growth rings. Later work on the nearby second timber circle, Holme II, dated its wood to the same spring or summer of 2049 BCE. Two closely situated, contemporary monuments create a more interesting question than an isolated oddity: what relationship did they have? Dating establishes their shared period. It does not establish an exact ceremony, identify a person commemorated, or prove that the central stump was used for a particular funerary practice."
+      ],
+      "facts": [
+        "Posts surrounded an inverted tree stump in an oval arrangement.",
+        "Tree-ring dating places construction in spring or early summer 2049 BCE.",
+        "The nearby Holme II timbers were later dated to the same year."
+      ],
+      "timeline": [
+        {
+          "date": "2049 BCE",
+          "title": "Timbers are felled and arranged",
+          "text": "The monument is constructed in a saltmarsh during spring or early summer."
+        },
+        {
+          "date": "1998–1999",
+          "title": "Exposure and excavation",
+          "text": "The shoreline discovery is recorded and the monument is fully excavated in 1999."
+        },
+        {
+          "date": "2014",
+          "title": "The second circle gains a precise date",
+          "text": "Norfolk announces matching 2049 BCE tree-ring dates for Holme II."
+        }
+      ],
+      "limits": "The date is much firmer than the function. Funerary, commemorative, and ritual explanations remain interpretations; the wood does not establish a specific ceremony or belief system.",
+      "question": "Why did one community build two timber monuments beside each other in the same year?",
+      "related": [
+        "stonehenge",
+        "silbury",
+        "doggerland"
+      ],
+      "sources": [
+        {
+          "label": "Norfolk Heritage Explorer: Holme next the Sea archaeological account",
+          "url": "https://www.heritage.norfolk.gov.uk/record-details?uid=%27TNF1117%27"
+        },
+        {
+          "label": "Norfolk Heritage Explorer: dating the second timber circle",
+          "url": "https://www.heritage.norfolk.gov.uk/dating-the-second-timber-circle-on-holme-next-the-sea-beach-1"
+        },
+        {
+          "label": "British Museum: Seahenge archaeologists’ interview transcript",
+          "url": "https://www.britishmuseum.org/sites/default/files/2022-02/Seahenge_film_transcript.pdf"
+        }
+      ]
+    },
+    {
+      "id": "silbury",
+      "title": "Silbury Hill: the enormous mound with no settled purpose",
+      "hook": "They moved half a million tonnes. The reason is still uncertain.",
+      "year": "c. 2470–2350 BCE",
+      "status": "Archaeological monument",
+      "category": "Ancient world",
+      "region": "England / Wiltshire",
+      "summary": "Silbury Hill is a vast artificial mound within the Avebury prehistoric landscape. English Heritage estimates that roughly half a million tonnes of material, mostly chalk, went into its construction. Built through successive enlargements around 2470–2350 BCE, it began on a far smaller scale than the monument visible today. Excavators repeatedly searched for a central burial without finding one. Its scale and construction are established; the builders’ precise purpose remains unresolved.",
+      "narrative": [
+        "The hill grew through a sequence of decisions. English Heritage describes an initial low mound of gravel, followed by soil, turf, stones, and later enormous additions of chalk taken from surrounding ditches. Its present size can make it look like one project planned completely from the beginning, but the construction record reveals enlargement over generations. The labour estimate runs into millions of person-hours. That makes the mound evidence of sustained collective activity within a landscape that also included Avebury’s circles, avenues, and other major Neolithic monuments.",
+        "Later investigators brought a different expectation: something valuable must be hidden at the centre. A vertical shaft in 1776, a tunnel in 1849, and investigations in 1968–1970 failed to reveal the anticipated central burial. The excavations themselves left voids; collapse produced a large summit crater in 2000 and prompted stabilisation and renewed research. That history makes the boundary of knowledge unusually visible. We know the hill was built and repeatedly enlarged, and we can study its materials and sequence. Neither its enormous size nor an unsuccessful burial search supplies a proven explanation for why it mattered to its makers."
+      ],
+      "facts": [
+        "English Heritage dates construction to approximately 2470–2350 BCE.",
+        "The mound was enlarged in stages using roughly half a million tonnes of material.",
+        "Major investigations did not find the expected central burial."
+      ],
+      "timeline": [
+        {
+          "date": "c. 2470–2350 BCE",
+          "title": "A mound becomes monumental",
+          "text": "Successive additions enlarge a small beginning into the great chalk hill."
+        },
+        {
+          "date": "1776–1970",
+          "title": "Searches for the centre",
+          "text": "Several major investigations explore the mound without finding an expected central burial."
+        },
+        {
+          "date": "2000 onward",
+          "title": "Collapse changes the research priority",
+          "text": "A summit crater exposes the legacy of excavation and prompts stabilisation and new study."
+        }
+      ],
+      "limits": "The construction sequence and scale do not settle the purpose. A central royal burial, an astronomical machine, or a hidden technological installation should not be presented as established. Labour and material totals are estimates.",
+      "question": "What could make generations keep enlarging a monument whose purpose they never wrote down?",
+      "related": [
+        "stonehenge",
+        "seahenge",
+        "gobekli"
+      ],
+      "sources": [
+        {
+          "label": "English Heritage: Silbury Hill’s construction and excavation history",
+          "url": "https://www.english-heritage.org.uk/visit/places/silbury-hill/history/"
+        },
+        {
+          "label": "English Heritage: research and stabilisation at Silbury Hill",
+          "url": "https://www.english-heritage.org.uk/visit/places/silbury-hill/history/research/"
+        }
+      ]
+    }
+  ],
+  "current": [
+    {
+      "id": "orgreave",
+      "title": "Orgreave: the inquiry finally opens",
+      "kicker": "A contested official account",
+      "category": "Current & open",
+      "year": "1984 / inquiry launched 2026",
+      "region": "England / South Yorkshire",
+      "status": "Inquiry ongoing",
+      "hook": "The arrests were real. The official account is being investigated.",
+      "summary": "The confrontation at Orgreave on 18 June 1984 produced injuries and 95 arrests. Charges were subsequently dropped after police evidence was discredited. On 26 March 2026, the government launched an inquiry with published terms covering police and government planning, the events, their aftermath and the public narrative. Its establishment is documented; its eventual findings must be assessed on their own evidence.",
+      "narrative": [
+        "The disturbing question at Orgreave is how a confrontation became an authoritative public account. The government’s launch statement acknowledges that the charges against arrested miners were dropped after police evidence was discredited. That creates a concrete starting point for scrutiny: what police recorded, how prosecutors received it, what decision-makers knew and how events were presented outside the courtroom. The inquiry can examine those connections rather than treating one dramatic photograph as the entire history.",
+        "The 2026 terms extend beyond the clash itself to planning by police and government, subsequent events and the impact on individuals and communities. An inquiry can assemble documents and testimony that were dispersed across institutions for decades. Its launch does not establish every allegation campaigners have made, or assign criminal responsibility in advance. The next meaningful change in confidence comes from disclosed records, tested testimony and findings that explain how the evidence supports a particular conclusion."
+      ],
+      "facts": [
+        "The confrontation occurred on 18 June 1984 at Orgreave Coking Plant.",
+        "The government records 95 arrests and charges later dropped after police evidence was discredited.",
+        "Published 2026 terms include planning, events, aftermath and the public narrative."
+      ],
+      "limits": "The existence and scope of the inquiry do not predetermine its findings or constitute a criminal conviction. Particular claims about coordination or individual responsibility require evidence.",
+      "sources": [
+        {
+          "label": "Home Office: inquiry launch, 26 March 2026",
+          "url": "https://www.gov.uk/government/news/truth-for-victims-and-families-as-orgreave-inquiry-launches"
+        },
+        {
+          "label": "Published Orgreave Inquiry terms of reference",
+          "url": "https://www.gov.uk/government/publications/orgreave-inquiry-terms-of-reference/orgreave-inquiry-terms-of-reference"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "18 June 1984",
+          "title": "The confrontation",
+          "text": "Police and picketing miners clash at Orgreave; 95 miners are arrested."
+        },
+        {
+          "date": "July 2025",
+          "title": "An inquiry is announced",
+          "text": "The government announces an inquiry chaired by the Bishop of Sheffield."
+        },
+        {
+          "date": "26 March 2026",
+          "title": "The terms and launch",
+          "text": "The inquiry begins with an agreed scope covering planning, events and their public account."
+        }
+      ],
+      "question": "Which parts of an official account change when the underlying records are finally examined together?",
+      "assessment": {
+        "level": "Documented inquiry; findings pending",
+        "claim": "A public inquiry is investigating the events and official handling of Orgreave.",
+        "reason": "Government launch documents and published terms establish the inquiry and its scope; they do not settle the allegations it will investigate."
+      },
+      "tests": [
+        "Compare contemporaneous operational plans and instructions with witness testimony.",
+        "Trace the creation, amendment and use of police statements in the prosecutions.",
+        "Assess published inquiry findings against the disclosed documents supporting them."
+      ],
+      "related": [
+        "spycops",
+        "cointelpro",
+        "hillsborough"
+      ]
+    },
+    {
+      "id": "facial-recognition",
+      "title": "Facial recognition: the public street becomes a search",
+      "kicker": "Biometrics in public",
+      "category": "Current & open",
+      "year": "2025–2026",
+      "region": "England and Wales / wider UK police use",
+      "status": "Documented deployment",
+      "hook": "A passing face can be compared with a police watchlist.",
+      "summary": "Police use live, retrospective and operator-initiated facial recognition for different purposes. A December 2025 Home Office factsheet acknowledged demographic performance concerns in retrospective recognition while describing safeguards and favourable live-system testing at specified settings. June 2026 funding announced further expansion. The technology and policy are real; accuracy, necessity and fairness must be judged by system, setting and deployment.",
+      "narrative": [
+        "A search that once required an officer to recognise a person can now begin with a camera and a watchlist. Live recognition compares people passing a deployment with selected images; retrospective recognition searches footage after an incident. Those distinctions matter. A successful match in a controlled test does not answer whether a particular watchlist was justified, whether an alert was correct in the street or whether the subsequent police intervention was proportionate.",
+        "The government’s December 2025 factsheet says live-system testing found no statistically significant demographic performance differences at the police settings tested. It also acknowledges bias concerns with a retrospective algorithm, describing a replacement and manual checks. June 2026 PoliceAI funding includes 40 additional live-recognition units. Expansion makes scrutiny more urgent, but does not by itself prove indiscriminate nationwide tracking. The relevant record combines algorithm tests, deployment logs, retention rules and what officers actually did after alerts."
+      ],
+      "facts": [
+        "Live and retrospective facial recognition are different police uses.",
+        "The December 2025 factsheet acknowledges demographic bias concerns in retrospective recognition.",
+        "June 2026 announcements include funding for 40 additional live-recognition units."
+      ],
+      "limits": "A tested algorithm’s performance does not establish every deployment’s fairness or legality. An alert is not a conviction; announced funding is not proof that every planned unit has been deployed.",
+      "sources": [
+        {
+          "label": "Home Office: police facial recognition factsheet, December 2025",
+          "url": "https://www.gov.uk/government/publications/police-use-of-facial-recognition/police-use-of-facial-recognition-factsheet"
+        },
+        {
+          "label": "Home Office: PoliceAI announcement, June 2026",
+          "url": "https://www.gov.uk/government/news/policeai-to-speed-up-investigations-and-fight-crime"
+        },
+        {
+          "label": "Biometrics and facial recognition legal-framework consultation",
+          "url": "https://www.gov.uk/government/consultations/legal-framework-for-using-facial-recognition-in-law-enforcement/consultation-on-a-new-legal-framework-for-law-enforcement-use-of-biometrics-facial-recognition-and-similar-technologies-accessible"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "August 2025",
+          "title": "Mobile capacity expands",
+          "text": "The Home Office describes ten live-recognition vans using an independently tested algorithm."
+        },
+        {
+          "date": "4 December 2025",
+          "title": "Facts and consultation",
+          "text": "The government publishes a factsheet and opens consultation on a biometrics legal framework."
+        },
+        {
+          "date": "10 June 2026",
+          "title": "Further expansion announced",
+          "text": "PoliceAI funding includes 40 more live-recognition units."
+        }
+      ],
+      "question": "Who should be on a watchlist, and what should happen when a machine thinks it recognises them?",
+      "assessment": {
+        "level": "Deployment established; safeguards need ongoing scrutiny",
+        "claim": "Police facial recognition is being used and expanded, with different evidence about different systems.",
+        "reason": "Official documents establish the technology and funding, acknowledge retrospective-system concerns and describe safeguards; they do not justify a single accuracy verdict for all uses."
+      },
+      "tests": [
+        "Publish false-alert and correct-identification rates for each algorithm version and threshold.",
+        "Compare interventions and outcomes across demographic groups using appropriate denominators.",
+        "Audit watchlist inclusion, deletion rules and officer responses in actual deployments."
+      ],
+      "related": [
+        "uk-bulk",
+        "equipment-oversight",
+        "brokers"
+      ]
+    },
+    {
+      "id": "welfare-ai",
+      "title": "Welfare AI: who gets sent for a fraud check?",
+      "kicker": "An algorithm before a decision",
+      "category": "Current & open",
+      "year": "2022–2026",
+      "region": "Great Britain / England, Scotland and Wales",
+      "status": "Documented model; disparities acknowledged",
+      "hook": "The model flags a claim. A person still makes the decision.",
+      "summary": "DWP uses machine learning to prioritise checks on Universal Credit advance requests. Its July 2026 assessment acknowledges mismatches between referrals and correct referrals for several age groups and non-UK nationals. DWP nevertheless assesses overall concerns as minimal, citing safeguards and human decisions. A retrained model still required testing before deployment. These are documented operational and fairness questions, not proof of automated benefit refusal.",
+      "narrative": [
+        "The algorithm operates at a consequential moment: someone has asked for an advance, and their request may be selected for additional scrutiny. DWP’s 2025–26 annual report says the model was introduced in 2022 and forms a small part of its wider fraud controls. The department states that staff make the entitlement or payment decision. Human involvement is a safeguard, but it does not remove questions about who is repeatedly selected, what evidence reviewers receive and whether legitimate people experience avoidable delay.",
+        "The separate assessment published on 9 July 2026 identifies inconsistencies between referral rates and correct referrals for non-UK nationals, several age bands and couple claims. It says a retrained model requires further testing before going live, while defending continued use of the existing model as reasonable and proportionate. Analysis covered only age and nationality among protected characteristics because suitable data for the others was unavailable. That is a transparency limit as well as a reason to demand more complete evaluation."
+      ],
+      "facts": [
+        "DWP says the Universal Credit Advances model was introduced in 2022.",
+        "The July 2026 assessment identifies inconsistencies for several groups and a retrained model not yet live.",
+        "DWP states that a human reviews evidence and decides on referred requests."
+      ],
+      "limits": "Statistical disparities require investigation but are not automatically a finding of unlawful discrimination. DWP’s published conclusion of minimal overall concern is its assessment, not proof that every claimant is unaffected.",
+      "sources": [
+        {
+          "label": "DWP annual report 2025–26: pages 109–110",
+          "url": "https://assets.publishing.service.gov.uk/media/6a4e3a53895317eadc35459e/dwp_annual_report_and_accounts_2025_to_2026.pdf"
+        },
+        {
+          "label": "DWP: latest Advances model assessment, 9 July 2026",
+          "url": "https://www.gov.uk/government/publications/effectiveness-assessment-including-statistical-analysis-of-the-universal-credit-advances-machine-learning-model-1-april-2025-to-31-march-2026/effectiveness-assessment-of-universal-credit-advances-model"
+        },
+        {
+          "label": "DWP: fairness assessment, July 2025",
+          "url": "https://www.gov.uk/government/publications/fairness-assessment-including-statistical-analysis-of-the-universal-credit-advances-machine-learning-model-1-april-2024-to-31-march-2025/universal-credit-advances-model-fairness-assessment"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2022",
+          "title": "The model enters use",
+          "text": "DWP introduces machine learning for Universal Credit advance fraud-risk referrals."
+        },
+        {
+          "date": "17 July 2025",
+          "title": "Fairness analysis is published",
+          "text": "DWP publishes a fairness assessment and announces retraining."
+        },
+        {
+          "date": "9 July 2026",
+          "title": "A newer assessment",
+          "text": "DWP reports persistent group inconsistencies and says the retrained model needs further testing."
+        }
+      ],
+      "question": "Can a decision remain fair if the system chooses unevenly who must explain themselves?",
+      "assessment": {
+        "level": "Use and disparities documented; harm requires case evidence",
+        "claim": "The live model has acknowledged performance disparities, while DWP retains human decisions and defends continued operation.",
+        "reason": "The annual report and latest assessment support this narrower claim; neither establishes that a computer automatically refuses benefits or that every statistical disparity is unlawful."
+      },
+      "tests": [
+        "Evaluate the retrained model on actual outcomes after deployment, with independent scrutiny.",
+        "Measure unnecessary referrals and payment delay for legitimate claimants across groups.",
+        "Improve protected-characteristic coverage without treating missing data as evidence of fairness."
+      ],
+      "related": [
+        "facial-recognition",
+        "brokers",
+        "equipment-oversight"
+      ]
+    },
+    {
+      "id": "english-landscapes",
+      "title": "England: the hidden landscape under familiar ground",
+      "kicker": "The terrain remembers",
+      "category": "Current & open",
+      "year": "Mapping continues in 2026",
+      "region": "England",
+      "status": "Established technique; interpretations investigated",
+      "hook": "The ordinary field can contain an extraordinary archaeological record.",
+      "summary": "Historic England combines aerial photographs and lidar to map archaeological landscapes. Filtered laser-scan data can expose subtle earthworks and features obscured by vegetation; its public explorer connects mapped features with fuller records. New 2026 standards describe systematic interpretation and recording. The terrain is measurable, while a feature’s date and purpose still require archaeological evidence.",
+      "narrative": [
+        "A field can look empty because its surviving history is shallow, overgrown or only visible under particular weather conditions. Air photographs reveal cropmarks; lidar measures surface shape and can produce a ground model after vegetation returns are filtered. Historic England illustrates this with an Iron Age enclosure in Savernake Forest. The effect can feel like switching on a second landscape, although the laser records terrain rather than directly seeing through soil to buried rooms.",
+        "The Aerial Archaeology Mapping Explorer brings together decades of interpretation across England, with links to monument records and project reports. It is an invitation to investigate particular places, rather than a catalogue of automatically proven mysteries. The 2026 standards emphasise integrated sources, consistent mapping and compatibility with historic environment records. A suspicious rectangle may turn out to be an enclosure, a quarry or a recent disturbance; its shape starts the inquiry, and excavation or other evidence can refine it."
+      ],
+      "facts": [
+        "Lidar measures surface heights and supports detailed terrain models.",
+        "Filtering vegetation returns can reveal subtle earthworks in woodland.",
+        "Historic England’s explorer links mapped features to archaeological records and reports."
+      ],
+      "limits": "Lidar does not directly photograph buried interiors, and a geometric pattern alone cannot establish age, function or a lost civilisation. Coverage and interpretation vary by survey area.",
+      "sources": [
+        {
+          "label": "Historic England: lidar methods and examples",
+          "url": "https://historicengland.org.uk/research/methods/airborne-remote-sensing/lidar/"
+        },
+        {
+          "label": "Historic England: Aerial Archaeology Mapping Explorer",
+          "url": "https://historicengland.org.uk/research/results/aerial-archaeology-mapping-explorer/"
+        },
+        {
+          "label": "Historic England: mapping standards, June 2026",
+          "url": "https://historicengland.org.uk/images-books/publications/standards-guidance-aerial-investigation-mapping-projects/"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "Late 1980s onward",
+          "title": "Landscapes are mapped",
+          "text": "Projects later brought together in the explorer systematically interpret aerial sources."
+        },
+        {
+          "date": "2000",
+          "title": "Lidar’s archaeological potential",
+          "text": "Historic England describes growing recognition of lidar as an archaeological recording technique."
+        },
+        {
+          "date": "30 June 2026",
+          "title": "Updated mapping standards",
+          "text": "New guidance sets requirements for integrated aerial investigation, mapping and recording."
+        }
+      ],
+      "question": "What survives around your own town that only becomes visible when the ground is measured differently?",
+      "assessment": {
+        "level": "Technique well established; each interpretation needs evidence",
+        "claim": "Aerial sources and lidar reveal archaeological features that can be difficult to recognise from the ground.",
+        "reason": "Historic England documents the methods, examples and records; classification and dating remain specific to each feature."
+      },
+      "tests": [
+        "Check a suspected feature against older photographs and independent terrain processing.",
+        "Compare the map interpretation with field survey, excavation or geophysical evidence.",
+        "Seek dated material and historical records before assigning a period or purpose."
+      ],
+      "related": [
+        "altar-journey",
+        "troy",
+        "heracleion"
+      ]
+    },
+    {
+      "id": "altar-journey",
+      "title": "Stonehenge: the Altar Stone’s long journey",
+      "kicker": "A stone from the north",
+      "category": "Current & open",
+      "year": "Research published 2024–2026",
+      "region": "England / Wiltshire; northeast Scotland",
+      "status": "Strong provenance evidence; route unresolved",
+      "hook": "A six-tonne stone points north. Its journey remains a puzzle.",
+      "summary": "A 2024 Nature study linked the Altar Stone’s mineral-age fingerprint to northeast Scotland’s Orcadian Basin, overturning a Welsh-source assumption. A 2026 study refined possible sources and tested glacial transport, concluding that substantial human movement was still necessary even with possible glacial assistance. The exact source, route, transport method and motivations remain unresolved.",
+      "narrative": [
+        "The Altar Stone is a distinctive sandstone block within Stonehenge, rather than one of the famous upright sarsens. Researchers analysed the ages and chemistry of mineral grains in its fragments and compared that fingerprint with possible source rocks. Their 2024 result pointed to the Orcadian Basin in northeast Scotland. Establishing a northern geological source transforms the practical question: how did a stone weighing around six tonnes reach Salisbury Plain, and what connections made such a journey worth undertaking?",
+        "A 2026 paper combines provenance analysis with ice-sheet modelling instead of treating the journey as a simple choice between boats and people dragging a rock. Caithness provides the closest zircon-age match among its candidates, but modelled ice flow does not deliver the stone directly to Stonehenge. A possible intermediate glacial stage creates further geographic and timing problems. The authors still require substantial human transport. The compelling mystery concerns the actual sequence of movement and decisions, not a demonstrated impossibility for ancient people."
+      ],
+      "facts": [
+        "The Altar Stone is a sandstone block weighing about six tonnes.",
+        "The 2024 study identifies a mineral fingerprint consistent with northeast Scotland’s Orcadian Basin.",
+        "The 2026 transport analysis still requires substantial human movement, even with possible glacial assistance."
+      ],
+      "limits": "A regional provenance is not an identified quarry. Geological fingerprinting does not establish the route, date or transport equipment; the 2026 scenarios are model-based constraints, not observations of the journey.",
+      "sources": [
+        {
+          "label": "Nature, 2024: Scottish provenance research",
+          "url": "https://www.nature.com/articles/s41586-024-07652-1"
+        },
+        {
+          "label": "Curtin University: researchers explain the 2024 finding",
+          "url": "https://www.curtin.edu.au/news/media-release/great-scott-stonehenges-altar-stone-origins-reveal-advanced-ancient-britain/"
+        },
+        {
+          "label": "Clarke and colleagues, 2026: provenance and transport pathways",
+          "url": "https://doi.org/10.1002/jqs.70080"
+        },
+        {
+          "label": "University repository: open 2026 paper",
+          "url": "https://eprints.whiterose.ac.uk/id/eprint/241788/"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "Before 2024",
+          "title": "A Welsh-source assumption",
+          "text": "Researchers reassess a long-standing attribution of the Altar Stone to Wales."
+        },
+        {
+          "date": "14 August 2024",
+          "title": "The northern fingerprint",
+          "text": "Nature publishes evidence for an Orcadian Basin source in northeast Scotland."
+        },
+        {
+          "date": "2026",
+          "title": "The journey is tested",
+          "text": "New provenance comparisons and ice-flow modelling constrain glacial assistance and human transport."
+        }
+      ],
+      "question": "Which combination of geology, movement and human intention can explain how this stone reached Stonehenge?",
+      "assessment": {
+        "level": "Strong evidence for northern provenance; route open",
+        "claim": "The stone’s analysed mineral fingerprint points to northeast Scotland, while its transport history remains uncertain.",
+        "reason": "Original geochemical work and later modelling support source constraints and substantial human movement; they do not identify the complete route or a particular transport technology."
+      },
+      "tests": [
+        "Find a source outcrop matching multiple mineral-age and chemical signatures.",
+        "Test transport scenarios against reconstructed geography, ice flow and sea-level timing.",
+        "Seek archaeological evidence of quarrying, staging points or stone-moving activity along proposed routes."
+      ],
+      "related": [
+        "vessels",
+        "english-landscapes",
+        "troy"
+      ]
+    },
+    {
+      "id": "equipment-oversight",
+      "title": "Equipment interference: the power to enter a device",
+      "kicker": "Inside the endpoint",
+      "category": "Current & open",
+      "year": "2016 framework / 2024 reporting",
+      "region": "United Kingdom / England, Wales, Scotland and Northern Ireland",
+      "status": "Documented statutory power",
+      "hook": "Encrypted traffic is one problem. The device holding it is another.",
+      "summary": "UK law provides for warranted equipment interference to obtain communications, equipment data and other information. Official guidance describes physical and remote techniques, including accessing devices and exploiting software vulnerabilities. IPCO’s report for 2024, published in December 2025, records 3,028 targeted-equipment-interference authorisations. This establishes a real power and its reported use, while public totals reveal neither every operation nor who was affected.",
+      "narrative": [
+        "Privacy discussions often focus on intercepting a message as it moves across a network. Equipment interference addresses the device itself, where information may already be stored. The published code describes a range from direct access to more complex remote exploitation. These are examples of what the legal framework can authorise, rather than admissions that every technique is used in every case. Separate rules apply when an operation also intercepts live communications, and the distinction affects which warrant is needed.",
+        "IPCO’s 2024 annual report records 3,028 targeted-equipment-interference authorisations, including 565 urgent authorisations. Those figures make the power’s use inspectable at an aggregate level, but one authorisation is not necessarily one person, one device or one successful intrusion. The code and oversight reports are valuable because they expose procedures, safeguards and limits that popular surveillance stories often omit. They support scrutiny of necessity, proportionality and compliance; they cannot identify an unexplained problem on someone’s own phone as a government operation."
+      ],
+      "facts": [
+        "The published code covers both physical and remote equipment interference.",
+        "IPCO reports 3,028 targeted-equipment-interference authorisations for 2024.",
+        "The authorisation count is not a count of unique people or compromised devices."
+      ],
+      "limits": "Statutory capability and aggregate authorisations do not prove unlawful targeting, universal surveillance or compromise of a particular device. Code examples are illustrative; live interception may require separate authorisation.",
+      "sources": [
+        {
+          "label": "Government: equipment interference code of practice",
+          "url": "https://www.gov.uk/government/publications/equipment-interference-code-of-practice--2/equipment-interference-code-of-practice-accessible--2"
+        },
+        {
+          "label": "IPCO: annual report 2024, published December 2025",
+          "url": "https://ipco-wpmedia-prod-s3.s3.eu-west-2.amazonaws.com/IPCO-Annual-Report-2024.pdf"
+        },
+        {
+          "label": "IPCO: annual-report publication dates",
+          "url": "https://www.ipco.org.uk/publications/annual-reports/"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2016",
+          "title": "The statutory framework",
+          "text": "The Investigatory Powers Act sets out targeted and bulk equipment-interference powers."
+        },
+        {
+          "date": "2024",
+          "title": "Use recorded by oversight",
+          "text": "The reporting year includes 3,028 targeted authorisations."
+        },
+        {
+          "date": "16 December 2025",
+          "title": "The report becomes public",
+          "text": "IPCO publishes its 2024 annual report and aggregate authorisation figures."
+        }
+      ],
+      "question": "How much can public oversight reveal about a power whose individual operations remain secret?",
+      "assessment": {
+        "level": "Power and aggregate use established; individual operations opaque",
+        "claim": "Warranted equipment interference is a real, reported UK investigatory capability.",
+        "reason": "The statutory code and oversight counts support that claim. They provide no evidentiary basis for attributing a particular device issue or personal experience to covert interference."
+      },
+      "tests": [
+        "Compare reported authorisations with oversight findings, refusals and error reporting.",
+        "Examine whether a specific documented operation used the correct warrants and safeguards.",
+        "Require forensic and corroborating operational evidence before attributing any particular device compromise."
+      ],
+      "related": [
+        "uk-bulk",
+        "facial-recognition",
+        "brokers"
+      ]
+    },
+    {
+      "id": "uap",
+      "title": "UAP: unidentified is a question, not an answer",
+      "kicker": "The missing measurements",
+      "category": "Current & open",
+      "year": "2023 study / 2026 releases",
+      "region": "United States / global observations",
+      "status": "Some observations unresolved",
+      "hook": "A real recording can still leave the cause unknown.",
+      "summary": "NASA’s 2023 independent study called for better calibrated observations, metadata and consistent reporting of unidentified anomalous phenomena. AARO’s 2026 public material includes an unresolved infrared recording whose description explicitly carries no analytical conclusion. Unidentified observations are real investigatory subjects; these sources do not establish extraterrestrial craft, extraordinary performance or a recovered alien technology programme.",
+      "narrative": [
+        "A military recording can be authentic while its subject remains unidentified. A single sensor view may omit distance, scale, motion of the observing platform or information needed to distinguish a physical source from an imaging effect. NASA’s independent study therefore focused on how to gather evidence capable of answering the question, rather than treating the existence of an unexplained clip as the answer. Reliable metadata and simultaneous observations can transform an arresting image into a testable event.",
+        "AARO’s 2026 material includes PR49, a one-minute-and-49-second infrared recording with no oral or written account supplied by the reporter. Its descriptive notes explain changes in zoom and contrast and expressly avoid an investigative conclusion. That is a useful example of disciplined uncertainty: the release does not identify the cause, but neither does it demonstrate impossible acceleration or alien origin. A serious open file should explain what is missing and what new measurements would distinguish competing explanations."
+      ],
+      "facts": [
+        "NASA published its independent UAP study on 14 September 2023.",
+        "AARO’s 2026 PR49 description reports missing narrative information from the observer.",
+        "An unidentified recording does not itself establish an extraterrestrial explanation."
+      ],
+      "limits": "Unresolved does not mean inexplicable, and missing evidence does not give every proposed explanation equal support. The cited releases do not establish alien craft or extraordinary physical performance.",
+      "sources": [
+        {
+          "label": "NASA: independent UAP study and report",
+          "url": "https://science.nasa.gov/uap/"
+        },
+        {
+          "label": "Original NASA independent study report, 2023",
+          "url": "https://science.nasa.gov/wp-content/uploads/2023/09/uap-independent-study-team-final-report.pdf"
+        },
+        {
+          "label": "AARO: 2026 transparency material, including unresolved PR49",
+          "url": "https://www.aaro.mil/Next-AARO-Home-redesign/Next-Parent/Presidential-UAP-Transparency-Initiative/"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "June 2022",
+          "title": "NASA commissions a study",
+          "text": "An independent team examines how scientific data could improve UAP investigation."
+        },
+        {
+          "date": "14 September 2023",
+          "title": "Recommendations published",
+          "text": "The report emphasises better data collection, calibration and analysis."
+        },
+        {
+          "date": "2026",
+          "title": "An unresolved recording is described",
+          "text": "AARO’s PR49 material supplies a video description while explicitly withholding an analytical conclusion."
+        }
+      ],
+      "question": "What would a recording need to contain before it could demonstrate extraordinary performance?",
+      "assessment": {
+        "level": "Cause undetermined; extraterrestrial origin unsupported here",
+        "claim": "Some released observations remain unidentified because the available evidence is insufficient.",
+        "reason": "NASA’s methodological findings and AARO’s explicit description support uncertainty. They do not provide affirmative evidence that the unknown cause is extraterrestrial."
+      },
+      "tests": [
+        "Obtain calibrated multi-sensor observations with time, position and range information.",
+        "Model platform motion, perspective, zoom, contrast and known sensor artefacts.",
+        "Compare physical predictions of proposed explanations with independent measurements."
+      ],
+      "related": [
+        "europa",
+        "planet-nine",
+        "dark-oxygen"
+      ]
+    },
+    {
+      "id": "dark-oxygen",
+      "title": "Dark oxygen: the seafloor claim under scrutiny",
+      "kicker": "An extraordinary measurement",
+      "category": "Current & open",
+      "year": "2024 claim / 2026 editorial concerns",
+      "region": "Pacific Ocean / Clarion–Clipperton Zone",
+      "status": "Contested study; editorial concerns unresolved",
+      "hook": "Oxygen rose in darkness. The explanation remains under examination.",
+      "summary": "A July 2024 Nature Geoscience paper reported oxygen increases in experiments at a deep, nodule-covered seafloor and proposed a possible electrochemical contribution. On 8 April 2026, the editors alerted readers that aspects of the paper were subject to concerns still being considered. The reported observation and proposed mechanism must be treated as contested, not established evidence that nodules are natural oxygen-producing batteries.",
+      "narrative": [
+        "The paper attracted attention because deep-seafloor experiments are normally used to measure oxygen consumption, yet the authors reported increases in darkness. Their laboratory observations associated the effect with polymetallic nodules, and measured surface potentials informed a hypothesis involving seawater electrolysis. Those are several evidentiary steps: an instrument reading, exclusion of alternative explanations, a repeatable phenomenon and a mechanism. A striking reading does not automatically establish all four, particularly when the mechanism is proposed rather than directly demonstrated.",
+        "The live article now carries an editor’s note dated 8 April 2026: concerns about aspects of the paper are under consideration, and a further editorial response is promised after resolution. The notice does not itself state that the paper has been retracted or specify a completed verdict. It does mean that a website should stop short of presenting the finding as settled. Independent replication, transparent calibration and rigorous controls are the path from a provocative report to reliable knowledge."
+      ],
+      "facts": [
+        "The original paper was published on 22 July 2024.",
+        "Seawater electrolysis was proposed as a possible contribution, not established as the mechanism.",
+        "An 8 April 2026 editor’s note states that concerns are being considered."
+      ],
+      "limits": "The editorial concerns remain unresolved in the checked record. Do not present oxygen production or the electrolysis mechanism as settled, and do not label the paper retracted when the notice does not say that.",
+      "sources": [
+        {
+          "label": "Original Nature Geoscience paper and current editor’s note",
+          "url": "https://www.nature.com/articles/s41561-024-01480-8"
+        },
+        {
+          "label": "Crossmark: editorial clarification dated 8 April 2026",
+          "url": "https://crossmark.crossref.org/dialog/?doi=10.1038%2Fs41561-024-01480-8"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2021–2022",
+          "title": "Seafloor chamber experiments",
+          "text": "Experiments later described in the paper measure oxygen at the nodule-covered seafloor."
+        },
+        {
+          "date": "22 July 2024",
+          "title": "An unusual result is published",
+          "text": "The authors report oxygen increases and propose a possible electrochemical explanation."
+        },
+        {
+          "date": "8 April 2026",
+          "title": "Readers are alerted",
+          "text": "Nature Geoscience posts an editor’s note about concerns awaiting resolution."
+        }
+      ],
+      "question": "Which measurements would show that the oxygen increase is real, and which would identify its source?",
+      "assessment": {
+        "level": "Contested; unresolved editorial concerns",
+        "claim": "A published study reported dark oxygen production, but both the result’s interpretation and proposed mechanism require scrutiny.",
+        "reason": "The primary paper establishes what was reported; its current editor’s note prevents treating the report as a settled discovery."
+      },
+      "tests": [
+        "Replicate the experiments independently with pre-specified protocols and complete calibration data.",
+        "Use controls capable of excluding contamination, chamber effects and measurement artefacts.",
+        "Demonstrate the proposed electrochemical pathway and oxygen production under relevant conditions."
+      ],
+      "related": [
+        "frogs",
+        "europa",
+        "planet-nine"
+      ]
+    },
+    {
+      "id": "planet-nine",
+      "title": "Planet Nine: an unseen planet or an incomplete pattern?",
+      "kicker": "Gravity without a photograph",
+      "category": "Current & open",
+      "year": "2016 hypothesis / 2025 constraints",
+      "region": "Outer Solar System",
+      "status": "Unconfirmed hypothesis",
+      "hook": "The orbits are measured. The proposed planet has not been seen.",
+      "summary": "Planet Nine is a proposed explanation for aspects of the distant Solar System’s orbital structure. It has not been directly detected. In July 2025, Subaru researchers announced the distant object Ammonite, whose orbit does not align with other sednoids. Their analysis adds constraints and challenges to some versions of the hypothesis, while leaving room for alternative histories and different distant-planet models.",
+      "narrative": [
+        "The appeal of Planet Nine is a familiar scientific move: infer an unseen cause from its possible effects. The difficulty is that the observed distant-object population is small, and discovery depends on where telescopes looked and what they could detect. A proposed planet must explain the pattern after those selection effects are considered and make predictions that new discoveries can test. A simulation that reproduces some orbits is useful evidence about a model, rather than a photograph of its proposed planet.",
+        "Ammonite, officially 2023 KQ14, gives that argument a new object to explain. Subaru’s 2025 announcement says its current orbit does not cluster with the other sednoids; the accompanying research reports a stable orbit and suggests that some hypothetical planets would need more distant orbits. The team discusses possible early Solar System histories as well. Ammonite neither discovers Planet Nine nor excludes every possible planet. It makes a simple, universal clustering story harder to maintain."
+      ],
+      "facts": [
+        "Planet Nine remains a hypothetical planet, without direct detection in these sources.",
+        "Ammonite’s measured orbit does not align with the other sednoids discussed by the researchers.",
+        "The 2025 analysis constrains possible distant-planet orbits and alternative early histories."
+      ],
+      "limits": "Indirect dynamical arguments do not establish a discovered planet. One contrary orbit challenges particular models, rather than ruling out every distant planet; simulations depend on assumptions and survey selection.",
+      "sources": [
+        {
+          "label": "Original research review: The Planet Nine Hypothesis",
+          "url": "https://arxiv.org/abs/1902.10103"
+        },
+        {
+          "label": "Subaru Telescope: Ammonite announcement, July 2025",
+          "url": "https://subarutelescope.org/en/results/2025/07/14/3574.html"
+        },
+        {
+          "label": "Chen and colleagues: Ammonite discovery and dynamics",
+          "url": "https://arxiv.org/abs/2508.02162"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2016",
+          "title": "A distant-planet hypothesis",
+          "text": "The modern Planet Nine proposal develops from the distant Solar System’s orbital structure."
+        },
+        {
+          "date": "2023–2024",
+          "title": "Ammonite is observed",
+          "text": "Subaru discovery images and follow-up observations help determine the object’s orbit."
+        },
+        {
+          "date": "14 July 2025",
+          "title": "A new constraint becomes public",
+          "text": "The discovery and dynamical analysis are announced; Ammonite does not share the other sednoids’ present alignment."
+        }
+      ],
+      "question": "What discovery would distinguish an unseen planet from a pattern produced by history and observational selection?",
+      "assessment": {
+        "level": "Plausible scientific hypothesis; unconfirmed",
+        "claim": "A distant planet is one proposed explanation for orbital evidence, challenged and constrained by additional objects.",
+        "reason": "Dynamical studies motivate searches, but the 2025 Ammonite analysis adds contrary structure and no direct planetary detection."
+      },
+      "tests": [
+        "Detect a consistent moving source and determine an orbit matching a specific planetary prediction.",
+        "Model survey selection before assessing whether orbital clustering is statistically compelling.",
+        "Test whether candidate models reproduce Ammonite and the wider observed population together."
+      ],
+      "related": [
+        "uap",
+        "europa",
+        "dark-oxygen"
+      ]
+    },
+    {
+      "id": "origins",
+      "title": "Pandemic origins: what the evidence can and cannot settle",
+      "kicker": "An unfinished reconstruction",
+      "category": "Current & open",
+      "year": "WHO assessment, June 2025",
+      "region": "China / international investigation",
+      "status": "Evidence favours zoonotic spillover; origin unresolved",
+      "hook": "A hypothesis remaining possible is not a hypothesis being proved.",
+      "summary": "WHO’s SAGO assessment, published on 27 June 2025, concluded that the available evidence favours zoonotic spillover, directly from bats or through an intermediate host. It also said missing information prevents full assessment of all hypotheses, including a laboratory-related origin. That combination is meaningful: an evidential preference with unresolved gaps, rather than equal proof for every account or confirmation of a deliberate release.",
+      "narrative": [
+        "Reconstructing a pandemic’s origin depends on samples, sequences, early cases, animal movements and laboratory information that can disappear or remain inaccessible. WHO’s 2025 assessment considered scientific papers, reports, available intelligence statements and expert discussions. Its conclusion favoured zoonotic spillover on the evidence available. That describes the balance of the reviewed evidence; it does not identify every step, the exact animal or a complete chain of transmission beyond reasonable dispute.",
+        "WHO also reports that important information was not shared, including more early genetic sequences, detailed market-animal information and information about work and biosafety in Wuhan laboratories. Missing records matter because they constrain how hypotheses can be evaluated. They are not affirmative evidence for whatever scenario a reader already prefers. A laboratory accident, deliberate engineering and intentional release are distinct claims requiring distinct supporting evidence; leaving one possibility unexcluded does not establish the others."
+      ],
+      "facts": [
+        "SAGO published its independent assessment on 27 June 2025.",
+        "WHO says the weight of available evidence suggests zoonotic spillover.",
+        "WHO identifies missing information needed to evaluate origins more fully."
+      ],
+      "limits": "Not excluded is not confirmed. The cited assessment does not establish a deliberate release, engineering or a specific laboratory accident, and its evidential preference does not resolve every step of the origin.",
+      "sources": [
+        {
+          "label": "WHO: assessment conclusions and missing information, June 2025",
+          "url": "https://www.who.int/news/item/27-06-2025-who-scientific-advisory-group-issues-report-on-origins-of-covid-19"
+        },
+        {
+          "label": "SAGO: independent assessment and updated report",
+          "url": "https://www.who.int/publications/m/item/independent-assessment-of-the-origins-of-sars-cov-2-from-the-scientific-advisory-group-for-the-origins-of-novel-pathogens"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "January–March 2021",
+          "title": "A joint mission and report",
+          "text": "International and Chinese experts conduct a WHO-supported origins investigation."
+        },
+        {
+          "date": "9 June 2022",
+          "title": "SAGO’s initial findings",
+          "text": "The advisory group publishes initial findings and recommendations."
+        },
+        {
+          "date": "27 June 2025",
+          "title": "An independent reassessment",
+          "text": "SAGO favours zoonotic spillover on available evidence while documenting information gaps."
+        }
+      ],
+      "question": "Which missing records could most sharply distinguish the remaining origin hypotheses?",
+      "assessment": {
+        "level": "Available evidence favours zoonotic spillover; incomplete",
+        "claim": "The reviewed evidence supports zoonotic spillover more strongly, while missing data leave a laboratory-related origin insufficiently assessed.",
+        "reason": "This follows WHO’s stated evidential balance and acknowledged gaps. It is not an assertion that all hypotheses are equally supported or that a lab-related explanation has been proved."
+      },
+      "tests": [
+        "Release and independently examine relevant early sequences, case records and market-animal data.",
+        "Make contemporaneous laboratory inventories, research records and biosafety information available for scrutiny.",
+        "Compare each proposed origin’s specific predictions with traceable biological and epidemiological evidence."
+      ],
+      "related": [
+        "frogs",
+        "dark-oxygen",
+        "welfare-ai"
+      ]
+    },
+    {
+      "id": "brokers",
+      "title": "Location brokers: the trail sold by the phone",
+      "kicker": "Movement becomes a product",
+      "category": "Current & open",
+      "year": "FTC action, 2024–2025",
+      "region": "United States / commercial data ecosystem",
+      "status": "Final regulatory consent order",
+      "hook": "A visit to a sensitive place can become a data product.",
+      "summary": "The FTC alleged that Gravy Analytics and its subsidiary Venntel collected and sold sensitive location data without properly verifying informed consent. In January 2025 it finalised an order restricting use and sale, requiring a sensitive-location programme and addressing historical data. The action documents a commercial privacy problem and specific restrictions; it does not ban every broker, every location use or all qualifying security activity.",
+      "narrative": [
+        "A phone’s movement can expose more than an advertising preference. Visits to clinics, places of worship, shelters or other sensitive locations can support inferences about a person’s life even when a product begins with a device identifier. The FTC’s action against Gravy Analytics and Venntel concerns that commercial chain: collection, consent, processing and onward sale. The original complaint’s allegations and the resulting consent order should be read separately, rather than treating a settlement as a criminal verdict.",
+        "The January 2025 order requires restrictions and compliance measures, including a programme for identifying sensitive locations. Its definitions also carve out certain security, national-security and emergency federal law-enforcement uses, and some directly requested services can qualify for exceptions. Those details matter when assessing what changed. A real regulatory intervention provides evidence of the market and its risks, but it does not establish that every smartphone owner has been personally tracked by an intelligence agency or that sensitive-location trade has universally ended."
+      ],
+      "facts": [
+        "The FTC announced the proposed action in December 2024 and finalised its order in January 2025.",
+        "The order requires a sensitive-locations programme and restricts relevant use, sale and disclosure.",
+        "Its definitions and exceptions leave some qualifying uses outside the general restrictions."
+      ],
+      "limits": "A consent order is not a criminal conviction or a universal ban on location brokers. The complaint’s allegations are not admissions of every asserted fact; exceptions and definitions must be read precisely.",
+      "sources": [
+        {
+          "label": "FTC: case record, complaint and final order",
+          "url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/212-3035-gravy-analytics-inc-matter"
+        },
+        {
+          "label": "FTC: final-order announcement, January 2025",
+          "url": "https://www.ftc.gov/news-events/news/press-releases/2025/01/ftc-finalizes-order-prohibiting-gravy-analytics-venntel-selling-sensitive-location-data"
+        },
+        {
+          "label": "Original decision and order: definitions and restrictions",
+          "url": "https://www.ftc.gov/system/files/ftc_gov/pdf/2123035gravyanalyticsorder.pdf"
+        },
+        {
+          "label": "Original FTC complaint",
+          "url": "https://www.ftc.gov/system/files/ftc_gov/pdf/2123035gravyanalyticscomplaint.pdf"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "Before the FTC action",
+          "title": "A commercial location chain",
+          "text": "The complaint describes collection and sale of location information associated with sensitive visits."
+        },
+        {
+          "date": "3 December 2024",
+          "title": "The proposed action",
+          "text": "The FTC publishes a complaint and proposed consent restrictions."
+        },
+        {
+          "date": "14 January 2025",
+          "title": "The order is finalised",
+          "text": "The FTC announces the final consent order and its compliance requirements."
+        }
+      ],
+      "question": "How meaningful is consent when the sensitive inference appears several companies downstream?",
+      "assessment": {
+        "level": "Regulatory action documented; allegations and scope distinct",
+        "claim": "A specific FTC order restricts these companies’ handling of sensitive location information.",
+        "reason": "The case file and order establish the action and its terms, while the complaint describes alleged conduct; they do not support a claim that all commercial tracking was outlawed."
+      },
+      "tests": [
+        "Audit supplier consent records against actual collection and onward transfers.",
+        "Test compliance with sensitive-location exclusion and deletion requirements.",
+        "Examine exception claims and whether downstream products permit prohibited inferences or reidentification."
+      ],
+      "related": [
+        "facial-recognition",
+        "equipment-oversight",
+        "nsa"
+      ]
+    },
+    {
+      "id": "europa",
+      "title": "Europa: an ocean beneath an alien sky",
+      "kicker": "Water behind the ice",
+      "category": "Current & open",
+      "year": "Europa Clipper launched 2024",
+      "region": "Jupiter system / Europa",
+      "status": "Strong ocean evidence; life unconfirmed",
+      "hook": "The ocean has strong evidence. The life within it does not.",
+      "summary": "Spacecraft observations support a saltwater ocean beneath Europa’s icy shell. NASA’s Europa Clipper launched in October 2024 to investigate environments that could support life, rather than to declare life already found. The distinction makes the mystery stronger: what chemistry, energy and interaction with rock exist below the ice, and can the mission constrain them without directly entering the ocean?",
+      "narrative": [
+        "Europa presents a different kind of hidden world from an unexplained video. Its surface, geology and spacecraft measurements together support an ocean beneath the ice. An ocean can be an attractive place to investigate habitability, yet water alone does not establish organisms. Scientists need to understand the chemical ingredients, available energy and how the ocean exchanges material with the shell and rocky interior. Those questions determine whether a compelling setting is actually suitable for life.",
+        "Europa Clipper launched on 14 October 2024 and tested instruments during its March 2025 Mars flyby while travelling toward Jupiter. Its science goal is to assess potentially habitable environments beneath Europa’s surface using multiple instruments and repeated flybys. As of this dossier’s October 2026 check, those Europa investigations remain ahead of the spacecraft. A future measurement suggesting habitability would be a major result, while a claim of life would require its own evidence and careful exclusion of non-biological explanations."
+      ],
+      "facts": [
+        "NASA describes strong evidence for a saltwater ocean beneath Europa’s ice.",
+        "Europa Clipper launched on 14 October 2024.",
+        "The mission assesses environments that could support life; it has not established life on Europa."
+      ],
+      "limits": "Strong evidence for an ocean is not evidence that organisms inhabit it. The mission’s habitability objective must not be presented as a life-detection result, and planned observations are not completed measurements.",
+      "sources": [
+        {
+          "label": "NASA: Europa overview and ocean evidence",
+          "url": "https://science.nasa.gov/jupiter/moons/europa/"
+        },
+        {
+          "label": "NASA: Europa Clipper mission objectives",
+          "url": "https://science.nasa.gov/mission/europa-clipper/"
+        },
+        {
+          "label": "NASA: radar test during the March 2025 Mars flyby",
+          "url": "https://science.nasa.gov/photojournal/europa-clipper-team-produces-radargram-from-mars-flyby-data/"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "Galileo mission era",
+          "title": "Evidence below the ice",
+          "text": "Spacecraft observations contribute to the strong case for a subsurface ocean."
+        },
+        {
+          "date": "14 October 2024",
+          "title": "Europa Clipper launches",
+          "text": "NASA sends a mission to assess environments potentially capable of supporting life."
+        },
+        {
+          "date": "1 March 2025",
+          "title": "An instrument test at Mars",
+          "text": "The spacecraft tests radar during a Mars flyby while travelling toward Jupiter."
+        }
+      ],
+      "question": "What would separate a habitable ocean from an inhabited one?",
+      "assessment": {
+        "level": "Ocean strongly supported; life unknown",
+        "claim": "Europa probably contains a subsurface ocean, making it a serious habitability target, while life remains unconfirmed.",
+        "reason": "NASA cites converging ocean evidence and clearly defines the mission as a habitability investigation. No cited measurement demonstrates organisms."
+      },
+      "tests": [
+        "Constrain the ocean and ice shell through mutually consistent magnetic, radar and geological measurements.",
+        "Determine whether usable chemical energy and relevant ingredients coexist and exchange over time.",
+        "Require multiple independent biosignatures with non-biological alternatives assessed before inferring life."
+      ],
+      "related": [
+        "uap",
+        "dark-oxygen",
+        "antikythera"
+      ]
+    }
+  ]
+}
