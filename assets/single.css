@@ -113,3 +113,5 @@ body[data-track="three-in-the-morning"]{--acid:#bdc5f3}body[data-track="set-phas
 .is-playing .record-card.is-active .record-play-mark::after{content:'Ⅱ';font-size:13px}
 
 body[data-track="phone-down-bass-up"]{--acid:#d1b7ed}
+
+body[data-track="get-your-tics-out"]{--acid:#e4c291}

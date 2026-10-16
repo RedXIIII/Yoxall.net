@@ -49,7 +49,7 @@ const page = `<!doctype html>
   <title>Planner FM — Estate Sessions</title>
   <link rel="canonical" href="https://yoxall.net/">
   <link rel="icon" href="/assets/single-icon.svg?v=crate1" type="image/svg+xml">
-  <link rel="stylesheet" href="/assets/single.css?v=crate2">
+  <link rel="stylesheet" href="/assets/single.css?v=crate3">
   <script src="/assets/single-player.js?v=crate2" defer></script>
 </head>
 <body class="is-album-view">

@@ -999,6 +999,173 @@
     "sleeveNote": "Heart of gold. Questionable title. One last toast to the group-chat legend."
   },
   {
+    "id": "get-your-tics-out",
+    "title": "Get Your TICs Out",
+    "subtitle": "Cowboys of the condensation.",
+    "station": "PLANNER FM / DAMP & MOULD COWBOYS",
+    "src": "/assets/get-your-tics-out.mp3",
+    "duration": 191.47,
+    "downloadName": "Get Your TICs Out - Planner FM.mp3",
+    "lyrics": [
+      {
+        "name": "Intro",
+        "note": "Twangy banjo, cowboy boots stomping",
+        "lines": [
+          "Yeeee-fucking-haw!",
+          "Oi, oi!",
+          "Damp and mould massive!",
+          "Cowboys of the condensation!",
+          "Ladies and gentlemen...",
+          "GET YOUR TICs OUT!"
+        ]
+      },
+      {
+        "name": "Drop",
+        "note": "Savage distorted Eskimo bass over banjo riff",
+        "lines": []
+      },
+      {
+        "name": "Verse 1",
+        "note": "Fast Cockney grime flow",
+        "lines": [
+          "Riding through the estate, got a job to do,",
+          "Black spots growing and the ceiling's gone blue!",
+          "Customer says, \"It's been there for weeks!\"",
+          "Grab that camera, let's have a little peek!",
+          "",
+          "Oi! What's that? Cold spot there!",
+          "Damp in the bedroom, mould everywhere!",
+          "Whip out the TIC, give the wall a scan,",
+          "I'm a moisture-hunting motherfucking cowboy, man!"
+        ]
+      },
+      {
+        "name": "Pre-chorus",
+        "note": "Country fiddle, stomping boots",
+        "lines": [
+          "Well, she said, \"Get your equipment out!\"",
+          "I said, \"Love, what's this all about?\"",
+          "She said, \"Show me what you've got!\"",
+          "I said, \"DARLIN', THAT'S A COLD SPOT!\""
+        ]
+      },
+      {
+        "name": "Chorus",
+        "note": "Huge bass, rowdy cowboy gang vocals",
+        "lines": [
+          "GET YOUR TICs OUT! (OI! OI!)",
+          "GET YOUR TICs OUT! (YEEHAW!)",
+          "WHIP 'EM OUT, SWING 'EM ROUND!",
+          "CHECK THAT FUCKING DAMP!",
+          "",
+          "GET YOUR TICs OUT! (OI! OI!)",
+          "GET YOUR TICs OUT! (YEAH!)",
+          "IT'S GETTING HOT IN HERE!",
+          "BUT THE WALL SAYS OTHERWISE!"
+        ]
+      },
+      {
+        "name": "Dj rewind",
+        "note": "Banjo stops",
+        "lines": [
+          "BOH! BOH! BOH!",
+          "HOLD UP!",
+          "DID SOMEBODY SAY TITS?!",
+          "",
+          "NAH BRUV!",
+          "THERMAL IMAGING CAMERAS!",
+          "",
+          "RELOAD!"
+        ]
+      },
+      {
+        "name": "Drop",
+        "note": "Brutal square-wave bass, frantic banjo",
+        "lines": []
+      },
+      {
+        "name": "Verse 2",
+        "note": "Double-time grime flow",
+        "lines": [
+          "Awaab's Law, clock's ticking away,",
+          "Get that survey booked, no time to delay!",
+          "Air Arc humming, get the airflow right,",
+          "Mould ain't welcome round here tonight!",
+          "",
+          "Damp in the corner, water in the wall,",
+          "Another bloody callback, another phone call!",
+          "DRS packed, no room for a slot,",
+          "But the TIC's coming out whether you like it or not!"
+        ]
+      },
+      {
+        "name": "Bridge",
+        "note": "Deep country voice, banjo solo",
+        "lines": [
+          "Well, I've been up north...",
+          "I've been down south...",
+          "Seen a lot of mould...",
+          "But nothing like this house!"
+        ]
+      },
+      {
+        "name": "Mc",
+        "note": "Shouting",
+        "lines": [
+          "THAT'S ENOUGH COUNTRY!",
+          "DROP THE FUCKING BASS!"
+        ]
+      },
+      {
+        "name": "Final drop",
+        "note": "Twangy banjo meets crushing grime sub",
+        "lines": []
+      },
+      {
+        "name": "Final chorus",
+        "note": "Crowd shouting",
+        "lines": [
+          "GET YOUR TICs OUT! (OI!)",
+          "GET YOUR TICs OUT! (YEEHAW!)",
+          "SHOW ME YOUR COLD SPOTS!",
+          "AND I'LL SHOW YOU MINE!",
+          "",
+          "GET YOUR TICs OUT! (WHAT!)",
+          "GET YOUR TICs OUT! (OI!)",
+          "DAMP AND MOULD COWBOYS!",
+          "ONE JOB AT A TIME!"
+        ]
+      },
+      {
+        "name": "Outro",
+        "note": "Banjo twang, deep Cockney voice",
+        "lines": [
+          "Right, job's booked.",
+          "Survey's done.",
+          "TIC's back in the bag.",
+          "",
+          "...What did you think I meant?"
+        ]
+      },
+      {
+        "name": "Sheep bleats",
+        "note": "",
+        "lines": [
+          "Oh, fuck off, Jack."
+        ]
+      },
+      {
+        "name": "Enormous distorted bass hit",
+        "note": "End",
+        "lines": []
+      }
+    ],
+    "artwork": "/assets/sleeves/get-your-tics-out.webp",
+    "thumbnail": "/assets/sleeves/get-your-tics-out-thumb.webp",
+    "artworkAlt": "Get Your TICs Out sleeve: the hooded Planner FM MC as a damp-hunting cowboy with a thermal camera, banjo and novelty-bra prop.",
+    "sleeveNote": "Banjo loaded. Cold spot located. The damp-and-mould cowboys ride again."
+  },
+  {
     "id": "phone-down-bass-up",
     "title": "Phone Down, Bass Up",
     "subtitle": "Clock out. Hands up.",
