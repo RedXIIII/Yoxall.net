@@ -997,5 +997,171 @@
     "thumbnail": "/assets/sleeves/original-thumb.webp",
     "artworkAlt": "Lyric-inspired Darren is a Bellend! sleeve with the hooded Planner FM MC.",
     "sleeveNote": "Heart of gold. Questionable title. One last toast to the group-chat legend."
+  },
+  {
+    "id": "phone-down-bass-up",
+    "title": "Phone Down, Bass Up",
+    "subtitle": "Clock out. Hands up.",
+    "station": "PLANNER FM / AFTER HOURS",
+    "src": "/assets/phone-down-bass-up.mp3",
+    "duration": 228.41,
+    "downloadName": "Phone Down, Bass Up - Planner FM.mp3",
+    "lyrics": [
+      {
+        "name": "Intro",
+        "note": "Phone ringing, vinyl crackle",
+        "lines": [
+          "Oi, oi!",
+          "Planner FM!",
+          "From the office to the afterparty!",
+          "All the wrong'uns inside!",
+          "Amanda, this one's for you!",
+          "DJ, RUN THE HOUSE!"
+        ]
+      },
+      {
+        "name": "Drop",
+        "note": "Heavy four-on-the-floor kick, filthy phonk cowbell",
+        "lines": []
+      },
+      {
+        "name": "Verse 1",
+        "note": "Skippy Cockney grime flow",
+        "lines": [
+          "Half-seven start and the phone goes mad,",
+          "Another leak, another job to add!",
+          "Awaab's clock ticking, get the survey through,",
+          "TIC on the job, Air Arc crew!",
+          "",
+          "Ops on the road, customers on hold,",
+          "Diaries packed and the coffee's gone cold!",
+          "Smara on deck, keeping us in line,",
+          "Zoe rolls her eyes for the hundredth fucking time!"
+        ]
+      },
+      {
+        "name": "Pre-chorus",
+        "note": "Bass cuts, female vocal rising",
+        "lines": [
+          "Five more minutes...",
+          "One last call...",
+          "Clock strikes five...",
+          "FUCK IT ALL!"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "note": "Infectious house vocals, massive bass",
+        "lines": [
+          "PHONE DOWN! (BASS UP!)",
+          "CLOCK OUT! (HANDS UP!)",
+          "NO SLOTS! (NO SLEEP!)",
+          "BUT THE BEAT DON'T STOP!",
+          "",
+          "WORK ALL DAY! (OI!)",
+          "RAVE ALL NIGHT! (YEAH!)",
+          "PLANNER FM!",
+          "WE'RE FEELING ALRIGHT!"
+        ]
+      },
+      {
+        "name": "Instrumental",
+        "note": "Rolling house groove, distorted 808 and cowbell",
+        "lines": []
+      },
+      {
+        "name": "Verse 2",
+        "note": "Fast Cockney MC, playful flow",
+        "lines": [
+          "Jack's got a joke that'll get us all barred,",
+          "Sheep across Wales putting up their guard!",
+          "Charlie's on low power, gaming till late,",
+          "Darren's fast asleep, fucking typical, mate!",
+          "",
+          "Amanda wants house, so we're switching the beat,",
+          "Four-four rhythm got the whole crew on their feet!",
+          "Zoe's got a grin, Smara's shaking her head,",
+          "Another bunch of bellends, enough fucking said!"
+        ]
+      },
+      {
+        "name": "Dj rewind",
+        "note": "Vinyl scratch",
+        "lines": [
+          "BOH! BOH! BOH!",
+          "WHEEL IT!",
+          "HOUSE CREW, GRIME CREW!",
+          "SAME FUCKING FAMILY!"
+        ]
+      },
+      {
+        "name": "Drop",
+        "note": "Massive distorted Eskimo bass meets phonk house",
+        "lines": []
+      },
+      {
+        "name": "Bridge",
+        "note": "Deep voice, stripped-back cowbell",
+        "lines": [
+          "Home from work, two kids still bouncing,",
+          "Little girl's an angel, but the sleep ain't happening!",
+          "Little lad's a legend, energy for days,",
+          "Dad's running on fumes in a permanent haze!",
+          "",
+          "House goes quiet, everyone's asleep,",
+          "Headphones on, bassline deep.",
+          "One little spliff, let the night begin,",
+          "Turn that filthy fucking sub back in!"
+        ]
+      },
+      {
+        "name": "Build",
+        "note": "Female chopped vocal, hypnotic repetition",
+        "lines": [
+          "Bass up... bass up...",
+          "No sleep... no sleep...",
+          "Bass up... bass up...",
+          "RELOAD!"
+        ]
+      },
+      {
+        "name": "Final drop",
+        "note": "Full phonk house bass, crowd chanting",
+        "lines": [
+          "PHONE DOWN! (BASS UP!)",
+          "CLOCK OUT! (HANDS UP!)",
+          "NO SLOTS! (NO SLEEP!)",
+          "BUT THE BEAT DON'T STOP!",
+          "",
+          "PLANNER FM! (OI!)",
+          "WRONG'UNS FOR LIFE! (WHAT!)",
+          "DIRTY FUCKING BASS!",
+          "TILL THE MORNING LIGHT!"
+        ]
+      },
+      {
+        "name": "Outro",
+        "note": "House kick fading, deep voice",
+        "lines": [
+          "Same shit tomorrow, yeah?"
+        ]
+      },
+      {
+        "name": "Phone rings",
+        "note": "",
+        "lines": [
+          "Oh, fuck off."
+        ]
+      },
+      {
+        "name": "Final enormous sub-bass hit",
+        "note": "",
+        "lines": []
+      }
+    ],
+    "artwork": "/assets/sleeves/phone-down-bass-up.webp",
+    "thumbnail": "/assets/sleeves/phone-down-bass-up-thumb.webp",
+    "artworkAlt": "Phone Down, Bass Up sleeve: the hooded Planner FM MC turns the repairs office into a house afterparty.",
+    "sleeveNote": "Clock strikes five. Phone down, bass up. The repairs office becomes the afterparty."
   }
 ]

@@ -25,10 +25,10 @@ const lyricMarkup = sections => sections.map(section => `<section class="lyric-b
 const mark = '<svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M8 6a14 14 0 0 0 0 20M24 6a14 14 0 0 1 0 20M12 10a8 8 0 0 0 0 12M20 10a8 8 0 0 1 0 12" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="16" r="2.5" fill="currentColor"/></svg>';
 const arrow = direction => `<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="${direction === 'left' ? 'm14 5-7 7 7 7M7 12h14' : 'm10 5 7 7-7 7M17 12H3'}" stroke="currentColor" stroke-width="1.5"/></svg>`;
 const records = tracks.map((track, index) => {
-  let offset = index;
-  if (offset > tracks.length / 2) offset -= tracks.length;
+  let offset = index + 1;
+  if (offset > (tracks.length + 1) / 2) offset -= tracks.length + 1;
   const depth = Math.abs(offset);
-  return `<article class="record-card${index === 0 ? ' is-active' : ''}" data-record-index="${index}" data-far="${depth > 2}" aria-hidden="${index !== 0}" style="--offset:${offset};--depth:${depth};--side:${Math.sign(offset)}"><div class="record-vinyl" aria-hidden="true"><div class="disc-label"><span>PLANNER FM</span><b>${pad(index + 1)}</b><i></i><span>ESTATE SESSIONS</span></div></div><a class="record-select" draggable="false" href="${escape(track.src)}" data-track-index="${index}" aria-label="Play ${escape(track.title)}" tabindex="${index === 0 ? '0' : '-1'}"${index === 0 ? ' aria-current="true"' : ''}><img src="${escape(track.artwork)}" width="1254" height="1254" alt="${escape(track.artworkAlt)}" ${index === 0 ? 'fetchpriority="high"' : 'loading="lazy"'} draggable="false"><span class="record-catalogue" aria-hidden="true"><span>PF–001 / ${pad(index + 1)}</span><span>ESTATE CREW</span></span><span class="record-play-mark" aria-hidden="true">▶</span></a></article>`;
+  return `<article class="record-card" data-record-index="${index}" data-far="${depth > 2}" aria-hidden="true" style="--offset:${offset};--depth:${depth};--side:${Math.sign(offset)}"><div class="record-vinyl" aria-hidden="true"><div class="disc-label"><span>PLANNER FM</span><b>${pad(index + 1)}</b><i></i><span>ESTATE SESSIONS</span></div></div><a class="record-select" draggable="false" href="${escape(track.src)}" data-track-index="${index}" aria-label="Play ${escape(track.title)}" tabindex="-1"><img src="${escape(track.artwork)}" width="1254" height="1254" alt="${escape(track.artworkAlt)}" loading="lazy" draggable="false"><span class="record-catalogue" aria-hidden="true"><span>PF–001 / ${pad(index + 1)}</span><span>ESTATE CREW</span></span><span class="record-play-mark" aria-hidden="true">▶</span></a></article>`;
 }).join('');
 const page = `<!doctype html>
 <html lang="en">
@@ -49,10 +49,10 @@ const page = `<!doctype html>
   <title>Planner FM — Estate Sessions</title>
   <link rel="canonical" href="https://yoxall.net/">
   <link rel="icon" href="/assets/single-icon.svg?v=crate1" type="image/svg+xml">
-  <link rel="stylesheet" href="/assets/single.css?v=crate1">
-  <script src="/assets/single-player.js?v=crate1" defer></script>
+  <link rel="stylesheet" href="/assets/single.css?v=crate2">
+  <script src="/assets/single-player.js?v=crate2" defer></script>
 </head>
-<body>
+<body class="is-album-view">
   <a class="skip-link" href="#main">Skip to the records</a>
   <div class="ambient" aria-hidden="true"></div>
   <div class="page-shell">
@@ -60,19 +60,19 @@ const page = `<!doctype html>
     <main id="main">
       <section class="release" aria-labelledby="release-title">
         <div class="record-column">
-          <div class="crate-topline"><span>THE RECORD CRATE</span><span id="crate-position">01 / ${pad(tracks.length)}</span></div>
-          <div id="record-browser" class="record-browser" role="region" tabindex="0" aria-label="Browse the record sleeves" aria-roledescription="record carousel" aria-describedby="record-help">${records}</div>
-          <div id="record-controls" class="crate-controls" hidden><button id="record-prev" type="button" aria-label="Flip to the previous record">${arrow('left')}<span>PREVIOUS</span></button><span id="vinyl-track">RECORD 01</span><button id="record-next" type="button" aria-label="Flip to the next record"><span>NEXT RECORD</span>${arrow('right')}</button></div>
+          <div class="crate-topline"><span>THE RECORD CRATE</span><span id="crate-position">ALBUM / ${pad(tracks.length)}</span></div>
+          <div id="record-browser" class="record-browser" role="region" tabindex="0" aria-label="Browse the record sleeves" aria-roledescription="record carousel" aria-describedby="record-help"><article id="album-cover" class="record-card is-active" style="--offset:0;--depth:0;--side:0"><div class="record-vinyl" aria-hidden="true"><div class="disc-label"><span>PLANNER FM</span><b>LP</b><i></i><span>ESTATE SESSIONS</span></div></div><a id="album-play" class="record-select" draggable="false" href="${escape(first.src)}" aria-label="Play Estate Sessions"><img src="/assets/planner-fm-estate-sessions.webp" width="1254" height="1254" alt="Original Planner FM — Estate Sessions album cover" fetchpriority="high" draggable="false"><span class="record-catalogue" aria-hidden="true"><span>PF–001 / THE ALBUM</span><span>ESTATE CREW</span></span><span class="record-play-mark" aria-hidden="true">▶</span></a></article>${records}</div>
+          <div id="record-controls" class="crate-controls" hidden><button id="record-prev" type="button" aria-label="Flip to the previous record">${arrow('left')}<span>PREVIOUS</span></button><span id="vinyl-track">THE ALBUM SLEEVE</span><button id="record-next" type="button" aria-label="Flip to the next record"><span>NEXT RECORD</span>${arrow('right')}</button></div>
           <p id="record-help" class="record-help">Pick a track below to listen.</p>
-          <p id="playing-story" class="sleeve-story">${escape(first.sleeveNote)}</p>
+          <p id="playing-story" class="sleeve-story">From the repairs desk to the dancefloor. The diary’s full. The frequency’s open.</p>
         </div>
         <section class="release-copy" aria-labelledby="release-title">
-          <div class="release-kicker"><span class="release-type">THE FULL SESSION</span><span>GRIME / PHONK / ESTATE LIFE</span></div>
+          <div class="release-kicker"><span class="release-type">THE FULL SESSION</span><span>GRIME / PHONK / HOUSE</span></div>
           <h1 id="release-title">PLANNER <span>FM</span></h1><p class="album-title">Estate Sessions<span>VOL. 01</span></p>
           <p class="release-intro">Repairs by day. Pirate radio after hours.</p>
           <div class="release-facts"><span>ESTATE CREW</span><span>${tracks.length} TRACKS</span><span>${totalTime} ON THE CLOCK</span><span class="explicit-tag">EXPLICIT / SHIFT LANGUAGE</span></div>
           <section class="player" aria-label="Listen to Estate Sessions"><div class="deck-screws" aria-hidden="true"><i></i><i></i></div><div class="player-topline"><span><i class="signal-light" aria-hidden="true"></i><span id="player-state">TRANSMISSION READY</span></span><span class="equalizer" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span></div>
-            <div class="now-track"><span id="playing-number">01</span><div><span>ON THE DECK</span><strong id="playing-title">${escape(first.title)}</strong><p id="playing-subtitle">${escape(first.subtitle)}</p></div></div>
+            <div class="now-track"><span id="playing-number">LP</span><div><span>ON THE DECK</span><strong id="playing-title">Estate Sessions</strong><p id="playing-subtitle">Pick a record. Find your frequency.</p></div></div>
             <audio id="release-audio" src="${escape(first.src)}" preload="metadata" controls aria-label="${escape(first.title)} — Planner FM"><a href="${escape(first.src)}">Play the opening track</a></audio>
             <div id="custom-player" hidden><button id="music-toggle" class="drop-button" type="button" aria-pressed="false" aria-controls="release-audio" aria-label="Play ${escape(first.title)}"><span class="play-disc" aria-hidden="true"><svg class="play-icon" viewBox="0 0 24 24"><path d="m8 4 13 8-13 8z"/></svg><svg class="pause-icon" viewBox="0 0 24 24"><path d="M6 4h5v16H6zm8 0h5v16h-5z"/></svg></span><span class="drop-copy"><strong id="play-label">TUNE IN</strong><span id="play-hint">${escape(first.subtitle)}</span></span><span class="drop-arrow" aria-hidden="true">↗</span></button>
               <div class="seek-row"><span id="music-current">0:00</span><label class="seek-label"><span class="sr-only">Seek through the selected track</span><input id="music-seek" type="range" min="0" max="1000" step="1" value="0" aria-valuetext="0:00 of ${time(first.duration)}" disabled></label><span id="music-duration">${time(first.duration)}</span></div>
@@ -84,9 +84,9 @@ const page = `<!doctype html>
           <p class="hero-aside"><span>NO SLOTS.</span> FULL VOLUME.<small>Please hold. Your bassline is important to us.</small></p>
         </section>
       </section>
-      <section class="tracklist" id="tracklist" aria-labelledby="tracklist-title"><div class="section-heading"><div><span class="eyebrow">THE COMPLETE COLLECTION</span><h2 id="tracklist-title">The running order.</h2></div><span>${tracks.length} TRACKS / ${totalTime}</span></div><ol>${tracks.map((track,index) => `<li><a class="track-link" href="${escape(track.src)}" data-track-index="${index}" aria-label="Play ${escape(track.title)}"${index === 0 ? ' aria-current="true"' : ''}><span class="track-number">${pad(index + 1)}</span><img src="${escape(track.thumbnail)}" width="72" height="72" alt="${escape(track.artworkAlt)}" loading="lazy"><span class="track-info"><strong>${escape(track.title)}</strong><small>${escape(track.subtitle)}</small></span><span class="track-time">${time(track.duration)}</span><span class="track-indicator" aria-hidden="true">▶</span></a></li>`).join('')}</ol></section>
+      <section class="tracklist" id="tracklist" aria-labelledby="tracklist-title"><div class="section-heading"><div><span class="eyebrow">THE COMPLETE COLLECTION</span><h2 id="tracklist-title">The running order.</h2></div><span>${tracks.length} TRACKS / ${totalTime}</span></div><ol>${tracks.map((track,index) => `<li><a class="track-link" href="${escape(track.src)}" data-track-index="${index}" aria-label="Play ${escape(track.title)}"><span class="track-number">${pad(index + 1)}</span><img src="${escape(track.thumbnail)}" width="72" height="72" alt="${escape(track.artworkAlt)}" loading="lazy"><span class="track-info"><strong>${escape(track.title)}</strong><small>${escape(track.subtitle)}</small></span><span class="track-time">${time(track.duration)}</span><span class="track-indicator" aria-hidden="true">▶</span></a></li>`).join('')}</ol></section>
       <div class="session-extras">
-        <details class="lyrics" id="lyrics"><summary><span id="lyrics-heading">TRACK 01 / THE LYRIC SHEET</span><span aria-hidden="true">+</span></summary><div class="lyrics-content"><p class="lyrics-intro">Every bar, straight from the crew. Lyrics follow the selected record.</p>${tracks.map((track,index) => `<div data-track-lyrics="${index}"><h2 class="lyric-track-title">${pad(index + 1)} / ${escape(track.title)}</h2>${lyricMarkup(track.lyrics)}</div>`).join('')}</div></details>
+        <details class="lyrics" id="lyrics"><summary><span id="lyrics-heading">THE LYRIC SHEETS / CHOOSE A TRACK</span><span aria-hidden="true">+</span></summary><div class="lyrics-content"><p class="lyrics-intro">Every bar, straight from the crew. Lyrics follow the selected record.</p>${tracks.map((track,index) => `<div data-track-lyrics="${index}"><h2 class="lyric-track-title">${pad(index + 1)} / ${escape(track.title)}</h2>${lyricMarkup(track.lyrics)}</div>`).join('')}</div></details>
         <aside class="sleeve-notes" id="sleeve-notes"><span class="eyebrow">FROM THE REPAIRS DESK TO THE DECKS</span><h2>No slots.<br><em>Full volume.</em></h2><p>Missed calls. Full diaries. Filthy basslines.<br>The soundtrack to keeping the estate moving.</p><div class="crew-stamp"><span>ESTATE<br><b>CREW</b></span><small>ON SHIFT<br>OFF THE DIAL</small></div><div class="liner-note"><span>NO ACTUAL RADIO LICENCE WAS HARMED</span><p>For the crew. For the group chat.<br>And, occasionally, at Darren’s expense.</p></div></aside>
       </div>
     </main>

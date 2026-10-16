@@ -15,12 +15,13 @@
   const share = $('share-single');
   const recordBrowser = $('record-browser');
   const recordCards = [...document.querySelectorAll('[data-record-index]')];
+  const albumCover = $('album-cover'), albumPlay = $('album-play');
   const lyricNav = $('lyrics-nav');
   if (lyricNav) lyricNav.addEventListener('click', () => { $('lyrics').open = true; });
-  let active = 0, repeatAll = true, playAttempt = 0, metadataReady = false;
+  let active = -1, repeatAll = true, playAttempt = 0, metadataReady = false;
   let pointerStart = null, ignoreClickUntil = 0;
-  const selected = () => tracks[active];
-  const shareUrl = () => 'https://yoxall.net/' + (active ? '?track=' + encodeURIComponent(selected().id) : '');
+  const selected = () => tracks[Math.max(0, active)];
+  const shareUrl = () => 'https://yoxall.net/' + (active >= 0 ? '?track=' + encodeURIComponent(selected().id) : '');
   function announce(text) { if (status.textContent !== text) status.textContent = text; }
   function time(value) {
     const seconds = Number.isFinite(value) && value > 0 ? Math.floor(value) : 0;
@@ -29,11 +30,20 @@
   function setPlaying(playing) {
     document.body.classList.toggle('is-playing', playing);
     toggle.setAttribute('aria-pressed', String(playing));
-    toggle.setAttribute('aria-label', (playing ? 'Pause ' : 'Play ') + selected().title);
+    toggle.setAttribute('aria-label', (playing ? 'Pause ' : 'Play ') + (active < 0 ? 'Estate Sessions' : selected().title));
     label.textContent = playing ? 'PAUSE THE SET' : 'TUNE IN';
-    hint.textContent = playing ? 'You’re locked into Planner FM.' : selected().subtitle;
+    hint.textContent = playing ? 'You’re locked into Planner FM.' : active < 0 ? 'Start the full session from track 01.' : selected().subtitle;
   }
   function updateTime() {
+    if (active < 0) {
+      current.textContent = '0:00';
+      duration.textContent = time(tracks.reduce((sum, track) => sum + track.duration, 0));
+      seek.disabled = true;
+      seek.value = '0';
+      seek.style.setProperty('--progress', '0%');
+      seek.setAttribute('aria-valuetext', 'Choose a track to seek');
+      return;
+    }
     const length = metadataReady && Number.isFinite(audio.duration) && audio.duration > 0 ? audio.duration : 0;
     const elapsed = length ? audio.currentTime : 0;
     current.textContent = time(elapsed);
@@ -46,6 +56,10 @@
   }
   function renderTrack() {
     const track = selected();
+    document.body.classList.toggle('is-album-view', false);
+    albumCover.hidden = true;
+    albumPlay.tabIndex = -1;
+    $('download-track').hidden = false;
     document.body.dataset.track = track.id;
     document.title = track.title + ' — Planner FM / Estate Sessions';
     $('playing-number').textContent = String(active + 1).padStart(2, '0');
@@ -83,7 +97,33 @@
     setPlaying(false);
     updateTime();
   }
+  function renderAlbum() {
+    document.body.dataset.track = 'album';
+    document.body.classList.toggle('is-album-view', true);
+    document.title = 'Planner FM — Estate Sessions';
+    albumCover.hidden = false;
+    albumPlay.tabIndex = 0;
+    $('playing-number').textContent = 'LP';
+    $('playing-title').textContent = 'Estate Sessions';
+    $('playing-subtitle').textContent = 'Pick a record. Find your frequency.';
+    $('vinyl-track').textContent = 'THE ALBUM SLEEVE';
+    $('crate-position').textContent = 'ALBUM / ' + String(tracks.length).padStart(2, '0');
+    $('playing-story').textContent = 'From the repairs desk to the dancefloor. The diary’s full. The frequency’s open.';
+    recordCards.forEach(card => {
+      card.classList.toggle('is-active', false);
+      card.setAttribute('aria-hidden', 'true');
+      card.querySelector('a').tabIndex = -1;
+    });
+    links.forEach(link => link.removeAttribute('aria-current'));
+    lyricPanels.forEach(panel => { panel.hidden = true; });
+    $('lyrics-heading').textContent = 'THE LYRIC SHEETS / CHOOSE A TRACK';
+    $('download-track').hidden = true;
+    state.textContent = 'THE FULL SESSION / READY WHEN YOU ARE';
+    setPlaying(false);
+    updateTime();
+  }
   function failed() {
+    if (active < 0) return;
     setPlaying(false);
     state.textContent = 'THE DECKS NEED A SECOND';
     label.textContent = 'TRY THE TRACK AGAIN';
@@ -92,6 +132,7 @@
     announce('The track could not load. Try again or open the audio directly.');
   }
   async function play() {
+    if (active < 0) { selectTrack(0); return; }
     const attempt = ++playAttempt;
     try {
       state.textContent = 'CUEING TRACK ' + String(active + 1).padStart(2, '0') + '…';
@@ -120,7 +161,7 @@
     renderTrack();
     if (moveRecordFocus) recordBrowser.focus({preventScroll: true});
     if (updateUrl) {
-      try { history.replaceState(null, '', active ? '/?track=' + encodeURIComponent(selected().id) : '/'); } catch {}
+      try { history.replaceState(null, '', '/?track=' + encodeURIComponent(selected().id)); } catch {}
     }
     if (autoplay) play();
     else {
@@ -160,6 +201,11 @@
     if (audio.paused) play();
     else { ++playAttempt; audio.pause(); }
   });
+  albumPlay.addEventListener('click', event => {
+    event.preventDefault();
+    if (Date.now() < ignoreClickUntil) return;
+    selectTrack(0);
+  });
   links.forEach(link => link.addEventListener('click', event => {
     event.preventDefault();
     if (Date.now() < ignoreClickUntil) return;
@@ -176,7 +222,8 @@
   restart.addEventListener('click', () => { audio.currentTime = 0; updateTime(); play(); });
   $('music-next').addEventListener('click', () => selectTrack((active + 1) % tracks.length));
   function flipRecord(direction) {
-    selectTrack((active + direction + tracks.length) % tracks.length, true, !audio.paused);
+    const next = active < 0 ? direction > 0 ? 0 : tracks.length - 1 : (active + direction + tracks.length) % tracks.length;
+    selectTrack(next, true, !audio.paused);
   }
   $('record-prev').addEventListener('click', () => flipRecord(-1));
   $('record-next').addEventListener('click', () => flipRecord(1));
@@ -217,7 +264,7 @@
       try {
         await navigator.clipboard.writeText(shareUrl());
         share.textContent = 'FREQUENCY COPIED ✓';
-        announce('A link to the selected track has been copied.');
+        announce(active < 0 ? 'A link to the album has been copied.' : 'A link to the selected track has been copied.');
       } catch {
         $('share-fallback').hidden = false;
         $('share-url').value = shareUrl();
@@ -235,5 +282,6 @@
   $('record-help').textContent = 'FLIP A SLEEVE. TAP TO PLAY.  ← → KEYS / DRAG OR SWIPE';
   const requested = new URLSearchParams(location.search).get('track');
   const initial = tracks.findIndex(track => track.id === requested);
-  selectTrack(initial >= 0 ? initial : 0, false);
+  if (initial >= 0) selectTrack(initial, false);
+  else renderAlbum();
 })();
