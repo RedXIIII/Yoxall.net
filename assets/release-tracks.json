@@ -1166,6 +1166,123 @@
     "sleeveNote": "Banjo loaded. Cold spot located. The damp-and-mould cowboys ride again."
   },
   {
+    "id": "zoe-unplugged",
+    "title": "Zoe: Here We Go Again (Unplugged)",
+    "subtitle": "One eyebrow. An entire office silenced.",
+    "station": "PLANNER FM / UNPLUGGED",
+    "src": "/assets/zoe-unplugged.mp3",
+    "duration": 152.04,
+    "downloadName": "Zoe - Here We Go Again (Unplugged) - Planner FM.mp3",
+    "lyrics": [
+      {
+        "name": "Intro",
+        "note": "Soft fingerpicked acoustic guitar, radio crackle",
+        "lines": [
+          "Yeah...",
+          "Planner FM unplugged.",
+          "This one's for Zoe.",
+          "Poor woman's surrounded by absolute fucking idiots.",
+          "Including me.",
+          "Listen."
+        ]
+      },
+      {
+        "name": "Verse 1",
+        "note": "Relaxed Cockney grime flow",
+        "lines": [
+          "Monday morning, same old scene,",
+          "Zoe walks in, the diary ain't green.",
+          "Phone starts ringing, jobs piling high,",
+          "Another bloody emergency, here we go, sigh.",
+          "",
+          "Jack's being filthy, Darren's asleep,",
+          "Someone's lost a job they were meant to keep.",
+          "Zoe looks up, doesn't say a thing,",
+          "That little fucking eyebrow says everything!"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "note": "Catchy acoustic hook, warm backing vocals",
+        "lines": [
+          "Ohhh Zoe, here we go again,",
+          "Stuck in an office full of questionable friends.",
+          "One more job, one more call,",
+          "How the fuck d'you put up with us all?",
+          "",
+          "Ohhh Zoe, what can we say?",
+          "Another bunch of bellends ruining your day.",
+          "But when the whole bloody place goes wrong,",
+          "She's still there taking the piss all along."
+        ]
+      },
+      {
+        "name": "Instrumental",
+        "note": "Acoustic guitar riff, deep rolling bass",
+        "lines": []
+      },
+      {
+        "name": "Verse 2",
+        "note": "Faster cheeky Cockney flow",
+        "lines": [
+          "Smara's got plans, Amanda wants house,",
+          "Jack's probably flirting with a sheep or a mouse.",
+          "Ops on the phone, customers too,",
+          "Everybody wants something, what can you do?",
+          "",
+          "Zoe's got patience, or so we pretend,",
+          "We keep finding new ways to bring it to an end.",
+          "Sharp little comment, perfectly timed,",
+          "Another daft bastard getting put back in line."
+        ]
+      },
+      {
+        "name": "Bridge",
+        "note": "Guitar only, quieter delivery",
+        "lines": [
+          "She's one of the good ones, don't tell her I said,",
+          "Or the praise might go straight to her head.",
+          "Nah, scrap that, can't let her win,",
+          "Someone say something stupid, get the eye-roll in!"
+        ]
+      },
+      {
+        "name": "Final chorus",
+        "note": "Guitar, bass and crew joining in",
+        "lines": [
+          "OHHH ZOE! (OI!)",
+          "HERE WE GO AGAIN! (WHAT!)",
+          "SURROUNDED BY MUPPETS!",
+          "BUT AT LEAST THEY'RE YOUR FRIENDS!",
+          "",
+          "OHHH ZOE! (YEAH!)",
+          "ONE MORE DAY! (OI!)",
+          "WE'D SAY SOMETHING LOVELY...",
+          "BUT THAT'S NOT HOW WE PLAY!"
+        ]
+      },
+      {
+        "name": "Outro",
+        "note": "Acoustic guitar fades",
+        "lines": [
+          "Big up Zoe.",
+          "Absolute legend.",
+          "",
+          "Don't get fucking used to it."
+        ]
+      },
+      {
+        "name": "Quiet laughter",
+        "note": "Final guitar chord",
+        "lines": []
+      }
+    ],
+    "artwork": "/assets/sleeves/zoe-unplugged.webp",
+    "thumbnail": "/assets/sleeves/zoe-unplugged-thumb.webp",
+    "artworkAlt": "Zoe at the repairs desk with a knowing smile while the hooded Planner FM MC plays acoustic guitar.",
+    "sleeveNote": "One eyebrow says everything. An acoustic one for Zoe and the office full of muppets."
+  },
+  {
     "id": "phone-down-bass-up",
     "title": "Phone Down, Bass Up",
     "subtitle": "Clock out. Hands up.",
