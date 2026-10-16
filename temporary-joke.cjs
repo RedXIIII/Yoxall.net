@@ -97,11 +97,12 @@ const page = `<!doctype html>
       </div>
     </main>
     <footer class="release-footer"><a href="/">PLANNER FM <span>/ PLANNING SESSIONS</span></a><span>THE DIARY’S FULL. THE FREQUENCY’S OPEN.</span><span class="catalogue">PF–001 / ${tracks.length} TRANSMISSIONS</span></footer>
+  <a class="archive-easter-egg" href="/the-record/" aria-label="Open The Record archive" title="Some files never stay buried."><svg viewBox="0 0 40 48" fill="none" aria-hidden="true"><path d="M20 2C9 2 3 10 3 20c0 11 10 23 17 26 7-3 17-15 17-26C37 10 31 2 20 2Z" fill="#183a30" stroke="#6a947a" stroke-width="1.2"/><path d="M7 19c8-1 11 5 11 13-7-1-11-6-11-13Zm26 0c-8-1-11 5-11 13 7-1 11-6 11-13Z" fill="#0a1016" stroke="#665582" stroke-width="1.3"/><path d="m18 35-1 2m5-2 1 2m-6 3c2-1 4-1 6 0" stroke="#749582" stroke-width="1.3" stroke-linecap="round"/></svg></a>
   </div><script id="track-data" type="application/json">${playerData}</script>
 </body>
 </html>
 `;
-const pages = execFileSync('git', ['ls-files', '-z'], {cwd: root, encoding: 'utf8'}).split('\0').filter(file => file.endsWith('.html'));
+const pages = execFileSync('git', ['ls-files', '-z'], {cwd: root, encoding: 'utf8'}).split('\0').filter(file => file.endsWith('.html') && !file.startsWith('the-record/'));
 if (!pages.includes('index.html') || !pages.includes('404.html')) throw Error('Expected homepage and fallback are missing');
 for (const file of pages) fs.writeFileSync(path.join(root, file), page);
 fs.writeFileSync(path.join(root, 'robots.txt'), 'User-agent: *\nDisallow: /\n');
