@@ -1,12 +1,226 @@
 [
   {
+    "id": "the-west-dont-rest",
+    "title": "The West Don’t Rest",
+    "subtitle": "Cornish grime. Icy bass. No rest.",
+    "station": "PLANNER FM / CORNWALL MASSIVE",
+    "src": "/assets/the-west-dont-rest.mp3",
+    "duration": 208.39,
+    "downloadName": "The West Don't Rest - yoxall.net.mp3",
+    "lyrics": [
+      {
+        "name": "Intro",
+        "note": "Rain, distant thunder, crackling pirate radio",
+        "lines": [
+          "Yeah...",
+          "Cornwall massive.",
+          "From the coast to the estates.",
+          "LiveWest on the line.",
+          "Same old weather...",
+          "Same filthy bass."
+        ]
+      },
+      {
+        "name": "Deep distorted voice",
+        "note": "",
+        "lines": [
+          "THE WEST DON'T REST!"
+        ]
+      },
+      {
+        "name": "DROP",
+        "note": "Crushing distorted 808, sinister phonk cowbell",
+        "lines": []
+      },
+      {
+        "name": "Verse 1",
+        "note": "Rapid Cockney grime flow",
+        "lines": [
+          "Seven-thirty, rain beating on the pane,",
+          "Camborne in the morning, here we go again!",
+          "Redruth to Penzance, got a patch to run,",
+          "Boiler's packed up and the day's just begun!",
+          "",
+          "Leak through the ceiling, water down the wall,",
+          "Get the right op booked when the customers call!",
+          "Damp on the plaster, TIC finds the cold,",
+          "Awaab's clock ticking, get the survey told!"
+        ]
+      },
+      {
+        "name": "Pre-Chorus",
+        "note": "Bass drops out, whispered vocals",
+        "lines": [
+          "One more job...",
+          "One more call...",
+          "Forty thousand homes...",
+          "And we're covering 'em all!"
+        ]
+      },
+      {
+        "name": "CHORUS",
+        "note": "Huge distorted bass, aggressive crew chant",
+        "lines": [
+          "THE WEST DON'T REST! (OI!)",
+          "RAIN ON THE SLATE! (WHAT!)",
+          "BASS IN THE CHEST!",
+          "AND THE JOBS WON'T WAIT!",
+          "",
+          "LIVE WEST! (OI!)",
+          "CORNWALL ON THE DIAL!",
+          "KEEP THAT DIARY MOVING!",
+          "ONE JOB AT A TIME!"
+        ]
+      },
+      {
+        "name": "Instrumental",
+        "note": "Filthy sliding square-wave bass, rolling phonk cowbell",
+        "lines": []
+      },
+      {
+        "name": "Verse 2",
+        "note": "Fast sarcastic Cockney flow",
+        "lines": [
+          "DRS flashing, Air Arc on the way,",
+          "Ops want a window, customers want today!",
+          "Forty thousand homes, that's a serious gig,",
+          "And the planning team's keeping the wheels on the rig!",
+          "",
+          "Flagship thirty-one nine, Camborne twenty-seven six,",
+          "Different hours, different towns, yeah, I know the little twist!",
+          "Same big family, just reading what's online,",
+          "Could we get a little love for the Cornwall pay line?"
+        ]
+      },
+      {
+        "name": "DJ Rewind",
+        "note": "Vinyl scratching",
+        "lines": [
+          "BOH! BOH! BOH!",
+          "HOLD UP!",
+          "DID HE JUST MENTION THE WAGES?!"
+        ]
+      },
+      {
+        "name": "MC",
+        "note": "Deadpan",
+        "lines": [
+          "Nah, bruv.",
+          "Just doing a bit of market research.",
+          "",
+          "RELOAD!"
+        ]
+      },
+      {
+        "name": "DROP",
+        "note": "Enormous distorted 808, icy Eskimo bass",
+        "lines": []
+      },
+      {
+        "name": "Verse 3",
+        "note": "Dark rolling grime flow",
+        "lines": [
+          "Big up the trades, out there in the rain,",
+          "Big up the planners keeping order in the game!",
+          "Surveyors, customers, everyone involved,",
+          "Another little problem getting fucking resolved!",
+          "",
+          "We're not superheroes, ain't wearing no cape,",
+          "Just chasing appointments and drinking cold tea!",
+          "From the Cornish coast to the houses inland,",
+          "Good people doing what they fucking well can!"
+        ]
+      },
+      {
+        "name": "Bridge",
+        "note": "Cowbell and low sub-bass, slower delivery",
+        "lines": [
+          "A home ain't just bricks,",
+          "It's the place you belong.",
+          "And behind every repair,",
+          "There's a crew keeping strong."
+        ]
+      },
+      {
+        "name": "Pause",
+        "note": "Spoken",
+        "lines": [
+          "Anyway...",
+          "That's enough sentimental bollocks."
+        ]
+      },
+      {
+        "name": "SCREAM",
+        "note": "",
+        "lines": [
+          "BRING BACK THE FUCKING BASS!"
+        ]
+      },
+      {
+        "name": "FINAL DROP",
+        "note": "Massive distorted phonk 808 and icy grime synths",
+        "lines": []
+      },
+      {
+        "name": "Final Chorus",
+        "note": "Multiple MCs, aggressive shouted chants",
+        "lines": [
+          "THE WEST DON'T REST! (OI!)",
+          "RAIN ON THE SLATE! (WHAT!)",
+          "BASS IN THE CHEST!",
+          "AND THE JOBS WON'T WAIT!",
+          "",
+          "LIVE WEST! (OI!)",
+          "SOUTH WEST CREW! (YEAH!)",
+          "GOT THE JOBS! GOT THE SKILLS!",
+          "GOT THE FUCKING BILLS!"
+        ]
+      },
+      {
+        "name": "Outro",
+        "note": "Bass fading, telephone rings",
+        "lines": []
+      },
+      {
+        "name": "Spoken",
+        "note": "Dry Cockney voice",
+        "lines": [
+          "LiveWest repairs, how can I help?"
+        ]
+      },
+      {
+        "name": "Pause",
+        "note": "",
+        "lines": [
+          "A pay rise?"
+        ]
+      },
+      {
+        "name": "Long pause",
+        "note": "",
+        "lines": [
+          "...I'll see if there's a slot."
+        ]
+      },
+      {
+        "name": "Massive final bass hit",
+        "note": "Pirate radio static",
+        "lines": []
+      }
+    ],
+    "artwork": "/assets/sleeves/the-west-dont-rest.webp",
+    "thumbnail": "/assets/sleeves/the-west-dont-rest-thumb.webp",
+    "artworkAlt": "The West Don’t Rest sleeve: the hooded Planner FM MC broadcasts from a rain-soaked Cornish harbour, with heavy speakers, slate rooftops and an Atlantic storm.",
+    "sleeveNote": "Rain on the slate. Bass in the chest. Cornwall on the dial. The west don’t rest."
+  },
+  {
     "id": "planner-fm",
     "title": "Planner FM: No Slots, No Peace",
     "subtitle": "Opening shift. Volume up.",
     "station": "PLANNER FM",
     "src": "/assets/planner-fm.mp3",
     "duration": 182.04,
-    "downloadName": "Planner FM - No Slots, No Peace.mp3",
+    "downloadName": "Planner FM - No Slots, No Peace - yoxall.net.mp3",
     "lyrics": [
       {
         "name": "Intro",
@@ -127,7 +341,7 @@
     "station": "PLANNER FM / AFTER HOURS",
     "src": "/assets/three-in-the-morning.mp3",
     "duration": 218.09,
-    "downloadName": "Three In The Morning - Planner FM.mp3",
+    "downloadName": "Three In The Morning - yoxall.net.mp3",
     "lyrics": [
       {
         "name": "Intro",
@@ -267,7 +481,7 @@
     "subtitle": "The Daz transmission. Nothing but love.",
     "src": "/assets/bellend-fm-daz-transmission.mp3",
     "duration": 154.03,
-    "downloadName": "Bellend FM - The Daz Transmission.mp3",
+    "downloadName": "Bellend FM - The Daz Transmission - yoxall.net.mp3",
     "lyrics": [
       {
         "name": "Intro",
@@ -383,7 +597,7 @@
     "station": "PLANNER FM / UNPLUGGED",
     "src": "/assets/zoe-unplugged.mp3",
     "duration": 152.04,
-    "downloadName": "Zoe - Here We Go Again (Unplugged) - Planner FM.mp3",
+    "downloadName": "Zoe - Here We Go Again (Unplugged) - yoxall.net.mp3",
     "lyrics": [
       {
         "name": "Intro",
@@ -500,7 +714,7 @@
     "station": "DEEP SPACE FREQUENCY",
     "src": "/assets/set-phasers-to-offensive.mp3",
     "duration": 187.63,
-    "downloadName": "Set Phasers to Offensive - Planner FM.mp3",
+    "downloadName": "Set Phasers to Offensive - yoxall.net.mp3",
     "lyrics": [
       {
         "name": "Intro",
@@ -638,7 +852,7 @@
     "station": "PLANNER FM / WHOLE CREW",
     "src": "/assets/planning-team-tunes.mp3",
     "duration": 187.63,
-    "downloadName": "Planning Team Tunes - Whole Crew Inside.mp3",
+    "downloadName": "Planning Team Tunes - Whole Crew Inside - yoxall.net.mp3",
     "lyrics": [
       {
         "name": "Intro",
@@ -798,7 +1012,7 @@
     "subtitle": "The group chat classic. Still on rotation.",
     "src": "/assets/darren-bellend-single.mp3",
     "duration": 130.03,
-    "downloadName": "Darren is a Bellend!.mp3",
+    "downloadName": "Darren is a Bellend! - yoxall.net.mp3",
     "lyrics": [
       {
         "name": "Intro",
@@ -888,7 +1102,7 @@
     "station": "PLANNER FM / SYSTEMS RESCUE",
     "src": "/assets/cutter-is-go-revised.mp3",
     "duration": 200.04,
-    "downloadName": "Cutter Is Go - Ctrl Alt Legend - Planner FM.mp3",
+    "downloadName": "Cutter Is Go - Ctrl+Alt+Legend - yoxall.net.mp3",
     "lyrics": [
       {
         "name": "INTRO",
@@ -1065,9 +1279,9 @@
         "lines": []
       }
     ],
-    "artwork": "/assets/sleeves/cutter-is-go-phillip.webp",
-    "thumbnail": "/assets/sleeves/cutter-is-go-phillip-thumb.webp",
-    "artworkAlt": "Cutter Is Go sleeve: Phillip rescues the planning systems at a mission-control desk, with his hooded MC colleague beside him.",
+    "artwork": "/assets/sleeves/cutter-is-go.webp",
+    "thumbnail": "/assets/sleeves/cutter-is-go-thumb.webp",
+    "artworkAlt": "Fictional hooded systems-rescue hero at a bank of office screens, with the Planner FM MC announcing his arrival.",
     "sleeveNote": "Someone get Phillip. Ten screens, one restart, all systems operational. Until the next tiny red light."
   },
   {
@@ -1077,7 +1291,7 @@
     "station": "PLANNER FM / DAMP & MOULD COWBOYS",
     "src": "/assets/get-your-tics-out.mp3",
     "duration": 191.47,
-    "downloadName": "Get Your TICs Out - Planner FM.mp3",
+    "downloadName": "Get Your TICs Out - yoxall.net.mp3",
     "lyrics": [
       {
         "name": "Intro",
@@ -1244,7 +1458,7 @@
     "station": "MOULD FM",
     "src": "/assets/awaabs-law.mp3",
     "duration": 173.23,
-    "downloadName": "Awaab’s Law - Mould FM.mp3",
+    "downloadName": "Awaab's Law - yoxall.net.mp3",
     "lyrics": [
       {
         "name": "Intro",
@@ -1367,7 +1581,7 @@
     "station": "PLANNER FM / AFTER HOURS",
     "src": "/assets/phone-down-bass-up.mp3",
     "duration": 228.41,
-    "downloadName": "Phone Down, Bass Up - Planner FM.mp3",
+    "downloadName": "Phone Down, Bass Up - yoxall.net.mp3",
     "lyrics": [
       {
         "name": "Intro",
@@ -1533,7 +1747,7 @@
     "station": "PLANNER FM / FOR MICHELLE",
     "src": "/assets/practically-perfect.mp3",
     "duration": 208.63,
-    "downloadName": "Planner FM - Practically Perfect (For Michelle).mp3",
+    "downloadName": "Practically Perfect (For Michelle) - yoxall.net.mp3",
     "bonus": true,
     "lyrics": [
       {
