@@ -49,7 +49,7 @@ const page = `<!doctype html>
   <title>Planner FM — Estate Sessions</title>
   <link rel="canonical" href="https://yoxall.net/">
   <link rel="icon" href="/assets/single-icon.svg?v=crate1" type="image/svg+xml">
-  <link rel="stylesheet" href="/assets/single.css?v=crate4">
+  <link rel="stylesheet" href="/assets/single.css?v=crate5">
   <script src="/assets/single-player.js?v=crate2" defer></script>
 </head>
 <body class="is-album-view">
@@ -67,7 +67,7 @@ const page = `<!doctype html>
           <p id="playing-story" class="sleeve-story">From the repairs desk to the dancefloor. The diary’s full. The frequency’s open.</p>
         </div>
         <section class="release-copy" aria-labelledby="release-title">
-          <div class="release-kicker"><span class="release-type">THE FULL SESSION</span><span>GRIME / HOUSE / UNPLUGGED</span></div>
+          <div class="release-kicker"><span class="release-type">THE FULL SESSION</span><span>GRIME / PUNK / HOUSE / UNPLUGGED</span></div>
           <h1 id="release-title">PLANNER <span>FM</span></h1><p class="album-title">Estate Sessions<span>VOL. 01</span></p>
           <p class="release-intro">Repairs by day. Pirate radio after hours.</p>
           <div class="release-facts"><span>ESTATE CREW</span><span>${tracks.length} TRACKS</span><span>${totalTime} ON THE CLOCK</span><span class="explicit-tag">EXPLICIT / SHIFT LANGUAGE</span></div>
