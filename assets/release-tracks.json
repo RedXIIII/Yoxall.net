@@ -999,6 +999,195 @@
     "sleeveNote": "Heart of gold. Questionable title. One last toast to the group-chat legend."
   },
   {
+    "id": "cutter-is-go",
+    "title": "Cutter Is Go: Ctrl+Alt+Legend",
+    "subtitle": "No cape. Just a restart.",
+    "station": "PLANNER FM / SYSTEMS RESCUE",
+    "src": "/assets/cutter-is-go.mp3",
+    "duration": 202.44,
+    "downloadName": "Cutter Is Go - Ctrl Alt Legend - Planner FM.mp3",
+    "lyrics": [
+      {
+        "name": "Intro",
+        "note": "Dramatic orchestral brass, military drums",
+        "lines": [
+          "Five...",
+          "Four...",
+          "Three...",
+          "Two...",
+          "One..."
+        ]
+      },
+      {
+        "name": "Spoken",
+        "note": "Deep British announcer",
+        "lines": [
+          "Systems failure detected!",
+          "Planning operations compromised!",
+          "There's only one man for the job...",
+          "",
+          "PHILLIP FUCKING CUTTER!"
+        ]
+      },
+      {
+        "name": "Explosive guitar riff",
+        "note": "Full punk drums",
+        "lines": []
+      },
+      {
+        "name": "Verse 1",
+        "note": "Fast cheeky British punk vocals",
+        "lines": [
+          "Big Phil Cutter, absolute unit,",
+          "Give him a system, he'll bloody well tune it!",
+          "DRS broken? Salesforce dead?",
+          "Phil's already fixed it while scratching his head!",
+          "",
+          "Built like a tank, but sharp as a knife,",
+          "Big gay legend, living his life!",
+          "Ten screens open, fingers on fire,",
+          "Another fucking crisis, another live wire!"
+        ]
+      },
+      {
+        "name": "Pre-chorus",
+        "note": "Rising orchestral strings",
+        "lines": [
+          "When the whole damn system goes down,",
+          "And the planners start running around...",
+          "One bloke stands, without a doubt..."
+        ]
+      },
+      {
+        "name": "Spoken",
+        "note": "Dramatic",
+        "lines": [
+          "Someone get Phillip!"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "note": "HUGE pop-punk guitars, heroic brass",
+        "lines": [
+          "CUTTER IS GO! (GO! GO!)",
+          "HE'S RUNNING THE SHOW! (OI! OI!)",
+          "WHEN THE SYSTEMS GO TO SHIT,",
+          "HE'S THE BLOKE WHO DEALS WITH IT!",
+          "",
+          "CUTTER IS GO! (GO! GO!)",
+          "THE LEGEND WE KNOW!",
+          "BIG PHIL'S IN THE BUILDING!",
+          "NOW WATCH THAT BASTARD GO!"
+        ]
+      },
+      {
+        "name": "Instrumental",
+        "note": "Fast punk guitar solo, soaring orchestral strings",
+        "lines": []
+      },
+      {
+        "name": "Verse 2",
+        "note": "Fast punchy punk vocals",
+        "lines": [
+          "Some poor sod's deleted a job,",
+          "Another one's crying, \"It's fucked up, Bob!\"",
+          "Phil takes one look, lets out a sigh,",
+          "\"Have you tried restarting it, you stupid guy?\"",
+          "",
+          "Knows every shortcut, every little trick,",
+          "Makes the rest of us look properly thick!",
+          "No fucking cape, no secret disguise,",
+          "Just a massive great geezer who's annoyingly wise!"
+        ]
+      },
+      {
+        "name": "Bridge",
+        "note": "Heroic orchestral breakdown",
+        "lines": []
+      },
+      {
+        "name": "Spoken",
+        "note": "Announcer",
+        "lines": [
+          "Warning!",
+          "Critical system malfunction!",
+          "Planning team approaching total meltdown!"
+        ]
+      },
+      {
+        "name": "Mc",
+        "note": "Shouting",
+        "lines": [
+          "PHIL!",
+          "GET YOUR ARSE OVER HERE!"
+        ]
+      },
+      {
+        "name": "Drum fill",
+        "note": "Guitar feedback",
+        "lines": []
+      },
+      {
+        "name": "Final chorus",
+        "note": "Full orchestra, massive gang vocals",
+        "lines": [
+          "CUTTER IS GO! (GO! GO!)",
+          "HE'S RUNNING THE SHOW!",
+          "GOT THE BRAINS! (OI!)",
+          "GOT THE BRAWN! (YEAH!)",
+          "FIXING OUR SHIT SINCE HALF-PAST DAWN!",
+          "",
+          "CUTTER IS GO! (GO! GO!)",
+          "LET THE WHOLE OFFICE KNOW!",
+          "HE'S A BIG GAY LEGEND!",
+          "AND WE FUCKING LOVE THE BLOKE!"
+        ]
+      },
+      {
+        "name": "Outro",
+        "note": "Triumphant orchestral brass",
+        "lines": []
+      },
+      {
+        "name": "Spoken",
+        "note": "Computer voice",
+        "lines": [
+          "All systems operational."
+        ]
+      },
+      {
+        "name": "Mc",
+        "note": "",
+        "lines": [
+          "Nice one, Phil!"
+        ]
+      },
+      {
+        "name": "Spoken",
+        "note": "Computer voice",
+        "lines": [
+          "New error detected."
+        ]
+      },
+      {
+        "name": "Mc",
+        "note": "",
+        "lines": [
+          "Oh, for FUCK'S SAKE!"
+        ]
+      },
+      {
+        "name": "Final explosive guitar chord",
+        "note": "",
+        "lines": []
+      }
+    ],
+    "artwork": "/assets/sleeves/cutter-is-go.webp",
+    "thumbnail": "/assets/sleeves/cutter-is-go-thumb.webp",
+    "artworkAlt": "Fictional hooded systems-rescue hero at a bank of office screens, with the Planner FM MC announcing his arrival.",
+    "sleeveNote": "Ten screens. One absolute unit. All systems operational… for about five seconds."
+  },
+  {
     "id": "get-your-tics-out",
     "title": "Get Your TICs Out",
     "subtitle": "Cowboys of the condensation.",
