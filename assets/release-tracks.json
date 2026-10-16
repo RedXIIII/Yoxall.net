@@ -121,244 +121,6 @@
     "sleeveNote": "Twenty missed calls. One very full diary. The repairs desk becomes the decks."
   },
   {
-    "id": "bellend-fm",
-    "title": "Bellend FM: The Daz Transmission",
-    "subtitle": "The Daz transmission. Nothing but love.",
-    "src": "/assets/bellend-fm-daz-transmission.mp3",
-    "duration": 154.03,
-    "downloadName": "Bellend FM - The Daz Transmission.mp3",
-    "lyrics": [
-      {
-        "name": "Intro",
-        "note": "Crackling pirate radio transmission",
-        "lines": [
-          "Yo, yo, yo!",
-          "Bellend FM!",
-          "One-four-oh on the dial!",
-          "Darren, you absolute fucking weapon!",
-          "DJ, DROP THAT!"
-        ]
-      },
-      {
-        "name": "Drop",
-        "note": "Filthy distorted bass, square-wave wobble",
-        "lines": []
-      },
-      {
-        "name": "Verse 1",
-        "note": "Aggressive rapid grime flow",
-        "lines": [
-          "Who’s that bloke? That’s Darren, mate!",
-          "Top lad, yeah, proper first-rate!",
-          "Solid geezer, one of the best,",
-          "Still a massive knob like all the rest!",
-          "",
-          "Oi! Daz! You fucking tit!",
-          "Certified wanker, admit that shit!",
-          "Good old boy, but the facts don’t bend,",
-          "Darren’s a bellend, start to end!"
-        ]
-      },
-      {
-        "name": "Hook",
-        "note": "Heavy bass, crew shouting",
-        "lines": [
-          "BELLEND! (OI!)",
-          "DARREN’S A BELLEND! (YEAH!)",
-          "KNOBHEAD! (WHAT!)",
-          "PROPER FUCKING BELLEND!",
-          "",
-          "Big up Daz! (OI!)",
-          "Big up the crew! (WHAT!)",
-          "He’s a fucking tosser!",
-          "BUT WE LOVE HIM TOO!"
-        ]
-      },
-      {
-        "name": "DJ rewind",
-        "note": "Vinyl rewind, siren",
-        "lines": [
-          "BOH! BOH! BOH!",
-          "REWIND THAT!",
-          "BRING THE FUCKING BASS BACK!"
-        ]
-      },
-      {
-        "name": "Drop",
-        "note": "Bass twice as heavy",
-        "lines": []
-      },
-      {
-        "name": "Verse 2",
-        "note": "Double-time, two MCs trading bars",
-        "lines": [
-          "D to the A to the double R,",
-          "Absolute legend, absolute star!",
-          "E to the N, that’s our man,",
-          "Biggest bloody bellend in the whole damn gang!",
-          "",
-          "Wanker on Monday, tosser on Friday,",
-          "Still got his back every single day!",
-          "No beef, no drama, nothing to prove,",
-          "Just a massive bellend with a filthy groove!"
-        ]
-      },
-      {
-        "name": "Final hook",
-        "note": "Aggressive crowd chant",
-        "lines": [
-          "DARREN’S A BELLEND! (OI!)",
-          "PROPER FUCKING BELLEND! (WHAT!)",
-          "TOP LAD! BIG KNOB!",
-          "CERTIFIED FUCKING BELLEND!"
-        ]
-      },
-      {
-        "name": "Outro",
-        "note": "Music cuts, radio static",
-        "lines": [
-          "Darren…",
-          "You’re alright, son.",
-          "",
-          "Still a cunt though."
-        ]
-      },
-      {
-        "name": "End",
-        "note": "Radio static",
-        "lines": []
-      }
-    ],
-    "station": "BELLEND FM",
-    "artwork": "/assets/sleeves/bellend-fm.webp",
-    "thumbnail": "/assets/sleeves/bellend-fm-thumb.webp",
-    "artworkAlt": "Lyric-inspired Bellend FM: The Daz Transmission sleeve with the hooded Planner FM MC.",
-    "sleeveNote": "One-four-oh on the dial. A rewind for Daz, with nothing but love."
-  },
-  {
-    "id": "awaabs-law",
-    "title": "Awaab’s Law",
-    "subtitle": "Mould FM. The clock don’t stop.",
-    "station": "MOULD FM",
-    "src": "/assets/awaabs-law.mp3",
-    "duration": 173.23,
-    "downloadName": "Awaab’s Law - Mould FM.mp3",
-    "lyrics": [
-      {
-        "name": "Intro",
-        "note": "Crackling pirate radio, deep Cockney voice",
-        "lines": [
-          "Check one, check two!",
-          "Mould FM!",
-          "Damp crew inside!",
-          "Awaab’s Law, bruv!",
-          "The clock don’t fucking stop!"
-        ]
-      },
-      {
-        "name": "Drop",
-        "note": "Nasty distorted square-wave bass",
-        "lines": []
-      },
-      {
-        "name": "Verse 1",
-        "note": "Fast aggressive grime flow",
-        "lines": [
-          "Seven-thirty, screen lights red,",
-          "Mould on the wall, damp by the bed!",
-          "Customer’s ringing, job’s come through,",
-          "Ten working days, know what to do!",
-          "",
-          "Surveyor’s booked, get the diary straight,",
-          "Awaab’s Law, we don’t fuck about, mate!",
-          "TIC machine, find that cold spot,",
-          "Air Arc ready, give it what you got!"
-        ]
-      },
-      {
-        "name": "Hook",
-        "note": "Heavy bass, MCs shouting",
-        "lines": [
-          "TEN DAYS! (INSPECT!)",
-          "THREE DAYS! (REPORT!)",
-          "FIVE DAYS! (MAKE SAFE!)",
-          "NO TIME TO FUCK ABOUT!",
-          "",
-          "DAMP CREW! (OI!)",
-          "MOULD CREW! (WHAT!)",
-          "CLOCK’S STILL TICKING!",
-          "AND THE BASS DON’T STOP!"
-        ]
-      },
-      {
-        "name": "DJ rewind",
-        "note": "Siren, vinyl scratching",
-        "lines": [
-          "BOH! BOH! BOH!",
-          "WHEEL THAT!",
-          "DEADLINE PRESSURE!",
-          "RELOAD THE FUCKING BASS!"
-        ]
-      },
-      {
-        "name": "Drop",
-        "note": "Filthy growling sub-bass",
-        "lines": []
-      },
-      {
-        "name": "Verse 2",
-        "note": "Double-time aggressive grime",
-        "lines": [
-          "Black on the ceiling, green on the wall,",
-          "Another fucking emergency call!",
-          "Twenty-four hours if the danger’s severe,",
-          "Get the op dispatched, get the fucker there!",
-          "",
-          "Air Arc machines, TIC on the scan,",
-          "Chasing up jobs like a mad fucking man!",
-          "DRS full, no slots left free,",
-          "Supervisor’s ringing, don’t look at me!",
-          "",
-          "Condensation, leaks, ventilation,",
-          "Damp crew running the operation!",
-          "Fix that cause, don’t paint over the stain,",
-          "Or the fucking mould comes back again!"
-        ]
-      },
-      {
-        "name": "Final hook",
-        "note": "Multiple MCs, bass pounding",
-        "lines": [
-          "MOULD! (OI!)",
-          "DAMP! (WHAT!)",
-          "AWAAB’S LAW!",
-          "WE’VE GOT YOUR BACK!",
-          "",
-          "TEN! THREE! FIVE!",
-          "KEEP THAT FUCKING DIARY ALIVE!"
-        ]
-      },
-      {
-        "name": "Outro",
-        "note": "Bass cuts, telephone rings",
-        "lines": [
-          "Damp and mould planning, how can I help?",
-          "",
-          "…It’s fucking come back?!"
-        ]
-      },
-      {
-        "name": "End",
-        "note": "Massive distorted bass hit, static",
-        "lines": []
-      }
-    ],
-    "artwork": "/assets/sleeves/awaabs-law.webp",
-    "thumbnail": "/assets/sleeves/awaabs-law-thumb.webp",
-    "artworkAlt": "Lyric-inspired Awaab’s Law sleeve with the hooded Planner FM MC.",
-    "sleeveNote": "Cold spots on the scan. Pressure on the clock. The bass keeps moving."
-  },
-  {
     "id": "three-in-the-morning",
     "title": "Three In The Morning",
     "subtitle": "After hours. No sleep. Bass deep.",
@@ -498,6 +260,238 @@
     "thumbnail": "/assets/sleeves/three-in-the-morning-thumb.webp",
     "artworkAlt": "Lyric-inspired Three In The Morning sleeve with the hooded Planner FM MC.",
     "sleeveNote": "Headphones on when the house finally sleeps. Running on love and fumes."
+  },
+  {
+    "id": "bellend-fm",
+    "title": "Bellend FM: The Daz Transmission",
+    "subtitle": "The Daz transmission. Nothing but love.",
+    "src": "/assets/bellend-fm-daz-transmission.mp3",
+    "duration": 154.03,
+    "downloadName": "Bellend FM - The Daz Transmission.mp3",
+    "lyrics": [
+      {
+        "name": "Intro",
+        "note": "Crackling pirate radio transmission",
+        "lines": [
+          "Yo, yo, yo!",
+          "Bellend FM!",
+          "One-four-oh on the dial!",
+          "Darren, you absolute fucking weapon!",
+          "DJ, DROP THAT!"
+        ]
+      },
+      {
+        "name": "Drop",
+        "note": "Filthy distorted bass, square-wave wobble",
+        "lines": []
+      },
+      {
+        "name": "Verse 1",
+        "note": "Aggressive rapid grime flow",
+        "lines": [
+          "Who’s that bloke? That’s Darren, mate!",
+          "Top lad, yeah, proper first-rate!",
+          "Solid geezer, one of the best,",
+          "Still a massive knob like all the rest!",
+          "",
+          "Oi! Daz! You fucking tit!",
+          "Certified wanker, admit that shit!",
+          "Good old boy, but the facts don’t bend,",
+          "Darren’s a bellend, start to end!"
+        ]
+      },
+      {
+        "name": "Hook",
+        "note": "Heavy bass, crew shouting",
+        "lines": [
+          "BELLEND! (OI!)",
+          "DARREN’S A BELLEND! (YEAH!)",
+          "KNOBHEAD! (WHAT!)",
+          "PROPER FUCKING BELLEND!",
+          "",
+          "Big up Daz! (OI!)",
+          "Big up the crew! (WHAT!)",
+          "He’s a fucking tosser!",
+          "BUT WE LOVE HIM TOO!"
+        ]
+      },
+      {
+        "name": "DJ rewind",
+        "note": "Vinyl rewind, siren",
+        "lines": [
+          "BOH! BOH! BOH!",
+          "REWIND THAT!",
+          "BRING THE FUCKING BASS BACK!"
+        ]
+      },
+      {
+        "name": "Drop",
+        "note": "Bass twice as heavy",
+        "lines": []
+      },
+      {
+        "name": "Verse 2",
+        "note": "Double-time, two MCs trading bars",
+        "lines": [
+          "D to the A to the double R,",
+          "Absolute legend, absolute star!",
+          "E to the N, that’s our man,",
+          "Biggest bloody bellend in the whole damn gang!",
+          "",
+          "Wanker on Monday, tosser on Friday,",
+          "Still got his back every single day!",
+          "No beef, no drama, nothing to prove,",
+          "Just a massive bellend with a filthy groove!"
+        ]
+      },
+      {
+        "name": "Final hook",
+        "note": "Aggressive crowd chant",
+        "lines": [
+          "DARREN’S A BELLEND! (OI!)",
+          "PROPER FUCKING BELLEND! (WHAT!)",
+          "TOP LAD! BIG KNOB!",
+          "CERTIFIED FUCKING BELLEND!"
+        ]
+      },
+      {
+        "name": "Outro",
+        "note": "Music cuts, radio static",
+        "lines": [
+          "Darren…",
+          "You’re alright, son.",
+          "",
+          "Still a cunt though."
+        ]
+      },
+      {
+        "name": "End",
+        "note": "Radio static",
+        "lines": []
+      }
+    ],
+    "station": "BELLEND FM",
+    "artwork": "/assets/sleeves/bellend-fm.webp",
+    "thumbnail": "/assets/sleeves/bellend-fm-thumb.webp",
+    "artworkAlt": "Lyric-inspired Bellend FM: The Daz Transmission sleeve with the hooded Planner FM MC.",
+    "sleeveNote": "One-four-oh on the dial. A rewind for Daz, with nothing but love."
+  },
+  {
+    "id": "zoe-unplugged",
+    "title": "Zoe: Here We Go Again (Unplugged)",
+    "subtitle": "One eyebrow. An entire office silenced.",
+    "station": "PLANNER FM / UNPLUGGED",
+    "src": "/assets/zoe-unplugged.mp3",
+    "duration": 152.04,
+    "downloadName": "Zoe - Here We Go Again (Unplugged) - Planner FM.mp3",
+    "lyrics": [
+      {
+        "name": "Intro",
+        "note": "Soft fingerpicked acoustic guitar, radio crackle",
+        "lines": [
+          "Yeah...",
+          "Planner FM unplugged.",
+          "This one's for Zoe.",
+          "Poor woman's surrounded by absolute fucking idiots.",
+          "Including me.",
+          "Listen."
+        ]
+      },
+      {
+        "name": "Verse 1",
+        "note": "Relaxed Cockney grime flow",
+        "lines": [
+          "Monday morning, same old scene,",
+          "Zoe walks in, the diary ain't green.",
+          "Phone starts ringing, jobs piling high,",
+          "Another bloody emergency, here we go, sigh.",
+          "",
+          "Jack's being filthy, Darren's asleep,",
+          "Someone's lost a job they were meant to keep.",
+          "Zoe looks up, doesn't say a thing,",
+          "That little fucking eyebrow says everything!"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "note": "Catchy acoustic hook, warm backing vocals",
+        "lines": [
+          "Ohhh Zoe, here we go again,",
+          "Stuck in an office full of questionable friends.",
+          "One more job, one more call,",
+          "How the fuck d'you put up with us all?",
+          "",
+          "Ohhh Zoe, what can we say?",
+          "Another bunch of bellends ruining your day.",
+          "But when the whole bloody place goes wrong,",
+          "She's still there taking the piss all along."
+        ]
+      },
+      {
+        "name": "Instrumental",
+        "note": "Acoustic guitar riff, deep rolling bass",
+        "lines": []
+      },
+      {
+        "name": "Verse 2",
+        "note": "Faster cheeky Cockney flow",
+        "lines": [
+          "Smara's got plans, Amanda wants house,",
+          "Jack's probably flirting with a sheep or a mouse.",
+          "Ops on the phone, customers too,",
+          "Everybody wants something, what can you do?",
+          "",
+          "Zoe's got patience, or so we pretend,",
+          "We keep finding new ways to bring it to an end.",
+          "Sharp little comment, perfectly timed,",
+          "Another daft bastard getting put back in line."
+        ]
+      },
+      {
+        "name": "Bridge",
+        "note": "Guitar only, quieter delivery",
+        "lines": [
+          "She's one of the good ones, don't tell her I said,",
+          "Or the praise might go straight to her head.",
+          "Nah, scrap that, can't let her win,",
+          "Someone say something stupid, get the eye-roll in!"
+        ]
+      },
+      {
+        "name": "Final chorus",
+        "note": "Guitar, bass and crew joining in",
+        "lines": [
+          "OHHH ZOE! (OI!)",
+          "HERE WE GO AGAIN! (WHAT!)",
+          "SURROUNDED BY MUPPETS!",
+          "BUT AT LEAST THEY'RE YOUR FRIENDS!",
+          "",
+          "OHHH ZOE! (YEAH!)",
+          "ONE MORE DAY! (OI!)",
+          "WE'D SAY SOMETHING LOVELY...",
+          "BUT THAT'S NOT HOW WE PLAY!"
+        ]
+      },
+      {
+        "name": "Outro",
+        "note": "Acoustic guitar fades",
+        "lines": [
+          "Big up Zoe.",
+          "Absolute legend.",
+          "",
+          "Don't get fucking used to it."
+        ]
+      },
+      {
+        "name": "Quiet laughter",
+        "note": "Final guitar chord",
+        "lines": []
+      }
+    ],
+    "artwork": "/assets/sleeves/zoe-unplugged.webp",
+    "thumbnail": "/assets/sleeves/zoe-unplugged-thumb.webp",
+    "artworkAlt": "Zoe at the repairs desk with a knowing smile while the hooded Planner FM MC plays acoustic guitar.",
+    "sleeveNote": "One eyebrow says everything. An acoustic one for Zoe and the office full of muppets."
   },
   {
     "id": "set-phasers-to-offensive",
@@ -1244,121 +1238,127 @@
     "sleeveNote": "Banjo loaded. Cold spot located. The damp-and-mould cowboys ride again."
   },
   {
-    "id": "zoe-unplugged",
-    "title": "Zoe: Here We Go Again (Unplugged)",
-    "subtitle": "One eyebrow. An entire office silenced.",
-    "station": "PLANNER FM / UNPLUGGED",
-    "src": "/assets/zoe-unplugged.mp3",
-    "duration": 152.04,
-    "downloadName": "Zoe - Here We Go Again (Unplugged) - Planner FM.mp3",
+    "id": "awaabs-law",
+    "title": "Awaab’s Law",
+    "subtitle": "Mould FM. The clock don’t stop.",
+    "station": "MOULD FM",
+    "src": "/assets/awaabs-law.mp3",
+    "duration": 173.23,
+    "downloadName": "Awaab’s Law - Mould FM.mp3",
     "lyrics": [
       {
         "name": "Intro",
-        "note": "Soft fingerpicked acoustic guitar, radio crackle",
+        "note": "Crackling pirate radio, deep Cockney voice",
         "lines": [
-          "Yeah...",
-          "Planner FM unplugged.",
-          "This one's for Zoe.",
-          "Poor woman's surrounded by absolute fucking idiots.",
-          "Including me.",
-          "Listen."
+          "Check one, check two!",
+          "Mould FM!",
+          "Damp crew inside!",
+          "Awaab’s Law, bruv!",
+          "The clock don’t fucking stop!"
         ]
+      },
+      {
+        "name": "Drop",
+        "note": "Nasty distorted square-wave bass",
+        "lines": []
       },
       {
         "name": "Verse 1",
-        "note": "Relaxed Cockney grime flow",
+        "note": "Fast aggressive grime flow",
         "lines": [
-          "Monday morning, same old scene,",
-          "Zoe walks in, the diary ain't green.",
-          "Phone starts ringing, jobs piling high,",
-          "Another bloody emergency, here we go, sigh.",
+          "Seven-thirty, screen lights red,",
+          "Mould on the wall, damp by the bed!",
+          "Customer’s ringing, job’s come through,",
+          "Ten working days, know what to do!",
           "",
-          "Jack's being filthy, Darren's asleep,",
-          "Someone's lost a job they were meant to keep.",
-          "Zoe looks up, doesn't say a thing,",
-          "That little fucking eyebrow says everything!"
+          "Surveyor’s booked, get the diary straight,",
+          "Awaab’s Law, we don’t fuck about, mate!",
+          "TIC machine, find that cold spot,",
+          "Air Arc ready, give it what you got!"
         ]
       },
       {
-        "name": "Chorus",
-        "note": "Catchy acoustic hook, warm backing vocals",
+        "name": "Hook",
+        "note": "Heavy bass, MCs shouting",
         "lines": [
-          "Ohhh Zoe, here we go again,",
-          "Stuck in an office full of questionable friends.",
-          "One more job, one more call,",
-          "How the fuck d'you put up with us all?",
+          "TEN DAYS! (INSPECT!)",
+          "THREE DAYS! (REPORT!)",
+          "FIVE DAYS! (MAKE SAFE!)",
+          "NO TIME TO FUCK ABOUT!",
           "",
-          "Ohhh Zoe, what can we say?",
-          "Another bunch of bellends ruining your day.",
-          "But when the whole bloody place goes wrong,",
-          "She's still there taking the piss all along."
+          "DAMP CREW! (OI!)",
+          "MOULD CREW! (WHAT!)",
+          "CLOCK’S STILL TICKING!",
+          "AND THE BASS DON’T STOP!"
         ]
       },
       {
-        "name": "Instrumental",
-        "note": "Acoustic guitar riff, deep rolling bass",
+        "name": "DJ rewind",
+        "note": "Siren, vinyl scratching",
+        "lines": [
+          "BOH! BOH! BOH!",
+          "WHEEL THAT!",
+          "DEADLINE PRESSURE!",
+          "RELOAD THE FUCKING BASS!"
+        ]
+      },
+      {
+        "name": "Drop",
+        "note": "Filthy growling sub-bass",
         "lines": []
       },
       {
         "name": "Verse 2",
-        "note": "Faster cheeky Cockney flow",
+        "note": "Double-time aggressive grime",
         "lines": [
-          "Smara's got plans, Amanda wants house,",
-          "Jack's probably flirting with a sheep or a mouse.",
-          "Ops on the phone, customers too,",
-          "Everybody wants something, what can you do?",
+          "Black on the ceiling, green on the wall,",
+          "Another fucking emergency call!",
+          "Twenty-four hours if the danger’s severe,",
+          "Get the op dispatched, get the fucker there!",
           "",
-          "Zoe's got patience, or so we pretend,",
-          "We keep finding new ways to bring it to an end.",
-          "Sharp little comment, perfectly timed,",
-          "Another daft bastard getting put back in line."
+          "Air Arc machines, TIC on the scan,",
+          "Chasing up jobs like a mad fucking man!",
+          "DRS full, no slots left free,",
+          "Supervisor’s ringing, don’t look at me!",
+          "",
+          "Condensation, leaks, ventilation,",
+          "Damp crew running the operation!",
+          "Fix that cause, don’t paint over the stain,",
+          "Or the fucking mould comes back again!"
         ]
       },
       {
-        "name": "Bridge",
-        "note": "Guitar only, quieter delivery",
+        "name": "Final hook",
+        "note": "Multiple MCs, bass pounding",
         "lines": [
-          "She's one of the good ones, don't tell her I said,",
-          "Or the praise might go straight to her head.",
-          "Nah, scrap that, can't let her win,",
-          "Someone say something stupid, get the eye-roll in!"
-        ]
-      },
-      {
-        "name": "Final chorus",
-        "note": "Guitar, bass and crew joining in",
-        "lines": [
-          "OHHH ZOE! (OI!)",
-          "HERE WE GO AGAIN! (WHAT!)",
-          "SURROUNDED BY MUPPETS!",
-          "BUT AT LEAST THEY'RE YOUR FRIENDS!",
+          "MOULD! (OI!)",
+          "DAMP! (WHAT!)",
+          "AWAAB’S LAW!",
+          "WE’VE GOT YOUR BACK!",
           "",
-          "OHHH ZOE! (YEAH!)",
-          "ONE MORE DAY! (OI!)",
-          "WE'D SAY SOMETHING LOVELY...",
-          "BUT THAT'S NOT HOW WE PLAY!"
+          "TEN! THREE! FIVE!",
+          "KEEP THAT FUCKING DIARY ALIVE!"
         ]
       },
       {
         "name": "Outro",
-        "note": "Acoustic guitar fades",
+        "note": "Bass cuts, telephone rings",
         "lines": [
-          "Big up Zoe.",
-          "Absolute legend.",
+          "Damp and mould planning, how can I help?",
           "",
-          "Don't get fucking used to it."
+          "…It’s fucking come back?!"
         ]
       },
       {
-        "name": "Quiet laughter",
-        "note": "Final guitar chord",
+        "name": "End",
+        "note": "Massive distorted bass hit, static",
         "lines": []
       }
     ],
-    "artwork": "/assets/sleeves/zoe-unplugged.webp",
-    "thumbnail": "/assets/sleeves/zoe-unplugged-thumb.webp",
-    "artworkAlt": "Zoe at the repairs desk with a knowing smile while the hooded Planner FM MC plays acoustic guitar.",
-    "sleeveNote": "One eyebrow says everything. An acoustic one for Zoe and the office full of muppets."
+    "artwork": "/assets/sleeves/awaabs-law.webp",
+    "thumbnail": "/assets/sleeves/awaabs-law-thumb.webp",
+    "artworkAlt": "Lyric-inspired Awaab’s Law sleeve with the hooded Planner FM MC.",
+    "sleeveNote": "Cold spots on the scan. Pressure on the clock. The bass keeps moving."
   },
   {
     "id": "phone-down-bass-up",
