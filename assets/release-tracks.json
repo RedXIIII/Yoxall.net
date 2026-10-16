@@ -1525,5 +1525,156 @@
     "thumbnail": "/assets/sleeves/phone-down-bass-up-thumb.webp",
     "artworkAlt": "Phone Down, Bass Up sleeve: the hooded Planner FM MC turns the repairs office into a house afterparty.",
     "sleeveNote": "Clock strikes five. Phone down, bass up. The repairs office becomes the afterparty."
+  },
+  {
+    "id": "practically-perfect",
+    "title": "Practically Perfect (For Michelle)",
+    "subtitle": "Bonus track. For my better half.",
+    "station": "PLANNER FM / FOR MICHELLE",
+    "src": "/assets/practically-perfect.mp3",
+    "duration": 208.63,
+    "downloadName": "Planner FM - Practically Perfect (For Michelle).mp3",
+    "bonus": true,
+    "lyrics": [
+      {
+        "name": "Intro",
+        "note": "Gentle fingerpicked acoustic guitar, soft vinyl crackle",
+        "lines": []
+      },
+      {
+        "name": "Spoken",
+        "note": "Warm, rough Cockney voice",
+        "lines": [
+          "Yeah...",
+          "Planner FM, unplugged.",
+          "This one's a little different.",
+          "",
+          "For Michelle.",
+          "My better half.",
+          "",
+          "And that's putting it fucking lightly."
+        ]
+      },
+      {
+        "name": "Verse 1",
+        "note": "Gentle rhythmic acoustic grime",
+        "lines": [
+          "She's a nurse by trade, got a heart that gives,",
+          "Spends her days helping strangers live.",
+          "Then she comes home, another shift begins,",
+          "Two little faces with their cheeky grins.",
+          "",
+          "Our boy's six, got a heart made of gold,",
+          "Full of mischief, impossible to control.",
+          "Little girl's three, an angel in sight,",
+          "But she's never understood sleeping through the night.",
+          "",
+          "And there she is, through the noise and the mess,",
+          "Finding little bits of magic in the everyday stress.",
+          "I look at this woman, and what can I say?",
+          "She makes the world better in her own little way."
+        ]
+      },
+      {
+        "name": "Chorus",
+        "note": "Warm melodic male vocals, gentle layered harmonies",
+        "lines": [
+          "Oh Michelle, you're the light in our days,",
+          "You turn all of our chaos into beautiful ways.",
+          "No magic umbrella, no flying away,",
+          "Just practically perfect in every way.",
+          "",
+          "Oh Michelle, when the world gets too loud,",
+          "You're the one that brings me back to solid ground.",
+          "Through the laughter, the tears and the grey,",
+          "You're practically perfect in every way."
+        ]
+      },
+      {
+        "name": "Instrumental",
+        "note": "Beautiful acoustic guitar riff, deep warm bass",
+        "lines": []
+      },
+      {
+        "name": "Verse 2",
+        "note": "Intimate Cockney grime flow",
+        "lines": [
+          "Now Mary Poppins had a trick or two,",
+          "But she'd last one bedtime, then she'd hand it to you!",
+          "A spoonful of sugar? Yeah, that's all well and good,",
+          "Try raising our two in this neighbourhood!",
+          "",
+          "And I know there are days when you're tired to the bone,",
+          "When you've given so much, there's not much left of your own.",
+          "So when the world gets heavy, let me carry some too,",
+          "'Cause there's no one on earth I'd rather stand beside than you.",
+          "",
+          "You're clever, you're gorgeous, you're funny as hell,",
+          "And there's a million little stories I could never quite tell.",
+          "Not some fairytale princess, no Hollywood scene,",
+          "Just the most incredible woman I've ever seen."
+        ]
+      },
+      {
+        "name": "Bridge",
+        "note": "Drums fade, acoustic guitar only",
+        "lines": []
+      },
+      {
+        "name": "Soft spoken rap",
+        "note": "",
+        "lines": [
+          "And I know I don't say it",
+          "As often as I should.",
+          "But you gave me a family,",
+          "And you made this life good.",
+          "",
+          "Not because every day's easy,",
+          "Or everything goes right.",
+          "But because I get to face it",
+          "With you by my side."
+        ]
+      },
+      {
+        "name": "Final Chorus",
+        "note": "Emotional melodic vocals, strings swelling",
+        "lines": [
+          "Oh Michelle, you're the light in our days,",
+          "You turn all of our chaos into beautiful ways.",
+          "No magic umbrella, no flying away,",
+          "Just practically perfect in every way.",
+          "",
+          "Oh Michelle, there's one thing I know,",
+          "Through every little storm and wherever we go.",
+          "Of all the things that life could ever give me,",
+          "Nothing comes close to our little family."
+        ]
+      },
+      {
+        "name": "Outro",
+        "note": "Soft acoustic guitar, intimate spoken voice",
+        "lines": [
+          "Mary Poppins...",
+          "Practically perfect in every way."
+        ]
+      },
+      {
+        "name": "Pause",
+        "note": "",
+        "lines": [
+          "Nah, love.",
+          "You've got her beat."
+        ]
+      },
+      {
+        "name": "Final warm guitar chord",
+        "note": "Fade out",
+        "lines": []
+      }
+    ],
+    "artwork": "/assets/sleeves/practically-perfect.webp",
+    "thumbnail": "/assets/sleeves/practically-perfect-thumb.webp",
+    "artworkAlt": "Practically Perfect sleeve: Michelle and her partner sit close together on a coastal bench in warm sunset light.",
+    "sleeveNote": "After all the noise, this one’s for Michelle. My better half. Practically perfect in every way."
   }
 ]
