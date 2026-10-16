@@ -16,6 +16,8 @@
   const recordBrowser = $('record-browser');
   const recordCards = [...document.querySelectorAll('[data-record-index]')];
   const albumCover = $('album-cover'), albumPlay = $('album-play');
+  const deckToggle = $('deck-toggle'), deckArt = $('deck-art'), platterProgress = $('platter-progress');
+  const ambientArt = $('ambient-art');
   const lyricNav = $('lyrics-nav');
   if (lyricNav) lyricNav.addEventListener('click', () => { $('lyrics').open = true; });
   let active = -1, repeatAll = true, playAttempt = 0, metadataReady = false;
@@ -30,12 +32,17 @@
   function setPlaying(playing) {
     document.body.classList.toggle('is-playing', playing);
     toggle.setAttribute('aria-pressed', String(playing));
-    toggle.setAttribute('aria-label', (playing ? 'Pause ' : 'Play ') + (active < 0 ? 'Estate Sessions' : selected().title));
+    toggle.setAttribute('aria-label', (playing ? 'Pause ' : 'Play ') + (active < 0 ? 'The Planning Sessions' : selected().title));
+    if (deckToggle) {
+      deckToggle.setAttribute('aria-pressed', String(playing));
+      deckToggle.setAttribute('aria-label', (playing ? 'Pause ' : 'Play ') + (active < 0 ? 'The Planning Sessions' : selected().title));
+    }
     label.textContent = playing ? 'PAUSE THE SET' : 'TUNE IN';
     hint.textContent = playing ? 'You’re locked into Planner FM.' : active < 0 ? 'Start the full session from track 01.' : selected().subtitle;
   }
   function updateTime() {
     if (active < 0) {
+      if (platterProgress) platterProgress.setAttribute('stroke-dashoffset', '100');
       current.textContent = '0:00';
       duration.textContent = time(tracks.reduce((sum, track) => sum + track.duration, 0));
       seek.disabled = true;
@@ -50,18 +57,21 @@
     duration.textContent = time(length || selected().duration);
     seek.disabled = !length;
     const fraction = length ? Math.min(1, Math.max(0, elapsed / length)) : 0;
+    if (platterProgress) platterProgress.setAttribute('stroke-dashoffset', String(100 - fraction * 100));
     seek.value = String(Math.round(fraction * 1000));
     seek.style.setProperty('--progress', (fraction * 100) + '%');
     seek.setAttribute('aria-valuetext', time(elapsed) + ' of ' + duration.textContent);
   }
   function renderTrack() {
     const track = selected();
+    if (deckArt) { deckArt.setAttribute('src', track.artwork); deckArt.setAttribute('alt', track.artworkAlt); }
+    if (ambientArt) ambientArt.style.setProperty('--sleeve-image', 'url("' + track.artwork + '")');
     document.body.classList.toggle('is-album-view', false);
     albumCover.hidden = true;
     albumPlay.tabIndex = -1;
     $('download-track').hidden = false;
     document.body.dataset.track = track.id;
-    document.title = track.title + ' — Planner FM / Estate Sessions';
+    document.title = track.title + ' — Planner FM / The Planning Sessions';
     $('playing-number').textContent = String(active + 1).padStart(2, '0');
     $('playing-title').textContent = track.title;
     $('playing-subtitle').textContent = track.subtitle;
@@ -98,13 +108,15 @@
     updateTime();
   }
   function renderAlbum() {
+    if (deckArt) { deckArt.setAttribute('src', '/assets/sleeves/the-west-dont-rest-supplied.webp'); deckArt.setAttribute('alt', 'Planner FM — The Planning Sessions cover, using the supplied The West Don’t Rest artwork'); }
+    if (ambientArt) ambientArt.style.setProperty('--sleeve-image', 'url("/assets/sleeves/the-west-dont-rest-supplied.webp")');
     document.body.dataset.track = 'album';
     document.body.classList.toggle('is-album-view', true);
-    document.title = 'Planner FM — Estate Sessions';
+    document.title = 'Planner FM — The Planning Sessions';
     albumCover.hidden = false;
     albumPlay.tabIndex = 0;
     $('playing-number').textContent = 'LP';
-    $('playing-title').textContent = 'Estate Sessions';
+    $('playing-title').textContent = 'The Planning Sessions';
     $('playing-subtitle').textContent = 'Pick a record. Find your frequency.';
     $('vinyl-track').textContent = 'THE ALBUM SLEEVE';
     $('crate-position').textContent = 'ALBUM / ' + String(tracks.length).padStart(2, '0');
@@ -138,6 +150,7 @@
       state.textContent = 'CUEING TRACK ' + String(active + 1).padStart(2, '0') + '…';
       if (audio.error) { metadataReady = false; audio.load(); updateTime(); }
       if (audio.ended) audio.currentTime = 0;
+      if (globalThis.PlannerFMVisuals) globalThis.PlannerFMVisuals.unlock();
       await audio.play();
     } catch (error) {
       if (attempt !== playAttempt || error.name === 'AbortError') return;
@@ -198,6 +211,10 @@
   audio.addEventListener('loadedmetadata', () => { metadataReady = true; updateTime(); });
   for (const event of ['durationchange', 'timeupdate']) audio.addEventListener(event, updateTime);
   toggle.addEventListener('click', () => {
+    if (audio.paused) play();
+    else { ++playAttempt; audio.pause(); }
+  });
+  if (deckToggle) deckToggle.addEventListener('click', () => {
     if (audio.paused) play();
     else { ++playAttempt; audio.pause(); }
   });
@@ -278,6 +295,7 @@
   audio.hidden = true;
   audio.loop = false;
   controls.hidden = false;
+  if ($('deck-visuals')) $('deck-visuals').hidden = false;
   $('record-controls').hidden = false;
   $('record-help').textContent = 'FLIP A SLEEVE. TAP TO PLAY.  ← → KEYS / DRAG OR SWIPE';
   const requested = new URLSearchParams(location.search).get('track');

@@ -8,7 +8,7 @@ a{color:inherit;text-decoration:none}button{color:inherit;cursor:pointer}input:d
 button:focus-visible,a:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid var(--acid);outline-offset:5px}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
 .skip-link{position:absolute;top:12px;left:12px;padding:12px;background:var(--acid);color:var(--ink);z-index:10;transform:translateY(-160%)}.skip-link:focus{transform:none}
-.ambient{position:fixed;inset:0;pointer-events:none;background:linear-gradient(90deg,#0b10168a,#0b1016ed),url('/assets/planner-fm-estate-sessions.webp') center/cover;opacity:.13;filter:grayscale(.7);z-index:0}
+.ambient{position:fixed;inset:0;pointer-events:none;background:linear-gradient(90deg,#0b10168a,#0b1016ed),url('/assets/sleeves/the-west-dont-rest-supplied.webp') center/cover;opacity:.13;filter:grayscale(.7);z-index:0}
 .page-shell{position:relative;width:min(1460px,100%);margin:auto;padding:0 64px}
 .masthead{display:flex;align-items:center;gap:28px;min-height:88px;border-bottom:1px solid var(--line)}
 .station-brand{display:flex;align-items:center;gap:10px;white-space:nowrap;font:700 13px/1 Arial,sans-serif;letter-spacing:.08em}.station-brand svg{width:31px;height:31px;color:var(--acid)}.station-brand b{color:var(--acid);font-weight:400}
@@ -124,3 +124,65 @@ body[data-track="cutter-is-go"]{--acid:#f0b2a8}
 .bonus-badge{display:inline-block;margin-left:5px;padding:1px 5px;border:1px solid #edc79f66;border-radius:2px;color:#edc79f;font:8px/1.6 var(--mono);letter-spacing:.08em;vertical-align:middle;white-space:nowrap}
 body[data-track="practically-perfect"]{--acid:#edc79f;--line:#edc79f30;background:radial-gradient(ellipse at 15% 23%,#754a303d,transparent 55%),var(--ink)}
 body[data-track="practically-perfect"] .ambient{background-image:linear-gradient(90deg,#0b10168a,#0b1016ed),url('/assets/sleeves/practically-perfect.webp');filter:none;opacity:.18}
+
+/* Planner FM: icy pirate-radio hardware, phonk light, and a live record label. */
+:root{--violet:#b183f5}
+body{background:radial-gradient(ellipse at 84% 8%,#45296126,transparent 42%),radial-gradient(ellipse at 10% 24%,#1a617132,transparent 50%),var(--ink)}
+.ambient{background-image:linear-gradient(90deg,#080e168c,#0b1016e8),var(--sleeve-image,url('/assets/sleeves/the-west-dont-rest-supplied.webp'));opacity:.18;filter:saturate(.6)}
+body[data-track="practically-perfect"] .ambient{background-image:linear-gradient(90deg,#0b10168a,#0b1016ed),var(--sleeve-image);opacity:.18}
+body[data-track="the-west-dont-rest"]{--acid:#9bdfff;--line:#9bdfff29}
+.release{align-items:center;gap:44px;padding:36px 0 35px}
+.release-kicker{margin-bottom:15px;font-size:7px}
+h1{font-size:clamp(50px,6.1vw,85px)}
+.album-title{font-size:30px}.release-intro{margin:16px 0 12px}.release-facts{margin-bottom:20px;gap:8px 13px}
+.player{isolation:isolate;background:linear-gradient(125deg,#223440d9,#101920 65%);border-color:#65879780;box-shadow:0 22px 55px #0007,inset 0 1px 0 #d9f1ff12;padding:19px 20px 10px}
+.player::before{content:"";position:absolute;inset:-1px -1px auto;height:2px;background:linear-gradient(90deg,#9bdfff,transparent 45%,#b183f5);z-index:-1}
+.player-topline{margin-bottom:15px;font-size:7px}.equalizer i{animation:none!important}
+.now-track{margin-bottom:17px}.now-track strong{font-size:20px}
+.deck-visuals{--bass:0;display:grid;grid-template-columns:minmax(112px,.83fr) minmax(0,1fr);gap:19px;align-items:center;margin-bottom:17px;padding:11px 12px 9px;border:1px solid #9acfe125;background:linear-gradient(135deg,#03080c,#13243175);box-shadow:inset 0 1px 15px #0008;overflow:hidden;position:relative}
+.turntable{position:relative;isolation:isolate;padding:10px 0 16px;min-width:0}
+.deck-speed{position:absolute;top:0;left:0;font:5px/1 var(--mono);letter-spacing:.1em;color:#718b9c}
+.platter-button{display:block;position:relative;width:100%;aspect-ratio:1;padding:6px;border:0;background:none;border-radius:50%}
+.platter{display:block;position:absolute;inset:6px;border:2px solid #5b7680;border-radius:50%;background:repeating-radial-gradient(circle at center,#03080b 0 2px,#22313a 2.5px 3px,#080f14 3.5px 5px);box-shadow:0 0 0 3px #0b141a,0 8px 20px #000b,0 0 calc(2px + var(--bass)*24px) #8edfff66;overflow:hidden}
+.platter-sheen{position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 35deg,transparent,#d0e7ff2b 10%,transparent 23%,#bb8dff1a 46%,transparent 63%,#91dfff26 77%,transparent 90%)}
+.platter-label{position:absolute;inset:26%;border-radius:50%;overflow:hidden;border:2px solid #bdd4e988;animation:record-spin 7.5s linear infinite;animation-play-state:paused;background:#17343f}
+.platter-label img{width:100%;height:100%;display:block;object-fit:cover}.spindle{position:absolute;inset:calc(50% - 4px);border-radius:50%;background:#dce7eb;border:2px solid #0a151e;box-shadow:0 0 0 3px #ffffff26}
+.is-playing .platter-label{animation-play-state:running}
+.platter-ring{position:absolute;inset:0;width:100%;height:100%;fill:none;stroke:#4d667c45;stroke-width:1;transform:rotate(-90deg);pointer-events:none}
+#platter-progress{stroke:var(--acid);stroke-width:1.5;stroke-linecap:round;transition:stroke-dashoffset .2s linear}
+.platter-play{position:absolute;inset:0;display:grid;place-items:center;font-size:20px;text-shadow:0 1px 8px #000;color:#fff;opacity:0;transition:opacity .2s}
+.platter-button:hover .platter-play,.platter-button:focus-visible .platter-play{opacity:1}.is-playing .platter-play{font-size:0}.is-playing .platter-play::after{content:'Ⅱ';font-size:22px}
+.tonearm{pointer-events:none;position:absolute;width:6px;height:53%;right:3%;top:9%;background:linear-gradient(90deg,#2a3541,#c1d0dd 48%,#3b4b56);border-radius:4px;transform:rotate(28deg);transform-origin:50% 7%;box-shadow:1px 3px 4px #0009;transition:transform .6s;z-index:2}
+.tonearm::before{content:"";position:absolute;left:-4px;top:-3px;width:14px;height:14px;border-radius:50%;background:radial-gradient(circle,#d3dce1 0 2px,#485e6e 3px 5px,#101a21 6px)}
+.tonearm::after{content:"";position:absolute;bottom:-5px;left:-2px;width:10px;height:20px;border-radius:2px;background:#c1d1dd;border-bottom:4px solid #101921;box-shadow:0 0 0 1px #52616b}
+.is-playing .tonearm{transform:rotate(43deg)}
+.deck-etch{position:absolute;bottom:0;left:0;right:0;text-align:center;font:5px/1.5 var(--mono);color:#708d9f;letter-spacing:.08em}
+.signal-rack{min-width:0}.signal-heading{display:flex;justify-content:space-between;align-items:center;gap:6px;font:6px/1.5 var(--mono);letter-spacing:.02em;color:#a1cadc;margin-bottom:5px}
+.signal-heading button{border:1px solid #a6d7f435;background:#19304066;color:#afd5e4;padding:8px 5px;font:6px/1.4 var(--mono);min-height:32px;white-space:nowrap}.signal-heading button[aria-pressed=false]{color:#8498a3}
+.signal-screen{position:relative;background:linear-gradient(140deg,#07141b,#070e17);border:1px solid #52768950;overflow:hidden}.signal-screen::after{content:"";pointer-events:none;position:absolute;inset:0;background:repeating-linear-gradient(transparent 0 3px,#0002 3px 4px);opacity:.6}
+#signal-canvas{display:block;width:100%;height:90px}.signal-screen-label{position:absolute;left:7px;top:6px;font:5px/1.5 var(--mono);letter-spacing:.1em;color:#b3e2ed66;pointer-events:none}
+.band-meters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px;color:#8eabba;font:5px/1 var(--mono);letter-spacing:.08em}.band-meters span{min-width:0}.band-meters i{display:block;position:relative;height:3px;background:#263b485c;margin-top:5px;overflow:hidden}.band-meters b{display:block;position:absolute;inset:0;background:linear-gradient(90deg,#82cfe8,#bf9aee);transform:scaleX(var(--level,0));transform-origin:left}
+.deck-signoff{font:5px/1.5 var(--mono);letter-spacing:.06em;color:#7e96a5;margin-top:10px}
+.drop-button{min-height:68px;padding:11px 14px;background:linear-gradient(110deg,var(--acid),#b5c5ef);box-shadow:0 0 24px #9bdfff09}.play-disc{width:39px;height:39px}.drop-copy strong{font-size:23px}.drop-copy>span{font-size:8px}.seek-row{margin-top:12px}
+.release-annotation{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-top:22px}.release-annotation .hero-aside{margin:0;font-size:14px;border-color:var(--acid)}
+.parental-advisory{display:block;width:79px;flex:none;border:2px solid #e4e8eb;background:#e4e8eb;color:#0b0c0d;text-align:center;transform:rotate(-3deg);box-shadow:3px 4px 0 #0008;font-family:Impact,'Arial Black',sans-serif;line-height:1;letter-spacing:.025em;user-select:none}
+.parental-advisory b{display:block;font-size:13px;padding:2px 1px}.parental-advisory strong{display:block;background:#080a0d;color:#fff;font-size:17px;padding:2px 0}.parental-advisory small{display:block;font:700 7px/1.4 Arial,sans-serif;letter-spacing:.02em;padding:2px 0}
+.frequency-strip{display:flex;align-items:center;justify-content:space-between;gap:18px;border-block:1px solid #9bdfff2b;padding:17px 4px;margin-bottom:28px;font:8px/1.5 var(--mono);letter-spacing:.08em;color:#789aac;background:linear-gradient(90deg,#8adfff05,transparent,#be83ff05)}
+.frequency-strip b{font-size:9px;font-weight:400;color:#aedbec}.frequency-strip b:last-of-type{color:#c3a0ee}.frequency-bars{color:#9bdfff;font-size:14px;white-space:nowrap;letter-spacing:.18em}
+.record-column::after{content:"";position:absolute;left:7%;right:7%;bottom:88px;height:35%;border-radius:50%;background:linear-gradient(90deg,#66cde520,#a75dff1a);filter:blur(40px);z-index:-1;pointer-events:none}
+.visuals-off .platter-label,.visuals-off .record-vinyl::before,.visuals-off .disc-label{animation-play-state:paused!important}.visuals-off .tonearm,.visuals-off #platter-progress{transition:none}.visuals-off .platter{box-shadow:0 0 0 3px #0b141a,0 8px 20px #000b}
+@media(min-width:1450px){.deck-visuals{grid-template-columns:170px minmax(0,1fr)}#signal-canvas{height:104px}.release{gap:60px}}
+@media(max-width:1150px) and (min-width:851px){.deck-visuals{grid-template-columns:116px minmax(0,1fr);gap:12px;padding:9px}.signal-heading{font-size:5px;flex-wrap:wrap}.signal-heading button{min-height:26px;padding:5px}.deck-etch{font-size:4px}#signal-canvas{height:64px}.deck-signoff{font-size:4px}.frequency-strip{font-size:7px;gap:12px}.frequency-strip b{font-size:8px}}
+@media(max-width:850px){.release{gap:25px;padding-top:27px}.release-copy{grid-row:auto}.record-column{--record-size:clamp(210px,70vw,440px)}.release-kicker{font-size:7px}h1{font-size:clamp(58px,12vw,85px)}.deck-visuals{grid-template-columns:minmax(110px,.8fr) minmax(0,1fr);gap:22px;padding:14px 16px 11px}#signal-canvas{height:106px}.frequency-strip{flex-wrap:wrap;justify-content:center;font-size:7px;gap:13px 24px}.frequency-strip>span:last-child{display:none}.record-column::after{bottom:100px}.player{padding:20px 19px 10px}}
+@media(max-width:480px){.release-copy{max-width:100%}.release-kicker{gap:10px;font-size:6px}.release-type{padding:5px 7px}.release-facts{font-size:6px;gap:7px 10px}.album-title{font-size:28px}.deck-visuals{grid-template-columns:minmax(104px,.85fr) minmax(0,1fr);gap:12px;padding:10px 9px 9px}.player{padding:19px 13px 9px}.now-track strong{font-size:20px}.signal-heading{font-size:5px;flex-wrap:wrap;gap:4px}.signal-heading button{min-height:28px;padding:5px;font-size:5px}#signal-canvas{height:72px}.signal-screen-label{font-size:4px;left:4px}.deck-signoff{font-size:4px}.band-meters{gap:5px;margin-top:8px;font-size:4px}.deck-etch{font-size:4px}.drop-button{min-height:70px}.drop-copy strong{font-size:22px}.frequency-strip{gap:12px 18px;margin-bottom:22px;padding-block:13px}.frequency-strip>span:first-child{width:100%;text-align:center}.frequency-strip b{font-size:8px}.frequency-bars{font-size:11px}.release-annotation{gap:14px}.release-annotation .hero-aside{font-size:13px}.parental-advisory{width:73px}.parental-advisory b{font-size:12px}.parental-advisory strong{font-size:16px}.parental-advisory small{font-size:6px}}
+@media(max-width:340px){.deck-visuals{gap:8px;grid-template-columns:100px minmax(0,1fr);padding:8px}.player{padding-inline:10px}.deck-speed,.deck-etch{font-size:3px}.deck-signoff{letter-spacing:0}.release-annotation .hero-aside{font-size:11px}.hero-aside small{font-size:6px}.frequency-strip{gap:10px 12px}}
+@media(prefers-reduced-motion:reduce){.platter-label{animation:none!important}.platter-ring,.platter-play,.tonearm{transition:none!important}}
+
+.is-playing .platter-play::after{position:absolute;inset:0;display:grid;place-items:center}
+.visuals-off .record-card{transition:none!important}
+
+.album-title{font-size:28px;flex-wrap:wrap;gap:10px 17px}.album-title>span{font-size:7px}
+@media(max-width:480px){.album-title{font-size:25px;gap:8px 12px}.album-title>span{padding-left:10px}}
+
+.signal-heading{font-size:7px}.signal-heading button{font-size:7px;min-height:36px;padding:7px;min-width:67px}
+@media(max-width:480px){.signal-heading{font-size:6px;gap:5px}.signal-heading button{font-size:7px;min-height:36px;padding:7px}}
