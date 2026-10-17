@@ -684,6 +684,261 @@
     "sleeveNote": "From the diary to the driveway. Big up the MSTs keeping homes sound, from Penzance to Cheltenham. Just remember to close your jobs."
   },
   {
+    "id": "hold-that-line",
+    "title": "Hold That Line",
+    "subtitle": "One number. Every problem.",
+    "station": "PLANNER FM / CSC MASSIVE",
+    "src": "/assets/hold-that-line.mp3",
+    "duration": 248.04,
+    "downloadName": "Hold That Line - yoxall.net.mp3",
+    "lyrics": [
+      {
+        "name": "Intro",
+        "note": "Telephone ringing, distorted Memphis vocal sample",
+        "lines": []
+      },
+      {
+        "name": "Deep whispered Cockney voice",
+        "note": "",
+        "lines": [
+          "Yeah...",
+          "South West.",
+          "One number.",
+          "Every fucking problem.",
+          "",
+          "You never know",
+          "What's coming down that line.",
+          "",
+          "C-S-C...",
+          "Listen."
+        ]
+      },
+      {
+        "name": "DROP",
+        "note": "Filthy distorted 808, sinister cowbell, icy square-wave bass",
+        "lines": []
+      },
+      {
+        "name": "Verse 1",
+        "note": "Rapid, low aggressive grime flow",
+        "lines": [
+          "Headset on, red light flashing,",
+          "Queue's going mad, calls keep stacking.",
+          "Rent on the line, roof's got a leak,",
+          "Next one's a complaint from the other week.",
+          "",
+          "Lost their keys, neighbour's gone mad,",
+          "Someone's in tears, someone's proper pissed off.",
+          "Ten departments, one fucking phone,",
+          "CSC dealing with the great unknown.",
+          "",
+          "No crystal ball, no magic trick,",
+          "Just another bloody problem to pick.",
+          "Keep that voice calm, keep it polite,",
+          "Even when the caller's looking for a fight."
+        ]
+      },
+      {
+        "name": "Hook",
+        "note": "Dark rhythmic shouted chant, bass cutouts",
+        "lines": [
+          "HOLD THAT LINE! (HOLD!)",
+          "TAKE THAT CALL! (OI!)",
+          "ONE FUCKING NUMBER!",
+          "DEALING WITH IT ALL!",
+          "",
+          "BIG WEIGHT! (BIG!)",
+          "SMALL PAY! (SMALL!)",
+          "C-S-C MASSIVE!",
+          "STILL HERE EVERY DAY!"
+        ]
+      },
+      {
+        "name": "Instrumental",
+        "note": "Growling 808, haunting cowbell loop",
+        "lines": []
+      },
+      {
+        "name": "Verse 2",
+        "note": "Darker, slower aggressive delivery",
+        "lines": [
+          "One says the neighbour's threatening their door,",
+          "Next one can't take the pain anymore.",
+          "Cut the jokes, get serious now,",
+          "Find the right support, work out how.",
+          "",
+          "Real fear, real lives, real shit,",
+          "Can't solve all that with a button and click.",
+          "No fucking script for the weight of a call,",
+          "When someone's got their back against the wall.",
+          "",
+          "Then the next one's asking about a parking space,",
+          "Back to the queue, back into the race.",
+          "You never know what's coming next,",
+          "Another call waiting, another new mess."
+        ]
+      },
+      {
+        "name": "Beat cuts",
+        "note": "Low distorted whisper",
+        "lines": [
+          "No warning...",
+          "No fucking warning..."
+        ]
+      },
+      {
+        "name": "DJ Rewind",
+        "note": "Vinyl scratching",
+        "lines": [
+          "BOH! BOH! BOH!",
+          "WHEEL THAT!",
+          "",
+          "ONE NUMBER!",
+          "EVERY FUCKING PROBLEM!",
+          "",
+          "RELOAD!"
+        ]
+      },
+      {
+        "name": "DROP",
+        "note": "Savage distorted square-wave bass, double-time drums",
+        "lines": []
+      },
+      {
+        "name": "Verse 3",
+        "note": "Fast syncopated Cockney grime",
+        "lines": [
+          "Salesforce spinning, screen gone dead,",
+          "Another bloody headset doing in my head!",
+          "Customer wants answers, fair enough, mate,",
+          "But don't shoot the bloke who's trying to help today!",
+          "",
+          "South West massive, holding the line,",
+          "CSC answering every time.",
+          "Penzance to Cheltenham, voices on the phone,",
+          "A hundred different stories, none of them their own.",
+          "",
+          "Wages ain't massive, responsibilities are,",
+          "Some of these calls leave a proper deep scar.",
+          "Not asking for medals, not asking for fame,",
+          "Just a bit more respect for the weight of the game."
+        ]
+      },
+      {
+        "name": "Breakdown",
+        "note": "Bass disappears, lone sinister cowbell",
+        "lines": []
+      },
+      {
+        "name": "Deep spoken voice",
+        "note": "",
+        "lines": [
+          "You hear the ringing...",
+          "We hear the stories.",
+          "",
+          "You see a call queue...",
+          "We hear real lives."
+        ]
+      },
+      {
+        "name": "Pause",
+        "note": "",
+        "lines": [
+          "And then there's the fucking payslip."
+        ]
+      },
+      {
+        "name": "Whispered",
+        "note": "",
+        "lines": [
+          "Big responsibility...",
+          "Little fucking reward."
+        ]
+      },
+      {
+        "name": "SCREAM",
+        "note": "",
+        "lines": [
+          "C-S-C!"
+        ]
+      },
+      {
+        "name": "FINAL DROP",
+        "note": "Crushing distorted 808, aggressive icy Eskimo bass",
+        "lines": []
+      },
+      {
+        "name": "Final Hook",
+        "note": "Multiple MCs shouting",
+        "lines": [
+          "HOLD THAT LINE! (HOLD!)",
+          "TAKE THAT CALL! (OI!)",
+          "ONE FUCKING NUMBER!",
+          "DEALING WITH IT ALL!",
+          "",
+          "NO CAPES! (NAH!)",
+          "NO CROWNS! (WHAT!)",
+          "JUST A HEADSET CREW!",
+          "HOLDING THIS SHIT DOWN!",
+          "",
+          "C-S-C! (OI!)",
+          "C-S-C! (WHAT!)",
+          "FIRST VOICE YOU HEAR!",
+          "WHEN YOUR WORLD GOES MAD!"
+        ]
+      },
+      {
+        "name": "Outro",
+        "note": "Bass fades, telephone ringing",
+        "lines": []
+      },
+      {
+        "name": "Spoken",
+        "note": "Tired Cockney voice",
+        "lines": [
+          "Another day done..."
+        ]
+      },
+      {
+        "name": "Pause",
+        "note": "",
+        "lines": [
+          "Some of those calls, bruv...",
+          "They stay with you."
+        ]
+      },
+      {
+        "name": "Phone rings",
+        "note": "",
+        "lines": []
+      },
+      {
+        "name": "Long silence",
+        "note": "",
+        "lines": [
+          "Right then...",
+          "Customer services, how can I help?"
+        ]
+      },
+      {
+        "name": "Deep distorted voice",
+        "note": "",
+        "lines": [
+          "HOLD THE LINE."
+        ]
+      },
+      {
+        "name": "Final filthy sub-bass hit",
+        "note": "Radio static",
+        "lines": []
+      }
+    ],
+    "artwork": "/assets/sleeves/hold-that-line.webp",
+    "thumbnail": "/assets/sleeves/hold-that-line-thumb.webp",
+    "artworkAlt": "CSC — Hold The Line: the hooded Planner FM MC wearing a headset at a neon-lit customer services desk, surrounded by incoming calls, case notes and a stormy Cornish coast.",
+    "sleeveNote": "One number. A hundred different stories. Big up the CSC crew holding the line, one call at a time."
+  },
+  {
     "id": "bellend-fm",
     "title": "Bellend FM: The Daz Transmission",
     "subtitle": "The Daz transmission. Nothing but love.",
