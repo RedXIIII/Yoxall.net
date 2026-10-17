@@ -5,7 +5,11 @@
   const panel = $('dancer-panel'), hide = $('dancer-hide'), show = $('dancer-show');
   if (!audio || !video || !stage || !panel || !hide || !show) return;
   const motion = typeof matchMedia === 'function' ? matchMedia('(prefers-reduced-motion: reduce)') : null;
+  // The supplied 9mm dance runs at 155 BPM; target the collection’s 140 BPM pulse.
+  const danceRate = 140 / 155;
   let dismissed = false, failed = false, buffering = false, attempt = 0;
+  video.defaultPlaybackRate = danceRate;
+  video.playbackRate = danceRate;
   video.muted = true; video.defaultMuted = true; video.volume = 0;
   video.loop = true; video.playsInline = true;
   const moving = () => !failed && !buffering && !audio.error && !document.hidden && !audio.paused && !audio.ended &&
@@ -19,6 +23,7 @@
     if (!on || dismissed) { video.pause(); return; }
     if (!video.getAttribute('src')) video.setAttribute('src', video.dataset.src);
     video.muted = true; video.volume = 0;
+    video.playbackRate = danceRate;
     try {
       Promise.resolve(video.play()).then(() => {
         if (ticket === attempt && !moving()) video.pause();
