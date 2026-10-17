@@ -196,18 +196,18 @@ h1{font-size:clamp(50px,6.1vw,85px)}
 
 /* A silent, optional meme booth follows actual music playback. */
 .meme-dancer{position:fixed;left:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:60;width:132px}
-.dancer-panel{background:#030609;border:1px solid #60889d70;box-shadow:0 5px 24px #0009,0 0 18px #b183f516}
-.dancer-topline{display:flex;align-items:center;justify-content:space-between;gap:4px;padding-left:9px;background:linear-gradient(90deg,#14313b,#17192a);font:7px/1.5 var(--mono);letter-spacing:.04em;color:#a1c8db}
-.dancer-topline button{display:grid;place-items:center;border:0;background:transparent;color:#b3c9d7;width:32px;min-height:32px;font:18px/1 Arial,sans-serif}
-.dancer-topline button:hover{color:#fff;background:#ffffff0a}
+.dancer-panel{position:relative;background:transparent;border:0;box-shadow:none}
 .meme-video{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:contain;background:#000;pointer-events:none}
-.dancer-show{padding:10px;border:1px solid #60889d70;background:#0b141eee;color:#9cc5d9;font:8px/1.5 var(--mono);min-height:40px;white-space:nowrap}
-@media(max-width:480px){.meme-dancer{width:110px;left:8px;bottom:calc(8px + env(safe-area-inset-bottom,0px))}.dancer-topline{font-size:6px;padding-left:6px}.dancer-topline button{width:30px;min-height:32px}}
+.dancer-show{padding:6px 4px;border:0;background:#0b141eaa;color:#9cc5d9;font:8px/1.5 var(--mono);min-height:32px;white-space:nowrap}
+@media(max-width:480px){.meme-dancer{width:110px;left:8px;bottom:calc(8px + env(safe-area-inset-bottom,0px))}}
 
 /* Cat faces into the page; leave the archive icon reachable below its turn. */
 .meme-dancer[data-meme="cat"]{left:auto;right:12px;bottom:calc(61px + env(safe-area-inset-bottom,0px))}
 .meme-cat{transform:scaleX(-1)}
 @media(max-width:480px){.meme-dancer[data-meme="cat"]{right:8px}}
 
-/* The third meme takes one centred turn between the cat and the next girl turn. */
+/* The third meme takes a centred turn between the cat and the next girl turn. */
 .meme-dancer[data-meme="ankha"]{left:50%;right:auto;transform:translateX(-50%)}
+
+.dancer-close{position:absolute;top:0;right:0;z-index:1;display:grid;place-items:center;width:28px;height:28px;padding:0;border:0;background:transparent;color:#c7d7e0;font:16px/1 Arial,sans-serif;text-shadow:0 1px 3px #000;opacity:.6}
+.dancer-close:hover,.dancer-close:focus-visible{color:#fff;opacity:1}

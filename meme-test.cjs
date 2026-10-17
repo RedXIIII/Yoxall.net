@@ -52,8 +52,8 @@ function active(f, id) {
   assert.equal(f.a.paused, false); assert.equal(f.a.playbackRate, 1);
 }
 (async () => {
-  // The first girl turn and every centred Ankha turn are exactly one play.
-  const f = fixture({random: [0, .999999, .999999, 0]});
+  // The first girl turn is one play; later turns cover both bounds for all three clips.
+  const f = fixture({random: [0, 0, .999999, .999999, .999999, 0, 0]});
   for (const video of [f.g, f.c, f.k]) {assert.equal(video.calls, 0); assert.equal(video.getAttribute('src'), null);}
   assert.equal(f.n['meme-dancer'].hidden, true);
   assert.equal(f.g.defaultPlaybackRate, 140 / 155); assert.equal(f.c.defaultPlaybackRate, 140 / 123); assert.equal(f.k.defaultPlaybackRate, 140 / 110);
@@ -70,6 +70,7 @@ function active(f, id) {
   f.g.finish(); await tick(); active(f, 'cat'); // Maximum girl turn: three loops.
   f.c.finish(); await tick(); active(f, 'cat');
   f.c.finish(); await tick(); active(f, 'ankha'); // Maximum cat turn: two loops.
+  f.k.finish(); await tick(); active(f, 'ankha'); // Maximum Ankha turn: two loops.
   f.k.finish(); await tick(); active(f, 'girl');
   f.g.finish(); await tick(); active(f, 'cat'); // Minimum later girl turn: one loop.
 
@@ -111,5 +112,5 @@ function active(f, id) {
   const hidden = fixture({mode: 'deferred'}); await hidden.start(); hidden.a.paused = true; hidden.a.emit('pause');
   hidden.g.pending[0].reject(Error('interrupted')); await tick(); assert.equal(hidden.n['meme-dancer'].hidden, true); assert.equal(hidden.g.paused, true);
   vm.runInNewContext(code, {document: {getElementById: () => null}});
-  console.log('PASS: first girl loop; random 1–3 girl / 1–2 cat turns plus exactly one Ankha play; only the active silent clip loads/plays; fixed video rates leave music unchanged; hide/show, pause, buffering, hidden tabs, reduced motion and track changes preserve turns; failures and stale promises are isolated.');
+  console.log('PASS: first girl loop; random 1–3 girl / 1–2 cat turns plus random 1–2 Ankha plays; only the active silent clip loads/plays; fixed video rates leave music unchanged; hide/show, pause, buffering, hidden tabs, reduced motion and track changes preserve turns; failures and stale promises are isolated.');
 })().catch(error => {console.error(error); process.exitCode = 1;});
