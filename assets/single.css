@@ -208,3 +208,6 @@ h1{font-size:clamp(50px,6.1vw,85px)}
 .meme-dancer[data-meme="cat"]{left:auto;right:12px;bottom:calc(61px + env(safe-area-inset-bottom,0px))}
 .meme-cat{transform:scaleX(-1)}
 @media(max-width:480px){.meme-dancer[data-meme="cat"]{right:8px}}
+
+/* The third meme takes one centred turn between the cat and the next girl turn. */
+.meme-dancer[data-meme="ankha"]{left:50%;right:auto;transform:translateX(-50%)}

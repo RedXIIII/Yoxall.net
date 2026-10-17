@@ -8,8 +8,8 @@ function node() {
     getAttribute(key) {return this.attrs[key] || null;},
     setAttribute(key, value) {this.attrs[key] = value;}, focus() {this.focused = true;}};
 }
-function fixture({reduced = false, visualsOff = false, mode = 'allowed', catMode = 'allowed', random = [0]} = {}) {
-  const names = ['release-audio','dancer-video','cat-video','meme-dancer','dancer-panel','dancer-hide','dancer-show','visual-toggle','meme-label'];
+function fixture({reduced = false, visualsOff = false, mode = 'allowed', catMode = 'allowed', ankhaMode = 'allowed', random = [0]} = {}) {
+  const names = ['release-audio','dancer-video','cat-video','ankha-video','meme-dancer','dancer-panel','dancer-hide','dancer-show','visual-toggle','meme-label'];
   const n = Object.fromEntries(names.map(id => [id, node()])), a = n['release-audio'];
   Object.assign(a, {paused: true, ended: false, error: null, playbackRate: 1});
   a.play = a.pause = () => {throw Error('Meme altered music playback');};
@@ -28,6 +28,7 @@ function fixture({reduced = false, visualsOff = false, mode = 'allowed', catMode
   }
   const g = video('dancer-video', '/assets/planner-fm-dancer.mp4', mode);
   const c = video('cat-video', '/assets/planner-fm-vibe-cat.mp4', catMode);
+  const k = video('ankha-video', '/assets/planner-fm-ankha.mp4', ankhaMode);
   const doc = node(); doc.hidden = false; doc.getElementById = id => n[id];
   let off = visualsOff; doc.body = {classList: {contains: () => off}};
   const media = node(); media.matches = reduced;
@@ -35,37 +36,41 @@ function fixture({reduced = false, visualsOff = false, mode = 'allowed', catMode
   math.random = () => random[Math.min(roll++, random.length - 1)];
   const box = {document: doc, matchMedia: () => media, Promise, Math: math}; if (!reduced) box.PlannerFMVisuals = {};
   vm.runInNewContext(code, box);
-  return {n, a, g, c, doc, media,
+  return {n, a, g, c, k, doc, media,
     off(value) {off = value; n['visual-toggle'].emit('click');},
     async start() {a.paused = false; a.emit('playing'); await tick();}};
 }
 function active(f, id) {
-  const current = id === 'girl' ? f.g : f.c, other = id === 'girl' ? f.c : f.g;
+  const videos = {girl: f.g, cat: f.c, ankha: f.k}, current = videos[id];
   assert.equal(f.n['meme-dancer'].dataset.meme, id);
   assert.equal(f.n['meme-dancer'].hidden, false); assert.equal(f.n['dancer-panel'].hidden, false);
-  assert.equal(current.hidden, false); assert.equal(other.hidden, true);
-  assert.equal(current.paused, false); assert.equal(other.paused, true);
+  for (const video of Object.values(videos)) {
+    assert.equal(video.hidden, video !== current); assert.equal(video.paused, video !== current);
+  }
   assert.equal(current.muted, true); assert.equal(current.volume, 0); assert.equal(current.loop, false); assert.equal(current.playsInline, true);
-  assert.equal(current.playbackRate, id === 'girl' ? 140 / 155 : 140 / 123);
+  assert.equal(current.playbackRate, {girl: 140 / 155, cat: 140 / 123, ankha: 140 / 110}[id]);
   assert.equal(f.a.paused, false); assert.equal(f.a.playbackRate, 1);
 }
 (async () => {
-  // First turn is exactly one girl loop. Later turns include both random bounds.
+  // The first girl turn and every centred Ankha turn are exactly one play.
   const f = fixture({random: [0, .999999, .999999, 0]});
-  assert.equal(f.g.calls, 0); assert.equal(f.c.calls, 0);
-  assert.equal(f.g.getAttribute('src'), null); assert.equal(f.c.getAttribute('src'), null);
+  for (const video of [f.g, f.c, f.k]) {assert.equal(video.calls, 0); assert.equal(video.getAttribute('src'), null);}
   assert.equal(f.n['meme-dancer'].hidden, true);
-  assert.equal(f.g.defaultPlaybackRate, 140 / 155); assert.equal(f.c.defaultPlaybackRate, 140 / 123);
-  await f.start(); active(f, 'girl'); assert.equal(f.c.getAttribute('src'), null);
+  assert.equal(f.g.defaultPlaybackRate, 140 / 155); assert.equal(f.c.defaultPlaybackRate, 140 / 123); assert.equal(f.k.defaultPlaybackRate, 140 / 110);
+  await f.start(); active(f, 'girl'); assert.equal(f.c.getAttribute('src'), null); assert.equal(f.k.getAttribute('src'), null);
   f.g.finish(); await tick(); active(f, 'cat'); // Minimum cat turn: one loop.
   assert.equal(f.n['meme-label'].textContent, 'CAT ON CALL');
-  f.g.emit('ended'); active(f, 'cat'); // A late event from the inactive clip is ignored.
-  f.c.finish(); await tick(); active(f, 'girl');
+  f.g.emit('ended'); active(f, 'cat'); // Ignore late events from an inactive clip.
+  f.c.finish(); await tick(); active(f, 'ankha');
+  assert.equal(f.n['meme-label'].textContent, 'NILE SHIFT');
+  f.k.finish(); await tick(); active(f, 'girl');
+  f.k.emit('ended'); active(f, 'girl');
   f.g.finish(); await tick(); active(f, 'girl');
   f.g.finish(); await tick(); active(f, 'girl');
   f.g.finish(); await tick(); active(f, 'cat'); // Maximum girl turn: three loops.
   f.c.finish(); await tick(); active(f, 'cat');
-  f.c.finish(); await tick(); active(f, 'girl'); // Maximum cat turn: two loops.
+  f.c.finish(); await tick(); active(f, 'ankha'); // Maximum cat turn: two loops.
+  f.k.finish(); await tick(); active(f, 'girl');
   f.g.finish(); await tick(); active(f, 'cat'); // Minimum later girl turn: one loop.
 
   // Dismissal and transport changes preserve the active turn and never control music.
@@ -84,13 +89,19 @@ function active(f, id) {
   life.a.paused = true; life.a.emit('emptied'); assert.equal(life.c.paused, true);
   life.a.paused = false; life.a.emit('playing'); await tick(); active(life, 'cat'); assert.equal(life.c.currentTime, 12);
   life.a.paused = true; life.a.emit('pause'); assert.equal(life.c.paused, true); assert.equal(life.n['meme-dancer'].hidden, true);
-  const low = fixture({reduced: true}); await low.start(); assert.equal(low.g.calls, 0); assert.equal(low.c.calls, 0);
+  life.a.paused = false; life.a.emit('playing'); life.c.finish(); await tick(); active(life, 'ankha');
+  life.k.currentTime = 6; life.a.paused = true; life.a.emit('pause'); assert.equal(life.k.paused, true);
+  life.a.paused = false; life.a.emit('playing'); await tick(); active(life, 'ankha'); assert.equal(life.k.currentTime, 6);
+  life.k.finish(); await tick(); active(life, 'girl');
+  const low = fixture({reduced: true}); await low.start(); assert.equal(low.g.calls, 0); assert.equal(low.c.calls, 0); assert.equal(low.k.calls, 0);
 
-  // A blocked or failed meme must not interrupt the music or the other video.
-  const blocked = fixture({catMode: 'blocked'}); await blocked.start(); blocked.g.finish(); await tick();
+  // A blocked or failed meme must not interrupt music or another clip.
+  const blocked = fixture({ankhaMode: 'blocked'}); await blocked.start(); blocked.g.finish(); blocked.c.finish(); await tick();
   assert.equal(blocked.n['dancer-show'].hidden, false); assert.equal(blocked.n['dancer-panel'].hidden, true); assert.equal(blocked.a.paused, false);
-  blocked.c.mode = 'allowed'; blocked.n['dancer-show'].emit('click'); await tick(); active(blocked, 'cat');
+  blocked.k.mode = 'allowed'; blocked.n['dancer-show'].emit('click'); await tick(); active(blocked, 'ankha');
   const broken = fixture(); await broken.start(); broken.g.emit('error'); await tick(); active(broken, 'cat');
+  broken.c.finish(); await tick(); active(broken, 'ankha');
+  broken.k.emit('error'); await tick(); active(broken, 'cat');
   broken.c.finish(); await tick(); active(broken, 'cat');
   broken.c.emit('error'); assert.equal(broken.n['meme-dancer'].hidden, true); assert.equal(broken.a.paused, false);
 
@@ -100,5 +111,5 @@ function active(f, id) {
   const hidden = fixture({mode: 'deferred'}); await hidden.start(); hidden.a.paused = true; hidden.a.emit('pause');
   hidden.g.pending[0].reject(Error('interrupted')); await tick(); assert.equal(hidden.n['meme-dancer'].hidden, true); assert.equal(hidden.g.paused, true);
   vm.runInNewContext(code, {document: {getElementById: () => null}});
-  console.log('PASS: first girl loop; random 1–3 girl / 1–2 cat turns; only the active silent clip loads/plays; fixed video rates leave music unchanged; hide/show, pause, buffering, hidden tabs, reduced motion and track changes preserve turns; failures and stale promises are isolated.');
+  console.log('PASS: first girl loop; random 1–3 girl / 1–2 cat turns plus exactly one Ankha play; only the active silent clip loads/plays; fixed video rates leave music unchanged; hide/show, pause, buffering, hidden tabs, reduced motion and track changes preserve turns; failures and stale promises are isolated.');
 })().catch(error => {console.error(error); process.exitCode = 1;});
