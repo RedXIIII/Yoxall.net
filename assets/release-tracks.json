@@ -476,6 +476,214 @@
     "sleeveNote": "Headphones on when the house finally sleeps. Running on love and fumes."
   },
   {
+    "id": "boots-on-the-ground",
+    "title": "Boots On The Ground",
+    "subtitle": "MST massive. Penzance to Cheltenham.",
+    "station": "PLANNER FM / MST MASSIVE",
+    "src": "/assets/boots-on-the-ground.mp3",
+    "duration": 257.64,
+    "downloadName": "Boots On The Ground - yoxall.net.mp3",
+    "lyrics": [
+      {
+        "name": "Intro",
+        "note": "Deep distorted voice, pirate radio static",
+        "lines": [
+          "Check one, check two...",
+          "South West massive!",
+          "Penzance to Cheltenham!",
+          "Planning crew on the line!",
+          "But this one ain't about us...",
+          "",
+          "This one's for the ones out there,",
+          "Getting their fucking hands dirty!",
+          "",
+          "M-S-T MASSIVE!",
+          "RUN THAT BASS!"
+        ]
+      },
+      {
+        "name": "DROP",
+        "note": "Crushing distorted 808, icy square-wave riff",
+        "lines": []
+      },
+      {
+        "name": "Verse 1",
+        "note": "Fast confident Cockney grime flow",
+        "lines": [
+          "Half-seven, rain coming down,",
+          "Van full of tools, heading out of town!",
+          "Penzance to Cheltenham, covering the patch,",
+          "Another front door, another job dispatched!",
+          "",
+          "Cornwall, Devon, Somerset too,",
+          "Up through Gloucestershire, the whole damn crew!",
+          "Door won't shut and the tap's gone wrong,",
+          "MST turns up, been grafting all along!",
+          "",
+          "Timber cut clean, new tile on the wall,",
+          "Brickwork patched, yeah, they handle it all!",
+          "We put it on the board, they put it right,",
+          "Getting homes sorted from morning till night!"
+        ]
+      },
+      {
+        "name": "Pre-Chorus",
+        "note": "Beat strips to cowbell, melodic vocals",
+        "lines": [
+          "From the diary to the driveway,",
+          "From the first call to the key...",
+          "When your home needs fixing,",
+          "You want an M-S-T!"
+        ]
+      },
+      {
+        "name": "CHORUS",
+        "note": "Huge catchy melodic vocals, filthy 808",
+        "lines": [
+          "BOOTS ON THE GROUND! (M-S-T!)",
+          "NO CAPES! NO CROWNS!",
+          "JUST THE CREW YOU NEED!",
+          "",
+          "RAIN COMING DOWN! (OI!)",
+          "VANS ROLLING OUT! (YEAH!)",
+          "FROM PENZANCE TO CHELTENHAM!",
+          "THAT'S WHAT WE'RE ABOUT!",
+          "",
+          "BOOTS ON THE GROUND!",
+          "LET THE BASSLINE POUND!",
+          "BIG UP THE CREW!",
+          "KEEPING HOMES SOUND!"
+        ]
+      },
+      {
+        "name": "Instrumental",
+        "note": "Hypnotic phonk cowbell, sliding Eskimo bass",
+        "lines": []
+      },
+      {
+        "name": "Verse 2",
+        "note": "Rapid cheeky grime flow",
+        "lines": [
+          "First-time fix, that's the aim,",
+          "No two houses ever quite the same!",
+          "Customer smiling, job looking sweet,",
+          "Another bit of graft, another day complete!",
+          "",
+          "Can hang a door, make the hinges behave,",
+          "Patch up a wall like a master of the trade!",
+          "But give him a tablet, watch his confidence slip,",
+          "Twenty fucking minutes trying to find 'submit'!",
+          "",
+          "Oi! What's the password? What's this screen?",
+          "Why's the bloody thing gone green?!",
+          "Call the planners, \"This app's gone flat!\"",
+          "\"YOU'VE FIXED THE FUCKING HOUSE, JUST PRESS THAT!\""
+        ]
+      },
+      {
+        "name": "DJ REWIND",
+        "note": "Vinyl scratching",
+        "lines": [
+          "BOH! BOH! BOH!",
+          "WHEEL THAT!",
+          "",
+          "THEY CAN FIX A FUCKING BUILDING...",
+          "BUT THEY CAN'T UPDATE A TABLET!",
+          "",
+          "BIG LOVE, LADS!",
+          "RELOAD!"
+        ]
+      },
+      {
+        "name": "DROP",
+        "note": "Massive filthy 808 and square-wave bass",
+        "lines": []
+      },
+      {
+        "name": "Bridge",
+        "note": "Stripped-back deep soulful vocals",
+        "lines": [
+          "From the Cornish coast to the northern end,",
+          "There's a bloke with a toolbox you can depend on.",
+          "Behind every door there's somebody's life,",
+          "A little peace of mind when you put something right.",
+          "",
+          "No medals, no headlines, no standing applause,",
+          "Just good honest graft for a bloody good cause."
+        ]
+      },
+      {
+        "name": "SCREAM",
+        "note": "",
+        "lines": [
+          "M-S-T!",
+          "BRING THAT FUCKING BEAT!"
+        ]
+      },
+      {
+        "name": "FINAL DROP",
+        "note": "Massive polished phonk bass, layered gang vocals",
+        "lines": []
+      },
+      {
+        "name": "Final Chorus",
+        "note": "Huge melodic hook",
+        "lines": [
+          "BOOTS ON THE GROUND! (M-S-T!)",
+          "NO CAPES! NO CROWNS!",
+          "JUST THE CREW YOU NEED!",
+          "",
+          "RAIN COMING DOWN! (OI!)",
+          "VANS ROLLING OUT! (YEAH!)",
+          "PENZANCE TO CHELTENHAM!",
+          "LET THE WHOLE SOUTH WEST SHOUT!",
+          "",
+          "M-S-T! (OI!)",
+          "M-S-T! (WHAT!)",
+          "THE ONES GETTING SHIT DONE!",
+          "AND WE'VE GOT THEIR BACK!"
+        ]
+      },
+      {
+        "name": "Outro",
+        "note": "Beat cuts, telephone ringing",
+        "lines": []
+      },
+      {
+        "name": "Spoken",
+        "note": "Cockney voice",
+        "lines": [
+          "Nice one, lads.",
+          "Proper legends."
+        ]
+      },
+      {
+        "name": "Pause",
+        "note": "",
+        "lines": [
+          "Oh, just one more thing...",
+          "Have you closed your jobs?"
+        ]
+      },
+      {
+        "name": "Operative",
+        "note": "Distant voice",
+        "lines": [
+          "FUCK OFF!"
+        ]
+      },
+      {
+        "name": "Massive distorted bass hit",
+        "note": "Radio static",
+        "lines": []
+      }
+    ],
+    "artwork": "/assets/sleeves/boots-on-the-ground.webp",
+    "thumbnail": "/assets/sleeves/boots-on-the-ground-thumb.webp",
+    "artworkAlt": "MST Massive — Boots On The Ground: the hooded Planner FM MC with a clipboard, surrounded by the South West repairs team, tool-filled vans and a neon Penzance-to-Cheltenham route.",
+    "sleeveNote": "From the diary to the driveway. Big up the MSTs keeping homes sound, from Penzance to Cheltenham. Just remember to close your jobs."
+  },
+  {
     "id": "bellend-fm",
     "title": "Bellend FM: The Daz Transmission",
     "subtitle": "The Daz transmission. Nothing but love.",
