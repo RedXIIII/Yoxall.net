@@ -52,7 +52,7 @@ const page = `<!doctype html>
   <link rel="stylesheet" href="/assets/single.css?v=intro3">
   <script src="/assets/single-player.js?v=intro3" defer></script>
   <script src="/assets/deck-visualizer.js?v=deck2" defer></script>
-  <script src="/assets/meme-dancer.js?v=1" defer></script>
+  <script src="/assets/meme-dancer.js?v=2" defer></script>
 </head>
 <body class="is-album-view">
   <a class="skip-link" href="#main">Skip to the records</a>

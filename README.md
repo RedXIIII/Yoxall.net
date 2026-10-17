@@ -59,6 +59,6 @@ The small alien in the bottom-right corner opens the restored original archive a
 
 Lyric sheets are expanded by default. Before selecting a record, the opening song’s lyrics are shown; choosing a record switches the visible lyric sheet. The Parental Advisory sticker uses bounded SVG lettering so the full word fits at every screen size.
 
-The user-supplied dancing meme is served as a small, silent H.264 loop. Its source is attached only when a track is actually playing. It pauses/hides with playback or a hidden tab, follows the visuals/reduced-motion setting, and has Hide/Show controls. It contains no audio stream and never controls the music element.
+The user-supplied dancing meme is served as a small, silent H.264 loop. Its playback rate is 140/155 (about 90.3%), slowing the 155 BPM “9mm” reference to suit the collection’s predominant 140 BPM pulse. The rate is retained when loading, resuming or switching tracks. Its source is attached only when a track is actually playing. It pauses/hides with playback or a hidden tab, follows the visuals/reduced-motion setting, and has Hide/Show controls. It contains no audio stream and never controls the music element.
 
 Run `node meme-test.cjs` to verify the dancer’s lazy loading, playback/visibility synchronization, motion controls and error handling.
