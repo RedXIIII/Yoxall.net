@@ -108,8 +108,8 @@
     updateTime();
   }
   function renderAlbum() {
-    if (deckArt) { deckArt.setAttribute('src', '/assets/sleeves/the-west-dont-rest-hooded.webp'); deckArt.setAttribute('alt', 'Planner FM — The Planning Sessions: hooded MC at a stormy Cornish planning desk'); }
-    if (ambientArt) ambientArt.style.setProperty('--sleeve-image', 'url("/assets/sleeves/the-west-dont-rest-hooded.webp")');
+    if (deckArt) { deckArt.setAttribute('src', '/assets/planner-fm-estate-sessions.webp'); deckArt.setAttribute('alt', 'Original Planner FM intro cover: hooded MC at the repairs planning desk'); }
+    if (ambientArt) ambientArt.style.setProperty('--sleeve-image', 'url("/assets/planner-fm-estate-sessions.webp")');
     document.body.dataset.track = 'album';
     document.body.classList.toggle('is-album-view', true);
     document.title = 'Planner FM — The Planning Sessions';
