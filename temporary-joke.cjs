@@ -49,10 +49,10 @@ const page = `<!doctype html>
   <title>Planner FM — The Planning Sessions</title>
   <link rel="canonical" href="https://yoxall.net/">
   <link rel="icon" href="/assets/single-icon.svg?v=crate1" type="image/svg+xml">
-  <link rel="stylesheet" href="/assets/single.css?v=intro3">
+  <link rel="stylesheet" href="/assets/single.css?v=memes4">
   <script src="/assets/single-player.js?v=intro3" defer></script>
   <script src="/assets/deck-visualizer.js?v=deck2" defer></script>
-  <script src="/assets/meme-dancer.js?v=2" defer></script>
+  <script src="/assets/meme-dancer.js?v=3" defer></script>
 </head>
 <body class="is-album-view">
   <a class="skip-link" href="#main">Skip to the records</a>
@@ -98,7 +98,7 @@ const page = `<!doctype html>
       </div>
     </main>
     <footer class="release-footer"><a href="/">PLANNER FM <span>/ PLANNING SESSIONS</span></a><span>THE DIARY’S FULL. THE FREQUENCY’S OPEN.</span><span class="catalogue">PF–001 / ${tracks.length} TRANSMISSIONS</span></footer>
-  <aside id="meme-dancer" class="meme-dancer" aria-label="Dancing meme" hidden><div id="dancer-panel" class="dancer-panel"><div class="dancer-topline"><span>OFF THE CLOCK</span><button id="dancer-hide" type="button" aria-label="Hide dancer" title="Hide dancer">×</button></div><video id="dancer-video" data-src="/assets/planner-fm-dancer.mp4" muted loop playsinline preload="none" width="320" height="320" aria-hidden="true"></video></div><button id="dancer-show" class="dancer-show" type="button" hidden>SHOW DANCER ↗</button></aside>
+  <aside id="meme-dancer" class="meme-dancer" data-meme="girl" aria-label="Off-the-clock memes" hidden><div id="dancer-panel" class="dancer-panel"><div class="dancer-topline"><span id="meme-label">OFF THE CLOCK</span><button id="dancer-hide" type="button" aria-label="Hide memes" title="Hide memes">×</button></div><video id="dancer-video" class="meme-video" data-src="/assets/planner-fm-dancer.mp4" muted playsinline preload="none" width="320" height="320" aria-hidden="true"></video><video id="cat-video" class="meme-video meme-cat" data-src="/assets/planner-fm-vibe-cat.mp4" muted playsinline preload="none" width="320" height="320" aria-hidden="true" hidden></video></div><button id="dancer-show" class="dancer-show" type="button" hidden>SHOW MEMES ↗</button></aside>
   <a class="archive-easter-egg" href="/the-record/" aria-label="Open The Record archive" title="Some files never stay buried."><svg viewBox="0 0 40 48" fill="none" aria-hidden="true"><path d="M20 2C9 2 3 10 3 20c0 11 10 23 17 26 7-3 17-15 17-26C37 10 31 2 20 2Z" fill="#183a30" stroke="#6a947a" stroke-width="1.2"/><path d="M7 19c8-1 11 5 11 13-7-1-11-6-11-13Zm26 0c-8-1-11 5-11 13 7-1 11-6 11-13Z" fill="#0a1016" stroke="#665582" stroke-width="1.3"/><path d="m18 35-1 2m5-2 1 2m-6 3c2-1 4-1 6 0" stroke="#749582" stroke-width="1.3" stroke-linecap="round"/></svg></a>
   </div><script id="track-data" type="application/json">${playerData}</script>
 </body>
