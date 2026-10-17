@@ -7,7 +7,7 @@
     {id: 'girl', video: $('dancer-video'), rate: 140 / 155, maxLoops: 3, label: 'OFF THE CLOCK'},
     // The uploaded cat clip’s measured nodding cadence is approximately 123 BPM.
     {id: 'cat', video: $('cat-video'), rate: 140 / 123, maxLoops: 2, label: 'CAT ON CALL'},
-    {id: 'ankha', video: $('ankha-video'), rate: 140 / 110, maxLoops: 1, label: 'NILE SHIFT'}
+    {id: 'ankha', video: $('ankha-video'), rate: 140 / 110, maxLoops: 2, label: 'NILE SHIFT'}
   ];
   if (!audio || !stage || !panel || !hide || !show || clips.some(clip => !clip.video)) return;
   const motion = typeof matchMedia === 'function' ? matchMedia('(prefers-reduced-motion: reduce)') : null;
