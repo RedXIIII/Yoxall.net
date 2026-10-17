@@ -8,7 +8,7 @@ a{color:inherit;text-decoration:none}button{color:inherit;cursor:pointer}input:d
 button:focus-visible,a:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid var(--acid);outline-offset:5px}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
 .skip-link{position:absolute;top:12px;left:12px;padding:12px;background:var(--acid);color:var(--ink);z-index:10;transform:translateY(-160%)}.skip-link:focus{transform:none}
-.ambient{position:fixed;inset:0;pointer-events:none;background:linear-gradient(90deg,#0b10168a,#0b1016ed),url('/assets/sleeves/the-west-dont-rest-hooded.webp') center/cover;opacity:.13;filter:grayscale(.7);z-index:0}
+.ambient{position:fixed;inset:0;pointer-events:none;background:linear-gradient(90deg,#0b10168a,#0b1016ed),url('/assets/planner-fm-estate-sessions.webp') center/cover;opacity:.13;filter:grayscale(.7);z-index:0}
 .page-shell{position:relative;width:min(1460px,100%);margin:auto;padding:0 64px}
 .masthead{display:flex;align-items:center;gap:28px;min-height:88px;border-bottom:1px solid var(--line)}
 .station-brand{display:flex;align-items:center;gap:10px;white-space:nowrap;font:700 13px/1 Arial,sans-serif;letter-spacing:.08em}.station-brand svg{width:31px;height:31px;color:var(--acid)}.station-brand b{color:var(--acid);font-weight:400}
@@ -128,7 +128,7 @@ body[data-track="practically-perfect"] .ambient{background-image:linear-gradient
 /* Planner FM: icy pirate-radio hardware, phonk light, and a live record label. */
 :root{--violet:#b183f5}
 body{background:radial-gradient(ellipse at 84% 8%,#45296126,transparent 42%),radial-gradient(ellipse at 10% 24%,#1a617132,transparent 50%),var(--ink)}
-.ambient{background-image:linear-gradient(90deg,#080e168c,#0b1016e8),var(--sleeve-image,url('/assets/sleeves/the-west-dont-rest-hooded.webp'));opacity:.18;filter:saturate(.6)}
+.ambient{background-image:linear-gradient(90deg,#080e168c,#0b1016e8),var(--sleeve-image,url('/assets/planner-fm-estate-sessions.webp'));opacity:.18;filter:saturate(.6)}
 body[data-track="practically-perfect"] .ambient{background-image:linear-gradient(90deg,#0b10168a,#0b1016ed),var(--sleeve-image);opacity:.18}
 body[data-track="the-west-dont-rest"]{--acid:#9bdfff;--line:#9bdfff29}
 .release{align-items:center;gap:44px;padding:36px 0 35px}
