@@ -22,6 +22,7 @@
   if (lyricNav) lyricNav.addEventListener('click', () => { $('lyrics').open = true; });
   let active = -1, repeatAll = true, playAttempt = 0, metadataReady = false;
   let pointerStart = null, ignoreClickUntil = 0;
+  let coverCueTimer = 0;
   const selected = () => tracks[Math.max(0, active)];
   const shareUrl = () => 'https://yoxall.net/' + (active >= 0 ? '?track=' + encodeURIComponent(selected().id) : '');
   function announce(text) { if (status.textContent !== text) status.textContent = text; }
@@ -30,6 +31,11 @@
     return Math.floor(seconds / 60) + ':' + String(seconds % 60).padStart(2, '0');
   }
   function setPlaying(playing) {
+    clearTimeout(coverCueTimer);
+    document.body.classList.toggle('cover-cue-dismissed', false);
+    if (playing) coverCueTimer = setTimeout(() => {
+      document.body.classList.toggle('cover-cue-dismissed', true);
+    }, 3000);
     document.body.classList.toggle('is-playing', playing);
     toggle.setAttribute('aria-pressed', String(playing));
     toggle.setAttribute('aria-label', (playing ? 'Pause ' : 'Play ') + (active < 0 ? 'The Planning Sessions' : selected().title));

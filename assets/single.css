@@ -211,3 +211,14 @@ h1{font-size:clamp(50px,6.1vw,85px)}
 
 .dancer-close{position:absolute;top:0;right:0;z-index:1;display:grid;place-items:center;width:28px;height:28px;padding:0;border:0;background:transparent;color:#c7d7e0;font:16px/1 Arial,sans-serif;text-shadow:0 1px 3px #000;opacity:.6}
 .dancer-close:hover,.dancer-close:focus-visible{color:#fff;opacity:1}
+
+/* A clear invitation on the sleeve; clear the artwork once the set is running. */
+.record-play-mark{top:50%;left:50%;right:auto;transform:translate(-50%,-50%);width:76px;height:76px;border:1px solid #edf6ff99;background:#0b141c38;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);box-shadow:0 3px 22px #0005;color:#fff;text-shadow:0 2px 6px #0009;pointer-events:none;transition:opacity .8s ease}
+.record-card.is-active .record-play-mark{font-size:28px}
+.record-play-mark::before{content:'PLAY';position:absolute;top:calc(100% + 9px);left:50%;transform:translateX(-50%);font:700 9px/1.4 var(--mono);letter-spacing:.18em;white-space:nowrap;text-shadow:0 1px 5px #000,0 1px 14px #000}
+#album-play .record-play-mark::before{content:'PLAY THE SET'}
+.cover-cue-dismissed .record-card.is-active .record-select .record-play-mark{opacity:0}
+.is-playing .record-card.is-active .record-play-mark::after{font-size:28px}
+.is-playing .record-play-mark::before{content:'PAUSE'}
+.cover-cue-dismissed .record-card.is-active .record-select:focus-visible .record-play-mark{opacity:1}
+@media(max-width:480px){.record-play-mark{width:62px;height:62px}.record-card.is-active .record-play-mark,.is-playing .record-card.is-active .record-play-mark::after{font-size:23px}.record-play-mark::before{font-size:8px}}
