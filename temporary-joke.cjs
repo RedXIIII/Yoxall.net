@@ -49,8 +49,8 @@ const page = `<!doctype html>
   <title>Planner FM — The Planning Sessions</title>
   <link rel="canonical" href="https://yoxall.net/">
   <link rel="icon" href="/assets/single-icon.svg?v=crate1" type="image/svg+xml">
-  <link rel="stylesheet" href="/assets/single.css?v=coverplay2">
-  <script src="/assets/single-player.js?v=coverplay1" defer></script>
+  <link rel="stylesheet" href="/assets/single.css?v=amanda1">
+  <script src="/assets/single-player.js?v=amanda1" defer></script>
   <script src="/assets/deck-visualizer.js?v=deck2" defer></script>
   <script src="/assets/meme-dancer.js?v=5" defer></script>
 </head>

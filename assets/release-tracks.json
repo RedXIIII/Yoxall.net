@@ -1688,170 +1688,277 @@
     "sleeveNote": "Banjo loaded. Cold spot located. The damp-and-mould cowboys ride again."
   },
   {
-    "id": "phone-down-bass-up",
-    "title": "Phone Down, Bass Up",
-    "subtitle": "Clock out. Hands up.",
-    "station": "PLANNER FM / AFTER HOURS",
-    "src": "/assets/phone-down-bass-up.mp3",
-    "duration": 228.41,
-    "downloadName": "Phone Down, Bass Up - yoxall.net.mp3",
+    "id": "amanda-holds-it-down",
+    "aliases": [
+      "phone-down-bass-up"
+    ],
+    "title": "Amanda Holds It Down",
+    "subtitle": "Heart of gold. Backbone of steel.",
+    "station": "PLANNER FM / AMANDA'S HOUSE",
+    "src": "/assets/amanda-holds-it-down-yoxall-net.mp3",
+    "duration": 280.01,
+    "downloadName": "Amanda Holds It Down - yoxall.net.mp3",
     "lyrics": [
       {
         "name": "Intro",
-        "note": "Phone ringing, vinyl crackle",
+        "note": "Deep rolling house bass, sinister phonk cowbell, soft female vocal chops",
+        "lines": []
+      },
+      {
+        "name": "Deep Cockney MC",
+        "note": "Spoken",
         "lines": [
-          "Oi, oi!",
-          "Planner FM!",
-          "From the office to the afterparty!",
-          "All the wrong'uns inside!",
-          "Amanda, this one's for you!",
-          "DJ, RUN THE HOUSE!"
+          "Oi, oi...",
+          "Estate Sessions.",
+          "House crew inside.",
+          "",
+          "This one's for Amanda.",
+          "The one keeping all us wrong'uns together."
         ]
       },
       {
-        "name": "Drop",
-        "note": "Heavy four-on-the-floor kick, filthy phonk cowbell",
+        "name": "Female whisper",
+        "note": "",
+        "lines": [
+          "She holds it down..."
+        ]
+      },
+      {
+        "name": "MC",
+        "note": "",
+        "lines": [
+          "Yeah, you fucking know she does."
+        ]
+      },
+      {
+        "name": "DROP",
+        "note": "Filthy distorted 808, rolling four-on-the-floor house groove",
         "lines": []
       },
       {
         "name": "Verse 1",
-        "note": "Skippy Cockney grime flow",
+        "note": "Fast skippy Cockney grime flow",
         "lines": [
-          "Half-seven start and the phone goes mad,",
-          "Another leak, another job to add!",
-          "Awaab's clock ticking, get the survey through,",
-          "TIC on the job, Air Arc crew!",
+          "Amanda walks in, gets straight to the task,",
+          "Don't need telling, don't need to ask!",
+          "Ten things broken, eleven gone wrong,",
+          "She's got it all sorted before too long!",
           "",
-          "Ops on the road, customers on hold,",
-          "Diaries packed and the coffee's gone cold!",
-          "Smara on deck, keeping us in line,",
-          "Zoe rolls her eyes for the hundredth fucking time!"
+          "Takes no prisoners, don't suffer fools,",
+          "Got her own way, makes her own rules!",
+          "But need a chat? She's always right there,",
+          "Got time for the people, genuinely cares.",
+          "",
+          "She'll tell you straight, won't sugar that shit,",
+          "But when things go sideways, she don't fucking quit!",
+          "Heart made of gold, backbone of steel,",
+          "One of the realest, and that's the deal!"
         ]
       },
       {
-        "name": "Pre-chorus",
-        "note": "Bass cuts, female vocal rising",
+        "name": "Pre-Chorus",
+        "note": "Female rhythmic house vocals, bass building",
         "lines": [
-          "Five more minutes...",
-          "One last call...",
-          "Clock strikes five...",
-          "FUCK IT ALL!"
+          "When it all goes wrong...",
+          "She turns it around...",
+          "When the whole crew's lost...",
+          "She holds it down..."
         ]
       },
       {
-        "name": "Chorus",
-        "note": "Infectious house vocals, massive bass",
+        "name": "CHORUS",
+        "note": "Infectious female house hook, filthy bass",
         "lines": [
-          "PHONE DOWN! (BASS UP!)",
-          "CLOCK OUT! (HANDS UP!)",
-          "NO SLOTS! (NO SLEEP!)",
-          "BUT THE BEAT DON'T STOP!",
+          "SHE HOLDS IT DOWN! (DOWN!)",
+          "SHE HOLDS IT DOWN! (OI!)",
+          "WHEN THE WORLD GOES MAD,",
+          "SHE TURNS IT AROUND!",
           "",
-          "WORK ALL DAY! (OI!)",
-          "RAVE ALL NIGHT! (YEAH!)",
-          "PLANNER FM!",
-          "WE'RE FEELING ALRIGHT!"
+          "HANDS IN THE AIR! (UP!)",
+          "FEEL THAT SOUND! (YEAH!)",
+          "AMANDA'S IN THE HOUSE!",
+          "AND THE BASS GOES DOWN!"
         ]
       },
       {
         "name": "Instrumental",
-        "note": "Rolling house groove, distorted 808 and cowbell",
+        "note": "Extended hypnotic phonk cowbell, dirty rolling house bass, chopped female vocals",
         "lines": []
       },
       {
         "name": "Verse 2",
-        "note": "Fast Cockney MC, playful flow",
+        "note": "Playful rapid Cockney grime",
         "lines": [
-          "Jack's got a joke that'll get us all barred,",
-          "Sheep across Wales putting up their guard!",
-          "Charlie's on low power, gaming till late,",
-          "Darren's fast asleep, fucking typical, mate!",
+          "Books a little holiday, off she goes,",
+          "Five minutes later, nobody fucking knows!",
+          "Where's that answer? Who's got the plan?",
+          "Someone find Amanda, do what you can!",
           "",
-          "Amanda wants house, so we're switching the beat,",
-          "Four-four rhythm got the whole crew on their feet!",
-          "Zoe's got a grin, Smara's shaking her head,",
-          "Another bunch of bellends, enough fucking said!"
+          "Meanwhile in Spain, enjoying the sun,",
+          "Should've been relaxing, having some fun!",
+          "Snake took a bite, what a fucking surprise,",
+          "Picked the wrong woman, probably traumatised!"
         ]
       },
       {
-        "name": "Dj rewind",
+        "name": "Beat cuts",
+        "note": "Silence",
+        "lines": []
+      },
+      {
+        "name": "MC",
+        "note": "Deadpan",
+        "lines": [
+          "Wait...",
+          "A fucking snake?"
+        ]
+      },
+      {
+        "name": "Pause",
+        "note": "",
+        "lines": [
+          "Amanda...",
+          "You absolute muppet!"
+        ]
+      },
+      {
+        "name": "DJ Rewind",
         "note": "Vinyl scratch",
         "lines": [
           "BOH! BOH! BOH!",
-          "WHEEL IT!",
-          "HOUSE CREW, GRIME CREW!",
-          "SAME FUCKING FAMILY!"
+          "WHEEL THAT!"
         ]
       },
       {
-        "name": "Drop",
-        "note": "Massive distorted Eskimo bass meets phonk house",
+        "name": "DROP",
+        "note": "Brutal sliding Eskimo bass, four-on-the-floor kick",
         "lines": []
+      },
+      {
+        "name": "Verse 3",
+        "note": "Confident Cockney flow",
+        "lines": [
+          "Back in the building, straight in her stride,",
+          "Whole crew knows they've got someone on their side!",
+          "Sharp with the banter, quick with a grin,",
+          "Got no patience for pointless spin!",
+          "",
+          "But when Friday lands, different kind of plan,",
+          "House music pumping, she's out with the gang!",
+          "Bang Bang Club, bass shaking the floor,",
+          "One more track and she's begging for more!",
+          "",
+          "I'm hood up, watching the bassline roll,",
+          "She's got house music deep in her soul!",
+          "No need for drama, no need for a crown,",
+          "She's simply the one who holds it down!"
+        ]
       },
       {
         "name": "Bridge",
-        "note": "Deep voice, stripped-back cowbell",
+        "note": "Deep bass, hypnotic female vocals",
+        "lines": []
+      },
+      {
+        "name": "Female",
+        "note": "Soft rhythmic singing",
         "lines": [
-          "Home from work, two kids still bouncing,",
-          "Little girl's an angel, but the sleep ain't happening!",
-          "Little lad's a legend, energy for days,",
-          "Dad's running on fumes in a permanent haze!",
-          "",
-          "House goes quiet, everyone's asleep,",
-          "Headphones on, bassline deep.",
-          "One little spliff, let the night begin,",
-          "Turn that filthy fucking sub back in!"
+          "Through the noise...",
+          "Through the night...",
+          "Always there...",
+          "Making things right..."
         ]
       },
       {
-        "name": "Build",
-        "note": "Female chopped vocal, hypnotic repetition",
+        "name": "MC",
+        "note": "Quiet spoken",
         "lines": [
-          "Bass up... bass up...",
-          "No sleep... no sleep...",
-          "Bass up... bass up...",
-          "RELOAD!"
+          "Some people make the job harder.",
+          "Some make the whole thing worth doing."
         ]
       },
       {
-        "name": "Final drop",
-        "note": "Full phonk house bass, crowd chanting",
+        "name": "Pause",
+        "note": "",
         "lines": [
-          "PHONE DOWN! (BASS UP!)",
-          "CLOCK OUT! (HANDS UP!)",
-          "NO SLOTS! (NO SLEEP!)",
-          "BUT THE BEAT DON'T STOP!",
-          "",
-          "PLANNER FM! (OI!)",
-          "WRONG'UNS FOR LIFE! (WHAT!)",
-          "DIRTY FUCKING BASS!",
-          "TILL THE MORNING LIGHT!"
+          "She's definitely the second one."
         ]
+      },
+      {
+        "name": "Female vocal chops",
+        "note": "Rising",
+        "lines": [
+          "Holds it...",
+          "Holds it...",
+          "Holds it down..."
+        ]
+      },
+      {
+        "name": "Silence",
+        "note": "",
+        "lines": []
+      },
+      {
+        "name": "Female whisper",
+        "note": "",
+        "lines": [
+          "Turn it up."
+        ]
+      },
+      {
+        "name": "FINAL DROP",
+        "note": "Enormous distorted 808, filthy Eskimo square-wave bass, euphoric house rhythm",
+        "lines": []
+      },
+      {
+        "name": "Final Chorus",
+        "note": "Layered female house vocals, male MC ad-libs",
+        "lines": [
+          "SHE HOLDS IT DOWN! (DOWN!)",
+          "SHE HOLDS IT DOWN! (OI!)",
+          "WHEN THE WORLD GOES MAD,",
+          "SHE TURNS IT AROUND!",
+          "",
+          "HANDS IN THE AIR! (UP!)",
+          "FEEL THAT SOUND! (YEAH!)",
+          "AMANDA'S IN THE HOUSE!",
+          "AND THE BASS GOES DOWN!"
+        ]
+      },
+      {
+        "name": "Extended instrumental",
+        "note": "Hypnotic rolling house groove, pitched feminine vocal chops",
+        "lines": []
       },
       {
         "name": "Outro",
-        "note": "House kick fading, deep voice",
+        "note": "House beat fading, deep Cockney voice",
         "lines": [
-          "Same shit tomorrow, yeah?"
+          "Big love, Amanda.",
+          "You're an absolute diamond."
         ]
       },
       {
-        "name": "Phone rings",
+        "name": "Pause",
         "note": "",
         "lines": [
-          "Oh, fuck off."
+          "Just one bit of advice, yeah?",
+          "",
+          "Next time you're in Spain...",
+          "",
+          "Stay away from the fucking wildlife."
         ]
       },
       {
-        "name": "Final enormous sub-bass hit",
-        "note": "",
+        "name": "Female giggle",
+        "note": "Final filthy bass hit – Tape stop",
         "lines": []
       }
     ],
-    "artwork": "/assets/sleeves/phone-down-bass-up-amanda.webp",
-    "thumbnail": "/assets/sleeves/phone-down-bass-up-amanda-thumb.webp",
-    "artworkAlt": "Phone Down, Bass Up sleeve: Amanda DJs beside the hooded Planner FM MC at a house party, with vinyl decks and mirrorball reflections.",
-    "sleeveNote": "Amanda wanted house. She’s got the decks. Phone down, bass up—the repairs crew are off the clock."
+    "artwork": "/assets/sleeves/amanda-holds-it-down.webp",
+    "thumbnail": "/assets/sleeves/amanda-holds-it-down-thumb.webp",
+    "artworkAlt": "Amanda Holds It Down — Amanda and the hooded Planner FM MC at the decks in a neon-pink and blue house club, with headphones, planning notes and a cheeky no-more-snakes-in-Spain reminder.",
+    "sleeveNote": "House music in her soul. The crew on her side. Amanda holds it down — just keep the Spanish wildlife at a distance."
   },
   {
     "id": "practically-perfect",

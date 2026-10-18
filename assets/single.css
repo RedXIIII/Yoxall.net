@@ -112,7 +112,7 @@ body[data-track="three-in-the-morning"]{--acid:#bdc5f3}body[data-track="set-phas
 .is-playing .record-card.is-active .record-play-mark{font-size:0}
 .is-playing .record-card.is-active .record-play-mark::after{content:'';position:absolute;top:50%;left:50%;width:20px;height:24px;box-sizing:border-box;border-left:6px solid currentColor;border-right:6px solid currentColor;transform:translate(-50%,-50%)}
 
-body[data-track="phone-down-bass-up"]{--acid:#d1b7ed}
+body[data-track="amanda-holds-it-down"]{--acid:#d1b7ed}
 
 body[data-track="get-your-tics-out"]{--acid:#e4c291}
 
