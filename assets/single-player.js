@@ -305,7 +305,7 @@
   $('record-controls').hidden = false;
   $('record-help').textContent = 'FLIP A SLEEVE. TAP TO PLAY.  ← → KEYS / DRAG OR SWIPE';
   const requested = new URLSearchParams(location.search).get('track');
-  const initial = tracks.findIndex(track => track.id === requested);
+  const initial = tracks.findIndex(track => track.id === requested || (Array.isArray(track.aliases) && track.aliases.includes(requested)));
   if (initial >= 0) selectTrack(initial, false);
   else renderAlbum();
 })();
