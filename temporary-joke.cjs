@@ -49,7 +49,7 @@ const page = `<!doctype html>
   <title>Planner FM — The Planning Sessions</title>
   <link rel="canonical" href="https://yoxall.net/">
   <link rel="icon" href="/assets/single-icon.svg?v=crate1" type="image/svg+xml">
-  <link rel="stylesheet" href="/assets/single.css?v=amanda1">
+  <link rel="stylesheet" href="/assets/single.css?v=yoxage1">
   <script src="/assets/single-player.js?v=amanda1" defer></script>
   <script src="/assets/deck-visualizer.js?v=deck2" defer></script>
   <script src="/assets/meme-dancer.js?v=5" defer></script>
@@ -97,7 +97,7 @@ const page = `<!doctype html>
         <aside class="sleeve-notes" id="sleeve-notes"><span class="eyebrow">FROM THE REPAIRS DESK TO THE DECKS</span><h2>Phones down.<br><em>Bass up.</em></h2><p>Missed calls. Full diaries. Filthy basslines.<br>The soundtrack to keeping the job board moving.</p><div class="crew-stamp"><span>PLANNING<br><b>TEAM</b></span><small>ON SHIFT<br>OFF THE DIAL</small></div><div class="liner-note"><span>NO ACTUAL RADIO LICENCE WAS HARMED</span><p>For the crew. For the group chat.<br>And, occasionally, at Darren’s expense.</p></div></aside>
       </div>
     </main>
-    <footer class="release-footer"><a href="/">PLANNER FM <span>/ PLANNING SESSIONS</span></a><span>THE DIARY’S FULL. THE FREQUENCY’S OPEN.</span><span class="catalogue">PF–001 / ${tracks.length} TRANSMISSIONS</span></footer>
+    <footer class="release-footer"><a href="/">PLANNER FM <span>/ PLANNING SESSIONS</span></a><span>THE DIARY’S FULL. THE FREQUENCY’S OPEN.</span><span class="catalogue">PF–001 / ${tracks.length} TRANSMISSIONS<a class="node-easter-egg" href="https://media.yoxall.net/" target="_blank" rel="noopener" aria-label="Open Yoxage Net access terminal in a new tab" title="Carrier detected."><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 6 6 6-6 6m9 0h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg></a></span></footer>
   <aside id="meme-dancer" class="meme-dancer" data-meme="girl" aria-label="Off-the-clock memes" hidden><div id="dancer-panel" class="dancer-panel"><span id="meme-label" class="sr-only">OFF THE CLOCK</span><button id="dancer-hide" class="dancer-close" type="button" aria-label="Hide memes" title="Hide memes">×</button><video id="dancer-video" class="meme-video" data-src="/assets/planner-fm-dancer.mp4" muted playsinline preload="none" width="320" height="320" aria-hidden="true"></video><video id="cat-video" class="meme-video meme-cat" data-src="/assets/planner-fm-vibe-cat.mp4" muted playsinline preload="none" width="320" height="320" aria-hidden="true" hidden></video><video id="ankha-video" class="meme-video" data-src="/assets/planner-fm-ankha.mp4" muted playsinline preload="none" width="320" height="320" aria-hidden="true" hidden></video></div><button id="dancer-show" class="dancer-show" type="button" hidden>SHOW MEMES ↗</button></aside>
   <a class="archive-easter-egg" href="/the-record/" aria-label="Open The Record archive" title="Some files never stay buried."><svg viewBox="0 0 40 48" fill="none" aria-hidden="true"><path d="M20 2C9 2 3 10 3 20c0 11 10 23 17 26 7-3 17-15 17-26C37 10 31 2 20 2Z" fill="#183a30" stroke="#6a947a" stroke-width="1.2"/><path d="M7 19c8-1 11 5 11 13-7-1-11-6-11-13Zm26 0c-8-1-11 5-11 13 7-1 11-6 11-13Z" fill="#0a1016" stroke="#665582" stroke-width="1.3"/><path d="m18 35-1 2m5-2 1 2m-6 3c2-1 4-1 6 0" stroke="#749582" stroke-width="1.3" stroke-linecap="round"/></svg></a>
   </div><script id="track-data" type="application/json">${playerData}</script>
