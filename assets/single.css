@@ -188,6 +188,12 @@ h1{font-size:clamp(50px,6.1vw,85px)}
 @media(max-width:480px){.signal-heading{font-size:6px;gap:5px}.signal-heading button{font-size:7px;min-height:36px;padding:7px}}
 
 /* A small signal from the original archive. */
+.release-footer .catalogue{display:flex;align-items:center;gap:8px}
+.node-easter-egg{display:grid;place-items:center;flex:0 0 44px;width:44px;height:44px;color:#7aa887;opacity:.4;transition:opacity .2s}
+.node-easter-egg svg{display:block;width:15px;height:15px}
+.node-easter-egg:hover,.node-easter-egg:focus-visible{opacity:1;color:#b4e9bc}
+.node-easter-egg:focus-visible{outline:1px solid currentColor;outline-offset:2px}
+@media(prefers-reduced-motion:reduce){.node-easter-egg{transition:none}}
 .archive-easter-egg{position:fixed;right:10px;bottom:calc(9px + env(safe-area-inset-bottom,0px));z-index:70;width:44px;height:44px;display:grid;place-items:center;opacity:.48;border-radius:50%;background:#080f13b3;transition:opacity .2s,filter .2s}
 .archive-easter-egg svg{width:19px;height:24px;display:block}.archive-easter-egg:hover,.archive-easter-egg:focus-visible{opacity:1;filter:drop-shadow(0 0 6px #7bbf8e44)}
 @media(prefers-reduced-motion:reduce){.archive-easter-egg{transition:none}}
