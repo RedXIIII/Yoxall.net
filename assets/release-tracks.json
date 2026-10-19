@@ -1961,6 +1961,303 @@
     "sleeveNote": "House music in her soul. The crew on her side. Amanda holds it down — just keep the Spanish wildlife at a distance."
   },
   {
+    "id": "emma-north-side-signal",
+    "title": "Emma: North Side Signal",
+    "subtitle": "North side covered. Passport ready.",
+    "station": "PLANNER FM / NORTH SIDE",
+    "src": "/assets/emma-north-side-signal-yoxall-net.mp3",
+    "duration": 231.6,
+    "downloadName": "Emma - North Side Signal - yoxall.net.mp3",
+    "lyrics": [
+      {
+        "name": "Intro",
+        "note": "Pirate radio static, sinister phonk cowbell",
+        "lines": []
+      },
+      {
+        "name": "Deep Cockney MC",
+        "note": "Spoken",
+        "lines": [
+          "Oi, oi...",
+          "Planner FM!",
+          "North side, stand up!",
+          "",
+          "Blonde hair...",
+          "Passport ready...",
+          "Amanda's partner in crime...",
+          "",
+          "Emma Wood!"
+        ]
+      },
+      {
+        "name": "Female whisper",
+        "note": "",
+        "lines": [
+          "Emma would..."
+        ]
+      },
+      {
+        "name": "MC",
+        "note": "",
+        "lines": [
+          "WOULD SHE?!"
+        ]
+      },
+      {
+        "name": "DROP",
+        "note": "Filthy distorted 808, icy square-wave bass",
+        "lines": []
+      },
+      {
+        "name": "Verse 1",
+        "note": "Fast skippy Cockney grime",
+        "lines": [
+          "Emma's on the north, got the patch on lock,",
+          "Another job booked, another tick on the clock!",
+          "Diary full, phone going mad,",
+          "Customer wants answers, operative wants a chat!",
+          "",
+          "Sat with Amanda, dangerous pair,",
+          "Between the two of 'em, there's fuck-all they can't repair!",
+          "Well, not with a hammer, not with a drill,",
+          "Just a screen and a phone and a serious bit of skill!",
+          "",
+          "Blonde hair shining, got that holiday glow,",
+          "Where's she off next? Nobody fucking knows!",
+          "One minute planning, next minute Spain,",
+          "Then she's back at her desk doing it all again!"
+        ]
+      },
+      {
+        "name": "Pre-Chorus",
+        "note": "Bass cuts, pitched-down vocal",
+        "lines": []
+      },
+      {
+        "name": "MC",
+        "note": "",
+        "lines": [
+          "North side calling...",
+          "Who's on the case?"
+        ]
+      },
+      {
+        "name": "Female",
+        "note": "",
+        "lines": [
+          "Emma Wood..."
+        ]
+      },
+      {
+        "name": "MC",
+        "note": "",
+        "lines": [
+          "You fucking know it!"
+        ]
+      },
+      {
+        "name": "HOOK",
+        "note": "Aggressive rhythmic chant, savage bass",
+        "lines": [
+          "EMMA WOOD! (OI!)",
+          "EMMA WOULD! (WHAT!)",
+          "GOT THE NORTH SIDE COVERED!",
+          "LIKE A PROPER ONE SHOULD!",
+          "",
+          "EMMA WOOD! (YEAH!)",
+          "BASSLINE GOOD! (BOH!)",
+          "GET THAT DIARY MOVING!",
+          "LIKE WE FUCKING KNEW SHE WOULD!"
+        ]
+      },
+      {
+        "name": "Instrumental",
+        "note": "Hypnotic cowbell and grinding 808",
+        "lines": []
+      },
+      {
+        "name": "Verse 2",
+        "note": "Playful rapid Cockney grime",
+        "lines": [
+          "Suitcase packed, another flight,",
+          "Probably looking at hotels on a Friday night!",
+          "Passport stamps, got places to see,",
+          "While the rest of us are drinking office tea!",
+          "",
+          "But there's more to Emma than a boarding pass,",
+          "Got her little girl, that's a different class.",
+          "Mum when she's home, planner through the day,",
+          "A whole bloody life outside the nine-to-five way!",
+          "",
+          "Amanda next door, two legends in line,",
+          "One's looking at holidays, one's thinking house time!",
+          "One's got snake stories from the Spanish sun,",
+          "The other's planning where she's going for the next one!"
+        ]
+      },
+      {
+        "name": "Beat cuts",
+        "note": "Sudden silence",
+        "lines": []
+      },
+      {
+        "name": "MC",
+        "note": "Deadpan",
+        "lines": [
+          "Hang on...",
+          "",
+          "Another fucking holiday?!"
+        ]
+      },
+      {
+        "name": "Pause",
+        "note": "",
+        "lines": [
+          "How much annual leave have you lot GOT?!"
+        ]
+      },
+      {
+        "name": "DJ REWIND",
+        "note": "Vinyl scratching",
+        "lines": [
+          "BOH! BOH! BOH!",
+          "WHEEL THAT!",
+          "",
+          "NORTH SIDE!",
+          "SOUTH WEST!",
+          "EMMA WOOD!",
+          "",
+          "RELOAD!"
+        ]
+      },
+      {
+        "name": "DROP",
+        "note": "Aggressive distorted square-wave bass",
+        "lines": []
+      },
+      {
+        "name": "Verse 3",
+        "note": "Dark confident rolling grime",
+        "lines": [
+          "From the northern patch to the office floor,",
+          "There's always another job coming through the door!",
+          "Some days madness, some days a laugh,",
+          "Same bunch of wrong'uns all doing their graft!",
+          "",
+          "Big up Emma, she's part of the crew,",
+          "One of the people who sees the day through!",
+          "No need for a crown, no need for a show,",
+          "Just proper good company and the bass down low!"
+        ]
+      },
+      {
+        "name": "Bridge",
+        "note": "Cowbell only, intimate distorted voice",
+        "lines": []
+      },
+      {
+        "name": "MC",
+        "note": "Low spoken",
+        "lines": [
+          "People come...",
+          "People go...",
+          "",
+          "Some make the day harder.",
+          "Some make it better."
+        ]
+      },
+      {
+        "name": "Pause",
+        "note": "",
+        "lines": [
+          "And some are already looking",
+          "At next year's fucking flights."
+        ]
+      },
+      {
+        "name": "Female giggle",
+        "note": "",
+        "lines": []
+      },
+      {
+        "name": "MC",
+        "note": "",
+        "lines": [
+          "EMMA!"
+        ]
+      },
+      {
+        "name": "FINAL DROP",
+        "note": "Huge overdriven 808, hypnotic grime synth",
+        "lines": []
+      },
+      {
+        "name": "Final Hook",
+        "note": "Layered male MC chants, female chopped responses",
+        "lines": [
+          "EMMA WOOD! (OI!)",
+          "EMMA WOULD! (WHAT!)",
+          "GOT THE NORTH SIDE COVERED!",
+          "LIKE A PROPER ONE SHOULD!",
+          "",
+          "EMMA WOOD! (YEAH!)",
+          "BASSLINE GOOD! (BOH!)",
+          "GET THAT DIARY MOVING!",
+          "LIKE WE FUCKING KNEW SHE WOULD!",
+          "",
+          "NORTH SIDE! (OI!)",
+          "WHO'S HOLDING IT DOWN?! (EMMA!)",
+          "PLANNER FM!",
+          "LET THAT BASSLINE POUND!"
+        ]
+      },
+      {
+        "name": "Outro",
+        "note": "Tape hiss, bass fading",
+        "lines": []
+      },
+      {
+        "name": "Spoken",
+        "note": "Exhausted Cockney voice",
+        "lines": [
+          "Nice one, Emma.",
+          "Absolute diamond."
+        ]
+      },
+      {
+        "name": "Pause",
+        "note": "",
+        "lines": [
+          "So...",
+          "Where you off to next, then?"
+        ]
+      },
+      {
+        "name": "Female voice",
+        "note": "Quiet",
+        "lines": [
+          "Holiday..."
+        ]
+      },
+      {
+        "name": "MC",
+        "note": "",
+        "lines": [
+          "OH, FOR FUCK'S SAKE!"
+        ]
+      },
+      {
+        "name": "Final distorted bass hit",
+        "note": "Pirate radio static",
+        "lines": []
+      }
+    ],
+    "artwork": "/assets/sleeves/emma-north-side-signal.webp",
+    "thumbnail": "/assets/sleeves/emma-north-side-signal-thumb.webp",
+    "artworkAlt": "Emma: North Side Signal sleeve: Emma and the hooded Planner FM MC at a neon-lit radio desk, with north-side maps, headphones, a passport and a boarding pass beneath white and cyan graffiti lettering.",
+    "sleeveNote": "North side on the line. Diary moving. Passport ready. Amanda's partner in crime is already checking the next flight."
+  },
+  {
     "id": "practically-perfect",
     "title": "Practically Perfect (For Michelle)",
     "subtitle": "Bonus track. For my better half.",
