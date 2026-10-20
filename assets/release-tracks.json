@@ -1521,6 +1521,275 @@
     "sleeveNote": "Someone get Phillip. Ten screens, one restart, all systems operational. Until the next tiny red light."
   },
   {
+    "id": "sparkes-fly",
+    "title": "Sparkes Fly",
+    "subtitle": "Smara Sparkes. Heart of gold. Electro on fire.",
+    "station": "PLANNER FM / SMARA SPARKES",
+    "src": "/assets/sparkes-fly-yoxall-net.mp3",
+    "duration": 244.8,
+    "downloadName": "Sparkes Fly - yoxall.net.mp3",
+    "lyrics": [
+      {
+        "name": "Intro",
+        "note": "Pulsing electro bass, glittering synths, breathy female whisper",
+        "lines": []
+      },
+      {
+        "name": "Whispered",
+        "note": "",
+        "lines": [
+          "S... M... A... R... A..."
+        ]
+      },
+      {
+        "name": "Soft laugh",
+        "note": "",
+        "lines": [
+          "You know who runs this."
+        ]
+      },
+      {
+        "name": "Electronic voice",
+        "note": "",
+        "lines": [
+          "Smara Sparkes."
+        ]
+      },
+      {
+        "name": "DROP",
+        "note": "Filthy electro bass, punchy club drums",
+        "lines": []
+      },
+      {
+        "name": "Verse 1",
+        "note": "Sassy rhythmic female vocals",
+        "lines": [
+          "Walks in late? Nah, she's on time,",
+          "Dark hair, sharp eyes, looking divine.",
+          "Got the whole damn room on a single wave,",
+          "She's the kind of woman everybody wants to save..."
+        ]
+      },
+      {
+        "name": "Spoken",
+        "note": "",
+        "lines": [
+          "Wait, scratch that.",
+          "",
+          "She's the one saving us!"
+        ]
+      },
+      {
+        "name": "Verse 1 continues",
+        "note": "",
+        "lines": [
+          "Phones going crazy, diaries collide,",
+          "She's already there, standing by our side.",
+          "Got a little fire and a whole lot of heart,",
+          "When the shit hits the fan, that's when the Sparkes start!"
+        ]
+      },
+      {
+        "name": "Pre-Chorus",
+        "note": "Rising synth arpeggio, layered harmonies",
+        "lines": [
+          "She's got that look,",
+          "She's got that glow.",
+          "Takes no shit,",
+          "And we all know.",
+          "",
+          "When the world gets loud,",
+          "And the walls fall down,",
+          "She's the one who turns it all around!"
+        ]
+      },
+      {
+        "name": "CHORUS",
+        "note": "Huge infectious female pop hook",
+        "lines": [
+          "SPARKES FLY! (OH!)",
+          "LIGHT UP THE NIGHT!",
+          "SMARA'S GOT OUR BACKS,",
+          "AND SHE'S READY TO FIGHT!",
+          "",
+          "HEAD HIGH! (YEAH!)",
+          "WATCH HER SHINE!",
+          "GOT THE WHOLE CREW WITH HER,",
+          "AND THE WORLD IN HER SIGHTS!",
+          "",
+          "SMA-RA! (HEY!)",
+          "SPARKES FLY! (OH!)",
+          "ONE OF A KIND,",
+          "AND SHE KNOWS HER WORTH TONIGHT!"
+        ]
+      },
+      {
+        "name": "Instrumental",
+        "note": "Explosive electro synth riff, distorted bass, chopped female vocals",
+        "lines": []
+      },
+      {
+        "name": "Verse 2",
+        "note": "Playful breathy pop delivery",
+        "lines": [
+          "Passport ready, another new place,",
+          "Little bit of sunshine, smile on her face.",
+          "Pretty Mrs waiting, love looking strong,",
+          "Now a little one's arrived to sing along.",
+          "",
+          "From a busy morning to a midnight flight,",
+          "She's got a whole new world in a different light.",
+          "Love at home, and a team that knows,",
+          "She's got a heart of gold beneath those killer clothes!"
+        ]
+      },
+      {
+        "name": "Pre-Chorus",
+        "note": "Synths rising, whispered backing vocals",
+        "lines": [
+          "She's got that fire,",
+          "She's got that glow.",
+          "Sweet when she wants,",
+          "But don't you know...",
+          "",
+          "Cross her crew,",
+          "And you'll find out why,",
+          "Even angels know how to bite!"
+        ]
+      },
+      {
+        "name": "CHORUS",
+        "note": "Huge melodic dance-pop vocals",
+        "lines": [
+          "SPARKES FLY! (OH!)",
+          "LIGHT UP THE NIGHT!",
+          "SMARA'S GOT OUR BACKS,",
+          "AND SHE'S READY TO FIGHT!",
+          "",
+          "HEAD HIGH! (YEAH!)",
+          "WATCH HER SHINE!",
+          "GOT THE WHOLE CREW WITH HER,",
+          "AND THE WORLD IN HER SIGHTS!"
+        ]
+      },
+      {
+        "name": "BREAKDOWN",
+        "note": "Bass disappears, breathy whispered vocals",
+        "lines": []
+      },
+      {
+        "name": "Whispered",
+        "note": "",
+        "lines": [
+          "Beautiful...",
+          "Fearless...",
+          "A little bit dangerous..."
+        ]
+      },
+      {
+        "name": "Pause",
+        "note": "",
+        "lines": [
+          "But always on our side."
+        ]
+      },
+      {
+        "name": "Soft giggle",
+        "note": "",
+        "lines": []
+      },
+      {
+        "name": "Spoken",
+        "note": "",
+        "lines": [
+          "Don't mistake kindness for weakness, babe."
+        ]
+      },
+      {
+        "name": "BUILD",
+        "note": "Stuttering vocal chops, accelerating synths",
+        "lines": [
+          "Sma... Sma... Smara...",
+          "Spark... Spark... Sparkes..."
+        ]
+      },
+      {
+        "name": "Whisper",
+        "note": "",
+        "lines": [
+          "Watch me."
+        ]
+      },
+      {
+        "name": "FINAL DROP",
+        "note": "Enormous dirty electro bass, euphoric synth explosion",
+        "lines": []
+      },
+      {
+        "name": "Final Chorus",
+        "note": "Layered powerful female vocals",
+        "lines": [
+          "SPARKES FLY! (OH!)",
+          "LIGHT UP THE NIGHT!",
+          "SHE'S THE QUEEN OF THE CHAOS,",
+          "AND SHE MAKES IT LOOK RIGHT!",
+          "",
+          "HEAD HIGH! (YEAH!)",
+          "LET THE WHOLE WORLD KNOW!",
+          "SHE'S GOT LOVE, SHE'S GOT FIRE,",
+          "AND A HEART MADE OF GOLD!",
+          "",
+          "SMA-RA! (HEY!)",
+          "SPARKES FLY! (OH!)",
+          "SHE'S ONE OF THE REAL ONES,",
+          "AND WE ALL KNOW WHY!"
+        ]
+      },
+      {
+        "name": "Extended instrumental",
+        "note": "Glitchy female vocal chops, heavy electro bass",
+        "lines": []
+      },
+      {
+        "name": "Outro",
+        "note": "Glittering synths, playful whispered vocals",
+        "lines": []
+      },
+      {
+        "name": "Female whisper",
+        "note": "",
+        "lines": [
+          "Smara Sparkes...",
+          "",
+          "Pretty...",
+          "Powerful...",
+          "Practically unstoppable."
+        ]
+      },
+      {
+        "name": "Pause",
+        "note": "",
+        "lines": []
+      },
+      {
+        "name": "Spoken",
+        "note": "Deadpan",
+        "lines": [
+          "Now can you lot stop being fucking idiots for five minutes?"
+        ]
+      },
+      {
+        "name": "Final electronic bass hit",
+        "note": "Tape stop",
+        "lines": []
+      }
+    ],
+    "artwork": "/assets/sleeves/sparkes-fly.webp",
+    "thumbnail": "/assets/sleeves/sparkes-fly-thumb.webp",
+    "artworkAlt": "Sparkes Fly sleeve: Smara Sparkes beside the hooded Planner FM MC in a neon pink and cyan club studio, with headphones, glittering lights and metallic Smara Sparkes / Electric lettering.",
+    "sleeveNote": "Glittering synths. Dirty electro bass. Smara has the crew’s back, a heart of gold and one request: stop being idiots for five minutes."
+  },
+  {
     "id": "get-your-tics-out",
     "title": "Get Your TICs Out",
     "subtitle": "Cowboys of the condensation.",
