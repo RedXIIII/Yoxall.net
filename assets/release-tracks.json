@@ -1790,6 +1790,325 @@
     "sleeveNote": "Glittering synths. Dirty electro bass. Smara has the crew’s back, a heart of gold and one request: stop being idiots for five minutes."
   },
   {
+    "id": "kelsey-south-side-in-gear",
+    "title": "Kelsey: South Side in Gear",
+    "subtitle": "South side covered. Heart of gold. Foot down.",
+    "station": "PLANNER FM / SOUTH SIDE",
+    "src": "/assets/kelsey-south-side-in-gear-yoxall-net.mp3",
+    "duration": 246.0,
+    "downloadName": "Kelsey - South Side in Gear - yoxall.net.mp3",
+    "lyrics": [
+      {
+        "name": "INTRO",
+        "note": "Pirate radio static, distant engine idling, sinister cowbell",
+        "lines": []
+      },
+      {
+        "name": "Deep whispered Cockney MC",
+        "note": "",
+        "lines": [
+          "Yeah...",
+          "South side...",
+          "You know the score.",
+          "",
+          "Big blonde hair...",
+          "Fast fucking cars...",
+          "Heart of gold...",
+          "",
+          "KELSEY!"
+        ]
+      },
+      {
+        "name": "Distorted female sample",
+        "note": "",
+        "lines": [
+          "South... side..."
+        ]
+      },
+      {
+        "name": "MC",
+        "note": "Low growl",
+        "lines": [
+          "TURN THAT FUCKING BASS UP!"
+        ]
+      },
+      {
+        "name": "DROP",
+        "note": "Monstrous distorted 808, aggressive icy Eskimo square-wave riff",
+        "lines": []
+      },
+      {
+        "name": "VERSE 1",
+        "note": "Rapid syncopated grime flow",
+        "lines": [
+          "Half-seven, phone starts ringing,",
+          "South-side diary, whole place spinning!",
+          "Jobs on the board, ops on the road,",
+          "Kelsey's got the crew when the lines overload!",
+          "",
+          "Big blonde curls, got a booty to match,",
+          "Don't get distracted, she's running the patch!",
+          "Heart of gold but she knows her shit,",
+          "When the whole thing's fucked, she ain't gonna quit!",
+          "",
+          "Calls keep coming, jobs stack high,",
+          "Calm in the chaos, never asks why!",
+          "Got time for the crew, got time to hear,",
+          "Kelsey's on the case, make that clear!"
+        ]
+      },
+      {
+        "name": "BEAT CUT",
+        "note": "Lone cowbell",
+        "lines": []
+      },
+      {
+        "name": "MC",
+        "note": "Whisper",
+        "lines": [
+          "Who's got the south?"
+        ]
+      },
+      {
+        "name": "Female chopped sample",
+        "note": "",
+        "lines": [
+          "Kelsey..."
+        ]
+      },
+      {
+        "name": "MC",
+        "note": "",
+        "lines": [
+          "LOUDER!"
+        ]
+      },
+      {
+        "name": "HOOK",
+        "note": "Aggressive shouted grime chants, savage bass",
+        "lines": [
+          "SOUTH SIDE! (OI!)",
+          "KELSEY! (WHAT!)",
+          "GOT THE WHOLE DAMN PATCH",
+          "ON FUCKING LOCK!",
+          "",
+          "BIG BASS! (BOH!)",
+          "BIG HAIR! (YEAH!)",
+          "SOUTH SIDE MASSIVE!",
+          "WE RUN IT DOWN HERE!"
+        ]
+      },
+      {
+        "name": "DROP",
+        "note": "Distorted 808 slides beneath chopped cowbell",
+        "lines": []
+      },
+      {
+        "name": "INSTRUMENTAL",
+        "note": "Filthy repeating square-wave bass riff, rolling grime drums",
+        "lines": []
+      },
+      {
+        "name": "VERSE 2",
+        "note": "Faster, darker Cockney flow",
+        "lines": [
+          "Kels likes cars, and she likes 'em fast,",
+          "Something goes roaring, she's watching it blast!",
+          "Blonde hair bouncing, grin on her face,",
+          "Loves a quick motor, loves a bit of pace!",
+          "",
+          "Back in the office, straight on the grind,",
+          "One hundred problems, ten more behind!",
+          "No fucking drama, no playing the queen,",
+          "Just looking after everyone on the team!",
+          "",
+          "She's sweet as anything, don't get it twisted,",
+          "Cross the crew and you've made her shitlist!",
+          "Never needs shouting, never needs fame,",
+          "South-side captain, remember the name!"
+        ]
+      },
+      {
+        "name": "BEAT CUT",
+        "note": "Engine revving",
+        "lines": []
+      },
+      {
+        "name": "MC",
+        "note": "Deadpan",
+        "lines": [
+          "Oi, Kels...",
+          "You seen that car?"
+        ]
+      },
+      {
+        "name": "Female",
+        "note": "Playful",
+        "lines": [
+          "Ooooh, I want one!"
+        ]
+      },
+      {
+        "name": "MC",
+        "note": "",
+        "lines": [
+          "Course you fucking do!"
+        ]
+      },
+      {
+        "name": "DJ REWIND",
+        "note": "Scratching, pirate radio siren",
+        "lines": [
+          "BOH! BOH! BOH!",
+          "WHEEL THAT!",
+          "",
+          "SOUTH SIDE!",
+          "BASSLINE!",
+          "KELSEY INSIDE!",
+          "",
+          "RELOAD!"
+        ]
+      },
+      {
+        "name": "DROP",
+        "note": "Crushing distorted 808, savage sliding Reese bass",
+        "lines": []
+      },
+      {
+        "name": "BREAKDOWN",
+        "note": "Sparse cowbell, deep rumbling sub",
+        "lines": []
+      },
+      {
+        "name": "MC",
+        "note": "Slow, gritty spoken delivery",
+        "lines": [
+          "Some bosses talk...",
+          "Some bosses shout..."
+        ]
+      },
+      {
+        "name": "Pause",
+        "note": "",
+        "lines": [
+          "Kelsey just gets the fucking job done."
+        ]
+      },
+      {
+        "name": "Female chopped whispers",
+        "note": "",
+        "lines": [
+          "South...",
+          "South...",
+          "South side..."
+        ]
+      },
+      {
+        "name": "MC",
+        "note": "",
+        "lines": [
+          "And she's got your back."
+        ]
+      },
+      {
+        "name": "BUILD",
+        "note": "Accelerating 8-bit stabs, distorted cowbell, sub-bass rising",
+        "lines": [
+          "KEL-SEY!",
+          "KEL-SEY!",
+          "SOUTH SIDE!",
+          "STAND BY!"
+        ]
+      },
+      {
+        "name": "Sudden complete silence",
+        "note": "",
+        "lines": []
+      },
+      {
+        "name": "Deep whispered MC",
+        "note": "",
+        "lines": [
+          "Put your foot down, Kels."
+        ]
+      },
+      {
+        "name": "FINAL DROP",
+        "note": "Absolutely enormous distorted sub-bass, filthy icy Eskimo synth",
+        "lines": []
+      },
+      {
+        "name": "FINAL HOOK",
+        "note": "Aggressive layered MC chants",
+        "lines": [
+          "SOUTH SIDE! (OI!)",
+          "KELSEY! (WHAT!)",
+          "GOT THE WHOLE DAMN PATCH",
+          "ON FUCKING LOCK!",
+          "",
+          "BIG BASS! (BOH!)",
+          "BIG HAIR! (YEAH!)",
+          "SOUTH SIDE MASSIVE!",
+          "WE RUN IT DOWN HERE!",
+          "",
+          "KELSEY! (OI!)",
+          "KELSEY! (BOH!)",
+          "HEART OF GOLD!",
+          "BUT SHE RUNS THE SHOW!"
+        ]
+      },
+      {
+        "name": "EXTENDED INSTRUMENTAL",
+        "note": "Heavy distorted 808, sinister repeating cowbell, savage Eskimo square-wave bass",
+        "lines": []
+      },
+      {
+        "name": "OUTRO",
+        "note": "Tape hiss, distant engine",
+        "lines": []
+      },
+      {
+        "name": "MC",
+        "note": "Exhausted Cockney voice",
+        "lines": [
+          "Big love, Kels.",
+          "Proper diamond."
+        ]
+      },
+      {
+        "name": "Pause",
+        "note": "",
+        "lines": [
+          "Right...",
+          "Who's sorting the next appointment?"
+        ]
+      },
+      {
+        "name": "Engine accelerates",
+        "note": "",
+        "lines": [
+          "Kels?"
+        ]
+      },
+      {
+        "name": "Pause",
+        "note": "",
+        "lines": [
+          "...Oh, for FUCK'S SAKE!"
+        ]
+      },
+      {
+        "name": "Final monstrous bass hit",
+        "note": "Pirate radio static",
+        "lines": []
+      }
+    ],
+    "artwork": "/assets/sleeves/kelsey-south-side-in-gear.webp",
+    "thumbnail": "/assets/sleeves/kelsey-south-side-in-gear-thumb.webp",
+    "artworkAlt": "Kelsey: South Side in Gear sleeve: Kelsey with blonde curls beside the hooded Planner FM MC at a planning desk, headphones and coffee in a pink and blue neon garage, with a car behind them and white and cyan graffiti lettering.",
+    "sleeveNote": "Full diary. Filthy bass. Kelsey has the south side covered and the crew’s back. Just don’t mention the car outside."
+  },
+  {
     "id": "get-your-tics-out",
     "title": "Get Your TICs Out",
     "subtitle": "Cowboys of the condensation.",
