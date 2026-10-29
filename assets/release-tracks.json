@@ -1,5 +1,126 @@
 [
   {
+    "id": "planner-fm",
+    "title": "Planner FM: Diary Pressure",
+    "subtitle": "Opening shift. Volume up.",
+    "station": "PLANNER FM",
+    "src": "/assets/planner-fm.mp3",
+    "duration": 182.04,
+    "downloadName": "Planner FM - Diary Pressure - yoxall.net.mp3",
+    "lyrics": [
+      {
+        "name": "Intro",
+        "note": "Pirate radio static, deep voice",
+        "lines": [
+          "Oi, oi!",
+          "Planner FM!",
+          "Repairs crew inside!",
+          "DRS massive!",
+          "Ops on the road!",
+          "Customers on the blower!",
+          "YOU KNOW WHAT TIME IT IS!"
+        ]
+      },
+      {
+        "name": "Drop",
+        "note": "Filthy distorted square-wave bass",
+        "lines": []
+      },
+      {
+        "name": "Verse 1",
+        "note": "Fast aggressive Cockney grime",
+        "lines": [
+          "Half-seven login, straight on the screen,",
+          "Twenty missed calls and the diary’s obscene!",
+          "Leak in the kitchen, boiler’s gone dead,",
+          "Customer’s fuming, wants somebody sent!",
+          "",
+          "Oi! Where’s my op? Where’s my slot?",
+          "Supervisor’s asking what jobs we got!",
+          "DRS flashing, appointments are tight,",
+          "Fucking hell, bruv, we’re booking all night!"
+        ]
+      },
+      {
+        "name": "Hook",
+        "note": "Heavy bass, shouted crew responses",
+        "lines": [
+          "WHO RUNS THE JOBS?! (PLANNERS!)",
+          "WHO SORTS THE SLOTS?! (PLANNERS!)",
+          "WHO TAKES THE SHIT?! (PLANNERS!)",
+          "WHO GETS IT DONE?! (PLANNERS!)",
+          "",
+          "EMERGENCY! (OI!)",
+          "NO ACCESS! (WHAT!)",
+          "GET THE OP ON THE PHONE!",
+          "AND GET THAT JOB GONE!"
+        ]
+      },
+      {
+        "name": "DJ rewind",
+        "note": "Screeching vinyl",
+        "lines": [
+          "BOH! BOH! BOH!",
+          "WHEEL THAT!",
+          "REPAIRS CREW, RELOAD!"
+        ]
+      },
+      {
+        "name": "Drop",
+        "note": "Huge distorted bass riff",
+        "lines": []
+      },
+      {
+        "name": "Verse 2",
+        "note": "Double-time grime flow",
+        "lines": [
+          "Damp on the ceiling, taps gone bust,",
+          "Chasing the tradesmen, doing what we must!",
+          "Customer calls, says nobody’s been,",
+          "Check the fucking notes, know what I mean!",
+          "",
+          "No slots left? Better find a way,",
+          "Move that job to another day!",
+          "Overdues low, keep the board green,",
+          "Hardest-working bastards you’ve ever seen!"
+        ]
+      },
+      {
+        "name": "Final hook",
+        "note": "Crew shouting, bass pounding",
+        "lines": [
+          "PLANNERS! (OI!)",
+          "REPAIRS! (WHAT!)",
+          "BOOK THAT JOB!",
+          "GET THE FUCKER THERE!",
+          "",
+          "PLANNERS! (OI!)",
+          "NO PEACE! (NAH!)",
+          "KEEP THAT DIARY MOVING!",
+          "TILL THE PHONES RELEASE!"
+        ]
+      },
+      {
+        "name": "Outro",
+        "note": "Beat cuts, phone ringing",
+        "lines": [
+          "Hello, repairs planning…",
+          "",
+          "…You’ve got a fucking leak?"
+        ]
+      },
+      {
+        "name": "End",
+        "note": "Massive bass hit, radio static",
+        "lines": []
+      }
+    ],
+    "artwork": "/assets/sleeves/planner-fm-diary-pressure.webp",
+    "thumbnail": "/assets/sleeves/planner-fm-diary-pressure-thumb.webp",
+    "artworkAlt": "Planner FM: Diary Pressure — the hooded MC on the phone at a rain-soaked mixing desk, with a full appointment diary, rooftop speakers and blue graffiti lettering.",
+    "sleeveNote": "Twenty missed calls. One very full diary. The repairs desk becomes the decks."
+  },
+  {
     "id": "the-west-dont-rest",
     "title": "The West Don’t Rest",
     "subtitle": "Cornish grime. Icy bass. No rest.",
@@ -212,127 +333,6 @@
     "thumbnail": "/assets/sleeves/the-west-dont-rest-hooded-thumb.webp",
     "artworkAlt": "The West Don’t Rest: the hooded Planner FM MC at a rain-soaked Cornish repairs desk, with a stormy coast, icy blue lettering and violet radio equipment.",
     "sleeveNote": "Rain on the slate. Bass in the chest. Cornwall on the dial. The west don’t rest."
-  },
-  {
-    "id": "planner-fm",
-    "title": "Planner FM: Diary Pressure",
-    "subtitle": "Opening shift. Volume up.",
-    "station": "PLANNER FM",
-    "src": "/assets/planner-fm.mp3",
-    "duration": 182.04,
-    "downloadName": "Planner FM - Diary Pressure - yoxall.net.mp3",
-    "lyrics": [
-      {
-        "name": "Intro",
-        "note": "Pirate radio static, deep voice",
-        "lines": [
-          "Oi, oi!",
-          "Planner FM!",
-          "Repairs crew inside!",
-          "DRS massive!",
-          "Ops on the road!",
-          "Customers on the blower!",
-          "YOU KNOW WHAT TIME IT IS!"
-        ]
-      },
-      {
-        "name": "Drop",
-        "note": "Filthy distorted square-wave bass",
-        "lines": []
-      },
-      {
-        "name": "Verse 1",
-        "note": "Fast aggressive Cockney grime",
-        "lines": [
-          "Half-seven login, straight on the screen,",
-          "Twenty missed calls and the diary’s obscene!",
-          "Leak in the kitchen, boiler’s gone dead,",
-          "Customer’s fuming, wants somebody sent!",
-          "",
-          "Oi! Where’s my op? Where’s my slot?",
-          "Supervisor’s asking what jobs we got!",
-          "DRS flashing, appointments are tight,",
-          "Fucking hell, bruv, we’re booking all night!"
-        ]
-      },
-      {
-        "name": "Hook",
-        "note": "Heavy bass, shouted crew responses",
-        "lines": [
-          "WHO RUNS THE JOBS?! (PLANNERS!)",
-          "WHO SORTS THE SLOTS?! (PLANNERS!)",
-          "WHO TAKES THE SHIT?! (PLANNERS!)",
-          "WHO GETS IT DONE?! (PLANNERS!)",
-          "",
-          "EMERGENCY! (OI!)",
-          "NO ACCESS! (WHAT!)",
-          "GET THE OP ON THE PHONE!",
-          "AND GET THAT JOB GONE!"
-        ]
-      },
-      {
-        "name": "DJ rewind",
-        "note": "Screeching vinyl",
-        "lines": [
-          "BOH! BOH! BOH!",
-          "WHEEL THAT!",
-          "REPAIRS CREW, RELOAD!"
-        ]
-      },
-      {
-        "name": "Drop",
-        "note": "Huge distorted bass riff",
-        "lines": []
-      },
-      {
-        "name": "Verse 2",
-        "note": "Double-time grime flow",
-        "lines": [
-          "Damp on the ceiling, taps gone bust,",
-          "Chasing the tradesmen, doing what we must!",
-          "Customer calls, says nobody’s been,",
-          "Check the fucking notes, know what I mean!",
-          "",
-          "No slots left? Better find a way,",
-          "Move that job to another day!",
-          "Overdues low, keep the board green,",
-          "Hardest-working bastards you’ve ever seen!"
-        ]
-      },
-      {
-        "name": "Final hook",
-        "note": "Crew shouting, bass pounding",
-        "lines": [
-          "PLANNERS! (OI!)",
-          "REPAIRS! (WHAT!)",
-          "BOOK THAT JOB!",
-          "GET THE FUCKER THERE!",
-          "",
-          "PLANNERS! (OI!)",
-          "NO PEACE! (NAH!)",
-          "KEEP THAT DIARY MOVING!",
-          "TILL THE PHONES RELEASE!"
-        ]
-      },
-      {
-        "name": "Outro",
-        "note": "Beat cuts, phone ringing",
-        "lines": [
-          "Hello, repairs planning…",
-          "",
-          "…You’ve got a fucking leak?"
-        ]
-      },
-      {
-        "name": "End",
-        "note": "Massive bass hit, radio static",
-        "lines": []
-      }
-    ],
-    "artwork": "/assets/sleeves/planner-fm-diary-pressure.webp",
-    "thumbnail": "/assets/sleeves/planner-fm-diary-pressure-thumb.webp",
-    "artworkAlt": "Planner FM: Diary Pressure — the hooded MC on the phone at a rain-soaked mixing desk, with a full appointment diary, rooftop speakers and blue graffiti lettering.",
-    "sleeveNote": "Twenty missed calls. One very full diary. The repairs desk becomes the decks."
   },
   {
     "id": "three-in-the-morning",
